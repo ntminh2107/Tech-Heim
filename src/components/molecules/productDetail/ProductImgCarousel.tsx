@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Product } from "../../../types/Product";
-import { Carousel } from "antd";
 import CarouselWithButton from "../../atoms/carousel/CarouselWithButton";
 
 type Props = {
@@ -11,6 +10,9 @@ const ProductImgCarousel = ({ product }: Props) => {
   const [selectedImage, setSelectedImage] = useState(product?.image);
 
   console.log(product?.imagePreview);
+  product?.imagePreview.map((item) => {
+    console.log(item.img);
+  });
 
   const handleChangeImg = (img: string) => {
     setSelectedImage(img);
@@ -24,7 +26,7 @@ const ProductImgCarousel = ({ product }: Props) => {
         onClick={() => console.log(selectedImage)}
       />
       <section className="py-6 md:py-12 w-full">
-        <Carousel>
+        <CarouselWithButton>
           {product?.imagePreview.map((item) => (
             <div className="items-center">
               <img
@@ -35,7 +37,7 @@ const ProductImgCarousel = ({ product }: Props) => {
               />
             </div>
           ))}
-        </Carousel>
+        </CarouselWithButton>
       </section>
     </div>
   );

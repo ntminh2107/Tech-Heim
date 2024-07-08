@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { useEffect } from "react";
 import { getDetailProductThunk } from "../../redux/slice/productSlice";
-import { ProductImgCarousel } from "../../components/molecules/productDetail";
+import ProductTab from "../../components/molecules/productDetail/ProductTab";
 
 const DetailProduct = () => {
   const { id } = useParams<{ id?: string }>() ?? {};
@@ -24,11 +24,34 @@ const DetailProduct = () => {
 
   return (
     <div className="flex flex-row gap-8">
-      <div className="flex flex-row gap-6">
-        <ProductImgCarousel product={detailProduct} />
+      <div className="basis-2/3 flex flex-col">
+        <div className="flex flex-row gap-6">
+          {/* image of Product */}
+          <div className="flex flex-col gap-6 w-[31rem]">
+            <img
+              src="/assets/images/product/product1.png"
+              className="max-w-full"
+            />
 
-        <ProductInfoCard product={detailProduct} />
+            <div className="flex flex-row gap-6 w-full">
+              {detailProduct?.imagePreview.slice(0, 5).map((item) => (
+                <img
+                  src={item.img}
+                  className="w-[4.43rem] h-[5rem] cursor-pointer"
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Pr*/}
+          <ProductInfoCard product={detailProduct} />
+        </div>
+
+        <div>
+          <ProductTab />
+        </div>
       </div>
+
       <div>
         <PayCard
           percent={detailProduct?.percent}
