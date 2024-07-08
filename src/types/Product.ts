@@ -26,7 +26,7 @@ export type Product = {
   GPU: string;
   memory: number;
   bestSeller?: boolean;
-  imagePreview: ImagePreview;
+  imagePreview: ImagePreview[];
 };
 
 export type ProductInCart = {
