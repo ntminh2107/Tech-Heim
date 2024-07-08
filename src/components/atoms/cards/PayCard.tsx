@@ -5,7 +5,9 @@ type Props = { price?: number; percent?: number };
 
 const PayCard = ({ price, percent }: Props) => {
   const [paymentMethod, setPaymentMethod] = useState(1);
-  const [installmentPeriod, setInstallmentPeriod] = useState();
+  const [installmentPeriod, setInstallmentPeriod] = useState<
+    number | undefined
+  >(undefined);
 
   const [disable, setDisable] = useState(true);
   const periods = [3, 6, 12, 18];
@@ -21,14 +23,18 @@ const PayCard = ({ price, percent }: Props) => {
   };
 
   const salePrice = () => {
-    return (price * percent) / 100;
+    const curPrice = price ?? 0;
+    const curPercent = percent ?? 0;
+    return (curPrice * curPercent) / 100;
   };
 
   const pricePerMonth = () => {
+    const curPrice = price ?? 0;
+    const curInstallmentPeriod = installmentPeriod ?? 0;
     if (percent) {
-      return (salePrice() / installmentPeriod).toFixed(2);
+      return (salePrice() / curInstallmentPeriod).toFixed(2);
     }
-    return (price / installmentPeriod).toFixed(2);
+    return (curPrice / curInstallmentPeriod).toFixed(2);
   };
 
   return (
