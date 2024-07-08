@@ -15,6 +15,13 @@ const ProductInfoCard = ({ product }: Props) => {
   ];
   const [showMore, setShowMore] = useState(false);
 
+  const renderValue = (value: any) => {
+    if (Array.isArray(value)) {
+      return value.join(", ");
+    }
+    return value;
+  };
+
   const handleShowMore = () => {
     setShowMore(!showMore);
   };
@@ -32,26 +39,37 @@ const ProductInfoCard = ({ product }: Props) => {
           <img src="/assets/icons/line/line.svg" />
           <div className="text-xl font-light">sold 123</div>
         </div>
-        <div className="gap-8 flex flex-row content-center">
-          <div className="flex flex-grow ">
-            <img src="/assets/icons/policy/shop.svg" />
-            <div className="text-gray-717171 font-medium text-xs content-center">
-              In Stock
-            </div>
+        <div className="gap-8 flex flex-row content-center w-full">
+          <div className="flex flex-grow items-center">
+            <img
+              src="/assets/icons/policy/shop.svg"
+              alt="In Stock"
+              className="mr-2"
+            />
+            <div className="text-gray-717171 font-medium text-xs">In Stock</div>
           </div>
-          <div className="flex flex-grow ">
-            <img src="/assets/icons/policy/verify.svg" />
-            <div className="text-gray-717171 font-medium text-xs content-center">
+          <div className="flex flex-grow items-center">
+            <img
+              src="/assets/icons/policy/verify.svg"
+              alt="Guaranteed"
+              className="mr-2"
+            />
+            <div className="text-gray-717171 font-medium text-xs">
               Guaranteed
             </div>
           </div>
-          <div className="flex flex-grow ">
-            <img src="/assets/icons/policy/truck.svg" />
-            <div className="text-gray-717171 font-medium text-xs content-center">
+          <div className="flex flex-grow items-center">
+            <img
+              src="/assets/icons/policy/truck.svg"
+              alt="Free Delivery"
+              className="mr-2"
+            />
+            <div className="text-gray-717171 font-medium text-xs">
               Free Delivery
             </div>
           </div>
         </div>
+
         <div className="flex flex-row gap-10">
           <div className="font-light text-base">Select Color</div>
         </div>
@@ -67,7 +85,7 @@ const ProductInfoCard = ({ product }: Props) => {
                     {key}
                   </td>
                   <th className="font-medium text-sm text-left w-fit">
-                    {product?.[key]}
+                    {renderValue(product?.[key])}
                   </th>
                 </tr>
               ))}

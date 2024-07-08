@@ -26,6 +26,7 @@ export type Product = {
   GPU: string;
   memory: number;
   bestSeller?: boolean;
+  imagePreview: ImagePreview;
 };
 
 export type ProductInCart = {
@@ -44,4 +45,8 @@ export type Brand = {
   id: string;
   name: string;
   image: string;
+};
+
+export type ImagePreview = {
+  img: string;
 };
