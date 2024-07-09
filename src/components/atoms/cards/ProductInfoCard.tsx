@@ -26,44 +26,32 @@ const ProductInfoCard = ({ product }: Props) => {
     setShowMore(!showMore);
   };
   return (
-    <div className="flex flex-col gap-8 w-fit ">
+    <div className="flex flex-col gap-8 w-full">
       <div className="flex flex-col gap-6">
         <div className="font-medium text-xl">{product?.name}</div>
-        <div className="flex flex-row  gap-2">
+        <div className="flex flex-row gap-2">
           <div className="bg-primary-500 rounded-lg text-white p-1 flex flex-row justify-center w-fit ">
             <img src="/assets/icons/like/white_star.svg" className="p-[2.5] " />
             <div className="font-medium text-xs content-center">
               {product?.rating}
             </div>
           </div>
-          <img src="/assets/icons/line/line.svg" />
+          <img src="/assets/icons/line/line.svg" className="mr-1" />
           <div className="text-xl font-light">sold 123</div>
         </div>
         <div className="gap-8 flex flex-row content-center w-full">
           <div className="flex flex-grow items-center">
-            <img
-              src="/assets/icons/policy/shop.svg"
-              alt="In Stock"
-              className="mr-2"
-            />
+            <img src="/assets/icons/policy/shop.svg" alt="In Stock" />
             <div className="text-gray-717171 font-medium text-xs">In Stock</div>
           </div>
           <div className="flex flex-grow items-center">
-            <img
-              src="/assets/icons/policy/verify.svg"
-              alt="Guaranteed"
-              className="mr-2"
-            />
+            <img src="/assets/icons/policy/verify.svg" alt="Guaranteed" />
             <div className="text-gray-717171 font-medium text-xs">
               Guaranteed
             </div>
           </div>
           <div className="flex flex-grow items-center">
-            <img
-              src="/assets/icons/policy/truck.svg"
-              alt="Free Delivery"
-              className="mr-2"
-            />
+            <img src="/assets/icons/policy/truck.svg" alt="Free Delivery" />
             <div className="text-gray-717171 font-medium text-xs">
               Free Delivery
             </div>
@@ -81,10 +69,10 @@ const ProductInfoCard = ({ product }: Props) => {
               .map((key) => (
                 <tr>
                   <td className="font-medium text-sm text-gray-717171">•</td>
-                  <td className="font-medium text-sm text-gray-717171 content-center">
+                  <td className="font-medium text-sm text-gray-717171 content-center w-1/2">
                     {key}
                   </td>
-                  <th className="font-medium text-sm text-left w-fit">
+                  <th className="font-medium text-sm text-left w-1/2">
                     {renderValue(product?.[key])}
                   </th>
                 </tr>

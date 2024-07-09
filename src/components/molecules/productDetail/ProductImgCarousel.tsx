@@ -25,20 +25,6 @@ const ProductImgCarousel = ({ product }: Props) => {
         className="h-[21.125rem] w-[31rem]"
         onClick={() => console.log(selectedImage)}
       />
-      <section className="py-6 md:py-12 w-full">
-        <CarouselWithButton>
-          {product?.imagePreview.map((item) => (
-            <div className="items-center">
-              <img
-                src={item.img}
-                alt={product.name}
-                className="w-[4.43rem] h-[5rem] cursor-pointer"
-                onClick={() => handleChangeImg(item.img)}
-              />
-            </div>
-          ))}
-        </CarouselWithButton>
-      </section>
     </div>
   );
 };

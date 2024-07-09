@@ -30,9 +30,8 @@ const ProductDescription = ({ product }: Props) => {
     setShowMore(!showMore);
   };
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-2/3">
       <div className="font-medium text-xl">Technical Details</div>
-      <div></div>
       <table className="w-full text-left border-collapse">
         <tbody>
           {displayKeys
@@ -46,10 +45,10 @@ const ProductDescription = ({ product }: Props) => {
                     : "bg-white rounded-md"
                 }
               >
-                <th className="py-2 px-4 text-gray-500 capitalize border border-gray-200">
+                <th className="py-2 px-4 text-gray-500 capitalize border border-gray-200 w-1/2">
                   {key}
                 </th>
-                <td className="py-2 px-4 border border-gray-200">
+                <td className="py-2 px-4 border border-gray-200 w-1/2">
                   {renderValue(product?.[key])}
                 </td>
               </tr>
