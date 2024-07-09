@@ -180,3 +180,13 @@ export const getDetailProductAPI = (id?: string) => {
     })
     .catch((err) => err);
 };
+
+export const getSimilarProductAPI = (brand?: string) => {
+  return axiosClient
+    .get(`product?brand=${brand}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};

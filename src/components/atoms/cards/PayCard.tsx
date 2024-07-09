@@ -5,7 +5,9 @@ type Props = { price?: number; percent?: number };
 
 const PayCard = ({ price, percent }: Props) => {
   const [paymentMethod, setPaymentMethod] = useState(1);
-  const [installmentPeriod, setInstallmentPeriod] = useState();
+  const [installmentPeriod, setInstallmentPeriod] = useState<
+    number | undefined
+  >(undefined);
 
   const [disable, setDisable] = useState(true);
   const periods = [3, 6, 12, 18];
@@ -21,18 +23,22 @@ const PayCard = ({ price, percent }: Props) => {
   };
 
   const salePrice = () => {
-    return (price * percent) / 100;
+    const curPrice = price ?? 0;
+    const curPercent = percent ?? 0;
+    return (curPrice * curPercent) / 100;
   };
 
   const pricePerMonth = () => {
+    const curPrice = price ?? 0;
+    const curInstallmentPeriod = installmentPeriod ?? 0;
     if (percent) {
-      return (salePrice() / installmentPeriod).toFixed(2);
+      return (salePrice() / curInstallmentPeriod).toFixed(2);
     }
-    return (price / installmentPeriod).toFixed(2);
+    return (curPrice / curInstallmentPeriod).toFixed(2);
   };
 
   return (
-    <div className="flex flex-col gap-4 shadow-md  p-6  rounded-md">
+    <div className="flex flex-col gap-4 shadow-md  p-6  rounded-md w-fit">
       {percent ? (
         <div className="flex flex-col gap-1">
           <div className="flex justify-between ">
@@ -68,7 +74,11 @@ const PayCard = ({ price, percent }: Props) => {
       <div className="flex flex-col gap-4">
         <div className="flex flex-row gap-2">
           {periods.map((month: number) => (
-            <label key={month} className="flex flex-col items-center">
+            <label
+              key={month}
+              className="flex flex-col items-center"
+              defaultValue={1}
+            >
               <input
                 type="radio"
                 name="installmentPeriod"

@@ -4,7 +4,9 @@ import ProductInfoCard from "../../components/atoms/cards/ProductInfoCard";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { useEffect } from "react";
-// import { getDetailProductThunk } from "../../redux/slice/productSlice";
+import { getDetailProductThunk } from "../../redux/slice/productSlice";
+import ProductTab from "../../components/molecules/productDetail/ProductTab";
+import ImagePreview from "../../components/atoms/image/ImagePreview";
 
 const DetailProduct = () => {
   const { id } = useParams<{ id?: string }>() ?? {};
@@ -12,7 +14,7 @@ const DetailProduct = () => {
 
   useEffect(() => {
     if (id) {
-      // dispatch(getDetailProductThunk(id));
+      dispatch(getDetailProductThunk(id));
     }
   }, [dispatch, id]);
 
@@ -22,19 +24,26 @@ const DetailProduct = () => {
   console.log(detailProduct);
 
   return (
-    <div className="flex flex-row gap-8">
-      <div className="flex flex-row gap-6 basis-2/3">
-        <div>
-          <img src="/assets/images/blog/blog1.png" className="w-108 h-96" />
+    <div>
+      <div className="flex gap-8 mb-8">
+        <div className="flex gap-6">
+          <div className="flex-shrink w-full">
+            <ImagePreview
+              width="31rem"
+              imageUrl={detailProduct?.image || ""}
+              height="21.125rem"
+              imagePreview={detailProduct?.imagePreview || null}
+            />
+          </div>
+          <ProductInfoCard product={detailProduct} />
         </div>
-        <ProductInfoCard product={detailProduct} />
-      </div>
-      <div className="basis-1/3">
         <PayCard
           percent={detailProduct?.percent}
           price={detailProduct?.price}
         />
       </div>
+
+      <ProductTab />
     </div>
   );
 };

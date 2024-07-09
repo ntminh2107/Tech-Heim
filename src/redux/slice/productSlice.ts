@@ -11,9 +11,11 @@ import {
   getBrandAPI,
   getCartItemsAPI,
   getCategoryAPI,
+  getDetailProductAPI,
   getNewProductsAPI,
   getProductSaleAPI,
   getSearchKeywordAPI,
+  getSimilarProductAPI,
   mostProductSearchedAPI,
   searchProductAPI,
   toggleLikeProductAPI,
@@ -30,10 +32,12 @@ interface ProductState {
   productSale: Product[];
   newProducts: Product[];
   bestSellers: Product[];
+  similarProduct: Product[];
   brandList: Brand[];
   loading: boolean;
   status: number;
   shipCost: number;
+  detailProduct: Product | null;
 }
 
 const initialState: ProductState = {
@@ -45,8 +49,9 @@ const initialState: ProductState = {
   productSale: [],
   newProducts: [],
   bestSellers: [],
-  // detailProduct: null,
+  detailProduct: null,
   brandList: [],
+  similarProduct: [],
   // filterProduct: [],
   loading: false,
   status: 0,
@@ -405,6 +410,62 @@ export const productSlice = createAppSlice({
         shipCost: data,
       };
     }),
+    getDetailProductThunk: create.asyncThunk(
+      async (id: string) => {
+        const data = await getDetailProductAPI(id);
+        return data;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            detailProduct: data,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
+    getSimilarProductThunk: create.asyncThunk(
+      async (brand: string) => {
+        const data = await getSimilarProductAPI(brand);
+        return data;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            similarProduct: data,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
   }),
 });
 
@@ -422,6 +483,8 @@ export const {
   getBestSellerProductThunk,
   getBrandThunk,
   addCartItemThunk,
+  getDetailProductThunk,
+  getSimilarProductThunk,
   chooseShipCostAction,
 } = productSlice.actions;
 
