@@ -42,7 +42,6 @@ const DetailProduct = () => {
           price={detailProduct?.price}
         />
       </div>
-
       <ProductTab />
     </div>
   );

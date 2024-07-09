@@ -25,7 +25,7 @@ const ProductTab = () => {
       <div id="technical-details">
         <ProductDescription product={productDes} />
       </div>
-      <div id="similar-products">
+      <div id="similar-products" className="mt-[46px]">
         <ProductSimilarCarousel brand={productDes?.brand} />
       </div>
     </div>

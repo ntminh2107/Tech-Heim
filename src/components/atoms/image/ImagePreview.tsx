@@ -20,7 +20,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
     setSelectedImage(img);
   };
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col gap-6">
       <div className={`w-[${width}] h-[${height}] `}>
         <img
           className="w-full h-full object-cover"

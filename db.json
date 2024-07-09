@@ -497,137 +497,335 @@
       "quantity": 0,
       "price": 23.26,
       "image": "/assets/images/cart/macbook.png"
+    },
+    {
+      "id": "517ef475-a9b5-42ac-accc-42fdac2f8d07",
+      "quantity": 1,
+      "productId": "4",
+      "color": "Rose Gold",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
+      "name": "Smartwatch A1",
+      "price": 250
     }
   ],
   "product": [
     {
       "id": "1",
       "name": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
-      "image": "/assets/images/product/product3.png",
+      "image": "https://shopdunk.com/images/thumbs/0000723_macbook-air-m1-2020-8gb-ram-256gb-ssd.png",
       "price": 1200,
       "color": "Silver",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 15.6,
-      "processor": "Intel Core i7",
-      "GPU": "NVIDIA GeForce GTX 1660 Ti",
-      "memory": 16,
       "rating": 4.5,
       "favorite": false,
+      "specifications": [
+        {
+          "key": "Processor",
+          "value": "Intel Core i9"
+        },
+        {
+          "key": "GPU",
+          "value": "NVIDIA GeForce RTX 3080"
+        },
+        {
+          "key": "Memory",
+          "value": "16 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "512 GB SSD"
+        },
+        {
+          "key": "Screen Size",
+          "value": "15.6 inches"
+        },
+        {
+          "key": "Battery Life",
+          "value": "10 hours"
+        },
+        {
+          "key": "OS",
+          "value": "Windows 10"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg"
+        },
+        {
+          "img": "https://socientifica.com.br/wp-content/uploads/2024/06/iphone-15.jpg"
+        },
+        {
+          "img": "https://cdn.tgdd.vn/Products/Images/42/299033/Slider/iphone-15-pro-thumbyt-1020x570.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4YjkNCkTpbuSrgDrbFGUm3.jpg"
+        },
+        {
+          "img": "https://cdn.xtmobile.vn/vnt_upload/product/03_2024/thiet-ke-iphone-15-plus-128gb-chinh-hang-xtmobile.jpg"
+        },
+        {
+          "img": "https://images.macrumors.com/article-new/2023/09/iphone-15-pro-gray.jpg"
+        }
       ]
     },
     {
       "id": "2",
       "name": "Smartphone Y2",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
       "price": 800,
       "salePrice": 750,
       "discount": true,
       "percent": 6,
       "favorite": true,
-      "description": "A high-performance smartphone with great camera features.",
       "color": "Black",
       "rating": 4.5,
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 6.2,
-      "processor": "Snapdragon 888",
-      "GPU": "Adreno 660",
-      "memory": 8,
       "bestSeller": true,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "6.1 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Octa-core"
+        },
+        {
+          "key": "RAM",
+          "value": "6 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "128 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "12 MP"
+        },
+        {
+          "key": "OS",
+          "value": "Android"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg"
+        },
+        {
+          "img": "https://socientifica.com.br/wp-content/uploads/2024/06/iphone-15.jpg"
+        },
+        {
+          "img": "https://cdn.tgdd.vn/Products/Images/42/299033/Slider/iphone-15-pro-thumbyt-1020x570.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4YjkNCkTpbuSrgDrbFGUm3.jpg"
+        },
+        {
+          "img": "https://cdn.xtmobile.vn/vnt_upload/product/03_2024/thiet-ke-iphone-15-plus-128gb-chinh-hang-xtmobile.jpg"
+        },
+        {
+          "img": "https://images.macrumors.com/article-new/2023/09/iphone-15-pro-gray.jpg"
+        }
       ]
     },
     {
       "id": "21",
-      "name": "Smartphone Y2",
-      "image": "/assets/images/search/phone.png",
+      "name": "Smartphone Y3",
+      "image": "https://media.wired.com/photos/593284aeaef9a462de98365f/master/w_2560%2Cc_limit/2014-09-23-iphone6-gallery-1.jpg",
       "price": 800,
       "salePrice": 750,
       "discount": true,
       "percent": 6,
       "favorite": true,
-      "description": "A high-performance smartphone with great camera features.",
       "color": "Black",
       "rating": 4.5,
-      "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 6.2,
-      "processor": "Snapdragon 888",
-      "GPU": "Adreno 660",
-      "memory": 8,
+      "categoryId": "electronics",
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "6.1 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Octa-core"
+        },
+        {
+          "key": "RAM",
+          "value": "6 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "128 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "12 MP"
+        },
+        {
+          "key": "OS",
+          "value": "IOS"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg"
+        },
+        {
+          "img": "https://socientifica.com.br/wp-content/uploads/2024/06/iphone-15.jpg"
+        },
+        {
+          "img": "https://cdn.tgdd.vn/Products/Images/42/299033/Slider/iphone-15-pro-thumbyt-1020x570.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4YjkNCkTpbuSrgDrbFGUm3.jpg"
+        },
+        {
+          "img": "https://cdn.xtmobile.vn/vnt_upload/product/03_2024/thiet-ke-iphone-15-plus-128gb-chinh-hang-xtmobile.jpg"
+        },
+        {
+          "img": "https://images.macrumors.com/article-new/2023/09/iphone-15-pro-gray.jpg"
+        }
       ]
     },
     {
       "id": "3",
       "name": "Tablet Z3",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://p2-ofp.static.pub/fes/cms/2021/10/28/juqs65pgl1gh3dysi7yv1tnvtsiqva364946.png",
       "price": 500,
       "color": "White",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 10.1,
-      "processor": "Apple A12 Bionic",
-      "GPU": "Apple GPU",
-      "memory": 64,
-      "favorite": true,
+      "favorite": false,
       "rating": 4.2,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "6.1 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Octa-core"
+        },
+        {
+          "key": "RAM",
+          "value": "6 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "128 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "12 MP"
+        },
+        {
+          "key": "OS",
+          "value": "Android"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://cdn.nguyenkimmall.com/images/companies/_1/SEO/nen-mua-tablet-hay-phablet/tablet-samsung-voi-but-stylus.jpg"
+        },
+        {
+          "img": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/tablet-new/matepad-pro-series-card-1.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/3Y5PQVLsQTK6K5n2Q3mdWS-1200-80.jpg"
+        },
+        {
+          "img": "https://www.cnet.com/a/img/resize/79a3ed74327621f060c3084189abd1c9452048be/hub/2023/06/30/9f75026d-1f39-4551-b336-9af80b3a4782/onepad-plus-tablet-01.jpg?auto=webp&fit=crop&height=360&width=640"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "4",
       "name": "Smartwatch A1",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
       "price": 250,
       "color": "Rose Gold",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 1.5,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "1.5 inches"
+        },
+        {
+          "key": "Battery Life",
+          "value": "24 hours"
+        },
+        {
+          "key": "Water Resistance",
+          "value": "Yes"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth, Wi-Fi"
+        },
+        {
+          "key": "Sensors",
+          "value": "Heart Rate, GPS, Accelerometer"
+        },
+        {
+          "key": "Compatibility",
+          "value": "iOS, Android"
+        },
+        {
+          "key": "Storage",
+          "value": "4 GB"
+        }
+      ],
       "bestSeller": true,
       "rating": 4.8,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
-      ]
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/FkGweMeB7hdPgaSFQdgsfj.jpg"
+        },
+        {
+          "img": "https://www.zdnet.com/a/img/resize/2df5e25cd33c84aee2c949c502ace10103b0c96f/2023/09/12/aec7c4a0-a40f-43c3-8c22-ecaa9bd7759f/img-0980.jpg?auto=webp&fit=crop&height=360&width=640"
+        },
+        {
+          "img": "https://cdn11.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture/News/News_expe_5716/5716.png?version=151625"
+        },
+        {
+          "img": "https://www.beatxp.com/blog/wp-content/uploads/2023/06/smartwatch-features-1200x900.jpg"
+        },
+        {
+          "img": "https://media.centrepointstores.com/i/centrepoint/163490269-163490269-LS18280521_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-m-prt-pdp-2x$"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2023/10/smartwatches-2048px-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200"
+        }
+      ],
+      "favorite": true
     },
     {
       "id": "5",
       "name": "Headphones B2",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://resource.logitechg.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/products/g433/g433-gallery-red-1.png?v=1",
       "price": 150,
       "salePrice": 120,
       "discount": true,
@@ -635,45 +833,113 @@
       "color": "Blue",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Type",
+          "value": "Over-Ear"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "20 hours"
+        },
+        {
+          "key": "Noise Cancellation",
+          "value": "Yes"
+        },
+        {
+          "key": "Microphone",
+          "value": "Built-in"
+        }
+      ],
       "favorite": false,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0608/4988/1306/files/roar-301-headphone.png?v=1667291051"
+        },
+        {
+          "img": "https://m.media-amazon.com/images/I/71VR6c3j2bL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2023/07/bluetoothheadphones-2048px-0876.jpg"
+        },
+        {
+          "img": "https://media.wired.com/photos/5f52a44bb555bc55dbcdf5a8/master/pass/Gear-Wireless-Bluetooth-1226031847.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4hU7T5fQYWbnU5vxHZnAZE.jpg"
+        },
+        {
+          "img": "https://file.hstatic.net/1000026716/file/gearvn-cach-phan-biet-headphone-va-headset_5e4b37c234194dafa2f4cd1bc55a81c8_1024x1024.png"
+        }
       ]
     },
     {
       "id": "6",
       "name": "Camera C3",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
       "price": 1200,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 16,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://eavf3cou74b.exactdn.com/wp-content/uploads/2023/06/28103020/Best-Cameras-for-Professional-Photography-6.jpg?strip=all&lossy=1&ssl=1"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/GXHa4PWwDPx7tGQG9MDQvK-1200-80.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/Ekc54rx2YMgRt5ycD5KYf5.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4wpKrH93D37dDPTisdqGy4.jpg"
+        },
+        {
+          "img": "https://i1.adis.ws/i/canon/eos-r7-lifestyle_c604337a3b374a94a080d40b43f3a920?$70-30-header-4by3-dt-jpg$"
+        },
+        {
+          "img": "https://pro.sony/s3/2017/09/18134059/hdc5500_3q_190225_01-Large.jpg"
+        }
       ]
     },
     {
       "id": "7",
       "name": "Desktop D4",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
       "price": 1800,
       "salePrice": 1600,
       "discount": true,
@@ -681,131 +947,334 @@
       "color": "Silver",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 32,
+      "specifications": [
+        {
+          "key": "Processor",
+          "value": "Intel Core i9"
+        },
+        {
+          "key": "GPU",
+          "value": "NVIDIA GeForce RTX 3080"
+        },
+        {
+          "key": "Memory",
+          "value": "16 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "512 GB SSD"
+        },
+        {
+          "key": "Screen Size",
+          "value": "15.6 inches"
+        },
+        {
+          "key": "Battery Life",
+          "value": "10 hours"
+        },
+        {
+          "key": "OS",
+          "value": "Windows 10"
+        }
+      ],
       "bestSeller": true,
       "rating": 4.9,
       "favorite": true,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://m.media-amazon.com/images/I/71snht4ZY+L.jpg"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2023/05/desktopcomputer-2048px-8816-3x2-1.jpg?auto=webp&quality=75&crop=3:2&width=1024"
+        },
+        {
+          "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/desktop/prod-1007554-aio-desktop-inspiron-5430-optiplex-7420-plus-km5221w-800x620.png?fmt=png-alpha&wid=800&hei=620"
+        },
+        {
+          "img": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-All-in-One_1040x585?scl=1"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/eEiyqh39i5ytkCQZGbdWA-1200-80.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/eEiyqh39i5ytkCQZGbdWA-1200-80.jpg"
+        }
       ]
     },
     {
       "id": "8",
       "name": "Keyboard E5",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
       "price": 80,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Type",
+          "value": "Mechanical"
+        },
+        {
+          "key": "Switch Type",
+          "value": "Cherry MX Red"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wired"
+        },
+        {
+          "key": "Backlight",
+          "value": "RGB"
+        },
+        {
+          "key": "Key Rollover",
+          "value": "N-Key"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "9",
       "name": "Mouse F6",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://resource.logitech.com/content/dam/gaming/en/products/pro-wireless-gaming-mouse/pro-wireless-carbon-gallery-1.png",
       "price": 40,
       "color": "Red",
       "categoryId": "electronics",
-      "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Type",
+          "value": "Wireless"
+        },
+        {
+          "key": "DPI",
+          "value": "16000"
+        },
+        {
+          "key": "Buttons",
+          "value": "6"
+        },
+        {
+          "key": "Battery Life",
+          "value": "60 hours"
+        },
+        {
+          "key": "Connectivity",
+          "value": "USB"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://www.ubuy.vn/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzF5R3RhdUItQUwuX0FDX1NMMTUwMF8uanBn.jpg"
+        },
+        {
+          "img": "https://www.cherry.co.uk/media/catalog/product/cache/661c0bae3bb54b88fbb1b415a9d390cb/j/k/jk-8600-2_topview_gb_3.jpg"
+        },
+        {
+          "img": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-keyboard/pro-x-keyboard-gallery-1.png?v=1"
+        },
+        {
+          "img": "https://assetsio.gnwcdn.com/shadow-x.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+        },
+        {
+          "img": "https://keychronthailand.com/cdn/shop/files/Keychron-Q1-HE-QMK-Wireless-Custom-Keyboard-Shell-White.webp?v=1711528520&width=1406"
+        },
+        {
+          "img": "https://keychronthailand.com/cdn/shop/files/Keychron-Q1-HE-QMK-Wireless-Custom-Keyboard-Shell-White.webp?v=1711528520&width=1406"
+        }
       ]
     },
     {
       "id": "10",
       "name": "Monitor G7",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://hanoicomputercdn.com/media/product/56917_xl2546k__3_.png",
       "price": 300,
       "color": "Silver",
       "categoryId": "electronics",
       "brand": "Brand G",
-      "screenSize": 27,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "27 inches"
+        },
+        {
+          "key": "Resolution",
+          "value": "2560x1440"
+        },
+        {
+          "key": "Refresh Rate",
+          "value": "144 Hz"
+        },
+        {
+          "key": "Panel Type",
+          "value": "IPS"
+        },
+        {
+          "key": "Aspect Ratio",
+          "value": "16:9"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://images-cdn.ubuy.co.in/633b97101b40ac43d352aad2-eyoyo-10-inch-ips-lcd-monitor-1280x800.jpg"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2021/05/27-inch-monitor-2048px-1572.jpg"
+        },
+        {
+          "img": "https://images.samsung.com/is/image/samsung/p6pim/ph/ls22r350fhexxp/gallery/ph-sr35-ls22r350fhexxp-534660416?$650_519_PNG$"
+        },
+        {
+          "img": "https://m.media-amazon.com/images/I/71bdgzFk6OL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          "img": "https://www.lg.com/content/dam/channel/wcms/in/images/monitors/27mp400-b_atr_eail_in_c/gallery/27MP400-B-D-01.jpg"
+        },
+        {
+          "img": "https://m.media-amazon.com/images/I/612vM0pdKCL._AC_UF894,1000_QL80_.jpg"
+        }
       ]
     },
     {
       "id": "11",
       "name": "Printer H8",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://mediaserver.goepson.com/ImConvServlet/imconv/63d65bfb325dadd89dd438c9482febd02112c15d/1200Wx1200H?use=banner&hybrisId=B2C&assetDescr=L5590-%282%29",
       "price": 200,
       "color": "White",
       "categoryId": "electronics",
       "brand": "Brand H",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "1920x1080"
+        },
+        {
+          "key": "Brightness",
+          "value": "3000 lumens"
+        },
+        {
+          "key": "Contrast Ratio",
+          "value": "10000:1"
+        },
+        {
+          "key": "Throw Distance",
+          "value": "1.5m - 5m"
+        },
+        {
+          "key": "Lamp Life",
+          "value": "5000 hours"
+        },
+        {
+          "key": "Connectivity",
+          "value": "HDMI, USB, VGA"
+        },
+        {
+          "key": "Aspect Ratio",
+          "value": "16:9"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "12",
       "name": "Projector I9",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/61+CDKTXYgL._AC_SL1500_.jpg",
       "price": 1500,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand I",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "1920x1080"
+        },
+        {
+          "key": "Brightness",
+          "value": "3000 lumens"
+        },
+        {
+          "key": "Contrast Ratio",
+          "value": "10000:1"
+        },
+        {
+          "key": "Throw Distance",
+          "value": "1.5m - 5m"
+        },
+        {
+          "key": "Lamp Life",
+          "value": "5000 hours"
+        },
+        {
+          "key": "Connectivity",
+          "value": "HDMI, USB, VGA"
+        },
+        {
+          "key": "Aspect Ratio",
+          "value": "16:9"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "13",
       "name": "Speaker J10",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://images-cdn.ubuy.co.id/633af66c2ed4376854580abf-60w-portable-bluetooth-speaker-with.jpg",
       "price": 100,
       "salePrice": 90,
       "discount": true,
@@ -813,81 +1282,225 @@
       "color": "Grey",
       "categoryId": "electronics",
       "brand": "Brand J",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Type",
+          "value": "Condenser"
+        },
+        {
+          "key": "Connectivity",
+          "value": "USB"
+        },
+        {
+          "key": "Frequency Response",
+          "value": "20 Hz - 20 kHz"
+        },
+        {
+          "key": "Polar Pattern",
+          "value": "Cardioid"
+        },
+        {
+          "key": "Sensitivity",
+          "value": "-42 dB"
+        },
+        {
+          "key": "Bit Depth",
+          "value": "24-bit"
+        },
+        {
+          "key": "Sample Rate",
+          "value": "96 kHz"
+        }
+      ],
       "favorite": true,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "14",
       "name": "Router K11",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://www.dlink.co.id/wp-content/uploads/2020/06/DIR-2150.jpg",
       "price": 80,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand K",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "27 inches"
+        },
+        {
+          "key": "Resolution",
+          "value": "2560x1440"
+        },
+        {
+          "key": "Refresh Rate",
+          "value": "144 Hz"
+        },
+        {
+          "key": "Panel Type",
+          "value": "IPS"
+        },
+        {
+          "key": "Aspect Ratio",
+          "value": "16:9"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "15",
       "name": "External HDD L12",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
       "price": 120,
       "color": "Blue",
       "categoryId": "electronics",
       "brand": "Brand L",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Capacity",
+          "value": "1 TB"
+        },
+        {
+          "key": "Type",
+          "value": "SSD"
+        },
+        {
+          "key": "Interface",
+          "value": "USB 3.1"
+        },
+        {
+          "key": "Read Speed",
+          "value": "500 MB/s"
+        },
+        {
+          "key": "Write Speed",
+          "value": "450 MB/s"
+        },
+        {
+          "key": "Dimensions",
+          "value": "100 x 70 x 10 mm"
+        },
+        {
+          "key": "Weight",
+          "value": "150 g"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "16",
       "name": "Camera Lens M13",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
       "price": 400,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand M",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
@@ -898,67 +1511,181 @@
       "color": "White",
       "categoryId": "electronics",
       "brand": "Brand N",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "bestSeller": true,
       "rating": 5,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "18",
       "name": "Fitness Tracker O15",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
       "price": 80,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand O",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "19",
       "name": "Drone P16",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/71ASACudpfL._AC_SL1500_.jpg",
       "price": 1000,
       "color": "Silver",
       "categoryId": "electronics",
       "brand": "Brand P",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "20",
       "name": "Game Console Q17",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
       "price": 400,
       "salePrice": 350,
       "discount": true,
@@ -966,18 +1693,56 @@
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand Q",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "favorite": true,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     }
   ],
@@ -1051,7 +1816,11 @@
       "releaseDate": "2024-07-01",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/blog1.png",
-      "tags": ["electric", "phone", "music"],
+      "tags": [
+        "electric",
+        "phone",
+        "music"
+      ],
       "content": "As the world faces the challenges of climate change and dwindling fossil fuel reserves, green energy emerges as a beacon of hope. Renewable energy sources are becoming increasingly vital in our quest for a sustainable future.\n\n**2. Solar Power**\nSolar energy is one of the most abundant and accessible sources of green energy. Advances in solar panel technology and energy storage solutions have made it more efficient and affordable for both residential and commercial use.\n\n**3. Wind Energy**\nWind power is another key player in the green energy sector. With the development of larger and more efficient turbines, wind farms are generating substantial amounts of clean electricity, contributing significantly to the global energy mix.\n\n**4. Hydropower**\nHydropower, one of the oldest forms of renewable energy, continues to be a reliable and significant source of power. Innovations in small-scale hydro projects and pumped storage are enhancing its role in sustainable energy production.\n\n**5. Biomass Energy**\nBiomass energy, derived from organic materials, offers a versatile and renewable option for energy production. Advances in biofuel technology are making it a more viable alternative to traditional fossil fuels.\n\n**6. Geothermal Energy**\nGeothermal energy harnesses the Earth's internal heat to generate power. With new drilling techniques and improved technology, geothermal energy is becoming a more accessible and efficient renewable energy source.\n\n**7. Challenges and Solutions**\nDespite the progress, the transition to green energy faces challenges such as high initial costs, storage issues, and grid integration. However, ongoing research and development are paving the way for overcoming these obstacles, making renewable energy more practical and widespread.\n\n**8. The Role of Policy and Investment**\nGovernment policies and investments play a crucial role in promoting green energy. Incentives, subsidies, and international cooperation are essential for accelerating the adoption of renewable energy technologies and infrastructure.\n\n**Conclusion**\nThe shift towards green energy is not only essential for environmental sustainability but also for economic resilience and energy security. By embracing renewable energy sources, we can ensure a cleaner, greener future for generations to come."
     },
     {
@@ -1061,7 +1830,13 @@
       "releaseDate": "2024-07-02",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/blog2.png",
-      "tags": ["headphone", "phone", "music", "accesories", "hifi"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "hifi"
+      ],
       "content": "Electric vehicles (EVs) are transforming the automotive industry, offering a sustainable alternative to traditional gasoline-powered cars. With advancements in battery technology and a growing charging infrastructure, EVs are becoming more accessible and practical for everyday use.\n\n**2. Advantages of EVs**\nEVs produce zero emissions, reducing air pollution and dependence on fossil fuels. They also offer lower operating costs, as electricity is cheaper than gasoline and EVs require less maintenance.\n\n**3. Challenges in Adoption**\nDespite their benefits, EVs face challenges such as limited range, long charging times, and higher upfront costs. However, ongoing research and development are addressing these issues, making EVs more viable for a wider audience.\n\n**4. Government Incentives**\nMany governments are offering incentives to promote EV adoption, including tax credits, rebates, and investment in charging infrastructure. These measures are helping to accelerate the transition to electric transportation.\n\n**5. The Role of Automakers**\nAutomakers are investing heavily in EV technology, developing new models with longer ranges and faster charging capabilities. Collaborations with technology companies are also driving innovation in the EV market.\n\n**6. Future Trends**\nThe future of EVs looks promising, with trends such as autonomous driving, vehicle-to-grid technology, and wireless charging on the horizon. These advancements will further enhance the convenience and sustainability of electric transportation.\n\n**Conclusion**\nElectric vehicles are poised to play a crucial role in the future of transportation. By overcoming current challenges and embracing new technologies, EVs can lead the way to a cleaner, more sustainable future."
     },
     {
@@ -1071,7 +1846,13 @@
       "releaseDate": "2024-07-03",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/blog3.png",
-      "tags": ["headphone", "phone", "music", "accesories", "hifi"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "hifi"
+      ],
       "content": "Artificial Intelligence (AI) is revolutionizing healthcare by improving diagnostics, treatment planning, and patient care. AI algorithms can analyze vast amounts of data quickly and accurately, leading to more effective and personalized healthcare solutions.\n\n**2. AI in Diagnostics**\nAI-powered diagnostic tools can identify diseases and conditions from medical images with high accuracy. This technology is particularly useful in radiology, dermatology, and pathology, where early detection is critical.\n\n**3. Treatment Planning**\nAI can assist in creating personalized treatment plans based on a patient's medical history, genetic information, and current health status. This approach can lead to more effective treatments with fewer side effects.\n\n**4. Patient Care**\nAI-powered chatbots and virtual assistants can provide patients with instant access to medical information and support, improving patient engagement and satisfaction. These tools can also help healthcare providers manage patient inquiries and appointments more efficiently.\n\n**5. Challenges and Considerations**\nWhile AI offers significant benefits, it also raises ethical and privacy concerns. Ensuring the security of patient data and maintaining transparency in AI decision-making processes are critical for building trust in AI-powered healthcare solutions.\n\n**6. Future of AI in Healthcare**\nThe future of AI in healthcare looks promising, with ongoing advancements in machine learning, natural language processing, and robotics. These technologies will continue to enhance healthcare delivery, making it more efficient, accurate, and patient-centered.\n\n**Conclusion**\nAI is transforming healthcare by providing innovative solutions for diagnostics, treatment planning, and patient care. By addressing ethical and privacy concerns and embracing new technologies, AI can lead to a more effective and personalized healthcare system."
     },
     {
@@ -1081,7 +1862,13 @@
       "releaseDate": "2024-07-04",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/greenscreen.png",
-      "tags": ["headphone", "phone", "music", "accesories", "story"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "story"
+      ],
       "content": "Blockchain technology, best known for underpinning cryptocurrencies like Bitcoin, has far-reaching applications beyond digital currencies. Its decentralized, secure, and transparent nature makes it ideal for various industries, including finance, supply chain, and healthcare.\n\n**2. Financial Services**\nBlockchain can streamline financial transactions by eliminating intermediaries, reducing costs, and increasing transaction speed. It also enhances security and transparency, reducing the risk of fraud.\n\n**3. Supply Chain Management**\nBlockchain enables real-time tracking of goods and materials throughout the supply chain. This transparency helps prevent counterfeiting, ensures product authenticity, and improves efficiency in logistics.\n\n**4. Healthcare**\nBlockchain can securely store and share patient medical records, ensuring data integrity and privacy. It also facilitates seamless communication between healthcare providers, improving patient care and coordination.\n\n**5. Smart Contracts**\nSmart contracts are self-executing contracts with the terms directly written into code. They automatically enforce agreements when predefined conditions are met, reducing the need for intermediaries and increasing efficiency.\n\n**6. Challenges and Limitations**\nDespite its potential, blockchain faces challenges such as scalability, energy consumption, and regulatory uncertainty. Ongoing research and development are addressing these issues, making blockchain more viable for widespread adoption.\n\n**Future of Blockchain**\nThe future of blockchain technology is promising, with potential applications in voting systems, intellectual property, and the Internet of Things (IoT). As the technology matures, it will continue to revolutionize various industries, offering new opportunities for innovation and efficiency.\n\n**Conclusion**\nBlockchain technology has the potential to transform multiple industries by providing secure, transparent, and efficient solutions. By addressing current challenges and exploring new applications, blockchain can lead to a more decentralized and trustworthy digital world."
     },
     {
@@ -1091,7 +1878,13 @@
       "releaseDate": "2024-07-05",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/ip14.png",
-      "tags": ["headphone", "phone", "music", "accesories", "hifi"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "hifi"
+      ],
       "content": "The rollout of 5G technology is set to revolutionize communication, offering faster speeds, lower latency, and greater connectivity. This next-generation wireless technology will impact various industries, including telecommunications, healthcare, and manufacturing.\n\n**2. Enhanced Mobile Connectivity**\n5G provides significantly faster download and upload speeds compared to previous generations, enabling seamless streaming, gaming, and real-time communication. This enhanced connectivity will improve user experiences and drive innovation in mobile applications.\n\n**3. Internet of Things (IoT)**\n5G will enable the widespread adoption of IoT devices by providing the necessary bandwidth and low latency for real-time data exchange. This connectivity will support smart cities, autonomous vehicles, and industrial automation, leading to increased efficiency and innovation.\n\n**4. Healthcare Applications**\n5G will transform healthcare by enabling remote monitoring, telemedicine, and robotic surgeries. High-speed, low-latency connections will allow for real-time data transmission and communication, improving patient outcomes and access to care.\n\n**5. Manufacturing and Industry 4.0**\n5G will drive the next industrial revolution by supporting advanced manufacturing technologies such as robotics, AI, and IoT. This connectivity will enable real-time monitoring, predictive maintenance, and efficient resource management, increasing productivity and reducing costs.\n\n**6. Challenges and Considerations**\nThe deployment of 5G faces challenges such as high infrastructure costs, spectrum allocation, and security concerns. Addressing these challenges will require collaboration between governments, telecom companies, and technology providers.\n\n**Future of 5G**\nThe future of 5G technology is promising, with potential applications in augmented reality (AR), virtual reality (VR), and immersive experiences. As 5G networks expand, they will continue to drive innovation and transform various industries.\n\n**Conclusion**\n5G technology is poised to revolutionize communication and connectivity across multiple industries. By overcoming current challenges and embracing new applications, 5G can lead to a more connected, efficient, and innovative future."
     },
     {
@@ -1101,7 +1894,13 @@
       "releaseDate": "2024-07-06",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/blog1.png",
-      "tags": ["headphone", "phone", "music", "accesories", "hifi"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "hifi"
+      ],
       "content": "Artificial Intelligence (AI) has evolved significantly since its inception, transforming from a theoretical concept to a practical tool with wide-ranging applications. This evolution has been driven by advances in machine learning, data processing, and computational power.\n\n**2. Early Development**\nThe early development of AI focused on creating systems that could mimic human intelligence, such as early neural networks and expert systems. These foundational concepts laid the groundwork for modern AI technologies.\n\n**3. Machine Learning**\nMachine learning, a subset of AI, has been a key driver of AI's evolution. By enabling systems to learn from data and improve over time, machine learning has led to significant advancements in natural language processing, computer vision, and predictive analytics.\n\n**4. Deep Learning**\nDeep learning, a more advanced form of machine learning, uses neural networks with multiple layers to process complex data. This technology has revolutionized fields such as image recognition, speech synthesis, and autonomous driving.\n\n**5. AI in Everyday Life**\nAI is now integrated into many aspects of our daily lives, from virtual assistants like Siri and Alexa to recommendation algorithms on streaming services and social media platforms. These applications enhance convenience, personalization, and efficiency.\n\n**6. Ethical Considerations**\nAs AI continues to evolve, it raises important ethical questions about privacy, bias, and accountability. Ensuring that AI systems are developed and deployed responsibly is critical for maintaining public trust and maximizing the benefits of AI technology.\n\n**Future of AI**\nThe future of AI holds exciting possibilities, including advancements in quantum computing, AI-driven healthcare solutions, and more sophisticated autonomous systems. Continued research and innovation will drive the next wave of AI evolution, shaping the future of technology and society.\n\n**Conclusion**\nThe evolution of AI has transformed it from a theoretical concept to a practical tool with wide-ranging applications. By addressing ethical considerations and embracing new advancements, AI can continue to enhance our lives and drive innovation across various industries."
     }
   ],

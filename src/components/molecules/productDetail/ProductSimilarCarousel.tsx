@@ -22,7 +22,8 @@ const ProductSimilarCarousel = ({ brand }: Props) => {
 
   return (
     <div>
-      <CarouselWithButton slideToShow={5} arrows slideButton>
+      <div className="font-medium text-xl mb-8">Similar Product</div>
+      <CarouselWithButton slideToShow={4}>
         {similarProd?.map((product) => {
           return (
             <ProductCard

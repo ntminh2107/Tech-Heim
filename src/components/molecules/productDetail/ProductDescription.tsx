@@ -6,25 +6,7 @@ type Props = {
 };
 
 const ProductDescription = ({ product }: Props) => {
-  const displayKeys: (keyof Product)[] = [
-    "brand",
-    "screenSize",
-    "processor",
-    "GPU",
-    "memory",
-    "categoryId",
-    "color",
-    "description",
-    "name",
-  ];
-
   const [showMore, setShowMore] = useState(false);
-  const renderValue = (value: any) => {
-    if (Array.isArray(value)) {
-      return value.join(", ");
-    }
-    return value;
-  };
 
   const handleShowMore = () => {
     setShowMore(!showMore);
@@ -34,11 +16,11 @@ const ProductDescription = ({ product }: Props) => {
       <div className="font-medium text-xl">Technical Details</div>
       <table className="w-full text-left border-collapse">
         <tbody>
-          {displayKeys
-            .slice(0, showMore ? displayKeys.length : 6)
-            .map((key, index) => (
+          {product?.specifications
+            .slice(0, showMore ? product?.specifications.length : 6)
+            .map((spec, index) => (
               <tr
-                key={key}
+                key={spec.key}
                 className={
                   index % 2 === 0
                     ? "bg-gray-100 rounded-md"
@@ -46,10 +28,10 @@ const ProductDescription = ({ product }: Props) => {
                 }
               >
                 <th className="py-2 px-4 text-gray-500 capitalize border border-gray-200 w-1/2">
-                  {key}
+                  {spec.key}
                 </th>
                 <td className="py-2 px-4 border border-gray-200 w-1/2">
-                  {renderValue(product?.[key])}
+                  {spec.value}
                 </td>
               </tr>
             ))}

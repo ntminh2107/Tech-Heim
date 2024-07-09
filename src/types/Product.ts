@@ -26,6 +26,7 @@ export type Product = {
   GPU: string;
   memory: number;
   bestSeller?: boolean;
+  specifications: { key: string; value: string }[];
   imagePreview: ImagePreview[];
 };
 
