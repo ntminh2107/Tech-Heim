@@ -439,8 +439,8 @@ export const productSlice = createAppSlice({
       }
     ),
     getSimilarProductThunk: create.asyncThunk(
-      async (brand: string) => {
-        const data = await getSimilarProductAPI(brand);
+      async (product: Product) => {
+        const data = await getSimilarProductAPI(product.brand);
         return data;
       },
       {

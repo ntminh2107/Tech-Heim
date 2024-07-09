@@ -6,21 +6,7 @@ type Props = {
 };
 
 const ProductInfoCard = ({ product }: Props) => {
-  const displayKey: (keyof Product)[] = [
-    "brand",
-    "screenSize",
-    "processor",
-    "GPU",
-    "memory",
-  ];
   const [showMore, setShowMore] = useState(false);
-
-  const renderValue = (value: any) => {
-    if (Array.isArray(value)) {
-      return value.join(", ");
-    }
-    return value;
-  };
 
   const handleShowMore = () => {
     setShowMore(!showMore);
@@ -64,16 +50,16 @@ const ProductInfoCard = ({ product }: Props) => {
 
         <div className="flex flex-col">
           <table className="table-auto mx-2">
-            {displayKey
-              .slice(0, showMore ? displayKey.length : 3)
-              .map((key) => (
+            {product?.specifications
+              .slice(0, showMore ? product.specifications.length : 3)
+              .map((spec) => (
                 <tr>
                   <td className="font-medium text-sm text-gray-717171">•</td>
                   <td className="font-medium text-sm text-gray-717171 content-center w-1/2">
-                    {key}
+                    {spec.key}
                   </td>
                   <th className="font-medium text-sm text-left w-1/2">
-                    {renderValue(product?.[key])}
+                    {spec.value}
                   </th>
                 </tr>
               ))}
