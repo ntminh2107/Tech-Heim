@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Pagination } from "antd";
 
 import { Blog } from "../../../types/Blog";
-import BlogCard from "../../atoms/cards/BlogCard";
+import BlogCard from "../../atoms/cards/blog/BlogCard";
 
 type Props = {
   recentBlogList: Blog[];

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../redux/store";
 import { getSimilarProductThunk } from "../../../redux/slice/productSlice";
 import CarouselWithButton from "../../atoms/carousel/CarouselWithButton";
-import ProductCard from "../../atoms/cards/ProductCard";
+import ProductCard from "../../atoms/cards/product/ProductCard";
 import { Product } from "../../../types/Product";
 
 type Props = {

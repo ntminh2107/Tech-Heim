@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addCartItemThunk } from "../../../redux/slice/productSlice";
-import { AppDispatch } from "../../../redux/store";
+import { addCartItemThunk } from "../../../../redux/slice/productSlice";
+import { AppDispatch } from "../../../../redux/store";
 
-import HeartTag from "../Tag/HeartTag";
+import HeartTag from "../../Tag/HeartTag";
 import ProductCardFooter from "./ProductCardFooter";
 
 type Props = {

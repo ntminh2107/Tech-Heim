@@ -7,7 +7,7 @@ import { AppDispatch, RootState } from "../../../redux/store";
 import { getCartItemThunk } from "../../../redux/slice/productSlice";
 
 import { formatNumber } from "../../../utils/formatNumber";
-import CardCart from "../cards/CardCart";
+import CardCart from "../cards/cart/CardCart";
 
 const CartDropdown = () => {
   const dispatch = useDispatch<AppDispatch>();
