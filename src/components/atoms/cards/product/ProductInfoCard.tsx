@@ -12,7 +12,7 @@ const ProductInfoCard = ({ product }: Props) => {
     setShowMore(!showMore);
   };
   return (
-    <div className="flex flex-col gap-8 w-full">
+    <div className="flex flex-col gap-8 w-full" key={product?.id}>
       <div className="flex flex-col gap-6">
         <div className="font-medium text-xl">{product?.name}</div>
         <div className="flex flex-row gap-2">

@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { getDetailProductThunk } from "../../redux/slice/productSlice";
 import ProductTab from "../../components/molecules/productDetail/ProductTab";
 import ImagePreview from "../../components/atoms/image/ImagePreview";
+import product from "../product";
 
 const DetailProduct = () => {
   const { id } = useParams<{ id?: string }>() ?? {};
@@ -36,7 +37,7 @@ const DetailProduct = () => {
               imagePreview={detailProduct?.imagePreview || null}
             />
           </div>
-          <ProductInfoCard product={detailProduct} />
+          <ProductInfoCard product={detailProduct} key={detailProduct?.id} />
         </div>
         <PayCard
           percent={detailProduct?.percent}

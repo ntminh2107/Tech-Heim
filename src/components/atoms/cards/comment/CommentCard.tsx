@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Comment } from "../../../../types/Comment";
 import CommentFooter from "./CommentFooter";
-import { Button } from "antd";
 
 type Props = {
   comment: Comment;
@@ -17,6 +16,7 @@ const CommentCard: React.FC<Props> = ({ comment }) => {
   return (
     <div className="rounded-lg bg-gray-F9F9F9 p-3 border-inherit  flex flex-col gap-3">
       <CommentFooter
+        key={comment.id}
         user={comment.user}
         userImage={comment.userImage}
         rating={comment.rating}

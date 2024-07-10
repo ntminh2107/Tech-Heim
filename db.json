@@ -599,6 +599,28 @@
           "date": "2024-07-11",
           "rating": 4.8
         }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -664,6 +686,53 @@
         {
           "img": "https://images.macrumors.com/article-new/2023/09/iphone-15-pro-gray.jpg"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -728,6 +797,53 @@
         {
           "img": "https://cdn.thewirecutter.com/wp-content/media/2023/09/smartphone-2048px-0778-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -738,7 +854,7 @@
       "color": "White",
       "categoryId": "electronics",
       "brand": "Apple",
-      "favorite": false,
+      "favorite": true,
       "rating": 4.2,
       "specifications": [
         {
@@ -788,6 +904,53 @@
         },
         {
           "img": "/assets/images/product/product6.png"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -851,7 +1014,54 @@
           "img": "https://cdn.thewirecutter.com/wp-content/media/2023/10/smartwatches-2048px-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200"
         }
       ],
-      "favorite": true
+      "favorite": true,
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
+      ]
     },
     {
       "id": "5",
@@ -905,6 +1115,53 @@
         },
         {
           "img": "https://file.hstatic.net/1000026716/file/gearvn-cach-phan-biet-headphone-va-headset_5e4b37c234194dafa2f4cd1bc55a81c8_1024x1024.png"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -964,6 +1221,53 @@
         },
         {
           "img": "https://pro.sony/s3/2017/09/18134059/hdc5500_3q_190225_01-Large.jpg"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -1030,6 +1334,53 @@
         {
           "img": "https://cdn.mos.cms.futurecdn.net/eEiyqh39i5ytkCQZGbdWA-1200-80.jpg"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -1081,6 +1432,53 @@
         {
           "img": "/assets/images/product/product6.png"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -1130,6 +1528,53 @@
         },
         {
           "img": "https://keychronthailand.com/cdn/shop/files/Keychron-Q1-HE-QMK-Wireless-Custom-Keyboard-Shell-White.webp?v=1711528520&width=1406"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -1181,6 +1626,53 @@
         },
         {
           "img": "https://m.media-amazon.com/images/I/612vM0pdKCL._AC_UF894,1000_QL80_.jpg"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -1241,6 +1733,53 @@
         {
           "img": "/assets/images/product/product6.png"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -1299,6 +1838,53 @@
         },
         {
           "img": "/assets/images/product/product6.png"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -1363,6 +1949,53 @@
         {
           "img": "/assets/images/product/product6.png"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -1413,6 +2046,53 @@
         },
         {
           "img": "/assets/images/product/product6.png"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -1473,6 +2153,53 @@
         {
           "img": "/assets/images/product/product6.png"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -1531,6 +2258,53 @@
         },
         {
           "img": "/assets/images/product/product6.png"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -1593,6 +2367,53 @@
         {
           "img": "/assets/images/product/product6.png"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -1652,6 +2473,53 @@
         {
           "img": "/assets/images/product/product6.png"
         }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -1710,6 +2578,53 @@
         },
         {
           "img": "/assets/images/product/product6.png"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     },
@@ -1773,6 +2688,53 @@
         },
         {
           "img": "/assets/images/product/product6.png"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
+      ],
+      "ratingFunction": [
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
         }
       ]
     }

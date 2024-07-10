@@ -10,7 +10,7 @@ const ListComment = ({ comments }: Props) => {
     <div className="flex flex-col gap-8">
       <div className="font-medium text-xl">Comments</div>
       {comments?.map((cmt) => (
-        <CommentCard comment={cmt} />
+        <CommentCard key={cmt.id} comment={cmt} />
       ))}
     </div>
   );

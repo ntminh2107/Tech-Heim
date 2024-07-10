@@ -27,7 +27,7 @@ const CommentFooter = ({ user, userImage, date, rating }: Props) => {
           <div className="font-medium text-xl mb-1">{user}</div>
           <div className="font-medium text-xs text-gray-9E9E9E">{date}</div>
         </div>
-        <div>
+        <div className="content-center">
           {rating && (
             <div className="bg-primary-500 rounded-lg text-white p-1 flex flex-row justify-center w-fit ">
               <img

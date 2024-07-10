@@ -7,4 +7,5 @@ export type Comment = {
   like?: number;
   unlike?: number;
   date: string;
+  ratingFunction?: { key: string; value: number }[];
 };
