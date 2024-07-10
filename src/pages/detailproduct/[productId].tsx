@@ -1,13 +1,12 @@
 import { useParams } from "react-router-dom";
-import PayCard from "../../components/atoms/cards/product/PayCard";
-import ProductInfoCard from "../../components/atoms/cards/product/ProductInfoCard";
+import PayCard from "../../components/atoms/cards/productdetails/PayCard";
+import ProductInfoCard from "../../components/atoms/cards/productdetails/ProductInfoCard";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { useEffect } from "react";
 import { getDetailProductThunk } from "../../redux/slice/productSlice";
 import ProductTab from "../../components/molecules/productDetail/ProductTab";
 import ImagePreview from "../../components/atoms/image/ImagePreview";
-import product from "../product";
 
 const DetailProduct = () => {
   const { id } = useParams<{ id?: string }>() ?? {};

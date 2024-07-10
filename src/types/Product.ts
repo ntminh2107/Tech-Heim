@@ -31,6 +31,7 @@ export type Product = {
   specifications: { key: string; value: string }[];
   imagePreview: ImagePreview[];
   comment?: Comment[];
+  ratingFunction: { key: string; value: number }[];
 };
 
 export type ProductInCart = {

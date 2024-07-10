@@ -601,26 +601,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Battery Life", "value": 4.8 },
+        { "key": "Performance", "value": 4.7 },
+        { "key": "Display Quality", "value": 4.9 },
+        { "key": "Portability", "value": 4.6 }
       ]
     },
     {
@@ -826,23 +810,23 @@
       "ratingFunction": [
         {
           "key": "Battery charge",
-          "value": 4.8
+          "value": 2.3
         },
         {
           "key": "Monitor",
-          "value": 4.9
+          "value": 3.5
         },
         {
           "key": "Lightness",
-          "value": 4.3
+          "value": 4.2
         },
         {
           "key": "Build Quality",
-          "value": 4.7
+          "value": 3.5
         },
         {
           "key": "Value for Money",
-          "value": 4.6
+          "value": 1.6
         }
       ]
     },
@@ -934,23 +918,23 @@
       "ratingFunction": [
         {
           "key": "Battery charge",
-          "value": 4.8
+          "value": 3.1
         },
         {
           "key": "Monitor",
-          "value": 4.9
+          "value": 2.4
         },
         {
           "key": "Lightness",
-          "value": 4.3
+          "value": 2.4
         },
         {
           "key": "Build Quality",
-          "value": 4.7
+          "value": 1.2
         },
         {
           "key": "Value for Money",
-          "value": 4.6
+          "value": 3
         }
       ]
     },
@@ -1143,26 +1127,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Sound Quality", "value": 4.9 },
+        { "key": "Comfort", "value": 4.8 },
+        { "key": "Noise Cancellation", "value": 4.7 },
+        { "key": "Build Quality", "value": 4.5 }
       ]
     },
     {
@@ -1249,26 +1217,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Image Quality", "value": 4.9 },
+        { "key": "Autofocus", "value": 4.7 },
+        { "key": "Battery Life", "value": 4.6 },
+        { "key": "Ease of Use", "value": 4.8 }
       ]
     },
     {
@@ -1361,26 +1313,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Battery Life", "value": 4.8 },
+        { "key": "Performance", "value": 4.7 },
+        { "key": "Display Quality", "value": 4.9 },
+        { "key": "Portability", "value": 4.6 }
       ]
     },
     {
@@ -1459,26 +1395,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Typing Comfort", "value": 4.7 },
+        { "key": "Build Quality", "value": 4.5 },
+        { "key": "Key Feedback", "value": 4.6 },
+        { "key": "Backlighting", "value": 4.4 }
       ]
     },
     {
@@ -1654,26 +1574,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Typing Comfort", "value": 4.7 },
+        { "key": "Build Quality", "value": 4.5 },
+        { "key": "Key Feedback", "value": 4.6 },
+        { "key": "Backlighting", "value": 4.4 }
       ]
     },
     {
@@ -1760,26 +1664,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Image Quality", "value": 4.9 },
+        { "key": "Autofocus Speed", "value": 4.7 },
+        { "key": "Build Quality", "value": 4.6 },
+        { "key": "Value for Money", "value": 4.5 }
       ]
     },
     {
@@ -1866,26 +1754,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Brightness", "value": 4.7 },
+        { "key": "Picture Quality", "value": 4.8 },
+        { "key": "Ease of Setup", "value": 4.6 },
+        { "key": "Portability", "value": 4.5 }
       ]
     },
     {
@@ -1976,26 +1848,10 @@
         }
       ],
       "ratingFunction": [
-        {
-          "key": "Battery charge",
-          "value": 4.8
-        },
-        {
-          "key": "Monitor",
-          "value": 4.9
-        },
-        {
-          "key": "Lightness",
-          "value": 4.3
-        },
-        {
-          "key": "Build Quality",
-          "value": 4.7
-        },
-        {
-          "key": "Value for Money",
-          "value": 4.6
-        }
+        { "key": "Sound Quality", "value": 4.8 },
+        { "key": "Build Quality", "value": 4.7 },
+        { "key": "Bass Response", "value": 4.6 },
+        { "key": "Portability", "value": 4.5 }
       ]
     },
     {
