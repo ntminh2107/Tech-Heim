@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import PayCard from "../../components/atoms/cards/product/PayCard";
-import ProductInfoCard from "../../components/atoms/cards/product/ProductInfoCard";
+import PayCard from "../../components/atoms/cards/productdetails/PayCard";
+import ProductInfoCard from "../../components/atoms/cards/productdetails/ProductInfoCard";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { useEffect } from "react";
@@ -36,7 +36,7 @@ const DetailProduct = () => {
               imagePreview={detailProduct?.imagePreview || null}
             />
           </div>
-          <ProductInfoCard product={detailProduct} />
+          <ProductInfoCard product={detailProduct} key={detailProduct?.id} />
         </div>
         <PayCard
           percent={detailProduct?.percent}

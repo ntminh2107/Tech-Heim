@@ -1,4 +1,4 @@
-import { Commment } from "./Comment";
+import { Comment } from "./Comment";
 
 export type ProductCategory = {
   id: string;
@@ -30,7 +30,8 @@ export type Product = {
   bestSeller?: boolean;
   specifications: { key: string; value: string }[];
   imagePreview: ImagePreview[];
-  comment?: Commment[];
+  comment?: Comment[];
+  ratingFunction: { key: string; value: number }[];
 };
 
 export type ProductInCart = {
