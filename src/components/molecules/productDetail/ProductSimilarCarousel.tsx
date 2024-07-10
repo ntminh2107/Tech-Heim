@@ -3,26 +3,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../redux/store";
 import { getSimilarProductThunk } from "../../../redux/slice/productSlice";
 import CarouselWithButton from "../../atoms/carousel/CarouselWithButton";
-import ProductCard from "../../atoms/cards/ProductCard";
+import ProductCard from "../../atoms/cards/product/ProductCard";
+import { Product } from "../../../types/Product";
 
 type Props = {
-  brand?: string;
+  product?: Product | null;
 };
 
-const ProductSimilarCarousel = ({ brand }: Props) => {
+const ProductSimilarCarousel = ({ product }: Props) => {
   const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
-    if (brand) {
-      dispatch(getSimilarProductThunk(brand));
-    }
-  }, [dispatch, brand]);
+    if (product) dispatch(getSimilarProductThunk(product));
+  }, [dispatch, product]);
   const similarProd = useSelector(
     (state: RootState) => state.product.similarProduct
   );
 
   return (
     <div>
-      <CarouselWithButton slideToShow={5} arrows slideButton>
+      <div className="font-medium text-xl mb-8">Similar Product</div>
+      <CarouselWithButton slideToShow={4}>
         {similarProd?.map((product) => {
           return (
             <ProductCard

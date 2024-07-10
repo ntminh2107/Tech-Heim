@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addCartItemThunk } from "../../../redux/slice/productSlice";
-import { AppDispatch } from "../../../redux/store";
+import { addCartItemThunk } from "../../../../redux/slice/productSlice";
+import { AppDispatch } from "../../../../redux/store";
 
-import HeartTag from "../Tag/HeartTag";
+import HeartTag from "../../Tag/HeartTag";
 import ProductCardFooter from "./ProductCardFooter";
 
 type Props = {
@@ -30,10 +30,11 @@ const ProductCard = ({
   salePrice,
 }: Props) => {
   const nav = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
+
   const handleClick = () => {
     nav(`/products/${id}`);
   };
-  const dispatch = useDispatch<AppDispatch>();
 
   const handleAddToCart = () => {
     dispatch(
@@ -42,7 +43,7 @@ const ProductCard = ({
   };
 
   return (
-    <div className="relative rounded-md bg-white w-72 h-auto flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer">
+    <div className="relative rounded-md bg-white w-72 h-[347px] flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4">
       {percent && (
         <p className="absolute top-2 left-0 py-1 px-[6px] text-secondary-400 bg-secondary-100 rounded-tr-xl rounded-br-xl group-hover:hidden">
           {percent}%
@@ -62,7 +63,7 @@ const ProductCard = ({
       {/* gradient */}
       <div className="gradient-black mx-2 group-hover:gradient"></div>
       {/* title */}
-      <div className="pb-2 px-2">
+      <div className="flex-1 flex flex-col justify-between pb-2 px-2">
         <h5 className="pb-2 line-clamp-2 group-hover:text-primary">{name}</h5>
         <ProductCardFooter
           price={price}

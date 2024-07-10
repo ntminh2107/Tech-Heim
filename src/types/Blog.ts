@@ -1,3 +1,5 @@
+import { Commment } from "./Comment";
+
 export type Blog = {
   id: string;
   title: string;
@@ -7,6 +9,7 @@ export type Blog = {
   releaseDate: string;
   content: string;
   image: string;
+  comment?: Commment[];
 };
 
 export type VideoBlog = {

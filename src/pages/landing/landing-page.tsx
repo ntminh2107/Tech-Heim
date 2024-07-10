@@ -10,7 +10,7 @@ import ListProduct from "../../components/molecules/product/ListProduct";
 import HomeSection from "../../components/organisms/section";
 
 import { RootState } from "../../redux/store";
-import BlogCard from "../../components/atoms/cards/BlogCard";
+import BlogCard from "../../components/atoms/cards/blog/BlogCard";
 
 const LandingPage = () => {
   const { newProducts, bestSellers, brandList } = useSelector(

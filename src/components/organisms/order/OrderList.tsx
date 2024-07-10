@@ -1,6 +1,6 @@
 import { Button, Input } from "antd";
 import { ProductInCart } from "../../../types/Product";
-import OrderCard from "../../atoms/cards/OrderCard";
+import OrderCard from "../../atoms/cards/cart/OrderCard";
 
 type Props = {
   cartItems: ProductInCart[];

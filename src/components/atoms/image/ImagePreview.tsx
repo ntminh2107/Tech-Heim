@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ImagePreview } from "../../../types/Product";
 
 type ImagePreviewProps = {
@@ -16,14 +16,20 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
 }) => {
   const [selectedImage, setSelectedImage] = useState(imageUrl);
 
+  useEffect(() => {
+    if (imagePreview && imagePreview.length > 0) {
+      setSelectedImage(imagePreview[0].img);
+    }
+  }, [imagePreview]);
+
   const handleChangeImg = (img: string) => {
     setSelectedImage(img);
   };
   return (
-    <div className="flex flex-col ">
-      <div className={`w-[${width}] h-[${height}] `}>
+    <div className="flex flex-col gap-6">
+      <div className={`w-[${width}] h-[${height}] bg-white`}>
         <img
-          className="w-full h-full object-cover"
+          className="h-full w-full object-contain"
           src={selectedImage}
           alt=""
         />
@@ -33,7 +39,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
           {imagePreview?.slice(0, 5).map((item) => (
             <img
               src={item?.img || ""}
-              className="max-w-20 max-h-[4.438rem] cursor-pointer object-cover"
+              className="w-20 max-h-[4.438rem] cursor-pointer object-cover"
               onClick={() => handleChangeImg(item?.img)}
             />
           ))}

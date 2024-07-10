@@ -1,5 +1,5 @@
 import { VideoBlog } from "../../../types/Blog";
-import VideoCard from "../../atoms/cards/VideoCard";
+import VideoCard from "../../atoms/cards/blog/VideoCard";
 
 type Props = {
   videoBlogList: VideoBlog[];

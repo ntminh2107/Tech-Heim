@@ -2,7 +2,7 @@ import { Button } from "antd";
 import {
   formatNumber,
   formatNumberFixOneDigit,
-} from "../../../utils/formatNumber";
+} from "../../../../utils/formatNumber";
 
 type Props = {
   price: number;

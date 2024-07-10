@@ -1,5 +1,5 @@
-import { formatNumber } from "../../../utils/formatNumber";
-import HeartTag from "../Tag/HeartTag";
+import { formatNumber } from "../../../../utils/formatNumber";
+import HeartTag from "../../Tag/HeartTag";
 
 type Props = {
   id: string;

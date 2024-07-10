@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import PayCard from "../../components/atoms/cards/PayCard";
-import ProductInfoCard from "../../components/atoms/cards/ProductInfoCard";
+import PayCard from "../../components/atoms/cards/product/PayCard";
+import ProductInfoCard from "../../components/atoms/cards/product/ProductInfoCard";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { useEffect } from "react";
@@ -15,6 +15,7 @@ const DetailProduct = () => {
   useEffect(() => {
     if (id) {
       dispatch(getDetailProductThunk(id));
+      window.scrollTo(0, 0);
     }
   }, [dispatch, id]);
 
@@ -42,7 +43,6 @@ const DetailProduct = () => {
           price={detailProduct?.price}
         />
       </div>
-
       <ProductTab />
     </div>
   );

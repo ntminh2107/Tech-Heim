@@ -1,5 +1,5 @@
-import { formatNumber } from "../../../utils/formatNumber";
-import { cn } from "../../../utils/utils";
+import { formatNumber } from "../../../../utils/formatNumber";
+import { cn } from "../../../../utils/utils";
 
 type Props = {
   name: string;

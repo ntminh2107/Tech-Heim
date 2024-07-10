@@ -463,6 +463,12 @@
       "username": "datnt",
       "name": "datnt12",
       "password": 123456
+    },
+    {
+      "id": "8f95fddd-b883-46b5-b6f2-c6b7a875166d",
+      "email": "vinxen2019@gmail.com",
+      "fullName": "nguyen tuan minh",
+      "password": "Minhmeo389"
     }
   ],
   "cart": [
@@ -497,137 +503,360 @@
       "quantity": 0,
       "price": 23.26,
       "image": "/assets/images/cart/macbook.png"
+    },
+    {
+      "id": "517ef475-a9b5-42ac-accc-42fdac2f8d07",
+      "quantity": 1,
+      "productId": "4",
+      "color": "Rose Gold",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
+      "name": "Smartwatch A1",
+      "price": 250
     }
   ],
   "product": [
     {
       "id": "1",
       "name": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
-      "image": "/assets/images/product/product3.png",
+      "image": "https://shopdunk.com/images/thumbs/0000723_macbook-air-m1-2020-8gb-ram-256gb-ssd.png",
       "price": 1200,
       "color": "Silver",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 15.6,
-      "processor": "Intel Core i7",
-      "GPU": "NVIDIA GeForce GTX 1660 Ti",
-      "memory": 16,
       "rating": 4.5,
       "favorite": false,
+      "specifications": [
+        {
+          "key": "Processor",
+          "value": "Intel Core i9"
+        },
+        {
+          "key": "GPU",
+          "value": "NVIDIA GeForce RTX 3080"
+        },
+        {
+          "key": "Memory",
+          "value": "16 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "512 GB SSD"
+        },
+        {
+          "key": "Screen Size",
+          "value": "15.6 inches"
+        },
+        {
+          "key": "Battery Life",
+          "value": "10 hours"
+        },
+        {
+          "key": "OS",
+          "value": "Windows 10"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://shopdunk.com/images/thumbs/0000723_macbook-air-m1-2020-8gb-ram-256gb-ssd.png"
+        },
+        {
+          "img": "https://vcdn1-sohoa.vnecdn.net/2023/07/06/DSCF3483-1686014164-7221-1688583032.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=haHqKX-5yf1qzlKyIyLukQ"
+        },
+        {
+          "img": "https://bizweb.dktcdn.net/100/444/581/products/apple-macbook-pro-14-16-inch-jpeg-c34427d4-d86f-4581-9c17-0db0e942dd1f.jpg?v=1675737472833"
+        },
+        {
+          "img": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/refurb-mbp13touchbar-performance-space-gallery-2020?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1591921674000"
+        },
+        {
+          "img": "https://imageio.forbes.com/specials-images/imageserve/5fd00ea644cd62376ce2b6c1/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds"
+        },
+        {
+          "img": "https://helios-i.mashable.com/imagery/reviews/03y8gbj1mqCuexgXxFJ5vyX/hero-image.fill.size_1248x702.v1623391330.jpg"
+        }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "minhNT",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://www.wilsoncenter.org/sites/default/files/media/images/person/james-person-1.jpg"
+        },
+        {
+          "id": "2",
+          "user": "HaVietAnh",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://www.psychologs.com/wp-content/uploads/2024/01/8-tips-to-be-a-jolly-person.jpg"
+        },
+        {
+          "id": "3",
+          "user": "HieuBM",
+          "content": "This macbook air at first feels just so big to me using it for school, and after a while, it felt as a perfect size. I look at it sometimes and realize how portable and small it is, but IT FEELS AS BIG AS LIKE A TV SCREEN. It's not a huge computer, but when your doing work and typing or whatever watching youtube it feels like a movie screen, beautiful. I never had such a good computer that just feels like a breath of fresh air. If you are contemplating on buying one, I would get 512 GB of storage and 16 ram. You will not be disappointed if you buy this no matter what, I strongly recommend it.",
+          "date": "2024-07-11",
+          "rating": 4.8
+        }
       ]
     },
     {
       "id": "2",
       "name": "Smartphone Y2",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
       "price": 800,
       "salePrice": 750,
       "discount": true,
       "percent": 6,
       "favorite": true,
-      "description": "A high-performance smartphone with great camera features.",
       "color": "Black",
       "rating": 4.5,
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 6.2,
-      "processor": "Snapdragon 888",
-      "GPU": "Adreno 660",
-      "memory": 8,
       "bestSeller": true,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "6.1 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Octa-core"
+        },
+        {
+          "key": "RAM",
+          "value": "6 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "128 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "12 MP"
+        },
+        {
+          "key": "OS",
+          "value": "Android"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg"
+        },
+        {
+          "img": "https://socientifica.com.br/wp-content/uploads/2024/06/iphone-15.jpg"
+        },
+        {
+          "img": "https://cdn.tgdd.vn/Products/Images/42/299033/Slider/iphone-15-pro-thumbyt-1020x570.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4YjkNCkTpbuSrgDrbFGUm3.jpg"
+        },
+        {
+          "img": "https://cdn.xtmobile.vn/vnt_upload/product/03_2024/thiet-ke-iphone-15-plus-128gb-chinh-hang-xtmobile.jpg"
+        },
+        {
+          "img": "https://images.macrumors.com/article-new/2023/09/iphone-15-pro-gray.jpg"
+        }
       ]
     },
     {
       "id": "21",
-      "name": "Smartphone Y2",
-      "image": "/assets/images/search/phone.png",
+      "name": "Smartphone Y3",
+      "image": "https://media.wired.com/photos/593284aeaef9a462de98365f/master/w_2560%2Cc_limit/2014-09-23-iphone6-gallery-1.jpg",
       "price": 800,
       "salePrice": 750,
       "discount": true,
       "percent": 6,
       "favorite": true,
-      "description": "A high-performance smartphone with great camera features.",
       "color": "Black",
       "rating": 4.5,
-      "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 6.2,
-      "processor": "Snapdragon 888",
-      "GPU": "Adreno 660",
-      "memory": 8,
+      "categoryId": "electronics",
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "6.1 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Octa-core"
+        },
+        {
+          "key": "RAM",
+          "value": "6 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "128 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "12 MP"
+        },
+        {
+          "key": "OS",
+          "value": "IOS"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://media.wired.com/photos/593284aeaef9a462de98365f/master/w_2560%2Cc_limit/2014-09-23-iphone6-gallery-1.jpg"
+        },
+        {
+          "img": "https://www.zdnet.com/a/img/resize/9c4c6a4546bf9e283e63548c45f588360ce02607/2023/10/05/487a7516-8c27-4547-9dd5-e78f40e8d112/google-pixel-8-pro-screen.jpg?auto=webp&fit=crop&height=900&width=1200"
+        },
+        {
+          "img": "https://www.dataselect.com/wp-content/uploads/2023/08/Smartphone-Specifications-Explained-2.webp"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4YjkNCkTpbuSrgDrbFGUm3.jpg"
+        },
+        {
+          "img": "https://cdn.xtmobile.vn/vnt_upload/product/03_2024/thiet-ke-iphone-15-plus-128gb-chinh-hang-xtmobile.jpg"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2023/09/smartphone-2048px-0778-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200"
+        }
       ]
     },
     {
       "id": "3",
       "name": "Tablet Z3",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://p2-ofp.static.pub/fes/cms/2021/10/28/juqs65pgl1gh3dysi7yv1tnvtsiqva364946.png",
       "price": 500,
       "color": "White",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 10.1,
-      "processor": "Apple A12 Bionic",
-      "GPU": "Apple GPU",
-      "memory": 64,
-      "favorite": true,
+      "favorite": false,
       "rating": 4.2,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "6.1 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Octa-core"
+        },
+        {
+          "key": "RAM",
+          "value": "6 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "128 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "12 MP"
+        },
+        {
+          "key": "OS",
+          "value": "Android"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://cdn.nguyenkimmall.com/images/companies/_1/SEO/nen-mua-tablet-hay-phablet/tablet-samsung-voi-but-stylus.jpg"
+        },
+        {
+          "img": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/tablet-new/matepad-pro-series-card-1.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/3Y5PQVLsQTK6K5n2Q3mdWS-1200-80.jpg"
+        },
+        {
+          "img": "https://www.cnet.com/a/img/resize/79a3ed74327621f060c3084189abd1c9452048be/hub/2023/06/30/9f75026d-1f39-4551-b336-9af80b3a4782/onepad-plus-tablet-01.jpg?auto=webp&fit=crop&height=360&width=640"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "4",
       "name": "Smartwatch A1",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
       "price": 250,
       "color": "Rose Gold",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 1.5,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "1.5 inches"
+        },
+        {
+          "key": "Battery Life",
+          "value": "24 hours"
+        },
+        {
+          "key": "Water Resistance",
+          "value": "Yes"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth, Wi-Fi"
+        },
+        {
+          "key": "Sensors",
+          "value": "Heart Rate, GPS, Accelerometer"
+        },
+        {
+          "key": "Compatibility",
+          "value": "iOS, Android"
+        },
+        {
+          "key": "Storage",
+          "value": "4 GB"
+        }
+      ],
       "bestSeller": true,
       "rating": 4.8,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
-      ]
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/FkGweMeB7hdPgaSFQdgsfj.jpg"
+        },
+        {
+          "img": "https://www.zdnet.com/a/img/resize/2df5e25cd33c84aee2c949c502ace10103b0c96f/2023/09/12/aec7c4a0-a40f-43c3-8c22-ecaa9bd7759f/img-0980.jpg?auto=webp&fit=crop&height=360&width=640"
+        },
+        {
+          "img": "https://cdn11.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture/News/News_expe_5716/5716.png?version=151625"
+        },
+        {
+          "img": "https://www.beatxp.com/blog/wp-content/uploads/2023/06/smartwatch-features-1200x900.jpg"
+        },
+        {
+          "img": "https://media.centrepointstores.com/i/centrepoint/163490269-163490269-LS18280521_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-m-prt-pdp-2x$"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2023/10/smartwatches-2048px-2x1-1.jpg?auto=webp&quality=75&crop=1.91:1&width=1200"
+        }
+      ],
+      "favorite": true
     },
     {
       "id": "5",
       "name": "Headphones B2",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://resource.logitechg.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/products/g433/g433-gallery-red-1.png?v=1",
       "price": 150,
       "salePrice": 120,
       "discount": true,
@@ -635,45 +864,113 @@
       "color": "Blue",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Type",
+          "value": "Over-Ear"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "20 hours"
+        },
+        {
+          "key": "Noise Cancellation",
+          "value": "Yes"
+        },
+        {
+          "key": "Microphone",
+          "value": "Built-in"
+        }
+      ],
       "favorite": false,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0608/4988/1306/files/roar-301-headphone.png?v=1667291051"
+        },
+        {
+          "img": "https://m.media-amazon.com/images/I/71VR6c3j2bL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2023/07/bluetoothheadphones-2048px-0876.jpg"
+        },
+        {
+          "img": "https://media.wired.com/photos/5f52a44bb555bc55dbcdf5a8/master/pass/Gear-Wireless-Bluetooth-1226031847.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4hU7T5fQYWbnU5vxHZnAZE.jpg"
+        },
+        {
+          "img": "https://file.hstatic.net/1000026716/file/gearvn-cach-phan-biet-headphone-va-headset_5e4b37c234194dafa2f4cd1bc55a81c8_1024x1024.png"
+        }
       ]
     },
     {
       "id": "6",
       "name": "Camera C3",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
       "price": 1200,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 16,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://eavf3cou74b.exactdn.com/wp-content/uploads/2023/06/28103020/Best-Cameras-for-Professional-Photography-6.jpg?strip=all&lossy=1&ssl=1"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/GXHa4PWwDPx7tGQG9MDQvK-1200-80.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/Ekc54rx2YMgRt5ycD5KYf5.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/4wpKrH93D37dDPTisdqGy4.jpg"
+        },
+        {
+          "img": "https://i1.adis.ws/i/canon/eos-r7-lifestyle_c604337a3b374a94a080d40b43f3a920?$70-30-header-4by3-dt-jpg$"
+        },
+        {
+          "img": "https://pro.sony/s3/2017/09/18134059/hdc5500_3q_190225_01-Large.jpg"
+        }
       ]
     },
     {
       "id": "7",
       "name": "Desktop D4",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
       "price": 1800,
       "salePrice": 1600,
       "discount": true,
@@ -681,131 +978,334 @@
       "color": "Silver",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 32,
+      "specifications": [
+        {
+          "key": "Processor",
+          "value": "Intel Core i9"
+        },
+        {
+          "key": "GPU",
+          "value": "NVIDIA GeForce RTX 3080"
+        },
+        {
+          "key": "Memory",
+          "value": "16 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "512 GB SSD"
+        },
+        {
+          "key": "Screen Size",
+          "value": "15.6 inches"
+        },
+        {
+          "key": "Battery Life",
+          "value": "10 hours"
+        },
+        {
+          "key": "OS",
+          "value": "Windows 10"
+        }
+      ],
       "bestSeller": true,
       "rating": 4.9,
       "favorite": true,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://m.media-amazon.com/images/I/71snht4ZY+L.jpg"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2023/05/desktopcomputer-2048px-8816-3x2-1.jpg?auto=webp&quality=75&crop=3:2&width=1024"
+        },
+        {
+          "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/desktop/prod-1007554-aio-desktop-inspiron-5430-optiplex-7420-plus-km5221w-800x620.png?fmt=png-alpha&wid=800&hei=620"
+        },
+        {
+          "img": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-All-in-One_1040x585?scl=1"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/eEiyqh39i5ytkCQZGbdWA-1200-80.jpg"
+        },
+        {
+          "img": "https://cdn.mos.cms.futurecdn.net/eEiyqh39i5ytkCQZGbdWA-1200-80.jpg"
+        }
       ]
     },
     {
       "id": "8",
       "name": "Keyboard E5",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
       "price": 80,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Type",
+          "value": "Mechanical"
+        },
+        {
+          "key": "Switch Type",
+          "value": "Cherry MX Red"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wired"
+        },
+        {
+          "key": "Backlight",
+          "value": "RGB"
+        },
+        {
+          "key": "Key Rollover",
+          "value": "N-Key"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "9",
       "name": "Mouse F6",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://resource.logitech.com/content/dam/gaming/en/products/pro-wireless-gaming-mouse/pro-wireless-carbon-gallery-1.png",
       "price": 40,
       "color": "Red",
       "categoryId": "electronics",
-      "brand": "Apple",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Type",
+          "value": "Wireless"
+        },
+        {
+          "key": "DPI",
+          "value": "16000"
+        },
+        {
+          "key": "Buttons",
+          "value": "6"
+        },
+        {
+          "key": "Battery Life",
+          "value": "60 hours"
+        },
+        {
+          "key": "Connectivity",
+          "value": "USB"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://www.ubuy.vn/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzF5R3RhdUItQUwuX0FDX1NMMTUwMF8uanBn.jpg"
+        },
+        {
+          "img": "https://www.cherry.co.uk/media/catalog/product/cache/661c0bae3bb54b88fbb1b415a9d390cb/j/k/jk-8600-2_topview_gb_3.jpg"
+        },
+        {
+          "img": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-keyboard/pro-x-keyboard-gallery-1.png?v=1"
+        },
+        {
+          "img": "https://assetsio.gnwcdn.com/shadow-x.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+        },
+        {
+          "img": "https://keychronthailand.com/cdn/shop/files/Keychron-Q1-HE-QMK-Wireless-Custom-Keyboard-Shell-White.webp?v=1711528520&width=1406"
+        },
+        {
+          "img": "https://keychronthailand.com/cdn/shop/files/Keychron-Q1-HE-QMK-Wireless-Custom-Keyboard-Shell-White.webp?v=1711528520&width=1406"
+        }
       ]
     },
     {
       "id": "10",
       "name": "Monitor G7",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://hanoicomputercdn.com/media/product/56917_xl2546k__3_.png",
       "price": 300,
       "color": "Silver",
       "categoryId": "electronics",
       "brand": "Brand G",
-      "screenSize": 27,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "27 inches"
+        },
+        {
+          "key": "Resolution",
+          "value": "2560x1440"
+        },
+        {
+          "key": "Refresh Rate",
+          "value": "144 Hz"
+        },
+        {
+          "key": "Panel Type",
+          "value": "IPS"
+        },
+        {
+          "key": "Aspect Ratio",
+          "value": "16:9"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "https://images-cdn.ubuy.co.in/633b97101b40ac43d352aad2-eyoyo-10-inch-ips-lcd-monitor-1280x800.jpg"
+        },
+        {
+          "img": "https://cdn.thewirecutter.com/wp-content/media/2021/05/27-inch-monitor-2048px-1572.jpg"
+        },
+        {
+          "img": "https://images.samsung.com/is/image/samsung/p6pim/ph/ls22r350fhexxp/gallery/ph-sr35-ls22r350fhexxp-534660416?$650_519_PNG$"
+        },
+        {
+          "img": "https://m.media-amazon.com/images/I/71bdgzFk6OL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          "img": "https://www.lg.com/content/dam/channel/wcms/in/images/monitors/27mp400-b_atr_eail_in_c/gallery/27MP400-B-D-01.jpg"
+        },
+        {
+          "img": "https://m.media-amazon.com/images/I/612vM0pdKCL._AC_UF894,1000_QL80_.jpg"
+        }
       ]
     },
     {
       "id": "11",
       "name": "Printer H8",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://mediaserver.goepson.com/ImConvServlet/imconv/63d65bfb325dadd89dd438c9482febd02112c15d/1200Wx1200H?use=banner&hybrisId=B2C&assetDescr=L5590-%282%29",
       "price": 200,
       "color": "White",
       "categoryId": "electronics",
       "brand": "Brand H",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "1920x1080"
+        },
+        {
+          "key": "Brightness",
+          "value": "3000 lumens"
+        },
+        {
+          "key": "Contrast Ratio",
+          "value": "10000:1"
+        },
+        {
+          "key": "Throw Distance",
+          "value": "1.5m - 5m"
+        },
+        {
+          "key": "Lamp Life",
+          "value": "5000 hours"
+        },
+        {
+          "key": "Connectivity",
+          "value": "HDMI, USB, VGA"
+        },
+        {
+          "key": "Aspect Ratio",
+          "value": "16:9"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "12",
       "name": "Projector I9",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/61+CDKTXYgL._AC_SL1500_.jpg",
       "price": 1500,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand I",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "1920x1080"
+        },
+        {
+          "key": "Brightness",
+          "value": "3000 lumens"
+        },
+        {
+          "key": "Contrast Ratio",
+          "value": "10000:1"
+        },
+        {
+          "key": "Throw Distance",
+          "value": "1.5m - 5m"
+        },
+        {
+          "key": "Lamp Life",
+          "value": "5000 hours"
+        },
+        {
+          "key": "Connectivity",
+          "value": "HDMI, USB, VGA"
+        },
+        {
+          "key": "Aspect Ratio",
+          "value": "16:9"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "13",
       "name": "Speaker J10",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://images-cdn.ubuy.co.id/633af66c2ed4376854580abf-60w-portable-bluetooth-speaker-with.jpg",
       "price": 100,
       "salePrice": 90,
       "discount": true,
@@ -813,81 +1313,225 @@
       "color": "Grey",
       "categoryId": "electronics",
       "brand": "Brand J",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Type",
+          "value": "Condenser"
+        },
+        {
+          "key": "Connectivity",
+          "value": "USB"
+        },
+        {
+          "key": "Frequency Response",
+          "value": "20 Hz - 20 kHz"
+        },
+        {
+          "key": "Polar Pattern",
+          "value": "Cardioid"
+        },
+        {
+          "key": "Sensitivity",
+          "value": "-42 dB"
+        },
+        {
+          "key": "Bit Depth",
+          "value": "24-bit"
+        },
+        {
+          "key": "Sample Rate",
+          "value": "96 kHz"
+        }
+      ],
       "favorite": true,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "14",
       "name": "Router K11",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://www.dlink.co.id/wp-content/uploads/2020/06/DIR-2150.jpg",
       "price": 80,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand K",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Screen Size",
+          "value": "27 inches"
+        },
+        {
+          "key": "Resolution",
+          "value": "2560x1440"
+        },
+        {
+          "key": "Refresh Rate",
+          "value": "144 Hz"
+        },
+        {
+          "key": "Panel Type",
+          "value": "IPS"
+        },
+        {
+          "key": "Aspect Ratio",
+          "value": "16:9"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "15",
       "name": "External HDD L12",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
       "price": 120,
       "color": "Blue",
       "categoryId": "electronics",
       "brand": "Brand L",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Capacity",
+          "value": "1 TB"
+        },
+        {
+          "key": "Type",
+          "value": "SSD"
+        },
+        {
+          "key": "Interface",
+          "value": "USB 3.1"
+        },
+        {
+          "key": "Read Speed",
+          "value": "500 MB/s"
+        },
+        {
+          "key": "Write Speed",
+          "value": "450 MB/s"
+        },
+        {
+          "key": "Dimensions",
+          "value": "100 x 70 x 10 mm"
+        },
+        {
+          "key": "Weight",
+          "value": "150 g"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "16",
       "name": "Camera Lens M13",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
       "price": 400,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand M",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
@@ -898,67 +1542,181 @@
       "color": "White",
       "categoryId": "electronics",
       "brand": "Brand N",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "bestSeller": true,
       "rating": 5,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "18",
       "name": "Fitness Tracker O15",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
       "price": 80,
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand O",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "19",
       "name": "Drone P16",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://m.media-amazon.com/images/I/71ASACudpfL._AC_SL1500_.jpg",
       "price": 1000,
       "color": "Silver",
       "categoryId": "electronics",
       "brand": "Brand P",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     },
     {
       "id": "20",
       "name": "Game Console Q17",
-      "image": "/assets/images/search/phone.png",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
       "price": 400,
       "salePrice": 350,
       "discount": true,
@@ -966,18 +1724,56 @@
       "color": "Black",
       "categoryId": "electronics",
       "brand": "Brand Q",
-      "screenSize": 0,
-      "processor": "Intel Core i9",
-      "GPU": "NVIDIA GeForce RTX 3080",
-      "memory": 8,
+      "specifications": [
+        {
+          "key": "Resolution",
+          "value": "24 MP"
+        },
+        {
+          "key": "Lens",
+          "value": "18-55mm"
+        },
+        {
+          "key": "Sensor Type",
+          "value": "CMOS"
+        },
+        {
+          "key": "ISO Range",
+          "value": "100-25600"
+        },
+        {
+          "key": "Video Resolution",
+          "value": "4K"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "key": "Battery Life",
+          "value": "600 shots"
+        }
+      ],
       "favorite": true,
       "imagePreview": [
-        { "img": "/assets/images/product/product1.png" },
-        { "img": "/assets/images/product/product2.png" },
-        { "img": "/assets/images/product/product3.png" },
-        { "img": "/assets/images/product/product4.png" },
-        { "img": "/assets/images/product/product5.png" },
-        { "img": "/assets/images/product/product6.png" }
+        {
+          "img": "/assets/images/product/product1.png"
+        },
+        {
+          "img": "/assets/images/product/product2.png"
+        },
+        {
+          "img": "/assets/images/product/product3.png"
+        },
+        {
+          "img": "/assets/images/product/product4.png"
+        },
+        {
+          "img": "/assets/images/product/product5.png"
+        },
+        {
+          "img": "/assets/images/product/product6.png"
+        }
       ]
     }
   ],

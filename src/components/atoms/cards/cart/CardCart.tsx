@@ -1,14 +1,14 @@
 import { Button } from "antd";
 import { useDispatch } from "react-redux";
 
-import { AppDispatch } from "../../../redux/store";
+import { AppDispatch } from "../../../../redux/store";
 import {
   deleteCartItemThunk,
   updateQuantityCartItemThunk,
-} from "../../../redux/slice/productSlice";
+} from "../../../../redux/slice/productSlice";
 
-import { formatNumber } from "../../../utils/formatNumber";
-import { cn } from "../../../utils/utils";
+import { formatNumber } from "../../../../utils/formatNumber";
+import { cn } from "../../../../utils/utils";
 
 type Props = {
   id: string;
