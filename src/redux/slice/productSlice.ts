@@ -14,6 +14,7 @@ import {
   getCategoryAPI,
   getColorAPI,
   getDetailProductAPI,
+  getFilterProductAPI,
   getNewProductsAPI,
   getProductAPI,
   getProductCatAPI,
@@ -41,6 +42,8 @@ interface ProductState {
   productCatList: Product[];
   brandList: Brand[];
   colorList: Colors[];
+  filterProduct: Product[];
+  // specifications: { key: string; value: number }[];
   loading: boolean;
   status: number;
   shipCost: number;
@@ -62,7 +65,8 @@ const initialState: ProductState = {
   product: [],
   productCatList: [],
   colorList: [],
-  // filterProduct: [],
+  // specifications: [],
+  filterProduct: [],
   loading: false,
   status: 0,
   shipCost: 0,
@@ -550,6 +554,35 @@ export const productSlice = createAppSlice({
         };
       },
     }),
+    getFilterProductThunk: create.asyncThunk(
+      async (query: string) => {
+        const data = await getFilterProductAPI(query);
+        return data;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            filterProduct: data,
+            status: status,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
   }),
 });
 
@@ -572,6 +605,7 @@ export const {
   getProductCatThunk,
   getProductThunk,
   getColorThunk,
+  getFilterProductThunk,
   chooseShipCostAction,
 } = productSlice.actions;
 

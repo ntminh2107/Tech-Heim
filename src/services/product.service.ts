@@ -1,6 +1,5 @@
 import { ProductInCart } from "../types/Product";
 import axiosClient from "./api.service";
-import queryString from "query-string";
 import { v4 as uuidv4 } from "uuid";
 export const getCategoryAPI = () => {
   return axiosClient
@@ -148,21 +147,9 @@ export const getBrandAPI = () => {
     .catch((err) => err);
 };
 
-export const getFilterProductAPI = ({
-  discount = false,
-  brand,
-}: {
-  discount: boolean;
-  brand: string[];
-}) => {
-  const newParams = {
-    brand: brand,
-  };
-  const filterParams = queryString.stringify(newParams);
-  console.log(filterParams);
-
+export const getFilterProductAPI = (query: string) => {
   return axiosClient
-    .get(`product?discount=${discount}&${filterParams}`)
+    .get(`product?${query}`)
     .then((res) => {
       const { data, status } = res;
       return { data, status };
@@ -214,6 +201,16 @@ export const getProductCatAPI = (category: string) => {
 export const getColorAPI = () => {
   return axiosClient
     .get("colors")
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getSpecByCatAPI = (category: string) => {
+  return axiosClient
+    .get(`product?categoryId=${category}`)
     .then((res) => {
       const { data, status } = res;
       return { data, status };

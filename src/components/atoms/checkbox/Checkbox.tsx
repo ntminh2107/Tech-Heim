@@ -14,7 +14,6 @@ type Props = {
 
 const Checkbox = ({ options, basePath, queryKey, defaultValue }: Props) => {
   const navigate = useNavigate();
-  // const dispatch = useDispatch<AppDispatch>();
   const currentParams = queryString.parse(location.search);
 
   const onChange: GetProp<typeof AntCheckbox.Group, "onChange"> = (
@@ -25,7 +24,7 @@ const Checkbox = ({ options, basePath, queryKey, defaultValue }: Props) => {
       ...currentParams,
       [queryKey]: checkedValues.join(","),
     };
-    // dispatch(getProductThunk({ discount: true, brand: checkedValues }));
+
     navigate({
       pathname: basePath,
       search: `?${queryString.stringify(newParams)}`,

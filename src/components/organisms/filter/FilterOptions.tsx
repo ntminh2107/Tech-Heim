@@ -1,16 +1,30 @@
 import { Button } from "antd";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../redux/store";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../../redux/store";
 import CollapseCheckbox from "../../molecules/collapse/Collapse";
 import Checkbox from "../../atoms/checkbox";
 
 import { useLocation } from "react-router-dom";
 import Switch from "../../atoms/switch/Switch";
+import { SplitQueryParams } from "../../../utils/convertParams";
+import { useEffect } from "react";
+import { getFilterProductThunk } from "../../../redux/slice/productSlice";
 
 const FilterOptions = () => {
   const { brandList } = useSelector((state: RootState) => state.product);
+
   const { colorList } = useSelector((state: RootState) => state.product);
   const location = useLocation();
+  const dispatch = useDispatch<AppDispatch>();
+  const params = SplitQueryParams(location.search);
+  useEffect(() => {
+    dispatch(getFilterProductThunk(params));
+  }, [dispatch, params]);
+
+  // const filterProduct = useSelector(
+  //   (state: RootState) => state.product.filterProduct
+  // );
+  console.log(params);
 
   return (
     <div className="flex flex-col flex-1">

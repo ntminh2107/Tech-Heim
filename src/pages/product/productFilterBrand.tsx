@@ -16,9 +16,14 @@ const ProductFilterBrand = () => {
     }
   }, [dispatch, categoryId]);
 
-  const productcatList = useSelector(
-    (state: RootState) => state.product.productCatList
+  // const productcatList = useSelector(
+  //   (state: RootState) => state.product.productCatList
+  // );
+
+  const filterProduct = useSelector(
+    (state: RootState) => state.product.filterProduct
   );
+
   return (
     <section>
       <CategoryListWithIcon />
@@ -27,7 +32,7 @@ const ProductFilterBrand = () => {
           <FilterOptions />
         </div>
         <div className="basis-3/4">
-          <ListProduct productList={productcatList} className="grid-cols-3" />
+          <ListProduct productList={filterProduct} className="grid-cols-3" />
         </div>
       </div>
       <div>
