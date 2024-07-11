@@ -30,7 +30,7 @@ const DetailProduct = () => {
   console.log(detailProduct);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 mb-14">
       <div className="flex gap-8 mb-8">
         <div className="flex gap-6">
           <div className="flex-shrink w-full">
