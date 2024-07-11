@@ -1,5 +1,6 @@
 import {
   Brand,
+  Colors,
   Product,
   ProductCategory,
   ProductInCart,
@@ -11,8 +12,11 @@ import {
   getBrandAPI,
   getCartItemsAPI,
   getCategoryAPI,
+  getColorAPI,
   getDetailProductAPI,
   getNewProductsAPI,
+  getProductAPI,
+  getProductCatAPI,
   getProductSaleAPI,
   getSearchKeywordAPI,
   getSimilarProductAPI,
@@ -33,7 +37,10 @@ interface ProductState {
   newProducts: Product[];
   bestSellers: Product[];
   similarProduct: Product[];
+  product: Product[];
+  productCatList: Product[];
   brandList: Brand[];
+  colorList: Colors[];
   loading: boolean;
   status: number;
   shipCost: number;
@@ -52,6 +59,9 @@ const initialState: ProductState = {
   detailProduct: null,
   brandList: [],
   similarProduct: [],
+  product: [],
+  productCatList: [],
+  colorList: [],
   // filterProduct: [],
   loading: false,
   status: 0,
@@ -466,6 +476,80 @@ export const productSlice = createAppSlice({
         },
       }
     ),
+    getProductThunk: create.asyncThunk(getProductAPI, {
+      pending: (state) => {
+        return {
+          ...state,
+          loading: true,
+        };
+      },
+      fulfilled: (state, action) => {
+        const { data, status } = action.payload;
+        return {
+          ...state,
+          loading: false,
+          product: data,
+          status: status,
+        };
+      },
+      rejected: (state) => {
+        return {
+          ...state,
+          loading: false,
+        };
+      },
+    }),
+    getProductCatThunk: create.asyncThunk(
+      async (categoryId: string) => {
+        const data = await getProductCatAPI(categoryId);
+        return data;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            productCatList: data,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
+    getColorThunk: create.asyncThunk(getColorAPI, {
+      pending: (state) => {
+        return {
+          ...state,
+          loading: true,
+        };
+      },
+      fulfilled: (state, action) => {
+        const { data, status } = action.payload;
+        return {
+          ...state,
+          loading: false,
+          colorList: data,
+          status: status,
+        };
+      },
+      rejected: (state) => {
+        return {
+          ...state,
+          loading: false,
+        };
+      },
+    }),
   }),
 });
 
@@ -485,6 +569,9 @@ export const {
   addCartItemThunk,
   getDetailProductThunk,
   getSimilarProductThunk,
+  getProductCatThunk,
+  getProductThunk,
+  getColorThunk,
   chooseShipCostAction,
 } = productSlice.actions;
 

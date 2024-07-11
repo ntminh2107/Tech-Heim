@@ -1,6 +1,6 @@
 import { Switch as AntSwitch } from "antd";
 import { cn } from "../../../utils/utils";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import queryString from "query-string";
 
 type Props = {
@@ -11,14 +11,18 @@ type Props = {
 
 const Switch = ({ title, basePath, className }: Props) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const currentParams = queryString.parse(location.search);
-  console.log(currentParams);
+  console.log("Current Params:", currentParams);
 
   const onChange = (checked: boolean) => {
     console.log(`switch to ${checked}`);
     navigate({
       pathname: basePath,
-      search: `?discount=${checked}`,
+      search: queryString.stringify({
+        ...currentParams,
+        discount: checked,
+      }),
     });
   };
   return (
@@ -26,7 +30,7 @@ const Switch = ({ title, basePath, className }: Props) => {
       className={cn("flex justify-between items-center px-4 py-3", className)}
     >
       <h5>{title}</h5>
-      <AntSwitch defaultChecked onChange={onChange} />
+      <AntSwitch onChange={onChange} />
     </div>
   );
 };

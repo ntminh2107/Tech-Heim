@@ -190,3 +190,33 @@ export const getSimilarProductAPI = (brand?: string) => {
     })
     .catch((err) => err);
 };
+
+export const getProductAPI = () => {
+  return axiosClient
+    .get("product?_sort=name")
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getProductCatAPI = (category: string) => {
+  return axiosClient
+    .get(`product?categoryId=${category}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getColorAPI = () => {
+  return axiosClient
+    .get("colors")
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};

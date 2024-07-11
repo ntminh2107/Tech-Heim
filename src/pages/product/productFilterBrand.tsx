@@ -1,12 +1,24 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CategoryListWithIcon } from "../../components/molecules/categoryList";
 import ListProduct from "../../components/molecules/product/ListProduct";
 import FilterOptions from "../../components/organisms/filter/FilterOptions";
-import { RootState } from "../../redux/store";
+import { AppDispatch, RootState } from "../../redux/store";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { getProductCatThunk } from "../../redux/slice/productSlice";
 
-const Products = () => {
-  const newProducts = useSelector((state: RootState) => state.product.product);
+const ProductFilterBrand = () => {
+  const { categoryId } = useParams<{ categoryId?: string }>() ?? {};
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    if (categoryId) {
+      dispatch(getProductCatThunk(categoryId));
+    }
+  }, [dispatch, categoryId]);
 
+  const productcatList = useSelector(
+    (state: RootState) => state.product.productCatList
+  );
   return (
     <section>
       <CategoryListWithIcon />
@@ -15,7 +27,7 @@ const Products = () => {
           <FilterOptions />
         </div>
         <div className="basis-3/4">
-          <ListProduct productList={newProducts} className="grid-cols-3" />
+          <ListProduct productList={productcatList} className="grid-cols-3" />
         </div>
       </div>
       <div>
@@ -42,4 +54,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ProductFilterBrand;
