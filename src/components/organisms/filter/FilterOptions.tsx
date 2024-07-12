@@ -1,21 +1,53 @@
-import { Button, Divider } from "antd";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../redux/store";
+import { Button } from "antd";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../../redux/store";
 import CollapseCheckbox from "../../molecules/collapse/Collapse";
-import Switch from "../../atoms/switch";
 import Checkbox from "../../atoms/checkbox";
-import Slider from "../../atoms/slider";
-import { useLocation } from "react-router-dom";
+
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import Switch from "../../atoms/switch/Switch";
+import { SplitQueryParams } from "../../../utils/convertParams";
+import { useEffect, useState } from "react";
+import { getFilterProductThunk } from "../../../redux/slice/productSlice";
 
 const FilterOptions = () => {
+  const { categoryId } = useParams<{ categoryId?: string }>() ?? {};
   const { brandList } = useSelector((state: RootState) => state.product);
+
+  const { colorList } = useSelector((state: RootState) => state.product);
   const location = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
+  const query = SplitQueryParams(location.search);
+  const [checked, setChecked] = useState<string[]>([]);
+  const [switched, setSwitched] = useState<boolean>(false);
+  console.log(categoryId);
+
+  useEffect(() => {
+    if (categoryId) dispatch(getFilterProductThunk({ categoryId, query }));
+  }, [dispatch, query, categoryId]);
+
+  console.log(query);
+
+  const clearAllFilters = () => {
+    navigate({
+      pathname: location.pathname,
+      search: "",
+    });
+    setChecked([]);
+    setSwitched(false);
+  };
 
   return (
     <div className="flex flex-col flex-1">
       <div className="flex px-4 py-1 items-center ">
         <h5 className="text-xl flex-1 font-semibold ">Filters</h5>
-        <Button type="text" size="small" className="text-primary px-12 py-3">
+        <Button
+          type="text"
+          size="small"
+          className="text-primary px-12 py-3"
+          onClick={clearAllFilters}
+        >
           Clear all
         </Button>
       </div>
@@ -27,78 +59,30 @@ const FilterOptions = () => {
             queryKey="brand"
             options={brandList.map((item) => item.name)}
             basePath={location.pathname}
+            checkedValues={checked}
+            onCheckedValuesChange={setChecked}
           />
         }
       />
-      {/* <CollapseCheckbox
-        key="color"
+      <CollapseCheckbox
+        key="Color"
         label="Color"
         children={
           <Checkbox
             queryKey="color"
-            // options={[...new Set(filterProduct.map((item) => item.color))]}
+            options={colorList.map((item) => item.color)}
             basePath={location.pathname}
-          />
-        }
-      /> */}
-      <Switch title="Discount" basePath={location.pathname} />
-      <Divider className="m-0 bg-gray-9E9E9E" />
-      <CollapseCheckbox key="price" label="Price" children={<Slider />} />
-      {/* <CollapseCheckbox
-        key="ram"
-        label="RAM"
-        children={
-          <Checkbox
-            queryKey="ram"
-            // options={[...new Set(filterProduct.map((item) => item.memory))]}
-            basePath={location.pathname}
-          />
-        }
-      /> */}
-      <CollapseCheckbox
-        key="screen"
-        label="Screen Size"
-        children={
-          <Checkbox
-            queryKey="screen"
-            options={["13 - 13.9", "14 - 14.9", "15 - 15.9", "16 - 16.9"]}
-            basePath={location.pathname}
+            checkedValues={checked}
+            onCheckedValuesChange={setChecked}
           />
         }
       />
-      {/* <CollapseCheckbox
-        key="processor"
-        label="Processor"
-        children={
-          <Checkbox
-            queryKey="processor"
-            // options={[...new Set(filterProduct.map((item) => item.processor))]}
-            basePath={location.pathname}
-          />
-        }
-      /> */}
-      {/* <CollapseCheckbox
-        key="gpu"
-        label="GPU Brand"
-        children={
-          <Checkbox
-            queryKey="gpu"
-            options={[...new Set(filterProduct.map((item) => item.GPU))]}
-            basePath={location.pathname}
-          />
-        }
+      <Switch
+        title="discount"
+        basePath={location.pathname}
+        checked={switched}
+        onCheckedChange={setSwitched}
       />
-      <CollapseCheckbox
-        key="drive"
-        label="Drive Size"
-        children={
-          <Checkbox
-            queryKey="drive"
-            options={[...new Set(filterProduct.map((item) => item.memory))]}
-            basePath={location.pathname}
-          />
-        }
-      /> */}
     </div>
   );
 };

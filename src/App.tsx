@@ -13,6 +13,7 @@ import Cart from "./pages/cart";
 import CheckoutLayout from "./layouts/CheckoutLayout";
 import Checkout from "./pages/cart/checkout";
 import Payment from "./pages/cart/payment";
+import ProductFilterBrand from "./pages/product/productFilterBrand";
 
 const LayoutWithBreadCrumb = () => {
   return (
@@ -40,8 +41,13 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<DetailBlog />} />
               <Route path="/products" element={<Products />}></Route>
+              <Route
+                path="/products/categories/:categoryId"
+                element={<ProductFilterBrand />}
+              />
               <Route path="/products/:id" element={<DetailProduct />} />
             </Route>
+
             <Route path="/" element={<CheckoutLayout />}>
               <Route path="/cart" element={<Cart />}></Route>
               <Route path="/checkout" element={<Checkout />}></Route>

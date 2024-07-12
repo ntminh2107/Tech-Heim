@@ -13,7 +13,7 @@ const CategoryListWithIcon = () => {
   //   index start based 2 ????
   const pathSnippets = location.pathname.split("/").filter((i) => i);
   const handleOnClick = (name: string) => {
-    navigate(`${name}`);
+    navigate(`/products/categories/${name}`);
   };
   return (
     <div className="flex justify-center gap-8 p-2 mb-12">

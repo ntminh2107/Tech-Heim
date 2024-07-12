@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import { getDetailProductThunk } from "../../redux/slice/productSlice";
 import ProductTab from "../../components/molecules/productDetail/ProductTab";
 import ImagePreview from "../../components/atoms/image/ImagePreview";
+import ProductSimilarCarousel from "../../components/molecules/productDetail/ProductSimilarCarousel";
+import VideoBlogCarousel from "../../components/molecules/blog/VideoBlogCarousel";
 
 const DetailProduct = () => {
   const { id } = useParams<{ id?: string }>() ?? {};
@@ -22,10 +24,13 @@ const DetailProduct = () => {
   const detailProduct = useSelector(
     (state: RootState) => state.product.detailProduct
   );
+  const reviewVideo = useSelector(
+    (state: RootState) => state.blog.videoBlogsPost
+  );
   console.log(detailProduct);
 
   return (
-    <div>
+    <div className="flex flex-col gap-8 mb-14">
       <div className="flex gap-8 mb-8">
         <div className="flex gap-6">
           <div className="flex-shrink w-full">
@@ -44,6 +49,12 @@ const DetailProduct = () => {
         />
       </div>
       <ProductTab />
+      <div>
+        <ProductSimilarCarousel product={detailProduct} />
+      </div>
+      <div>
+        <VideoBlogCarousel videoBlog={reviewVideo} />
+      </div>
     </div>
   );
 };

@@ -55,3 +55,7 @@ export type Brand = {
 export type ImagePreview = {
   img: string;
 };
+
+export type Colors = {
+  color: string;
+};

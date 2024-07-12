@@ -469,6 +469,12 @@
       "email": "vinxen2019@gmail.com",
       "fullName": "nguyen tuan minh",
       "password": "Minhmeo389"
+    },
+    {
+      "id": "777b9756-8081-47de-aa50-8a166096f19e",
+      "email": "vinxen2019@gmail.com",
+      "fullName": "minh",
+      "password": "1234567"
     }
   ],
   "cart": [
@@ -512,6 +518,16 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
       "name": "Smartwatch A1",
       "price": 250
+    },
+    {
+      "id": "9b05b430-09f2-4dc2-a997-7f99c4011886",
+      "quantity": 1,
+      "productId": "2",
+      "color": "Black",
+      "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+      "name": "Smartphone Y2",
+      "price": 800,
+      "salePrice": 750
     }
   ],
   "product": [
@@ -521,7 +537,7 @@
       "image": "https://shopdunk.com/images/thumbs/0000723_macbook-air-m1-2020-8gb-ram-256gb-ssd.png",
       "price": 1200,
       "color": "Silver",
-      "categoryId": "electronics",
+      "categoryId": "laptop",
       "brand": "Apple",
       "rating": 4.5,
       "favorite": false,
@@ -601,10 +617,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery Life", "value": 4.8 },
-        { "key": "Performance", "value": 4.7 },
-        { "key": "Display Quality", "value": 4.9 },
-        { "key": "Portability", "value": 4.6 }
+        {
+          "key": "Battery Life",
+          "value": 4.8
+        },
+        {
+          "key": "Performance",
+          "value": 4.7
+        },
+        {
+          "key": "Display Quality",
+          "value": 4.9
+        },
+        {
+          "key": "Portability",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -618,7 +646,7 @@
       "favorite": true,
       "color": "Black",
       "rating": 4.5,
-      "categoryId": "electronics",
+      "categoryId": "phone",
       "brand": "Apple",
       "bestSeller": true,
       "specifications": [
@@ -731,35 +759,35 @@
       "color": "Black",
       "rating": 4.5,
       "brand": "Apple",
-      "categoryId": "electronics",
+      "categoryId": "phone",
       "specifications": [
         {
           "key": "Screen Size",
-          "value": "6.1 inches"
+          "value": "5.9 inches"
         },
         {
           "key": "Processor",
-          "value": "Octa-core"
+          "value": "AMD I100"
         },
         {
           "key": "RAM",
-          "value": "6 GB"
+          "value": "12 GB"
         },
         {
           "key": "Storage",
-          "value": "128 GB"
+          "value": "256 GB"
         },
         {
           "key": "Battery",
-          "value": "4000 mAh"
+          "value": "5000 mAh"
         },
         {
           "key": "Camera",
-          "value": "12 MP"
+          "value": "20 MP"
         },
         {
           "key": "OS",
-          "value": "IOS"
+          "value": "UBUNTU"
         }
       ],
       "imagePreview": [
@@ -836,7 +864,7 @@
       "image": "https://p2-ofp.static.pub/fes/cms/2021/10/28/juqs65pgl1gh3dysi7yv1tnvtsiqva364946.png",
       "price": 500,
       "color": "White",
-      "categoryId": "electronics",
+      "categoryId": "phone",
       "brand": "Apple",
       "favorite": true,
       "rating": 4.2,
@@ -944,7 +972,7 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
       "price": 250,
       "color": "Rose Gold",
-      "categoryId": "electronics",
+      "categoryId": "watch",
       "brand": "Apple",
       "specifications": [
         {
@@ -1056,7 +1084,7 @@
       "discount": true,
       "percent": 20,
       "color": "Blue",
-      "categoryId": "electronics",
+      "categoryId": "audio",
       "brand": "Apple",
       "specifications": [
         {
@@ -1127,10 +1155,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Sound Quality", "value": 4.9 },
-        { "key": "Comfort", "value": 4.8 },
-        { "key": "Noise Cancellation", "value": 4.7 },
-        { "key": "Build Quality", "value": 4.5 }
+        {
+          "key": "Sound Quality",
+          "value": 4.9
+        },
+        {
+          "key": "Comfort",
+          "value": 4.8
+        },
+        {
+          "key": "Noise Cancellation",
+          "value": 4.7
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.5
+        }
       ]
     },
     {
@@ -1139,7 +1179,7 @@
       "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
       "price": 1200,
       "color": "Black",
-      "categoryId": "electronics",
+      "categoryId": "camera",
       "brand": "Apple",
       "specifications": [
         {
@@ -1217,10 +1257,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Image Quality", "value": 4.9 },
-        { "key": "Autofocus", "value": 4.7 },
-        { "key": "Battery Life", "value": 4.6 },
-        { "key": "Ease of Use", "value": 4.8 }
+        {
+          "key": "Image Quality",
+          "value": 4.9
+        },
+        {
+          "key": "Autofocus",
+          "value": 4.7
+        },
+        {
+          "key": "Battery Life",
+          "value": 4.6
+        },
+        {
+          "key": "Ease of Use",
+          "value": 4.8
+        }
       ]
     },
     {
@@ -1232,8 +1284,8 @@
       "discount": true,
       "percent": 11,
       "color": "Silver",
-      "categoryId": "electronics",
-      "brand": "Apple",
+      "categoryId": "laptop",
+      "brand": "Sony",
       "specifications": [
         {
           "key": "Processor",
@@ -1313,10 +1365,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery Life", "value": 4.8 },
-        { "key": "Performance", "value": 4.7 },
-        { "key": "Display Quality", "value": 4.9 },
-        { "key": "Portability", "value": 4.6 }
+        {
+          "key": "Battery Life",
+          "value": 4.8
+        },
+        {
+          "key": "Performance",
+          "value": 4.7
+        },
+        {
+          "key": "Display Quality",
+          "value": 4.9
+        },
+        {
+          "key": "Portability",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -1325,8 +1389,8 @@
       "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
       "price": 80,
       "color": "Black",
-      "categoryId": "electronics",
-      "brand": "Apple",
+      "categoryId": "gaming",
+      "brand": "Samsung",
       "specifications": [
         {
           "key": "Type",
@@ -1395,10 +1459,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Typing Comfort", "value": 4.7 },
-        { "key": "Build Quality", "value": 4.5 },
-        { "key": "Key Feedback", "value": 4.6 },
-        { "key": "Backlighting", "value": 4.4 }
+        {
+          "key": "Typing Comfort",
+          "value": 4.7
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.5
+        },
+        {
+          "key": "Key Feedback",
+          "value": 4.6
+        },
+        {
+          "key": "Backlighting",
+          "value": 4.4
+        }
       ]
     },
     {
@@ -1407,7 +1483,7 @@
       "image": "https://resource.logitech.com/content/dam/gaming/en/products/pro-wireless-gaming-mouse/pro-wireless-carbon-gallery-1.png",
       "price": 40,
       "color": "Red",
-      "categoryId": "electronics",
+      "categoryId": "gaming",
       "specifications": [
         {
           "key": "Type",
@@ -1504,8 +1580,8 @@
       "image": "https://hanoicomputercdn.com/media/product/56917_xl2546k__3_.png",
       "price": 300,
       "color": "Silver",
-      "categoryId": "electronics",
-      "brand": "Brand G",
+      "categoryId": "gaming",
+      "brand": "Samsung",
       "specifications": [
         {
           "key": "Screen Size",
@@ -1574,10 +1650,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Typing Comfort", "value": 4.7 },
-        { "key": "Build Quality", "value": 4.5 },
-        { "key": "Key Feedback", "value": 4.6 },
-        { "key": "Backlighting", "value": 4.4 }
+        {
+          "key": "Typing Comfort",
+          "value": 4.7
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.5
+        },
+        {
+          "key": "Key Feedback",
+          "value": 4.6
+        },
+        {
+          "key": "Backlighting",
+          "value": 4.4
+        }
       ]
     },
     {
@@ -1586,8 +1674,8 @@
       "image": "https://mediaserver.goepson.com/ImConvServlet/imconv/63d65bfb325dadd89dd438c9482febd02112c15d/1200Wx1200H?use=banner&hybrisId=B2C&assetDescr=L5590-%282%29",
       "price": 200,
       "color": "White",
-      "categoryId": "electronics",
-      "brand": "Brand H",
+      "categoryId": "accessories",
+      "brand": "Canon",
       "specifications": [
         {
           "key": "Resolution",
@@ -1664,10 +1752,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Image Quality", "value": 4.9 },
-        { "key": "Autofocus Speed", "value": 4.7 },
-        { "key": "Build Quality", "value": 4.6 },
-        { "key": "Value for Money", "value": 4.5 }
+        {
+          "key": "Image Quality",
+          "value": 4.9
+        },
+        {
+          "key": "Autofocus Speed",
+          "value": 4.7
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.6
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.5
+        }
       ]
     },
     {
@@ -1676,8 +1776,8 @@
       "image": "https://m.media-amazon.com/images/I/61+CDKTXYgL._AC_SL1500_.jpg",
       "price": 1500,
       "color": "Black",
-      "categoryId": "electronics",
-      "brand": "Brand I",
+      "categoryId": "accessories",
+      "brand": "Canon",
       "specifications": [
         {
           "key": "Resolution",
@@ -1754,10 +1854,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Brightness", "value": 4.7 },
-        { "key": "Picture Quality", "value": 4.8 },
-        { "key": "Ease of Setup", "value": 4.6 },
-        { "key": "Portability", "value": 4.5 }
+        {
+          "key": "Brightness",
+          "value": 4.7
+        },
+        {
+          "key": "Picture Quality",
+          "value": 4.8
+        },
+        {
+          "key": "Ease of Setup",
+          "value": 4.6
+        },
+        {
+          "key": "Portability",
+          "value": 4.5
+        }
       ]
     },
     {
@@ -1769,8 +1881,8 @@
       "discount": true,
       "percent": 10,
       "color": "Grey",
-      "categoryId": "electronics",
-      "brand": "Brand J",
+      "categoryId": "audio",
+      "brand": "Lenovo",
       "specifications": [
         {
           "key": "Type",
@@ -1848,10 +1960,22 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Sound Quality", "value": 4.8 },
-        { "key": "Build Quality", "value": 4.7 },
-        { "key": "Bass Response", "value": 4.6 },
-        { "key": "Portability", "value": 4.5 }
+        {
+          "key": "Sound Quality",
+          "value": 4.8
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Bass Response",
+          "value": 4.6
+        },
+        {
+          "key": "Portability",
+          "value": 4.5
+        }
       ]
     },
     {
@@ -1860,8 +1984,8 @@
       "image": "https://www.dlink.co.id/wp-content/uploads/2020/06/DIR-2150.jpg",
       "price": 80,
       "color": "Black",
-      "categoryId": "electronics",
-      "brand": "Brand K",
+      "categoryId": "network",
+      "brand": "Lenovo",
       "specifications": [
         {
           "key": "Screen Size",
@@ -1959,7 +2083,7 @@
       "price": 120,
       "color": "Blue",
       "categoryId": "electronics",
-      "brand": "Brand L",
+      "brand": "Samsung",
       "specifications": [
         {
           "key": "Capacity",
@@ -2064,8 +2188,8 @@
       "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
       "price": 400,
       "color": "Black",
-      "categoryId": "electronics",
-      "brand": "Brand M",
+      "categoryId": "camera",
+      "brand": "Canon",
       "specifications": [
         {
           "key": "Resolution",
@@ -2170,8 +2294,8 @@
       "image": "/assets/images/search/phone.png",
       "price": 150,
       "color": "White",
-      "categoryId": "electronics",
-      "brand": "Brand N",
+      "categoryId": "accessories",
+      "brand": "Flower",
       "specifications": [
         {
           "key": "Resolution",
@@ -2279,7 +2403,7 @@
       "price": 80,
       "color": "Black",
       "categoryId": "electronics",
-      "brand": "Brand O",
+      "brand": "Flower",
       "specifications": [
         {
           "key": "Resolution",
@@ -2384,8 +2508,8 @@
       "image": "https://m.media-amazon.com/images/I/71ASACudpfL._AC_SL1500_.jpg",
       "price": 1000,
       "color": "Silver",
-      "categoryId": "electronics",
-      "brand": "Brand P",
+      "categoryId": "accessories",
+      "brand": "Lenovo",
       "specifications": [
         {
           "key": "Resolution",
@@ -2493,8 +2617,8 @@
       "discount": true,
       "percent": 13,
       "color": "Black",
-      "categoryId": "electronics",
-      "brand": "Brand Q",
+      "categoryId": "gaming",
+      "brand": "Lenovo",
       "specifications": [
         {
           "key": "Resolution",
@@ -2592,6 +2716,698 @@
           "key": "Value for Money",
           "value": 4.6
         }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Laptop A1",
+      "image": "https://example.com/images/laptop-a1.jpg",
+      "price": 1200,
+      "salePrice": 1100,
+      "discount": true,
+      "percent": 8,
+      "favorite": true,
+      "color": "Silver",
+      "rating": 4.6,
+      "categoryId": "laptop",
+      "brand": "Dell",
+      "bestSeller": true,
+      "specifications": [
+        { "key": "Screen Size", "value": "15.6 inches" },
+        { "key": "Processor", "value": "Intel Core i7" },
+        { "key": "RAM", "value": "16 GB" },
+        { "key": "Storage", "value": "512 GB SSD" },
+        { "key": "Battery", "value": "6000 mAh" },
+        { "key": "Camera", "value": "720p HD" },
+        { "key": "OS", "value": "Windows 10" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/laptop-a1-preview1.jpg" },
+        { "img": "https://example.com/images/laptop-a1-preview2.jpg" },
+        { "img": "https://example.com/images/laptop-a1-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "john_doe",
+          "content": "Excellent laptop for daily use.",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://example.com/users/john_doe.jpg"
+        },
+        {
+          "id": "2",
+          "user": "jane_smith",
+          "content": "Good performance but battery life could be better.",
+          "date": "2024-07-11",
+          "rating": 4.5,
+          "userImage": "https://example.com/users/jane_smith.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.5 },
+        { "key": "Monitor", "value": 4.8 },
+        { "key": "Lightness", "value": 4.2 },
+        { "key": "Build Quality", "value": 4.7 },
+        { "key": "Value for Money", "value": 4.6 }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Laptop B2",
+      "image": "https://example.com/images/laptop-b2.jpg",
+      "price": 1500,
+      "salePrice": 1400,
+      "discount": true,
+      "percent": 6,
+      "favorite": true,
+      "color": "Black",
+      "rating": 4.7,
+      "categoryId": "laptop",
+      "brand": "HP",
+      "bestSeller": true,
+      "specifications": [
+        { "key": "Screen Size", "value": "14 inches" },
+        { "key": "Processor", "value": "Intel Core i9" },
+        { "key": "RAM", "value": "32 GB" },
+        { "key": "Storage", "value": "1 TB SSD" },
+        { "key": "Battery", "value": "7000 mAh" },
+        { "key": "Camera", "value": "1080p HD" },
+        { "key": "OS", "value": "Windows 11" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/laptop-b2-preview1.jpg" },
+        { "img": "https://example.com/images/laptop-b2-preview2.jpg" },
+        { "img": "https://example.com/images/laptop-b2-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "alice_wonder",
+          "content": "A powerhouse for all my tasks.",
+          "date": "2024-07-10",
+          "rating": 4.9,
+          "userImage": "https://example.com/users/alice_wonder.jpg"
+        },
+        {
+          "id": "2",
+          "user": "bob_brown",
+          "content": "Perfect for gaming and heavy workloads.",
+          "date": "2024-07-11",
+          "rating": 4.7,
+          "userImage": "https://example.com/users/bob_brown.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.7 },
+        { "key": "Monitor", "value": 4.9 },
+        { "key": "Lightness", "value": 4.3 },
+        { "key": "Build Quality", "value": 4.8 },
+        { "key": "Value for Money", "value": 4.7 }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Laptop C3",
+      "image": "https://example.com/images/laptop-c3.jpg",
+      "price": 1000,
+      "salePrice": 950,
+      "discount": true,
+      "percent": 5,
+      "favorite": true,
+      "color": "Grey",
+      "rating": 4.4,
+      "categoryId": "laptop",
+      "brand": "Lenovo",
+      "bestSeller": false,
+      "specifications": [
+        { "key": "Screen Size", "value": "13.3 inches" },
+        { "key": "Processor", "value": "AMD Ryzen 7" },
+        { "key": "RAM", "value": "16 GB" },
+        { "key": "Storage", "value": "512 GB SSD" },
+        { "key": "Battery", "value": "5500 mAh" },
+        { "key": "Camera", "value": "720p HD" },
+        { "key": "OS", "value": "Windows 10" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/laptop-c3-preview1.jpg" },
+        { "img": "https://example.com/images/laptop-c3-preview2.jpg" },
+        { "img": "https://example.com/images/laptop-c3-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "charlie_doe",
+          "content": "Compact and efficient.",
+          "date": "2024-07-10",
+          "rating": 4.6,
+          "userImage": "https://example.com/users/charlie_doe.jpg"
+        },
+        {
+          "id": "2",
+          "user": "dana_smith",
+          "content": "Good for everyday use.",
+          "date": "2024-07-11",
+          "rating": 4.3,
+          "userImage": "https://example.com/users/dana_smith.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.3 },
+        { "key": "Monitor", "value": 4.5 },
+        { "key": "Lightness", "value": 4.1 },
+        { "key": "Build Quality", "value": 4.4 },
+        { "key": "Value for Money", "value": 4.5 }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Laptop D4",
+      "image": "https://example.com/images/laptop-d4.jpg",
+      "price": 1300,
+      "salePrice": 1250,
+      "discount": true,
+      "percent": 4,
+      "favorite": true,
+      "color": "Blue",
+      "rating": 4.5,
+      "categoryId": "laptop",
+      "brand": "Asus",
+      "bestSeller": false,
+      "specifications": [
+        { "key": "Screen Size", "value": "14 inches" },
+        { "key": "Processor", "value": "Intel Core i7" },
+        { "key": "RAM", "value": "24 GB" },
+        { "key": "Storage", "value": "1 TB SSD" },
+        { "key": "Battery", "value": "6500 mAh" },
+        { "key": "Camera", "value": "1080p HD" },
+        { "key": "OS", "value": "Windows 11" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/laptop-d4-preview1.jpg" },
+        { "img": "https://example.com/images/laptop-d4-preview2.jpg" },
+        { "img": "https://example.com/images/laptop-d4-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "eva_green",
+          "content": "Solid performance and great design.",
+          "date": "2024-07-10",
+          "rating": 4.7,
+          "userImage": "https://example.com/users/eva_green.jpg"
+        },
+        {
+          "id": "2",
+          "user": "frank_black",
+          "content": "Excellent value for money.",
+          "date": "2024-07-11",
+          "rating": 4.5,
+          "userImage": "https://example.com/users/frank_black.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.6 },
+        { "key": "Monitor", "value": 4.8 },
+        { "key": "Lightness", "value": 4.3 },
+        { "key": "Build Quality", "value": 4.6 },
+        { "key": "Value for Money", "value": 4.5 }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Smartphone X1",
+      "image": "https://example.com/images/smartphone-x1.jpg",
+      "price": 900,
+      "salePrice": 850,
+      "discount": true,
+      "percent": 6,
+      "favorite": true,
+      "color": "Black",
+      "rating": 4.7,
+      "categoryId": "phone",
+      "brand": "Samsung",
+      "bestSeller": true,
+      "specifications": [
+        { "key": "Screen Size", "value": "6.2 inches" },
+        { "key": "Processor", "value": "Snapdragon 888" },
+        { "key": "RAM", "value": "8 GB" },
+        { "key": "Storage", "value": "256 GB" },
+        { "key": "Battery", "value": "4500 mAh" },
+        { "key": "Camera", "value": "64 MP" },
+        { "key": "OS", "value": "Android 12" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartphone-x1-preview1.jpg" },
+        { "img": "https://example.com/images/smartphone-x1-preview2.jpg" },
+        { "img": "https://example.com/images/smartphone-x1-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "alex_jones",
+          "content": "Amazing phone with great features!",
+          "date": "2024-07-10",
+          "rating": 4.9,
+          "userImage": "https://example.com/users/alex_jones.jpg"
+        },
+        {
+          "id": "2",
+          "user": "maria_smith",
+          "content": "Battery life is impressive.",
+          "date": "2024-07-11",
+          "rating": 4.7,
+          "userImage": "https://example.com/users/maria_smith.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.8 },
+        { "key": "Monitor", "value": 4.9 },
+        { "key": "Lightness", "value": 4.3 },
+        { "key": "Build Quality", "value": 4.7 },
+        { "key": "Value for Money", "value": 4.6 }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Smartphone Y2",
+      "image": "https://example.com/images/smartphone-y2.jpg",
+      "price": 800,
+      "salePrice": 750,
+      "discount": true,
+      "percent": 6,
+      "favorite": true,
+      "color": "White",
+      "rating": 4.6,
+      "categoryId": "phone",
+      "brand": "Apple",
+      "bestSeller": true,
+      "specifications": [
+        { "key": "Screen Size", "value": "6.1 inches" },
+        { "key": "Processor", "value": "A14 Bionic" },
+        { "key": "RAM", "value": "6 GB" },
+        { "key": "Storage", "value": "128 GB" },
+        { "key": "Battery", "value": "4000 mAh" },
+        { "key": "Camera", "value": "12 MP" },
+        { "key": "OS", "value": "iOS 15" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartphone-y2-preview1.jpg" },
+        { "img": "https://example.com/images/smartphone-y2-preview2.jpg" },
+        { "img": "https://example.com/images/smartphone-y2-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "john_doe",
+          "content": "Very informative!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://example.com/users/john_doe.jpg"
+        },
+        {
+          "id": "2",
+          "user": "jane_smith",
+          "content": "This phone is great for everyday use.",
+          "date": "2024-07-11",
+          "rating": 4.6,
+          "userImage": "https://example.com/users/jane_smith.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.5 },
+        { "key": "Monitor", "value": 4.8 },
+        { "key": "Lightness", "value": 4.2 },
+        { "key": "Build Quality", "value": 4.7 },
+        { "key": "Value for Money", "value": 4.6 }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Smartphone Z3",
+      "image": "https://example.com/images/smartphone-z3.jpg",
+      "price": 950,
+      "salePrice": 900,
+      "discount": true,
+      "percent": 5,
+      "favorite": true,
+      "color": "Blue",
+      "rating": 4.8,
+      "categoryId": "phone",
+      "brand": "OnePlus",
+      "bestSeller": true,
+      "specifications": [
+        { "key": "Screen Size", "value": "6.4 inches" },
+        { "key": "Processor", "value": "Snapdragon 870" },
+        { "key": "RAM", "value": "12 GB" },
+        { "key": "Storage", "value": "256 GB" },
+        { "key": "Battery", "value": "4500 mAh" },
+        { "key": "Camera", "value": "48 MP" },
+        { "key": "OS", "value": "Android 12" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartphone-z3-preview1.jpg" },
+        { "img": "https://example.com/images/smartphone-z3-preview2.jpg" },
+        { "img": "https://example.com/images/smartphone-z3-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "anna_williams",
+          "content": "Great performance and value.",
+          "date": "2024-07-10",
+          "rating": 4.9,
+          "userImage": "https://example.com/users/anna_williams.jpg"
+        },
+        {
+          "id": "2",
+          "user": "mark_jones",
+          "content": "Battery life could be better, but overall a solid phone.",
+          "date": "2024-07-11",
+          "rating": 4.8,
+          "userImage": "https://example.com/users/mark_jones.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.7 },
+        { "key": "Monitor", "value": 4.9 },
+        { "key": "Lightness", "value": 4.3 },
+        { "key": "Build Quality", "value": 4.8 },
+        { "key": "Value for Money", "value": 4.7 }
+      ]
+    },
+    {
+      "id": "28",
+      "name": "Smartphone W4",
+      "image": "https://example.com/images/smartphone-w4.jpg",
+      "price": 700,
+      "salePrice": 650,
+      "discount": true,
+      "percent": 7,
+      "favorite": true,
+      "color": "Red",
+      "rating": 4.5,
+      "categoryId": "phone",
+      "brand": "Xiaomi",
+      "bestSeller": false,
+      "specifications": [
+        { "key": "Screen Size", "value": "6.5 inches" },
+        { "key": "Processor", "value": "MediaTek Dimensity 1200" },
+        { "key": "RAM", "value": "8 GB" },
+        { "key": "Storage", "value": "128 GB" },
+        { "key": "Battery", "value": "5000 mAh" },
+        { "key": "Camera", "value": "64 MP" },
+        { "key": "OS", "value": "Android 11" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartphone-w4-preview1.jpg" },
+        { "img": "https://example.com/images/smartphone-w4-preview2.jpg" },
+        { "img": "https://example.com/images/smartphone-w4-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "oliver_lee",
+          "content": "Great phone for the price.",
+          "date": "2024-07-10",
+          "rating": 4.6,
+          "userImage": "https://example.com/users/oliver_lee.jpg"
+        },
+        {
+          "id": "2",
+          "user": "sophia_davis",
+          "content": "Good performance but could be improved.",
+          "date": "2024-07-11",
+          "rating": 4.4,
+          "userImage": "https://example.com/users/sophia_davis.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.5 },
+        { "key": "Monitor", "value": 4.6 },
+        { "key": "Lightness", "value": 4.2 },
+        { "key": "Build Quality", "value": 4.5 },
+        { "key": "Value for Money", "value": 4.7 }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Smart Watch A1",
+      "image": "https://example.com/images/smartwatch-a1.jpg",
+      "price": 250,
+      "salePrice": 230,
+      "discount": true,
+      "percent": 8,
+      "favorite": true,
+      "color": "Black",
+      "rating": 4.5,
+      "categoryId": "smartwatch",
+      "brand": "Apple",
+      "bestSeller": true,
+      "specifications": [
+        { "key": "Screen Size", "value": "1.7 inches" },
+        { "key": "Battery", "value": "300 mAh" },
+        { "key": "Water Resistant", "value": "Yes" },
+        { "key": "Connectivity", "value": "Bluetooth, Wi-Fi" },
+        { "key": "OS", "value": "watchOS" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartwatch-a1-preview1.jpg" },
+        { "img": "https://example.com/images/smartwatch-a1-preview2.jpg" },
+        { "img": "https://example.com/images/smartwatch-a1-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "john_doe",
+          "content": "Great smart watch with many features!",
+          "date": "2024-07-10",
+          "rating": 4.8,
+          "userImage": "https://example.com/users/john_doe.jpg"
+        },
+        {
+          "id": "2",
+          "user": "jane_smith",
+          "content": "Battery life is a bit short.",
+          "date": "2024-07-11",
+          "rating": 4.6,
+          "userImage": "https://example.com/users/jane_smith.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.3 },
+        { "key": "Monitor", "value": 4.7 },
+        { "key": "Lightness", "value": 4.5 },
+        { "key": "Build Quality", "value": 4.6 },
+        { "key": "Value for Money", "value": 4.5 }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Smart Watch B2",
+      "image": "https://example.com/images/smartwatch-b2.jpg",
+      "price": 200,
+      "salePrice": 180,
+      "discount": true,
+      "percent": 10,
+      "favorite": true,
+      "color": "Silver",
+      "rating": 4.6,
+      "categoryId": "smartwatch",
+      "brand": "Samsung",
+      "bestSeller": true,
+      "specifications": [
+        { "key": "Screen Size", "value": "1.6 inches" },
+        { "key": "Battery", "value": "350 mAh" },
+        { "key": "Water Resistant", "value": "Yes" },
+        { "key": "Connectivity", "value": "Bluetooth, Wi-Fi, LTE" },
+        { "key": "OS", "value": "Tizen" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartwatch-b2-preview1.jpg" },
+        { "img": "https://example.com/images/smartwatch-b2-preview2.jpg" },
+        { "img": "https://example.com/images/smartwatch-b2-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "alex_jones",
+          "content": "Solid performance and build quality.",
+          "date": "2024-07-10",
+          "rating": 4.7,
+          "userImage": "https://example.com/users/alex_jones.jpg"
+        },
+        {
+          "id": "2",
+          "user": "maria_smith",
+          "content": "Love the design and features.",
+          "date": "2024-07-11",
+          "rating": 4.6,
+          "userImage": "https://example.com/users/maria_smith.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.4 },
+        { "key": "Monitor", "value": 4.8 },
+        { "key": "Lightness", "value": 4.5 },
+        { "key": "Build Quality", "value": 4.7 },
+        { "key": "Value for Money", "value": 4.6 }
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Smart Watch C3",
+      "image": "https://example.com/images/smartwatch-c3.jpg",
+      "price": 150,
+      "salePrice": 140,
+      "discount": true,
+      "percent": 7,
+      "favorite": true,
+      "color": "Blue",
+      "rating": 4.4,
+      "categoryId": "smartwatch",
+      "brand": "Fitbit",
+      "bestSeller": false,
+      "specifications": [
+        { "key": "Screen Size", "value": "1.4 inches" },
+        { "key": "Battery", "value": "200 mAh" },
+        { "key": "Water Resistant", "value": "Yes" },
+        { "key": "Connectivity", "value": "Bluetooth" },
+        { "key": "OS", "value": "Fitbit OS" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartwatch-c3-preview1.jpg" },
+        { "img": "https://example.com/images/smartwatch-c3-preview2.jpg" },
+        { "img": "https://example.com/images/smartwatch-c3-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "anna_williams",
+          "content": "Perfect for fitness tracking.",
+          "date": "2024-07-10",
+          "rating": 4.5,
+          "userImage": "https://example.com/users/anna_williams.jpg"
+        },
+        {
+          "id": "2",
+          "user": "mark_jones",
+          "content": "Affordable and functional.",
+          "date": "2024-07-11",
+          "rating": 4.3,
+          "userImage": "https://example.com/users/mark_jones.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.2 },
+        { "key": "Monitor", "value": 4.4 },
+        { "key": "Lightness", "value": 4.3 },
+        { "key": "Build Quality", "value": 4.5 },
+        { "key": "Value for Money", "value": 4.4 }
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Smart Watch D4",
+      "image": "https://example.com/images/smartwatch-d4.jpg",
+      "price": 300,
+      "salePrice": 280,
+      "discount": true,
+      "percent": 7,
+      "favorite": true,
+      "color": "Gold",
+      "rating": 4.7,
+      "categoryId": "smartwatch",
+      "brand": "Garmin",
+      "bestSeller": true,
+      "specifications": [
+        { "key": "Screen Size", "value": "1.8 inches" },
+        { "key": "Battery", "value": "400 mAh" },
+        { "key": "Water Resistant", "value": "Yes" },
+        { "key": "Connectivity", "value": "Bluetooth, Wi-Fi" },
+        { "key": "OS", "value": "Garmin OS" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartwatch-d4-preview1.jpg" },
+        { "img": "https://example.com/images/smartwatch-d4-preview2.jpg" },
+        { "img": "https://example.com/images/smartwatch-d4-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "eva_green",
+          "content": "Highly recommend for outdoor activities.",
+          "date": "2024-07-10",
+          "rating": 4.9,
+          "userImage": "https://example.com/users/eva_green.jpg"
+        },
+        {
+          "id": "2",
+          "user": "frank_black",
+          "content": "Excellent features and battery life.",
+          "date": "2024-07-11",
+          "rating": 4.7,
+          "userImage": "https://example.com/users/frank_black.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.6 },
+        { "key": "Monitor", "value": 4.8 },
+        { "key": "Lightness", "value": 4.5 },
+        { "key": "Build Quality", "value": 4.7 },
+        { "key": "Value for Money", "value": 4.6 }
+      ]
+    },
+    {
+      "id": "33",
+      "name": "Smart Watch E5",
+      "image": "https://example.com/images/smartwatch-e5.jpg",
+      "price": 280,
+      "salePrice": 260,
+      "discount": true,
+      "percent": 7,
+      "favorite": true,
+      "color": "Rose Gold",
+      "rating": 4.5,
+      "categoryId": "smartwatch",
+      "brand": "Huawei",
+      "bestSeller": false,
+      "specifications": [
+        { "key": "Screen Size", "value": "1.7 inches" },
+        { "key": "Battery", "value": "380 mAh" },
+        { "key": "Water Resistant", "value": "Yes" },
+        { "key": "Connectivity", "value": "Bluetooth, Wi-Fi" },
+        { "key": "OS", "value": "HarmonyOS" }
+      ],
+      "imagePreview": [
+        { "img": "https://example.com/images/smartwatch-e5-preview1.jpg" },
+        { "img": "https://example.com/images/smartwatch-e5-preview2.jpg" },
+        { "img": "https://example.com/images/smartwatch-e5-preview3.jpg" }
+      ],
+      "comment": [
+        {
+          "id": "1",
+          "user": "lisa_white",
+          "content": "Stylish and functional.",
+          "date": "2024-07-10",
+          "rating": 4.6,
+          "userImage": "https://example.com/users/lisa_white.jpg"
+        },
+        {
+          "id": "2",
+          "user": "tom_green",
+          "content": "Great watch with a lot of features.",
+          "date": "2024-07-11",
+          "rating": 4.5,
+          "userImage": "https://example.com/users/tom_green.jpg"
+        }
+      ],
+      "ratingFunction": [
+        { "key": "Battery charge", "value": 4.4 },
+        { "key": "Monitor", "value": 4.7 },
+        { "key": "Lightness", "value": 4.5 },
+        { "key": "Build Quality", "value": 4.6 },
+        { "key": "Value for Money", "value": 4.5 }
       ]
     }
   ],
@@ -2781,6 +3597,29 @@
       "name": "J SMITH",
       "expires": "07/24",
       "selected": false
+    }
+  ],
+  "colors": [
+    {
+      "color": "White"
+    },
+    {
+      "color": "Black"
+    },
+    {
+      "color": "Grey"
+    },
+    {
+      "color": "Blue"
+    },
+    {
+      "color": "Red"
+    },
+    {
+      "color": "Rose Gold"
+    },
+    {
+      "color": "Silver"
     }
   ]
 }

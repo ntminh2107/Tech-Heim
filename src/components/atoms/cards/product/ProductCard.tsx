@@ -43,7 +43,7 @@ const ProductCard = ({
   };
 
   return (
-    <div className="relative rounded-md bg-white w-72 h-[347px] flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4">
+    <div className="relative rounded-md bg-white w-72 h-[347px]  flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4">
       {percent && (
         <p className="absolute top-2 left-0 py-1 px-[6px] text-secondary-400 bg-secondary-100 rounded-tr-xl rounded-br-xl group-hover:hidden">
           {percent}%

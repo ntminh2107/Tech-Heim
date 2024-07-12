@@ -12,8 +12,10 @@ import {
   getBestSellerProductThunk,
   getBrandThunk,
   getCategoryThunk,
+  getColorThunk,
   getNewProductThunk,
   getProductSaleThunk,
+  getProductThunk,
   // getProductThunk,
 } from "../../../redux/slice/productSlice";
 import {
@@ -35,6 +37,8 @@ const Header = () => {
     dispatch(getBlogThunk());
     dispatch(getVideoBlogThunk());
     dispatch(getNewBlogThunk());
+    dispatch(getProductThunk());
+    dispatch(getColorThunk());
     // dispatch(getProductThunk());
   }, []);
 
