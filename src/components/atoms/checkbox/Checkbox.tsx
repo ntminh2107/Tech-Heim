@@ -1,9 +1,6 @@
-import { Checkbox as AntCheckbox, GetProp } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Checkbox as AntCheckbox } from "antd";
+import { useNavigate, useLocation } from "react-router-dom";
 import queryString from "query-string";
-// import { useDispatch } from "react-redux";
-// import { AppDispatch } from "../../../redux/store";
-// import { getProductThunk } from "../../../redux/slice/productSlice";
 
 type Props = {
   options: string[] | number[];
@@ -14,22 +11,30 @@ type Props = {
 
 const Checkbox = ({ options, basePath, queryKey, defaultValue }: Props) => {
   const navigate = useNavigate();
+  const location = useLocation(); // Added to use the current location
   const currentParams = queryString.parse(location.search);
 
-  const onChange: GetProp<typeof AntCheckbox.Group, "onChange"> = (
-    checkedValues
-  ) => {
+  const onChange = (checkedValues: Array<string | number>) => {
     console.log("checked = ", checkedValues);
-    const newParams = {
-      ...currentParams,
-      [queryKey]: checkedValues.join(","),
-    };
 
+    // Create new parameters object
+    const newParams = { ...currentParams };
+
+    if (checkedValues.length > 0) {
+      // If there are checked values, update the query parameter
+      newParams[queryKey] = checkedValues.join(",");
+    } else {
+      // If no values are checked, remove the query parameter
+      delete newParams[queryKey];
+    }
+
+    // Navigate to the new URL with updated query parameters
     navigate({
       pathname: basePath,
       search: `?${queryString.stringify(newParams)}`,
     });
   };
+
   return (
     <AntCheckbox.Group
       options={options}

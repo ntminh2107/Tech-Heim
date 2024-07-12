@@ -17,14 +17,20 @@ const Switch = ({ title, basePath, className }: Props) => {
 
   const onChange = (checked: boolean) => {
     console.log(`switch to ${checked}`);
+    const newParams = { ...currentParams };
+
+    if (checked) {
+      newParams.discount = "true";
+    } else {
+      delete newParams.discount;
+    }
+
     navigate({
       pathname: basePath,
-      search: queryString.stringify({
-        ...currentParams,
-        discount: checked,
-      }),
+      search: queryString.stringify(newParams),
     });
   };
+
   return (
     <div
       className={cn("flex justify-between items-center px-4 py-3", className)}

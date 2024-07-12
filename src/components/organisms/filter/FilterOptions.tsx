@@ -24,9 +24,6 @@ const FilterOptions = () => {
     if (categoryId) dispatch(getFilterProductThunk({ categoryId, query }));
   }, [dispatch, query, categoryId]);
 
-  // const filterProduct = useSelector(
-  //   (state: RootState) => state.product.filterProduct
-  // );
   console.log(query);
 
   return (
