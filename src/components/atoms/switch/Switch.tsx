@@ -7,16 +7,23 @@ type Props = {
   title: string;
   basePath: string;
   className?: string;
+  checked: boolean;
+  onCheckedChange: (checked: boolean) => void;
 };
 
-const Switch = ({ title, basePath, className }: Props) => {
+const Switch = ({
+  title,
+  basePath,
+  className,
+  checked,
+  onCheckedChange,
+}: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
   const currentParams = queryString.parse(location.search);
-  console.log("Current Params:", currentParams);
 
   const onChange = (checked: boolean) => {
-    console.log(`switch to ${checked}`);
+    onCheckedChange(checked);
     const newParams = { ...currentParams };
 
     if (checked) {
@@ -36,7 +43,7 @@ const Switch = ({ title, basePath, className }: Props) => {
       className={cn("flex justify-between items-center px-4 py-3", className)}
     >
       <h5>{title}</h5>
-      <AntSwitch onChange={onChange} />
+      <AntSwitch checked={checked} onChange={onChange} />
     </div>
   );
 };

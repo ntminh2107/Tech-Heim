@@ -6,29 +6,31 @@ type Props = {
   options: string[] | number[];
   basePath: string;
   queryKey: string;
-  defaultValue?: string[];
+  checkedValues: string[];
+  onCheckedValuesChange: (checkedValues: string[]) => void;
 };
 
-const Checkbox = ({ options, basePath, queryKey, defaultValue }: Props) => {
+const Checkbox = ({
+  options,
+  basePath,
+  queryKey,
+  checkedValues,
+  onCheckedValuesChange,
+}: Props) => {
   const navigate = useNavigate();
-  const location = useLocation(); // Added to use the current location
+  const location = useLocation();
   const currentParams = queryString.parse(location.search);
 
   const onChange = (checkedValues: Array<string | number>) => {
-    console.log("checked = ", checkedValues);
-
-    // Create new parameters object
+    onCheckedValuesChange(checkedValues as string[]);
     const newParams = { ...currentParams };
 
     if (checkedValues.length > 0) {
-      // If there are checked values, update the query parameter
       newParams[queryKey] = checkedValues.join(",");
     } else {
-      // If no values are checked, remove the query parameter
       delete newParams[queryKey];
     }
 
-    // Navigate to the new URL with updated query parameters
     navigate({
       pathname: basePath,
       search: `?${queryString.stringify(newParams)}`,
@@ -38,7 +40,7 @@ const Checkbox = ({ options, basePath, queryKey, defaultValue }: Props) => {
   return (
     <AntCheckbox.Group
       options={options}
-      defaultValue={defaultValue}
+      value={checkedValues}
       onChange={onChange}
       className="flex flex-col gap-4"
     />
