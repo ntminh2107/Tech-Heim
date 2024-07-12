@@ -147,9 +147,15 @@ export const getBrandAPI = () => {
     .catch((err) => err);
 };
 
-export const getFilterProductAPI = (query: string) => {
+export const getFilterProductAPI = ({
+  categoryId,
+  query,
+}: {
+  categoryId: string;
+  query: string;
+}) => {
   return axiosClient
-    .get(`product?${query}`)
+    .get(`product?categoryId=${categoryId}&${query}`)
     .then((res) => {
       const { data, status } = res;
       return { data, status };

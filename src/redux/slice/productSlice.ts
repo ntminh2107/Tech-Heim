@@ -555,8 +555,8 @@ export const productSlice = createAppSlice({
       },
     }),
     getFilterProductThunk: create.asyncThunk(
-      async (query: string) => {
-        const data = await getFilterProductAPI(query);
+      async ({ categoryId, query }: { categoryId: string; query: string }) => {
+        const data = await getFilterProductAPI({ categoryId, query });
         return data;
       },
       {
