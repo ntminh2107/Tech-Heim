@@ -506,6 +506,7 @@ export const productSlice = createAppSlice({
     getProductCatThunk: create.asyncThunk(
       async (categoryId: string) => {
         const data = await getProductCatAPI(categoryId);
+
         return data;
       },
       {
@@ -516,11 +517,12 @@ export const productSlice = createAppSlice({
           };
         },
         fulfilled: (state, action) => {
-          const { data } = action.payload;
+          const { data, status } = action.payload;
           return {
             ...state,
             loading: false,
             productCatList: data,
+            status: status,
           };
         },
         rejected: (state) => {

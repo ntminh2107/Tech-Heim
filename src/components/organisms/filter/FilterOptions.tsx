@@ -9,6 +9,7 @@ import Switch from "../../atoms/switch/Switch";
 import { SplitQueryParams } from "../../../utils/convertParams";
 import { useEffect, useState } from "react";
 import { getFilterProductThunk } from "../../../redux/slice/productSlice";
+import { mappingSpec } from "../../../utils/mappingSpec";
 
 const FilterOptions = () => {
   const { categoryId } = useParams<{ categoryId?: string }>() ?? {};
@@ -19,16 +20,22 @@ const FilterOptions = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const query = SplitQueryParams(location.search);
+
   const [checked, setChecked] = useState<string[]>([]);
   const [switched, setSwitched] = useState<boolean>(false);
   console.log(categoryId);
 
   useEffect(() => {
-    if (categoryId) dispatch(getFilterProductThunk({ categoryId, query }));
+    if (categoryId) {
+      dispatch(getFilterProductThunk({ categoryId, query }));
+    }
   }, [dispatch, query, categoryId]);
 
-  console.log(query);
+  const { productCatList } = useSelector((state: RootState) => state.product);
 
+  const specProd = mappingSpec(productCatList);
+  console.log(specProd);
+  console.log(query);
   const clearAllFilters = () => {
     navigate({
       pathname: location.pathname,
@@ -83,6 +90,21 @@ const FilterOptions = () => {
         checked={switched}
         onCheckedChange={setSwitched}
       />
+      {Object.keys(specProd).map((key) => (
+        <CollapseCheckbox
+          key={key}
+          label={key}
+          children={
+            <Checkbox
+              queryKey={key}
+              options={specProd[key].map((value) => value)}
+              basePath={location.pathname}
+              checkedValues={checked}
+              onCheckedValuesChange={setChecked}
+            />
+          }
+        />
+      ))}
     </div>
   );
 };

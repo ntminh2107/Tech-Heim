@@ -6,6 +6,7 @@ import { AppDispatch, RootState } from "../../redux/store";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { getProductCatThunk } from "../../redux/slice/productSlice";
+import { mappingSpec } from "../../utils/mappingSpec";
 
 const ProductFilterBrand = () => {
   const { categoryId } = useParams<{ categoryId?: string }>() ?? {};
@@ -24,6 +25,8 @@ const ProductFilterBrand = () => {
     (state: RootState) => state.product.filterProduct
   );
 
+  // const specProd = mappingSpec(filterProduct);
+  // console.log(specProd);
   return (
     <section>
       <CategoryListWithIcon />
