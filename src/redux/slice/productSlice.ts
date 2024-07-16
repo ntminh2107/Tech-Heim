@@ -14,6 +14,7 @@ import {
   getCategoryAPI,
   getColorAPI,
   getDetailProductAPI,
+  getFilterPriceProductAPI,
   getFilterProductAPI,
   getNewProductsAPI,
   getProductAPI,
@@ -43,6 +44,7 @@ interface ProductState {
   brandList: Brand[];
   colorList: Colors[];
   filterProduct: Product[];
+  priceFilterProduct: Product[];
   // specifications: { key: string; value: number }[];
   loading: boolean;
   status: number;
@@ -65,6 +67,7 @@ const initialState: ProductState = {
   product: [],
   productCatList: [],
   colorList: [],
+  priceFilterProduct: [],
   // specifications: [],
   filterProduct: [],
   loading: false,
@@ -585,6 +588,35 @@ export const productSlice = createAppSlice({
         },
       }
     ),
+    getFilterPriceProductThunk: create.asyncThunk(
+      async ({ min, max }: { min: number; max: number }) => {
+        const data = await getFilterPriceProductAPI({ min, max });
+        return data;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            priceFilterProduct: data,
+            status: status,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
   }),
 });
 
@@ -605,6 +637,7 @@ export const {
   getDetailProductThunk,
   getSimilarProductThunk,
   getProductCatThunk,
+  getFilterPriceProductThunk,
   getProductThunk,
   getColorThunk,
   getFilterProductThunk,

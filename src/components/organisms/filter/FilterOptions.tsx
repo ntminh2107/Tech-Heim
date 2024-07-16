@@ -27,13 +27,6 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
   );
   const [switched, setSwitched] = useState<boolean>(false);
 
-  useEffect(() => {
-    setCheckedBrands([]);
-    setCheckedColors([]);
-    setCheckedSpecs({});
-    setSwitched(false);
-  }, [location.search]);
-
   const specProd = mappingSpec(productCatList);
 
   const clearAllFilters = () => {
@@ -153,6 +146,7 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
         checked={switched}
         onCheckedChange={handleSwitchChange}
       />
+
       {Object.keys(specProd).map((key) => (
         <CollapseCheckbox
           key={key}
