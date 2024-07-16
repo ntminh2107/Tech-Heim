@@ -223,3 +223,19 @@ export const getSpecByCatAPI = (category: string) => {
     })
     .catch((err) => err);
 };
+
+export const getFilterPriceProductAPI = ({
+  min,
+  max,
+}: {
+  min: number;
+  max: number;
+}) => {
+  return axiosClient
+    .get(`product?price_gte=${min}&price_lte=${max}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
