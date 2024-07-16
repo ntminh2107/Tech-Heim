@@ -48,11 +48,11 @@ const FilterOptions = () => {
   return (
     <div className="flex flex-col flex-1">
       <div className="flex px-4 py-1 items-center ">
-        <h5 className="text-xl flex-1 font-semibold ">Filters</h5>
+        <h5 className="text-xl flex-1 font-semibold">Filters</h5>
         <Button
           type="text"
           size="small"
-          className="text-primary px-12 py-3"
+          className="text-primary px-12 py-3 "
           onClick={clearAllFilters}
         >
           Clear all
