@@ -528,6 +528,16 @@
       "name": "Smartphone Y2",
       "price": 800,
       "salePrice": 750
+    },
+    {
+      "id": "0583ec3a-7b33-4e37-a5e2-e72f47e7d585",
+      "quantity": 1,
+      "productId": "21",
+      "color": "Silver",
+      "image": "https://example.com/images/laptop-a1.jpg",
+      "name": "Laptop A1",
+      "price": 1200,
+      "salePrice": 1100
     }
   ],
   "product": [
@@ -2719,7 +2729,7 @@
       ]
     },
     {
-      "id": "21",
+      "id": "200",
       "name": "Laptop A1",
       "image": "https://example.com/images/laptop-a1.jpg",
       "price": 1200,
@@ -2730,21 +2740,48 @@
       "color": "Silver",
       "rating": 4.6,
       "categoryId": "laptop",
-      "brand": "Dell",
+      "brand": "Lenovo",
       "bestSeller": true,
       "specifications": [
-        { "key": "Screen Size", "value": "15.6 inches" },
-        { "key": "Processor", "value": "Intel Core i7" },
-        { "key": "RAM", "value": "16 GB" },
-        { "key": "Storage", "value": "512 GB SSD" },
-        { "key": "Battery", "value": "6000 mAh" },
-        { "key": "Camera", "value": "720p HD" },
-        { "key": "OS", "value": "Windows 10" }
+        {
+          "key": "Screen Size",
+          "value": "15.6 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Intel Core i7"
+        },
+        {
+          "key": "RAM",
+          "value": "16 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "512 GB SSD"
+        },
+        {
+          "key": "Battery",
+          "value": "6000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "720p HD"
+        },
+        {
+          "key": "OS",
+          "value": "Windows 10"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/laptop-a1-preview1.jpg" },
-        { "img": "https://example.com/images/laptop-a1-preview2.jpg" },
-        { "img": "https://example.com/images/laptop-a1-preview3.jpg" }
+        {
+          "img": "https://example.com/images/laptop-a1-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/laptop-a1-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/laptop-a1-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -2765,11 +2802,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.5 },
-        { "key": "Monitor", "value": 4.8 },
-        { "key": "Lightness", "value": 4.2 },
-        { "key": "Build Quality", "value": 4.7 },
-        { "key": "Value for Money", "value": 4.6 }
+        {
+          "key": "Battery charge",
+          "value": 4.5
+        },
+        {
+          "key": "Monitor",
+          "value": 4.8
+        },
+        {
+          "key": "Lightness",
+          "value": 4.2
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -2784,21 +2836,48 @@
       "color": "Black",
       "rating": 4.7,
       "categoryId": "laptop",
-      "brand": "HP",
+      "brand": "Apple",
       "bestSeller": true,
       "specifications": [
-        { "key": "Screen Size", "value": "14 inches" },
-        { "key": "Processor", "value": "Intel Core i9" },
-        { "key": "RAM", "value": "32 GB" },
-        { "key": "Storage", "value": "1 TB SSD" },
-        { "key": "Battery", "value": "7000 mAh" },
-        { "key": "Camera", "value": "1080p HD" },
-        { "key": "OS", "value": "Windows 11" }
+        {
+          "key": "Screen Size",
+          "value": "14 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Intel Core i9"
+        },
+        {
+          "key": "RAM",
+          "value": "32 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "1 TB SSD"
+        },
+        {
+          "key": "Battery",
+          "value": "7000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "1080p HD"
+        },
+        {
+          "key": "OS",
+          "value": "Windows 11"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/laptop-b2-preview1.jpg" },
-        { "img": "https://example.com/images/laptop-b2-preview2.jpg" },
-        { "img": "https://example.com/images/laptop-b2-preview3.jpg" }
+        {
+          "img": "https://example.com/images/laptop-b2-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/laptop-b2-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/laptop-b2-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -2819,11 +2898,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.7 },
-        { "key": "Monitor", "value": 4.9 },
-        { "key": "Lightness", "value": 4.3 },
-        { "key": "Build Quality", "value": 4.8 },
-        { "key": "Value for Money", "value": 4.7 }
+        {
+          "key": "Battery charge",
+          "value": 4.7
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.8
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.7
+        }
       ]
     },
     {
@@ -2841,18 +2935,45 @@
       "brand": "Lenovo",
       "bestSeller": false,
       "specifications": [
-        { "key": "Screen Size", "value": "13.3 inches" },
-        { "key": "Processor", "value": "AMD Ryzen 7" },
-        { "key": "RAM", "value": "16 GB" },
-        { "key": "Storage", "value": "512 GB SSD" },
-        { "key": "Battery", "value": "5500 mAh" },
-        { "key": "Camera", "value": "720p HD" },
-        { "key": "OS", "value": "Windows 10" }
+        {
+          "key": "Screen Size",
+          "value": "13.3 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "AMD Ryzen 7"
+        },
+        {
+          "key": "RAM",
+          "value": "24 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "512 GB SSD"
+        },
+        {
+          "key": "Battery",
+          "value": "5500 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "720p HD"
+        },
+        {
+          "key": "OS",
+          "value": "Windows 10"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/laptop-c3-preview1.jpg" },
-        { "img": "https://example.com/images/laptop-c3-preview2.jpg" },
-        { "img": "https://example.com/images/laptop-c3-preview3.jpg" }
+        {
+          "img": "https://example.com/images/laptop-c3-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/laptop-c3-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/laptop-c3-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -2873,11 +2994,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.3 },
-        { "key": "Monitor", "value": 4.5 },
-        { "key": "Lightness", "value": 4.1 },
-        { "key": "Build Quality", "value": 4.4 },
-        { "key": "Value for Money", "value": 4.5 }
+        {
+          "key": "Battery charge",
+          "value": 4.3
+        },
+        {
+          "key": "Monitor",
+          "value": 4.5
+        },
+        {
+          "key": "Lightness",
+          "value": 4.1
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.4
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.5
+        }
       ]
     },
     {
@@ -2895,18 +3031,45 @@
       "brand": "Asus",
       "bestSeller": false,
       "specifications": [
-        { "key": "Screen Size", "value": "14 inches" },
-        { "key": "Processor", "value": "Intel Core i7" },
-        { "key": "RAM", "value": "24 GB" },
-        { "key": "Storage", "value": "1 TB SSD" },
-        { "key": "Battery", "value": "6500 mAh" },
-        { "key": "Camera", "value": "1080p HD" },
-        { "key": "OS", "value": "Windows 11" }
+        {
+          "key": "Screen Size",
+          "value": "14 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Intel Core i7"
+        },
+        {
+          "key": "RAM",
+          "value": "24 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "1 TB SSD"
+        },
+        {
+          "key": "Battery",
+          "value": "6500 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "1080p HD"
+        },
+        {
+          "key": "OS",
+          "value": "Windows 11"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/laptop-d4-preview1.jpg" },
-        { "img": "https://example.com/images/laptop-d4-preview2.jpg" },
-        { "img": "https://example.com/images/laptop-d4-preview3.jpg" }
+        {
+          "img": "https://example.com/images/laptop-d4-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/laptop-d4-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/laptop-d4-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -2927,11 +3090,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.6 },
-        { "key": "Monitor", "value": 4.8 },
-        { "key": "Lightness", "value": 4.3 },
-        { "key": "Build Quality", "value": 4.6 },
-        { "key": "Value for Money", "value": 4.5 }
+        {
+          "key": "Battery charge",
+          "value": 4.6
+        },
+        {
+          "key": "Monitor",
+          "value": 4.8
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.6
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.5
+        }
       ]
     },
     {
@@ -2949,18 +3127,45 @@
       "brand": "Samsung",
       "bestSeller": true,
       "specifications": [
-        { "key": "Screen Size", "value": "6.2 inches" },
-        { "key": "Processor", "value": "Snapdragon 888" },
-        { "key": "RAM", "value": "8 GB" },
-        { "key": "Storage", "value": "256 GB" },
-        { "key": "Battery", "value": "4500 mAh" },
-        { "key": "Camera", "value": "64 MP" },
-        { "key": "OS", "value": "Android 12" }
+        {
+          "key": "Screen Size",
+          "value": "6.2 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Snapdragon 888"
+        },
+        {
+          "key": "RAM",
+          "value": "8 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "256 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4500 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "64 MP"
+        },
+        {
+          "key": "OS",
+          "value": "Android 12"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartphone-x1-preview1.jpg" },
-        { "img": "https://example.com/images/smartphone-x1-preview2.jpg" },
-        { "img": "https://example.com/images/smartphone-x1-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartphone-x1-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartphone-x1-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartphone-x1-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -2981,11 +3186,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.8 },
-        { "key": "Monitor", "value": 4.9 },
-        { "key": "Lightness", "value": 4.3 },
-        { "key": "Build Quality", "value": 4.7 },
-        { "key": "Value for Money", "value": 4.6 }
+        {
+          "key": "Battery charge",
+          "value": 4.8
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -3003,18 +3223,45 @@
       "brand": "Apple",
       "bestSeller": true,
       "specifications": [
-        { "key": "Screen Size", "value": "6.1 inches" },
-        { "key": "Processor", "value": "A14 Bionic" },
-        { "key": "RAM", "value": "6 GB" },
-        { "key": "Storage", "value": "128 GB" },
-        { "key": "Battery", "value": "4000 mAh" },
-        { "key": "Camera", "value": "12 MP" },
-        { "key": "OS", "value": "iOS 15" }
+        {
+          "key": "Screen Size",
+          "value": "6.1 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "A14 Bionic"
+        },
+        {
+          "key": "RAM",
+          "value": "6 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "128 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "12 MP"
+        },
+        {
+          "key": "OS",
+          "value": "iOS 15"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartphone-y2-preview1.jpg" },
-        { "img": "https://example.com/images/smartphone-y2-preview2.jpg" },
-        { "img": "https://example.com/images/smartphone-y2-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartphone-y2-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartphone-y2-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartphone-y2-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -3035,11 +3282,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.5 },
-        { "key": "Monitor", "value": 4.8 },
-        { "key": "Lightness", "value": 4.2 },
-        { "key": "Build Quality", "value": 4.7 },
-        { "key": "Value for Money", "value": 4.6 }
+        {
+          "key": "Battery charge",
+          "value": 4.5
+        },
+        {
+          "key": "Monitor",
+          "value": 4.8
+        },
+        {
+          "key": "Lightness",
+          "value": 4.2
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -3057,18 +3319,45 @@
       "brand": "OnePlus",
       "bestSeller": true,
       "specifications": [
-        { "key": "Screen Size", "value": "6.4 inches" },
-        { "key": "Processor", "value": "Snapdragon 870" },
-        { "key": "RAM", "value": "12 GB" },
-        { "key": "Storage", "value": "256 GB" },
-        { "key": "Battery", "value": "4500 mAh" },
-        { "key": "Camera", "value": "48 MP" },
-        { "key": "OS", "value": "Android 12" }
+        {
+          "key": "Screen Size",
+          "value": "6.4 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "Snapdragon 870"
+        },
+        {
+          "key": "RAM",
+          "value": "12 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "256 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "4500 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "48 MP"
+        },
+        {
+          "key": "OS",
+          "value": "Android 12"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartphone-z3-preview1.jpg" },
-        { "img": "https://example.com/images/smartphone-z3-preview2.jpg" },
-        { "img": "https://example.com/images/smartphone-z3-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartphone-z3-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartphone-z3-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartphone-z3-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -3089,11 +3378,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.7 },
-        { "key": "Monitor", "value": 4.9 },
-        { "key": "Lightness", "value": 4.3 },
-        { "key": "Build Quality", "value": 4.8 },
-        { "key": "Value for Money", "value": 4.7 }
+        {
+          "key": "Battery charge",
+          "value": 4.7
+        },
+        {
+          "key": "Monitor",
+          "value": 4.9
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.8
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.7
+        }
       ]
     },
     {
@@ -3111,18 +3415,45 @@
       "brand": "Xiaomi",
       "bestSeller": false,
       "specifications": [
-        { "key": "Screen Size", "value": "6.5 inches" },
-        { "key": "Processor", "value": "MediaTek Dimensity 1200" },
-        { "key": "RAM", "value": "8 GB" },
-        { "key": "Storage", "value": "128 GB" },
-        { "key": "Battery", "value": "5000 mAh" },
-        { "key": "Camera", "value": "64 MP" },
-        { "key": "OS", "value": "Android 11" }
+        {
+          "key": "Screen Size",
+          "value": "6.5 inches"
+        },
+        {
+          "key": "Processor",
+          "value": "MediaTek Dimensity 1200"
+        },
+        {
+          "key": "RAM",
+          "value": "8 GB"
+        },
+        {
+          "key": "Storage",
+          "value": "128 GB"
+        },
+        {
+          "key": "Battery",
+          "value": "5000 mAh"
+        },
+        {
+          "key": "Camera",
+          "value": "64 MP"
+        },
+        {
+          "key": "OS",
+          "value": "Android 11"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartphone-w4-preview1.jpg" },
-        { "img": "https://example.com/images/smartphone-w4-preview2.jpg" },
-        { "img": "https://example.com/images/smartphone-w4-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartphone-w4-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartphone-w4-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartphone-w4-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -3143,11 +3474,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.5 },
-        { "key": "Monitor", "value": 4.6 },
-        { "key": "Lightness", "value": 4.2 },
-        { "key": "Build Quality", "value": 4.5 },
-        { "key": "Value for Money", "value": 4.7 }
+        {
+          "key": "Battery charge",
+          "value": 4.5
+        },
+        {
+          "key": "Monitor",
+          "value": 4.6
+        },
+        {
+          "key": "Lightness",
+          "value": 4.2
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.5
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.7
+        }
       ]
     },
     {
@@ -3165,16 +3511,37 @@
       "brand": "Apple",
       "bestSeller": true,
       "specifications": [
-        { "key": "Screen Size", "value": "1.7 inches" },
-        { "key": "Battery", "value": "300 mAh" },
-        { "key": "Water Resistant", "value": "Yes" },
-        { "key": "Connectivity", "value": "Bluetooth, Wi-Fi" },
-        { "key": "OS", "value": "watchOS" }
+        {
+          "key": "Screen Size",
+          "value": "1.7 inches"
+        },
+        {
+          "key": "Battery",
+          "value": "300 mAh"
+        },
+        {
+          "key": "Water Resistant",
+          "value": "Yes"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth, Wi-Fi"
+        },
+        {
+          "key": "OS",
+          "value": "watchOS"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartwatch-a1-preview1.jpg" },
-        { "img": "https://example.com/images/smartwatch-a1-preview2.jpg" },
-        { "img": "https://example.com/images/smartwatch-a1-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartwatch-a1-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-a1-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-a1-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -3195,11 +3562,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.3 },
-        { "key": "Monitor", "value": 4.7 },
-        { "key": "Lightness", "value": 4.5 },
-        { "key": "Build Quality", "value": 4.6 },
-        { "key": "Value for Money", "value": 4.5 }
+        {
+          "key": "Battery charge",
+          "value": 4.3
+        },
+        {
+          "key": "Monitor",
+          "value": 4.7
+        },
+        {
+          "key": "Lightness",
+          "value": 4.5
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.6
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.5
+        }
       ]
     },
     {
@@ -3217,16 +3599,37 @@
       "brand": "Samsung",
       "bestSeller": true,
       "specifications": [
-        { "key": "Screen Size", "value": "1.6 inches" },
-        { "key": "Battery", "value": "350 mAh" },
-        { "key": "Water Resistant", "value": "Yes" },
-        { "key": "Connectivity", "value": "Bluetooth, Wi-Fi, LTE" },
-        { "key": "OS", "value": "Tizen" }
+        {
+          "key": "Screen Size",
+          "value": "1.6 inches"
+        },
+        {
+          "key": "Battery",
+          "value": "350 mAh"
+        },
+        {
+          "key": "Water Resistant",
+          "value": "Yes"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth, Wi-Fi, LTE"
+        },
+        {
+          "key": "OS",
+          "value": "Tizen"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartwatch-b2-preview1.jpg" },
-        { "img": "https://example.com/images/smartwatch-b2-preview2.jpg" },
-        { "img": "https://example.com/images/smartwatch-b2-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartwatch-b2-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-b2-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-b2-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -3247,11 +3650,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.4 },
-        { "key": "Monitor", "value": 4.8 },
-        { "key": "Lightness", "value": 4.5 },
-        { "key": "Build Quality", "value": 4.7 },
-        { "key": "Value for Money", "value": 4.6 }
+        {
+          "key": "Battery charge",
+          "value": 4.4
+        },
+        {
+          "key": "Monitor",
+          "value": 4.8
+        },
+        {
+          "key": "Lightness",
+          "value": 4.5
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -3269,16 +3687,37 @@
       "brand": "Fitbit",
       "bestSeller": false,
       "specifications": [
-        { "key": "Screen Size", "value": "1.4 inches" },
-        { "key": "Battery", "value": "200 mAh" },
-        { "key": "Water Resistant", "value": "Yes" },
-        { "key": "Connectivity", "value": "Bluetooth" },
-        { "key": "OS", "value": "Fitbit OS" }
+        {
+          "key": "Screen Size",
+          "value": "1.4 inches"
+        },
+        {
+          "key": "Battery",
+          "value": "200 mAh"
+        },
+        {
+          "key": "Water Resistant",
+          "value": "Yes"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth"
+        },
+        {
+          "key": "OS",
+          "value": "Fitbit OS"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartwatch-c3-preview1.jpg" },
-        { "img": "https://example.com/images/smartwatch-c3-preview2.jpg" },
-        { "img": "https://example.com/images/smartwatch-c3-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartwatch-c3-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-c3-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-c3-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -3299,11 +3738,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.2 },
-        { "key": "Monitor", "value": 4.4 },
-        { "key": "Lightness", "value": 4.3 },
-        { "key": "Build Quality", "value": 4.5 },
-        { "key": "Value for Money", "value": 4.4 }
+        {
+          "key": "Battery charge",
+          "value": 4.2
+        },
+        {
+          "key": "Monitor",
+          "value": 4.4
+        },
+        {
+          "key": "Lightness",
+          "value": 4.3
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.5
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.4
+        }
       ]
     },
     {
@@ -3321,16 +3775,37 @@
       "brand": "Garmin",
       "bestSeller": true,
       "specifications": [
-        { "key": "Screen Size", "value": "1.8 inches" },
-        { "key": "Battery", "value": "400 mAh" },
-        { "key": "Water Resistant", "value": "Yes" },
-        { "key": "Connectivity", "value": "Bluetooth, Wi-Fi" },
-        { "key": "OS", "value": "Garmin OS" }
+        {
+          "key": "Screen Size",
+          "value": "1.8 inches"
+        },
+        {
+          "key": "Battery",
+          "value": "400 mAh"
+        },
+        {
+          "key": "Water Resistant",
+          "value": "Yes"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth, Wi-Fi"
+        },
+        {
+          "key": "OS",
+          "value": "Garmin OS"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartwatch-d4-preview1.jpg" },
-        { "img": "https://example.com/images/smartwatch-d4-preview2.jpg" },
-        { "img": "https://example.com/images/smartwatch-d4-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartwatch-d4-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-d4-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-d4-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -3351,11 +3826,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.6 },
-        { "key": "Monitor", "value": 4.8 },
-        { "key": "Lightness", "value": 4.5 },
-        { "key": "Build Quality", "value": 4.7 },
-        { "key": "Value for Money", "value": 4.6 }
+        {
+          "key": "Battery charge",
+          "value": 4.6
+        },
+        {
+          "key": "Monitor",
+          "value": 4.8
+        },
+        {
+          "key": "Lightness",
+          "value": 4.5
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.7
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.6
+        }
       ]
     },
     {
@@ -3373,16 +3863,37 @@
       "brand": "Huawei",
       "bestSeller": false,
       "specifications": [
-        { "key": "Screen Size", "value": "1.7 inches" },
-        { "key": "Battery", "value": "380 mAh" },
-        { "key": "Water Resistant", "value": "Yes" },
-        { "key": "Connectivity", "value": "Bluetooth, Wi-Fi" },
-        { "key": "OS", "value": "HarmonyOS" }
+        {
+          "key": "Screen Size",
+          "value": "1.7 inches"
+        },
+        {
+          "key": "Battery",
+          "value": "380 mAh"
+        },
+        {
+          "key": "Water Resistant",
+          "value": "Yes"
+        },
+        {
+          "key": "Connectivity",
+          "value": "Bluetooth, Wi-Fi"
+        },
+        {
+          "key": "OS",
+          "value": "HarmonyOS"
+        }
       ],
       "imagePreview": [
-        { "img": "https://example.com/images/smartwatch-e5-preview1.jpg" },
-        { "img": "https://example.com/images/smartwatch-e5-preview2.jpg" },
-        { "img": "https://example.com/images/smartwatch-e5-preview3.jpg" }
+        {
+          "img": "https://example.com/images/smartwatch-e5-preview1.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-e5-preview2.jpg"
+        },
+        {
+          "img": "https://example.com/images/smartwatch-e5-preview3.jpg"
+        }
       ],
       "comment": [
         {
@@ -3403,11 +3914,26 @@
         }
       ],
       "ratingFunction": [
-        { "key": "Battery charge", "value": 4.4 },
-        { "key": "Monitor", "value": 4.7 },
-        { "key": "Lightness", "value": 4.5 },
-        { "key": "Build Quality", "value": 4.6 },
-        { "key": "Value for Money", "value": 4.5 }
+        {
+          "key": "Battery charge",
+          "value": 4.4
+        },
+        {
+          "key": "Monitor",
+          "value": 4.7
+        },
+        {
+          "key": "Lightness",
+          "value": 4.5
+        },
+        {
+          "key": "Build Quality",
+          "value": 4.6
+        },
+        {
+          "key": "Value for Money",
+          "value": 4.5
+        }
       ]
     }
   ],
@@ -3464,12 +3990,17 @@
     },
     {
       "id": "5",
-      "name": "Flower",
+      "name": "Dell",
       "image": "/assets/images/logo/flower.png"
     },
     {
       "id": "6",
       "name": "Lenovo",
+      "image": "/assets/images/logo/lenovo.png"
+    },
+    {
+      "id": "7",
+      "name": "HP",
       "image": "/assets/images/logo/lenovo.png"
     }
   ],

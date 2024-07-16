@@ -7,7 +7,7 @@ type Props = {
   basePath: string;
   queryKey: string;
   checkedValues: string[];
-  onCheckedValuesChange: (checkedValues: string[]) => void;
+  onCheckedValuesChange: (queryKey: string, checkedValues: string[]) => void;
 };
 
 const Checkbox = ({
@@ -21,12 +21,13 @@ const Checkbox = ({
   const location = useLocation();
   const currentParams = queryString.parse(location.search);
 
-  const onChange = (checkedValues: Array<string | number>) => {
-    onCheckedValuesChange(checkedValues as string[]);
-    const newParams = { ...currentParams };
+  const onChange = (newCheckedValues: Array<string | number>) => {
+    const updatedValues = newCheckedValues as string[];
+    onCheckedValuesChange(queryKey, updatedValues);
 
-    if (checkedValues.length > 0) {
-      newParams[queryKey] = checkedValues.join(",");
+    const newParams = { ...currentParams };
+    if (updatedValues.length > 0) {
+      newParams[queryKey] = updatedValues.join(",");
     } else {
       delete newParams[queryKey];
     }
