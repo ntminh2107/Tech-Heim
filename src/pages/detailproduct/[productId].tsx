@@ -27,7 +27,6 @@ const DetailProduct = () => {
   const reviewVideo = useSelector(
     (state: RootState) => state.blog.videoBlogsPost
   );
-  console.log(detailProduct);
 
   return (
     <div className="flex flex-col gap-8 mb-14">

@@ -4,38 +4,35 @@ import ListProduct from "../../components/molecules/product/ListProduct";
 import FilterOptions from "../../components/organisms/filter/FilterOptions";
 import { AppDispatch, RootState } from "../../redux/store";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getProductCatThunk } from "../../redux/slice/productSlice";
-import { mappingSpec } from "../../utils/mappingSpec";
 
 const ProductFilterBrand = () => {
   const { categoryId } = useParams<{ categoryId?: string }>() ?? {};
   const dispatch = useDispatch<AppDispatch>();
+  const { productCatList } = useSelector((state: RootState) => state.product);
+
+  const [filteredProducts, setFilteredProducts] = useState(productCatList);
+
   useEffect(() => {
     if (categoryId) {
       dispatch(getProductCatThunk(categoryId));
     }
   }, [dispatch, categoryId]);
 
-  // const productcatList = useSelector(
-  //   (state: RootState) => state.product.productCatList
-  // );
+  useEffect(() => {
+    setFilteredProducts(productCatList);
+  }, [productCatList]);
 
-  const filterProduct = useSelector(
-    (state: RootState) => state.product.filterProduct
-  );
-
-  // const specProd = mappingSpec(filterProduct);
-  // console.log(specProd);
   return (
     <section>
       <CategoryListWithIcon />
       <div className="flex">
         <div className="basis-1/4 mr-6">
-          <FilterOptions />
+          <FilterOptions setFilteredProducts={setFilteredProducts} />
         </div>
         <div className="basis-3/4">
-          <ListProduct productList={filterProduct} className="grid-cols-3" />
+          <ListProduct productList={filteredProducts} className="grid-cols-3" />
         </div>
       </div>
       <div>

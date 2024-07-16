@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Input, Modal } from "antd";
 
@@ -11,6 +11,7 @@ import {
 
 import { Product } from "../../../types/Product";
 import ImgAndNameCard from "../../atoms/cards/ImgAndNameCard";
+import { debounce } from "lodash";
 
 type SearchProps = {
   isOpen: boolean;
@@ -39,7 +40,7 @@ const DefaultSearch = ({
           {defaultSearchItems.map((item) => {
             return (
               <p
-                className="cursor-pointer"
+                className="cursor-pointer truncate"
                 key={item.id}
                 onClick={() => {
                   setSearchValue(item.name);
@@ -89,7 +90,11 @@ const SuggestionSearch = ({
         </p>
         <div className="grid grid-cols-2 gap-y-6 gap-x-14 truncate">
           {limitSearchItems.map((item) => {
-            return <p key={item.id}>{item.name}</p>;
+            return (
+              <p key={item.id} className="truncate">
+                {item.name}
+              </p>
+            );
           })}
 
           <Button
@@ -108,7 +113,7 @@ const SuggestionSearch = ({
               key={item.id}
               img={item.image}
               name={item.name}
-              className="w-32"
+              className="w-32 p-2"
             />
           );
         })}
@@ -133,9 +138,22 @@ const SearchModal = ({ isOpen, setIsOpen }: SearchProps) => {
     }
   }, []);
 
+  const debounceSearch = useCallback(
+    debounce((value) => {
+      dispatch(searchProductThunk(value));
+    }, 1000),
+    [dispatch]
+  );
+
   useEffect(() => {
-    dispatch(searchProductThunk(searchValue));
-  }, [searchValue]);
+    if (searchValue !== "") {
+      debounceSearch(searchValue);
+    }
+  }, [searchValue, debounceSearch]);
+
+  // useEffect(() => {
+  //   dispatch(searchProductThunk(searchValue));
+  // }, [searchValue]);
 
   return (
     <>
