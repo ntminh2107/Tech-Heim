@@ -78,7 +78,10 @@ const ProfileMenu = () => {
       dropdownRender={(menu) => {
         return (
           <div className="mt-[31px] bg-white">
-            <div className="cursor-pointer pt-4 px-4">
+            <div
+              className="cursor-pointer pt-4 px-4"
+              onClick={() => navigate("/detail")}
+            >
               <DropdownItem
                 icon={"/assets/icons/user/profile_icon.svg"}
                 label={currentUser?.fullName}

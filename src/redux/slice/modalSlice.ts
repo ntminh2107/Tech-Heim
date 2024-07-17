@@ -8,6 +8,7 @@ interface AppModalState {
   addressModal: boolean;
   chooseCardModal: boolean;
   addNewCardModal: boolean;
+  userModal: boolean;
 }
 const initialState: AppModalState = {
   authModal: false,
@@ -18,6 +19,7 @@ const initialState: AppModalState = {
   addressModal: false,
   chooseCardModal: false,
   addNewCardModal: false,
+  userModal: false,
 };
 
 export const appModalSlice = createSlice({

@@ -2,7 +2,7 @@ import { AxiosResponse } from "axios";
 import { SignUpBody } from "../types/RequestBody";
 import axiosClient from "./api.service";
 import { v4 as uuidv4 } from "uuid";
-import { CreditCard } from "../types/User";
+import { CreditCard, User } from "../types/User";
 
 export const signUp = (data: SignUpBody) => {
   const body = {
@@ -50,6 +50,84 @@ export const addCreditCardAPI = (
   };
   return axiosClient
     .post(`credit-card`, body)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const editUserAPI = (user: User) => {
+  return axiosClient
+    .put(`users/${user.id}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const editFullnameUserAPI = ({
+  id,
+  fullName,
+}: {
+  id: string | number;
+  fullName: string;
+}) => {
+  const body = { fullName };
+  return axiosClient
+    .patch(`users/${id}`, body)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const editPhoneUserAPI = ({
+  id,
+  phoneNumber,
+}: {
+  id: string | number;
+  phoneNumber: string;
+}) => {
+  const body = { phoneNumber };
+  return axiosClient
+    .put(`users/${id}`, body)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const editAddressUserAPI = ({
+  id,
+  address,
+}: {
+  id: string | number;
+  address: string;
+}) => {
+  const body = { address };
+  return axiosClient
+    .put(`users/${id}`, body)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const editPasswordUserAPI = ({
+  id,
+  password,
+}: {
+  id: string | number;
+  password: string;
+}) => {
+  const body = { password };
+  return axiosClient
+    .patch(`users/${id}`, body)
     .then((res) => {
       const { data, status } = res;
       return { data, status };

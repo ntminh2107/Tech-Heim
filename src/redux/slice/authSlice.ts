@@ -3,6 +3,8 @@ import { createAppSlice } from "../appSlice";
 import { setModalState } from "./modalSlice";
 import {
   addCreditCardAPI,
+  editFullnameUserAPI,
+  editUserAPI,
   getCreditCardAPI,
   getCurrentUserAPI,
   signUp,
@@ -15,6 +17,7 @@ interface AuthState {
   currentUser: User | undefined;
   creditCard: CreditCard[];
   selectedCreditCard: CreditCard | undefined;
+  PersonalData: User | undefined;
   loading: boolean;
   status: number;
 }
@@ -24,6 +27,7 @@ const initialState: AuthState = {
   currentUser: undefined,
   creditCard: [],
   selectedCreditCard: undefined,
+  PersonalData: undefined,
   loading: false,
   status: 0,
 };
@@ -161,6 +165,35 @@ export const authSlice = createAppSlice({
         },
       }
     ),
+    editFullnameUserThunk: create.asyncThunk(
+      async ({ id, fullName }: { id: string | number; fullName: string }) => {
+        const res = await editFullnameUserAPI({ id, fullName });
+        return res;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            PersonalData: data,
+            status: status,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
   }),
 });
 export const {
@@ -169,5 +202,6 @@ export const {
   getCurrentUserThunk,
   getCreditCardThunk,
   addCreditCardThunk,
+  editFullnameUserThunk,
 } = authSlice.actions;
 export default authSlice.reducer;
