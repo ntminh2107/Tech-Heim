@@ -8,6 +8,7 @@ interface AppModalState {
   addressModal: boolean;
   chooseCardModal: boolean;
   addNewCardModal: boolean;
+  editAddressModal: boolean;
   userModal: boolean;
 }
 const initialState: AppModalState = {
@@ -19,6 +20,7 @@ const initialState: AppModalState = {
   addressModal: false,
   chooseCardModal: false,
   addNewCardModal: false,
+  editAddressModal: false,
   userModal: false,
 };
 

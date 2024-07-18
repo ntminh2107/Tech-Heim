@@ -2,7 +2,7 @@ import { Button, Form, FormProps, Input, Modal } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../../redux/store";
 import { editFullnameUserThunk } from "../../../../redux/slice/authSlice";
-import { values } from "lodash";
+
 type FieldType = {
   fullName: string;
 };
@@ -33,7 +33,7 @@ const UserModal = ({ isOpen, setIsOpen }: ModalProps) => {
   };
   return (
     <Modal
-      className="max-w-[392px] text-xl font-medium text-gray-444444 p-6"
+      className=" text-xl font-medium text-gray-444444 p-6"
       title="First name and Last name"
       centered
       open={isOpen}

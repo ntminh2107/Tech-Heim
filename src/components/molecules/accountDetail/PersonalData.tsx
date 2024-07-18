@@ -2,8 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../redux/store";
 import { setModalState } from "../../../redux/slice/modalSlice";
 import UserModal from "../../organisms/modal/profile/UserModal";
-import AddressModal from "../../organisms/modal/AddressModal";
-
+import EditAdressModal from "../../organisms/modal/profile/EditAdressModal";
 type Props = {
   classname?: string;
 };
@@ -11,7 +10,7 @@ type Props = {
 const PersonalData = ({ classname }: Props) => {
   const dispatch = useDispatch<AppDispatch>();
   const { currentUser } = useSelector((state: RootState) => state.auth);
-  const { userModal, mapModal } = useSelector(
+  const { userModal, editAddressModal } = useSelector(
     (state: RootState) => state.appModal
   );
 
@@ -26,7 +25,7 @@ const PersonalData = ({ classname }: Props) => {
   const handleToggleModalEditAdress = (isOpen: boolean) => {
     dispatch(
       setModalState({
-        key: "mapModal",
+        key: "editAddressModal",
         isOpen: isOpen,
       })
     );
@@ -45,7 +44,7 @@ const PersonalData = ({ classname }: Props) => {
             <div className="flex flex-row px-4 py-6 bg-gray-F9F9F9">
               <div className="flex flex-row gap-2 w-full">
                 <img
-                  src="../../../../public/assets/icons/user/userdetail/user.svg"
+                  src="/assets/icons/user/userdetail/user.svg"
                   className="object-contain"
                 />
                 <div className="content-center text-base font-light text-gray-717171">
@@ -53,7 +52,7 @@ const PersonalData = ({ classname }: Props) => {
                 </div>
               </div>
               <img
-                src="../../../../public/assets/icons/user/edit.svg"
+                src="/assets/icons/user/edit.svg"
                 className="object-contain cursor-pointer"
                 onClick={() => handleToggleModalEditFullname(true)}
               />
@@ -66,7 +65,7 @@ const PersonalData = ({ classname }: Props) => {
             <div className="flex flex-row px-4 py-6 bg-gray-F9F9F9">
               <div className="flex flex-row gap-2 w-full">
                 <img
-                  src="../../../../public/assets/icons/user/userdetail/call.svg"
+                  src="/assets/icons/user/userdetail/call.svg"
                   className="object-contain"
                 />
                 <div className="content-center text-base font-light text-gray-717171">
@@ -86,7 +85,7 @@ const PersonalData = ({ classname }: Props) => {
             <div className="flex flex-row px-4 py-6 bg-gray-F9F9F9">
               <div className="flex flex-row gap-2 w-full">
                 <img
-                  src="../../../../public/assets/icons/user/userdetail/home-2.svg"
+                  src="/assets/icons/user/userdetail/home-2.svg"
                   className="object-contain"
                 />
                 <div className="content-center text-base font-light text-gray-717171">
@@ -94,7 +93,7 @@ const PersonalData = ({ classname }: Props) => {
                 </div>
               </div>
               <img
-                src="../../../../public/assets/icons/user/edit.svg"
+                src="/assets/icons/user/edit.svg"
                 className="object-contain cursor-pointer"
                 onClick={() => handleToggleModalEditAdress(true)}
               />
@@ -109,7 +108,7 @@ const PersonalData = ({ classname }: Props) => {
             <div className="flex flex-row px-4 py-6 bg-gray-F9F9F9">
               <div className="flex flex-row gap-2 w-full">
                 <img
-                  src="../../../../public/assets/icons/user/userdetail/direct.svg"
+                  src="/assets/icons/user/userdetail/direct.svg"
                   className="object-contain"
                 />
                 <div className="content-center text-base font-light text-gray-717171">
@@ -117,7 +116,7 @@ const PersonalData = ({ classname }: Props) => {
                 </div>
               </div>
               <img
-                src="../../../../public/assets/icons/user/edit.svg"
+                src="/assets/icons/user/edit.svg"
                 className="object-contain cursor-pointer"
               />
             </div>
@@ -129,7 +128,7 @@ const PersonalData = ({ classname }: Props) => {
             <div className="flex flex-row px-4 py-6 bg-gray-F9F9F9">
               <div className="flex flex-row gap-2 w-full">
                 <img
-                  src="../../../../public/assets/icons/user/userdetail/key.svg"
+                  src="/assets/icons/user/userdetail/key.svg"
                   className="object-contain"
                 />
                 <div
@@ -140,7 +139,7 @@ const PersonalData = ({ classname }: Props) => {
                 </div>
               </div>
               <img
-                src="../../../../public/assets/icons/user/edit.svg"
+                src="/assets/icons/user/edit.svg"
                 className="object-contain cursor-pointer"
               />
             </div>
@@ -152,7 +151,7 @@ const PersonalData = ({ classname }: Props) => {
             <div className="flex flex-row px-4 py-6 bg-gray-F9F9F9">
               <div className="flex flex-row gap-2 w-full">
                 <img
-                  src="../../../../public/assets/icons/user/userdetail/signpost.svg"
+                  src="/assets/icons/user/userdetail/signpost.svg"
                   className="object-contain"
                 />
                 <div
@@ -163,7 +162,7 @@ const PersonalData = ({ classname }: Props) => {
                 </div>
               </div>
               <img
-                src="../../../../public/assets/icons/user/edit.svg"
+                src="/assets/icons/user/edit.svg"
                 className="object-contain cursor-pointer"
               />
             </div>
@@ -176,9 +175,9 @@ const PersonalData = ({ classname }: Props) => {
           setIsOpen={handleToggleModalEditFullname}
         />
       )}
-      {mapModal && (
-        <AddressModal
-          isOpen={mapModal}
+      {editAddressModal && (
+        <EditAdressModal
+          isOpen={editAddressModal}
           setIsOpen={handleToggleModalEditAdress}
         />
       )}

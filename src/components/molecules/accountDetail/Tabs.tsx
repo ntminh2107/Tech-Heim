@@ -12,37 +12,37 @@ interface sideBarItem {
 const sideBarItems: sideBarItem[] = [
   {
     lable: "Payment & Installments",
-    imgSrc: "../../../../public/assets/icons/user/dollar-circle.svg",
+    imgSrc: "/assets/icons/user/dollar-circle.svg",
     navigate: "/paymentinstallments",
   },
   {
     lable: "Orders",
-    imgSrc: "../../../../public/assets/icons/user/bag.svg",
+    imgSrc: "/assets/icons/user/bag.svg",
     navigate: "/order",
   },
   {
     lable: "Wish Lists",
-    imgSrc: "../../../../public/assets/icons/user/heart.svg",
+    imgSrc: "/assets/icons/user/heart.svg",
     navigate: "wishlist",
   },
   {
     lable: "Discounts",
-    imgSrc: "../../../../public/assets/icons/user/gift.svg",
+    imgSrc: "/assets/icons/user/gift.svg",
     navigate: "discount",
   },
   {
     lable: "Security & Access",
-    imgSrc: "../../../../public/assets/icons/user/security-safe.svg",
+    imgSrc: "/assets/icons/user/security-safe.svg",
     navigate: "securityaccess",
   },
   {
     lable: "Notification",
-    imgSrc: "../../../../public/assets/icons/user/notification.svg",
+    imgSrc: "/assets/icons/user/notification.svg",
     navigate: "notification",
   },
   {
     lable: "Contact Us",
-    imgSrc: "../../../../public/assets/icons/user/24-support.svg",
+    imgSrc: "/assets/icons/user/24-support.svg",
     navigate: "contactus",
   },
 ];

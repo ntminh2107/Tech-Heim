@@ -16,3 +16,13 @@ export type CreditCard = {
   expires: string;
   selected: boolean;
 };
+
+export type PaymentCard = {
+  id: string;
+  userId: string;
+  code: string;
+  type: string;
+  expired: string;
+  cvv: string;
+  selected?: boolean;
+};

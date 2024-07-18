@@ -15,6 +15,8 @@ import Checkout from "./pages/cart/checkout";
 import Payment from "./pages/cart/payment";
 import ProductFilterBrand from "./pages/product/productFilterBrand";
 import DetailUser from "./pages/account-detail/[accountId]";
+import AccountDetailLayout from "./layouts/AccountDetailLayout";
+import PaymentInstallmentsPage from "./pages/account-detail/[paymentCardUserId]";
 
 const LayoutWithBreadCrumb = () => {
   return (
@@ -47,7 +49,14 @@ function App() {
                 element={<ProductFilterBrand />}
               />
               <Route path="/products/:id" element={<DetailProduct />} />
-              <Route path="/detail" element={<DetailUser />} />
+
+              <Route path="/" element={<AccountDetailLayout />}>
+                <Route path="/detail" element={<DetailUser />} />
+                <Route
+                  path="/paymentinstallments"
+                  element={<PaymentInstallmentsPage />}
+                />
+              </Route>
             </Route>
 
             <Route path="/" element={<CheckoutLayout />}>
