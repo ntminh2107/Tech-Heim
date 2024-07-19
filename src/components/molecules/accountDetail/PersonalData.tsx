@@ -73,7 +73,7 @@ const PersonalData = ({ classname }: Props) => {
                 </div>
               </div>
               <img
-                src="../../../../public/assets/icons/user/edit.svg"
+                src="/assets/icons/user/edit.svg"
                 className="object-contain cursor-pointer"
               />
             </div>

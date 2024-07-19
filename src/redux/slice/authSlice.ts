@@ -6,10 +6,8 @@ import {
   addPaymentCardAPI,
   editAddressUserAPI,
   editFullnameUserAPI,
-  editPaymentCardAPI,
   getCreditCardAPI,
   getCurrentUserAPI,
-  getPaymentCardAPI,
   signUp,
 } from "../../services/auth.service";
 import { CreditCard, PaymentCard, User } from "../../types/User";
@@ -17,6 +15,7 @@ import { SignUpBody } from "../../types/RequestBody";
 
 interface AuthState {
   isLoggedIn: boolean;
+  users: User | undefined;
   currentUser: User | undefined;
   creditCard: CreditCard[];
   selectedCreditCard: CreditCard | undefined;
@@ -29,10 +28,11 @@ interface AuthState {
 const initialState: AuthState = {
   isLoggedIn: false,
   currentUser: undefined,
+  users: undefined,
   creditCard: [],
   selectedCreditCard: undefined,
-  PersonalData: undefined,
   paymentCard: undefined,
+  PersonalData: undefined,
   loading: false,
   status: 0,
 };
@@ -228,74 +228,9 @@ export const authSlice = createAppSlice({
         },
       }
     ),
-    addPaymentCardthunk: create.asyncThunk(
-      async (data: Omit<PaymentCard, "id">) => {
-        const res = await addPaymentCardAPI(data);
-        return res;
-      },
-      {
-        pending: (state) => {
-          return {
-            ...state,
-            loading: true,
-          };
-        },
-        fulfilled: (state, action) => {
-          const { data, status }: { data: PaymentCard; status: number } =
-            action.payload;
-          return {
-            ...state,
-            loading: false,
-            paymentCard: data,
-            status: status,
-          };
-        },
-        rejected: (state) => {
-          return {
-            ...state,
-            loading: false,
-          };
-        },
-      }
-    ),
-    getPaymentCardThunk: create.asyncThunk(
-      async (userId: string) => {
-        const res = await getPaymentCardAPI(userId);
-        return res;
-      },
-      {
-        pending: (state) => {
-          return {
-            ...state,
-            loading: true,
-          };
-        },
-        fulfilled: (state, action) => {
-          const { data, status } = action.payload;
-          return {
-            ...state,
-            paymentCard: data,
-            loading: false,
-            status: status,
-          };
-        },
-        rejected: (state) => {
-          return {
-            ...state,
-            loading: false,
-          };
-        },
-      }
-    ),
-    editPaymentCardThunk: create.asyncThunk(
-      async ({
-        userId,
-        paymentCard,
-      }: {
-        userId: string | number;
-        paymentCard: PaymentCard;
-      }) => {
-        const res = await editPaymentCardAPI({ userId, paymentCard });
+    addPaymentCardThunk: create.asyncThunk(
+      async ({ id, currentUser }: { id: string; currentUser: User }) => {
+        const res = await addPaymentCardAPI({ id, currentUser });
         return res;
       },
       {
@@ -310,7 +245,7 @@ export const authSlice = createAppSlice({
           return {
             ...state,
             loading: false,
-            paymentCard: data,
+            PersonalData: data,
             status: status,
           };
         },
@@ -332,8 +267,6 @@ export const {
   addCreditCardThunk,
   editFullnameUserThunk,
   editAddressUserThunk,
-  addPaymentCardthunk,
-  getPaymentCardThunk,
-  editPaymentCardThunk,
+  addPaymentCardThunk,
 } = authSlice.actions;
 export default authSlice.reducer;

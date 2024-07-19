@@ -1,6 +1,6 @@
 import { Button, Form, FormProps, Input, Modal } from "antd";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../../../redux/store";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../../../redux/store";
 import { editFullnameUserThunk } from "../../../../redux/slice/authSlice";
 
 type FieldType = {

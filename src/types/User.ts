@@ -6,6 +6,7 @@ export type User = {
   address?: string;
   postalCode?: number;
   password: string;
+  paymentCard?: PaymentCard;
 };
 
 export type CreditCard = {
@@ -18,9 +19,9 @@ export type CreditCard = {
 };
 
 export type PaymentCard = {
-  id: string;
-  userId: string;
-  code: string;
+  idPayment: string;
+  cardNumber: string;
+  name: string;
   type: string;
   expired: string;
   cvv: string;

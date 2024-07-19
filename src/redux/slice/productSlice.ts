@@ -16,6 +16,7 @@ import {
   getDetailProductAPI,
   getFilterPriceProductAPI,
   getFilterProductAPI,
+  getInstalmentsAPI,
   getNewProductsAPI,
   getProductAPI,
   getProductCatAPI,
@@ -28,6 +29,7 @@ import {
   updateQuantityCartItemsAPI,
 } from "../../services/product.service";
 import { createAppSlice } from "../appSlice";
+import { Instalment } from "../../types/Instalments";
 
 interface ProductState {
   categories: ProductCategory[];
@@ -45,6 +47,7 @@ interface ProductState {
   colorList: Colors[];
   filterProduct: Product[];
   priceFilterProduct: Product[];
+  instalments: Instalment[];
   // specifications: { key: string; value: number }[];
   loading: boolean;
   status: number;
@@ -70,6 +73,7 @@ const initialState: ProductState = {
   priceFilterProduct: [],
   // specifications: [],
   filterProduct: [],
+  instalments: [],
   loading: false,
   status: 0,
   shipCost: 0,
@@ -617,6 +621,29 @@ export const productSlice = createAppSlice({
         },
       }
     ),
+    getInstalmentsThunk: create.asyncThunk(getInstalmentsAPI, {
+      pending: (state) => {
+        return {
+          ...state,
+          loading: true,
+        };
+      },
+      fulfilled: (state, action) => {
+        const { data, status } = action.payload;
+        return {
+          ...state,
+          loading: false,
+          instalments: data,
+          status: status,
+        };
+      },
+      rejected: (state) => {
+        return {
+          ...state,
+          loading: false,
+        };
+      },
+    }),
   }),
 });
 
@@ -642,6 +669,7 @@ export const {
   getColorThunk,
   getFilterProductThunk,
   chooseShipCostAction,
+  getInstalmentsThunk,
 } = productSlice.actions;
 
 export default productSlice.reducer;

@@ -436,58 +436,47 @@
   "users": [
     {
       "id": 1,
-      "name": "Juliet Oma",
+      "fullName": "Juliet Oma",
       "email": "julie@yahoo.com",
-      "number": "08100000000"
+      "number": "08100000000",
+      "paymentCard": {
+        "idPayment": "1721362298133",
+        "cardNumber": "4012888888881881",
+        "name": "NGUYEN TUAN MINH",
+        "type": "Visa",
+        "expired": "12/25",
+        "cvv": "111"
+      }
     },
     {
       "id": 2,
-      "name": "James Williams",
+      "fullName": "James Williams",
       "email": "jameswilly@gmail.com",
       "number": "08111111111"
     },
     {
       "id": 3,
-      "name": "Ahmed Ali",
+      "fullName": "Ahmed Ali",
       "email": "ahmedali012@gmail.com",
       "number": "09022222222"
     },
     {
       "id": 4,
-      "name": "Grace Funsho",
+      "fullName": "Grace Funsho",
       "email": "gracefunsho@gmail.com",
       "number": "09033333333"
     },
     {
       "id": 8,
-      "username": "datnt",
-      "name": "datnt12",
+      "email": "datnt",
+      "fullName": "datnt12",
       "password": 123456
     },
     {
-      "id": "8f95fddd-b883-46b5-b6f2-c6b7a875166d",
+      "id": "1775741e-d669-4f0d-9544-94ca58407d98",
       "email": "vinxen2019@gmail.com",
-      "fullName": "nguyen tuan minh",
-      "phoneNumber": "0339633289",
-      "address": "9 tt5.2 kdt Ao Sao, Hanoi",
-      "password": "Minhmeo389"
-    },
-    {
-      "id": "777b9756-8081-47de-aa50-8a166096f19e",
-      "email": "vinxen2019@gmail.com",
-      "fullName": "minh",
-      "phoneNumber": "0339633289",
-      "address": "9 tt5.2 kdt Ao Sao, Hanoi",
-      "password": "1234567"
-    },
-    {
-      "id": "cae5d501-a816-481f-9a65-00562c89e5c1",
-      "email": "vinxen2019@gmail.com",
-      "fullName": "Jimmy Smith",
-      "phoneNumber": "0339633289",
-      "address": "9 tt5.2 kdt Ao Sao, Hanoi",
-      "password": "123456",
-      "fullname": "Nguyễn Tuấn Minh"
+      "fullName": "nguyễn tuấn minh",
+      "password": "210720002"
     }
   ],
   "cart": [
@@ -551,6 +540,26 @@
       "name": "Laptop A1",
       "price": 1200,
       "salePrice": 1100
+    }
+  ],
+  "instalment": [
+    {
+      "id": 1,
+      "productImg": "https://shopdunk.com/images/thumbs/0000723_macbook-air-m1-2020-8gb-ram-256gb-ssd.png",
+      "cartId": "1",
+      "dueAmount": 300,
+      "dueDate": "19/07/204",
+      "total": 1200
+    },
+    {
+      "id": 2,
+      "productImg": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+      "cartId": "9b05b430-09f2-4dc2-a997-7f99c4011886",
+      "dueAmount": 250,
+      "dueDate": "10/07/2024",
+      "actualAmount": 250,
+      "paymentDate": "08/07/2024",
+      "total": 750
     }
   ],
   "product": [
@@ -4167,6 +4176,5 @@
     {
       "color": "Silver"
     }
-  ],
-  "payment-card": []
+  ]
 }

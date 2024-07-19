@@ -39,6 +39,7 @@ const Header = () => {
     dispatch(getNewBlogThunk());
     dispatch(getProductThunk());
     dispatch(getColorThunk());
+
     if (token) {
       dispatch(getCurrentUserThunk(token));
     }

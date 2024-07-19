@@ -17,6 +17,7 @@ import ProductFilterBrand from "./pages/product/productFilterBrand";
 import DetailUser from "./pages/account-detail/[accountId]";
 import AccountDetailLayout from "./layouts/AccountDetailLayout";
 import PaymentInstallmentsPage from "./pages/account-detail/[paymentCardUserId]";
+import InstalmentsDetail from "./pages/account-detail/[instalmentUserId]";
 
 const LayoutWithBreadCrumb = () => {
   return (
@@ -57,6 +58,7 @@ function App() {
                   element={<PaymentInstallmentsPage />}
                 />
               </Route>
+              <Route path="/instalments" element={<InstalmentsDetail />} />
             </Route>
 
             <Route path="/" element={<CheckoutLayout />}>

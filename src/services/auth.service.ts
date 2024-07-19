@@ -2,7 +2,7 @@ import { AxiosResponse } from "axios";
 import { SignUpBody } from "../types/RequestBody";
 import axiosClient from "./api.service";
 import { v4 as uuidv4 } from "uuid";
-import { CreditCard, PaymentCard, User } from "../types/User";
+import { CreditCard, User } from "../types/User";
 
 export const signUp = (data: SignUpBody) => {
   const body = {
@@ -135,23 +135,15 @@ export const editPasswordUserAPI = ({
     .catch((err) => err);
 };
 
-export const addPaymentCardAPI = (data: Omit<PaymentCard, "id">) => {
-  const body = {
-    id: uuidv4(),
-    ...data,
-  };
+export const addPaymentCardAPI = ({
+  id,
+  currentUser,
+}: {
+  id: string | number;
+  currentUser: User;
+}) => {
   return axiosClient
-    .post(`payment-card`, body)
-    .then((res) => {
-      const { data, status } = res;
-      return { data, status };
-    })
-    .catch((err) => err);
-};
-
-export const getPaymentCardAPI = (userId: string | number) => {
-  return axiosClient
-    .get(`payment-card?userId=${userId}`)
+    .patch(`users/${id}`, currentUser)
     .then((res) => {
       const { data, status } = res;
       return { data, status };
@@ -160,15 +152,15 @@ export const getPaymentCardAPI = (userId: string | number) => {
 };
 
 export const editPaymentCardAPI = ({
-  userId,
-  paymentCard,
+  id,
+  users,
 }: {
-  userId: string | number;
-  paymentCard: PaymentCard;
+  id: string | number;
+  users: User;
 }) => {
-  const body = { paymentCard };
+  const body = { users };
   return axiosClient
-    .patch(`payment-card?userId=${userId}`, body)
+    .post(`users/${id}`, body)
     .then((res) => {
       const { data, status } = res;
       return { data, status };
