@@ -8,6 +8,7 @@ import {
   editFullnameUserAPI,
   getCreditCardAPI,
   getCurrentUserAPI,
+  loginAPI,
   signUp,
 } from "../../services/auth.service";
 import { CreditCard, PaymentCard, User } from "../../types/User";
@@ -57,6 +58,49 @@ export const authSlice = createAppSlice({
             })
           );
         }
+        return res;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            currentUser: data[0],
+            status: status,
+            isLoggedIn: true,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
+    loginThunk: create.asyncThunk(
+      async (
+        { email, password }: { email: string; password: string },
+        { dispatch }
+      ) => {
+        const res = await loginAPI({ email, password });
+        if (res?.status === 200) {
+          localStorage.setItem("token", res.data[0].id);
+          dispatch(
+            setModalState({
+              key: "successModal",
+              isOpen: true,
+            })
+          );
+        }
+
         return res;
       },
       {
@@ -267,6 +311,7 @@ export const authSlice = createAppSlice({
 });
 export const {
   logoutAction,
+  loginThunk,
   SignUpThunk,
   getCurrentUserThunk,
   getCreditCardThunk,

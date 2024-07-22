@@ -508,7 +508,7 @@
           ],
           "paymentType": "cr",
           "paymentTransaction": "txn_p6vdmio",
-          "amountPaid": null
+          "amountPaid": 1600
         }
       ]
     },
