@@ -3,7 +3,7 @@ import { createAppSlice } from "../appSlice";
 import { setModalState } from "./modalSlice";
 import {
   addCreditCardAPI,
-  addPaymentCardAPI,
+  addPaymentCardAndOrderAPI,
   editAddressUserAPI,
   editFullnameUserAPI,
   getCreditCardAPI,
@@ -229,8 +229,14 @@ export const authSlice = createAppSlice({
       }
     ),
     addPaymentCardAndOrderThunk: create.asyncThunk(
-      async ({ id, currentUser }: { id: string; currentUser: User }) => {
-        const res = await addPaymentCardAPI({ id, currentUser });
+      async ({
+        id,
+        currentUser,
+      }: {
+        id: string | number;
+        currentUser: User;
+      }) => {
+        const res = await addPaymentCardAndOrderAPI({ id, currentUser });
         return res;
       },
       {

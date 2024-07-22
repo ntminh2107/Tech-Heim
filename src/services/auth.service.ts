@@ -135,7 +135,7 @@ export const editPasswordUserAPI = ({
     .catch((err) => err);
 };
 
-export const addPaymentCardAPI = ({
+export const addPaymentCardAndOrderAPI = ({
   id,
   currentUser,
 }: {
