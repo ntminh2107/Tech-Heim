@@ -29,8 +29,36 @@ const RadioCard = ({ label, price, time }: RadioCardProps) => {
 
 const RadioFormField = ({ label, className, value }: Props) => {
   const dispatch = useDispatch<AppDispatch>();
+
+  const shippingMethod = [
+    {
+      label: "Free Shipping",
+      time: "7-30",
+      price: 0,
+    },
+    {
+      label: "Regular Shipping",
+      time: "3-14",
+      price: 7.5,
+    },
+    {
+      label: "Express Shipping",
+      time: "1-3",
+      price: 22.5,
+    },
+  ];
   const onChange = (e: RadioChangeEvent) => {
-    dispatch(chooseShipCostAction(e.target.value));
+    const selectedMethod = shippingMethod.find(
+      (method) => method.price === e.target.value
+    );
+    if (selectedMethod) {
+      dispatch(
+        chooseShipCostAction({
+          label: selectedMethod.label,
+          price: selectedMethod.price,
+        })
+      );
+    }
   };
 
   return (
@@ -41,7 +69,7 @@ const RadioFormField = ({ label, className, value }: Props) => {
         onChange={onChange}
         value={value}
       >
-        <Radio value={0} className="relative">
+        {/* <Radio value={0} className="relative">
           <RadioCard label="Free Shipping" time="7-30" price={0} />
         </Radio>
         <Radio value={7.5} className="relative">
@@ -49,7 +77,16 @@ const RadioFormField = ({ label, className, value }: Props) => {
         </Radio>
         <Radio value={22.5} className="relative">
           <RadioCard label="Express Shipping" time="1-3" price={22.5} />
-        </Radio>
+        </Radio> */}
+        {shippingMethod.map((method) => (
+          <Radio key={method.label} value={method.price} className="relative">
+            <RadioCard
+              label={method.label}
+              time={method.time}
+              price={method.price}
+            />
+          </Radio>
+        ))}
       </Radio.Group>
     </div>
   );

@@ -5,7 +5,7 @@ import CollapseCheckbox from "../../molecules/collapse/Collapse";
 import Checkbox from "../../atoms/checkbox";
 import { useLocation, useNavigate } from "react-router-dom";
 import Switch from "../../atoms/switch/Switch";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { mappingSpec } from "../../../utils/mappingSpec";
 import { Product } from "../../../types/Product";
 

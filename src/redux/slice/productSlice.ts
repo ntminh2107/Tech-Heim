@@ -4,6 +4,7 @@ import {
   Product,
   ProductCategory,
   ProductInCart,
+  ShipCost,
 } from "../../types/Product";
 import {
   addToCartAPI,
@@ -16,6 +17,7 @@ import {
   getDetailProductAPI,
   getFilterPriceProductAPI,
   getFilterProductAPI,
+  getInstalmentsAPI,
   getNewProductsAPI,
   getProductAPI,
   getProductCatAPI,
@@ -28,6 +30,8 @@ import {
   updateQuantityCartItemsAPI,
 } from "../../services/product.service";
 import { createAppSlice } from "../appSlice";
+import { Instalment } from "../../types/Instalments";
+import { PayloadAction } from "@reduxjs/toolkit";
 
 interface ProductState {
   categories: ProductCategory[];
@@ -45,10 +49,11 @@ interface ProductState {
   colorList: Colors[];
   filterProduct: Product[];
   priceFilterProduct: Product[];
+  instalments: Instalment[];
   // specifications: { key: string; value: number }[];
   loading: boolean;
   status: number;
-  shipCost: number;
+  shipCost: ShipCost | null;
   detailProduct: Product | null;
 }
 
@@ -70,9 +75,10 @@ const initialState: ProductState = {
   priceFilterProduct: [],
   // specifications: [],
   filterProduct: [],
+  instalments: [],
   loading: false,
   status: 0,
-  shipCost: 0,
+  shipCost: null,
 };
 
 export const productSlice = createAppSlice({
@@ -420,13 +426,15 @@ export const productSlice = createAppSlice({
         };
       },
     }),
-    chooseShipCostAction: create.reducer((state, action) => {
-      const data = action.payload as unknown as number;
-      return {
-        ...state,
-        shipCost: data,
-      };
-    }),
+    chooseShipCostAction: create.reducer(
+      (state, action: PayloadAction<ShipCost>) => {
+        const data = action.payload;
+        return {
+          ...state,
+          shipCost: data,
+        };
+      }
+    ),
     getDetailProductThunk: create.asyncThunk(
       async (id: string) => {
         const data = await getDetailProductAPI(id);
@@ -617,6 +625,29 @@ export const productSlice = createAppSlice({
         },
       }
     ),
+    getInstalmentsThunk: create.asyncThunk(getInstalmentsAPI, {
+      pending: (state) => {
+        return {
+          ...state,
+          loading: true,
+        };
+      },
+      fulfilled: (state, action) => {
+        const { data, status } = action.payload;
+        return {
+          ...state,
+          loading: false,
+          instalments: data,
+          status: status,
+        };
+      },
+      rejected: (state) => {
+        return {
+          ...state,
+          loading: false,
+        };
+      },
+    }),
   }),
 });
 
@@ -642,6 +673,7 @@ export const {
   getColorThunk,
   getFilterProductThunk,
   chooseShipCostAction,
+  getInstalmentsThunk,
 } = productSlice.actions;
 
 export default productSlice.reducer;

@@ -239,3 +239,13 @@ export const getFilterPriceProductAPI = ({
     })
     .catch((err) => err);
 };
+
+export const getInstalmentsAPI = () => {
+  return axiosClient
+    .get(`instalment`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};

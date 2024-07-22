@@ -4,12 +4,16 @@ import AddressForm from "../../molecules/form/delivery/AddressForm";
 type ModalProps = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  onSubmit: (address: any) => void;
 };
 
-const AddressModal = ({ isOpen, setIsOpen }: ModalProps) => {
+const AddressModal = ({ isOpen, setIsOpen, onSubmit }: ModalProps) => {
   const [form] = Form.useForm();
-  const handleSubmitAddress = () => {
-    form.submit();
+  const handleSave = (values: any) => {
+    if (onSubmit) {
+      onSubmit(values);
+    }
+    setIsOpen(false);
   };
   return (
     <Modal
@@ -32,7 +36,7 @@ const AddressModal = ({ isOpen, setIsOpen }: ModalProps) => {
             className="flex-1"
             type="primary"
             htmlType="submit"
-            onClick={handleSubmitAddress}
+            onClick={() => form.submit()}
           >
             Submit
           </Button>
@@ -40,7 +44,7 @@ const AddressModal = ({ isOpen, setIsOpen }: ModalProps) => {
       )}
     >
       <p className="text-base text-gray-717171 mb-3">Enter your details</p>
-      <AddressForm form={form} />
+      <AddressForm form={form} onSave={handleSave} />
     </Modal>
   );
 };
