@@ -4,6 +4,7 @@ import {
   Product,
   ProductCategory,
   ProductInCart,
+  ShipCost,
 } from "../../types/Product";
 import {
   addToCartAPI,
@@ -30,6 +31,7 @@ import {
 } from "../../services/product.service";
 import { createAppSlice } from "../appSlice";
 import { Instalment } from "../../types/Instalments";
+import { PayloadAction } from "@reduxjs/toolkit";
 
 interface ProductState {
   categories: ProductCategory[];
@@ -51,7 +53,7 @@ interface ProductState {
   // specifications: { key: string; value: number }[];
   loading: boolean;
   status: number;
-  shipCost: number;
+  shipCost: ShipCost | null;
   detailProduct: Product | null;
 }
 
@@ -76,7 +78,7 @@ const initialState: ProductState = {
   instalments: [],
   loading: false,
   status: 0,
-  shipCost: 0,
+  shipCost: null,
 };
 
 export const productSlice = createAppSlice({
@@ -424,13 +426,15 @@ export const productSlice = createAppSlice({
         };
       },
     }),
-    chooseShipCostAction: create.reducer((state, action) => {
-      const data = action.payload as unknown as number;
-      return {
-        ...state,
-        shipCost: data,
-      };
-    }),
+    chooseShipCostAction: create.reducer(
+      (state, action: PayloadAction<ShipCost>) => {
+        const data = action.payload;
+        return {
+          ...state,
+          shipCost: data,
+        };
+      }
+    ),
     getDetailProductThunk: create.asyncThunk(
       async (id: string) => {
         const data = await getDetailProductAPI(id);

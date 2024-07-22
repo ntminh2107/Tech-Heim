@@ -38,9 +38,6 @@ const EditAdressModal = ({ isOpen, setIsOpen }: ModalProps) => {
   };
 
   const [form] = Form.useForm();
-  const handleSubmit = () => {
-    form.submit();
-  };
 
   return (
     <Modal

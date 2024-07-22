@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../../redux/store";
 import { Button, Form, FormProps, Modal } from "antd";
-import { addPaymentCardThunk } from "../../../../redux/slice/authSlice";
+import { addPaymentCardAndOrderThunk } from "../../../../redux/slice/authSlice";
 import { PaymentCard, User } from "../../../../types/User";
 import CustomizeInput from "../../../atoms/inputs/CustomizeInput";
 
@@ -39,7 +39,9 @@ const EditPaymentModal = ({ isOpen, setIsOpen }: ModalProps) => {
         paymentCard: updatedPaymentCard,
       };
 
-      dispatch(addPaymentCardThunk({ id: token, currentUser: updatedUser }));
+      dispatch(
+        addPaymentCardAndOrderThunk({ id: token, currentUser: updatedUser })
+      );
       setIsOpen(false);
     }
   };

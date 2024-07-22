@@ -151,6 +151,22 @@ export const addPaymentCardAPI = ({
     .catch((err) => err);
 };
 
+export const addOrderAPI = ({
+  id,
+  currentUser,
+}: {
+  id: string | number;
+  currentUser: User;
+}) => {
+  axiosClient
+    .patch(`users/${id}`, currentUser)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
 export const editPaymentCardAPI = ({
   id,
   users,

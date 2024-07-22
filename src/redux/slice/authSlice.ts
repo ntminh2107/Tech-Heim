@@ -19,7 +19,7 @@ interface AuthState {
   currentUser: User | undefined;
   creditCard: CreditCard[];
   selectedCreditCard: CreditCard | undefined;
-  PersonalData: User | undefined;
+  personalData: User | undefined;
   paymentCard: PaymentCard | undefined;
   loading: boolean;
   status: number;
@@ -32,7 +32,7 @@ const initialState: AuthState = {
   creditCard: [],
   selectedCreditCard: undefined,
   paymentCard: undefined,
-  PersonalData: undefined,
+  personalData: undefined,
   loading: false,
   status: 0,
 };
@@ -187,7 +187,7 @@ export const authSlice = createAppSlice({
           return {
             ...state,
             loading: false,
-            PersonalData: data,
+            personalData: data,
             status: status,
           };
         },
@@ -216,7 +216,7 @@ export const authSlice = createAppSlice({
           return {
             ...state,
             loading: false,
-            PersonalData: data,
+            personalData: data,
             status: status,
           };
         },
@@ -228,7 +228,7 @@ export const authSlice = createAppSlice({
         },
       }
     ),
-    addPaymentCardThunk: create.asyncThunk(
+    addPaymentCardAndOrderThunk: create.asyncThunk(
       async ({ id, currentUser }: { id: string; currentUser: User }) => {
         const res = await addPaymentCardAPI({ id, currentUser });
         return res;
@@ -245,7 +245,7 @@ export const authSlice = createAppSlice({
           return {
             ...state,
             loading: false,
-            PersonalData: data,
+            personalData: data,
             status: status,
           };
         },
@@ -267,6 +267,6 @@ export const {
   addCreditCardThunk,
   editFullnameUserThunk,
   editAddressUserThunk,
-  addPaymentCardThunk,
+  addPaymentCardAndOrderThunk,
 } = authSlice.actions;
 export default authSlice.reducer;

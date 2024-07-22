@@ -1,3 +1,5 @@
+import { ProductInCart } from "./Product";
+
 export type User = {
   id: string | number;
   fullName: string;
@@ -7,6 +9,7 @@ export type User = {
   postalCode?: number;
   password: string;
   paymentCard?: PaymentCard;
+  bill?: Bill[];
 };
 
 export type CreditCard = {
@@ -26,4 +29,19 @@ export type PaymentCard = {
   expired: string;
   cvv: string;
   selected?: boolean;
+};
+
+export type Bill = {
+  id: string;
+  fullname: string;
+  street: string;
+  city: string;
+  region: string;
+  postalcode: string;
+  shippingMethod: string;
+  shippingPrice: number;
+  products: ProductInCart[];
+  paymentType: string;
+  paymentTransaction: string;
+  amountPaid: number;
 };
