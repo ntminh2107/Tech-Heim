@@ -7,8 +7,8 @@ import { Product } from "../../types/Product";
 import { useState } from "react";
 
 const Products = () => {
-  const newProducts = useSelector((state: RootState) => state.product.product);
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+  const { productCatList } = useSelector((state: RootState) => state.product);
+  const [filteredProducts, setFilteredProducts] = useState(productCatList);
   console.log(filteredProducts);
 
   return (
@@ -20,7 +20,7 @@ const Products = () => {
         </div>
         <div className="w-full md:basis-3/4">
           <ListProduct
-            productList={newProducts}
+            productList={filteredProducts}
             className=" grid cols-2 md:grid-cols-3"
           />
         </div>
