@@ -222,6 +222,7 @@ export const productSlice = createAppSlice({
         },
       }
     ),
+
     getItemMostSearchedThunk: create.asyncThunk(mostProductSearchedAPI, {
       pending: (state) => {
         return {

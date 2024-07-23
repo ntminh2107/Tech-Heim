@@ -54,7 +54,7 @@ type Props = {
 const MenuUser = ({ user, classname }: Props) => {
   const navigate = useNavigate();
   return (
-    <div className={`${classname} bg-gray-F9F9F9 flex flex-col w-fit`}>
+    <div className={`${classname} bg-gray-F9F9F9 flex flex-col w-fit mb-10`}>
       <div className="flex flex-row gap-4 cursor-pointer p-5 hover:text-primary">
         <img
           src="/assets/icons/user/profile_icon.svg"
