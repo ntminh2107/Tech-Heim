@@ -66,20 +66,39 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
 
       filterProducts(brands, colors, specs, discount);
     }
-  }, []);
+  }, [productCatList]);
 
   useEffect(() => {
-    // Xóa filterState khỏi local storage và đặt lại các trạng thái khi URL thay đổi
     const handleLocationChange = () => {
-      localStorage.removeItem("filterState");
-      setCheckedBrands([]);
-      setCheckedColors([]);
-      setCheckedSpecs({});
-      setSwitched(false);
+      const currentParams = queryString.parse(location.search);
+
+      const brands = currentParams.brand
+        ? (currentParams.brand as string).split(",")
+        : [];
+      const colors = currentParams.color
+        ? (currentParams.color as string).split(",")
+        : [];
+      const discount = currentParams.discount === "true";
+
+      const specs = Object.keys(specProd).reduce((acc, key) => {
+        if (currentParams[key]) {
+          acc[key] = (currentParams[key] as string).split(",");
+        } else {
+          acc[key] = [];
+        }
+        return acc;
+      }, {} as { [key: string]: string[] });
+
+      setCheckedBrands(brands);
+      setCheckedColors(colors);
+      setCheckedSpecs(specs);
+      setSwitched(discount);
+
+      filterProducts(brands, colors, specs, discount);
     };
 
     handleLocationChange();
-  }, [location.pathname]);
+  }, [location.search, specProd]);
 
   useEffect(() => {
     saveFiltersToLocalStorage(

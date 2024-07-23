@@ -13,10 +13,7 @@ const ProductFilterBrand = () => {
   const { productCatList } = useSelector((state: RootState) => state.product);
 
   const [filteredProducts, setFilteredProducts] = useState(productCatList);
-  useEffect(() => {
-    // Xóa filterState khỏi local storage khi categoryId thay đổi
-    localStorage.removeItem("filterState");
-  }, [categoryId]);
+
   useEffect(() => {
     if (categoryId) {
       dispatch(getProductCatThunk(categoryId));
@@ -24,8 +21,48 @@ const ProductFilterBrand = () => {
   }, [dispatch, categoryId]);
 
   useEffect(() => {
-    setFilteredProducts(productCatList);
+    const savedFilters = localStorage.getItem("filterState");
+    if (savedFilters) {
+      const { brands, colors, specs, discount } = JSON.parse(savedFilters);
+      filterProducts(brands, colors, specs, discount);
+    } else {
+      setFilteredProducts(productCatList);
+    }
   }, [productCatList]);
+
+  const filterProducts = (
+    brands: string[],
+    colors: string[],
+    specs: { [key: string]: string[] },
+    discount: boolean
+  ) => {
+    let filtered = productCatList;
+
+    if (brands.length > 0) {
+      filtered = filtered.filter((product) => brands.includes(product.brand));
+    }
+
+    if (colors.length > 0) {
+      filtered = filtered.filter((product) => colors.includes(product.color));
+    }
+
+    if (discount) {
+      filtered = filtered.filter((product) => product.discount);
+    }
+
+    Object.keys(specs).forEach((key) => {
+      const values = specs[key];
+      if (values.length > 0) {
+        filtered = filtered.filter((product) =>
+          product.specifications.some(
+            (spec) => spec.key === key && values.includes(spec.value)
+          )
+        );
+      }
+    });
+
+    setFilteredProducts(filtered);
+  };
 
   return (
     <section>
