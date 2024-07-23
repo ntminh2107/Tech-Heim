@@ -1,7 +1,7 @@
 import type { FormProps } from "antd";
 import { Button, Checkbox, Form, Input } from "antd";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AppDispatch } from "../../../../redux/store";
 import { loginThunk } from "../../../../redux/slice/authSlice";
 import { setModalState } from "../../../../redux/slice/modalSlice";
@@ -15,7 +15,6 @@ type FieldType = {
 const LoginForm = () => {
   const dispatch = useDispatch<AppDispatch>();
   const [form] = Form.useForm();
-  const navigate = useNavigate();
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
     dispatch(loginThunk({ email: values.email, password: values.password }));
     dispatch(
@@ -83,7 +82,6 @@ const LoginForm = () => {
             className="w-full"
             type="primary"
             htmlType="submit"
-            onClick={() => navigate("/")}
           >
             Log in
           </Button>

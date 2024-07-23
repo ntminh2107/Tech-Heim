@@ -72,7 +72,7 @@ export const authSlice = createAppSlice({
           return {
             ...state,
             loading: false,
-            currentUser: data[0],
+            currentUser: data,
             status: status,
             isLoggedIn: true,
           };

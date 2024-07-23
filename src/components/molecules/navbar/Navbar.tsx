@@ -14,7 +14,7 @@ const Navbar = () => {
         ) : (
           <div key={item.key}>
             <Link
-              to=""
+              to={item.link}
               className={
                 (cn("p-2"),
                 location.pathname === item.link ? "text-primary" : "")

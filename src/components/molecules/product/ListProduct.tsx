@@ -37,7 +37,8 @@ const ListProduct = ({ productList, className }: Props) => {
           `grid gap-6 transition-opacity duration-300 ${
             isTransitioning ? "opacity-0" : "opacity-100"
           }`,
-          className
+          className,
+          "grid-cols-2 lg:grid-cols-3"
         )}
       >
         {currentProducts?.map((product) => {
@@ -63,7 +64,7 @@ const ListProduct = ({ productList, className }: Props) => {
           pageSize={productPerPage}
           total={productList.length}
           onChange={onPageChange}
-          className="item-cen"
+          className="items-center"
         />
       </div>
     </div>
