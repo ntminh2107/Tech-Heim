@@ -222,7 +222,9 @@ export const productSlice = createAppSlice({
         },
       }
     ),
-
+    clearCartItemThunk: create.reducer((state) => {
+      return { ...state, cartItems: [] };
+    }),
     getItemMostSearchedThunk: create.asyncThunk(mostProductSearchedAPI, {
       pending: (state) => {
         return {
@@ -675,6 +677,7 @@ export const {
   getFilterProductThunk,
   chooseShipCostAction,
   getInstalmentsThunk,
+  clearCartItemThunk,
 } = productSlice.actions;
 
 export default productSlice.reducer;

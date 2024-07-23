@@ -21,6 +21,7 @@ import { SuccessModal } from "../../components/organisms/modal";
 import { formatNumber } from "../../utils/formatNumber";
 import { generateTransactionID } from "../../utils/orderUtils";
 import { Bill, User } from "../../types/User";
+import { clearCartItemThunk } from "../../redux/slice/productSlice";
 
 const Payment = () => {
   const cartItems = useSelector((state: RootState) => state.product.cartItems);
@@ -115,6 +116,7 @@ const Payment = () => {
     );
 
     localStorage.removeItem("shipmentData");
+    dispatch(clearCartItemThunk());
     handleOpenSuccessModal(true);
   };
 
