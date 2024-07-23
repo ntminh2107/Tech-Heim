@@ -66,7 +66,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #fff;
+  background-color: #ffff;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -84,7 +84,7 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: #ffff;
   padding: 10px;
   text-align: center;
 }

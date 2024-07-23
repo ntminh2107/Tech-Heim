@@ -14,12 +14,15 @@ const Products = () => {
   return (
     <section>
       <CategoryListWithIcon />
-      <div className="flex">
-        <div className="basis-1/4 mr-6">
+      <div className="flex flex-col md:flex-row">
+        <div className="hidden md:block basis-1/4 mr-6">
           <FilterOptions setFilteredProducts={setFilteredProducts} />
         </div>
-        <div className="basis-3/4">
-          <ListProduct productList={newProducts} className="grid-cols-3" />
+        <div className="w-full md:basis-3/4">
+          <ListProduct
+            productList={newProducts}
+            className=" grid cols-2 md:grid-cols-3"
+          />
         </div>
       </div>
       <div>

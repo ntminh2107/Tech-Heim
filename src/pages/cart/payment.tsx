@@ -5,7 +5,10 @@ import { Button } from "antd";
 
 import { AppDispatch, RootState } from "../../redux/store";
 import { setModalState } from "../../redux/slice/modalSlice";
-import { getCreditCardThunk } from "../../redux/slice/authSlice";
+import {
+  addPaymentCardAndOrderThunk,
+  getCreditCardThunk,
+} from "../../redux/slice/authSlice";
 
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import OrderList from "../../components/organisms/order/OrderList";
@@ -16,6 +19,9 @@ import ChooseCardModal from "../../components/organisms/modal/ChooseCardModal";
 import AddNewCardModal from "../../components/organisms/modal/AddNewCardModal";
 import { SuccessModal } from "../../components/organisms/modal";
 import { formatNumber } from "../../utils/formatNumber";
+import { generateTransactionID } from "../../utils/orderUtils";
+import { Bill, User } from "../../types/User";
+import { clearCartItemThunk } from "../../redux/slice/productSlice";
 
 const Payment = () => {
   const cartItems = useSelector((state: RootState) => state.product.cartItems);
@@ -24,7 +30,6 @@ const Payment = () => {
   const { selectedCreditCard, currentUser } = useSelector(
     (state: RootState) => state.auth
   );
-
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
@@ -72,6 +77,49 @@ const Payment = () => {
   const handlePaymentChange = (paymentMethod: string) => {
     setSelectedPayment(paymentMethod);
   };
+
+  const handlePlaceOrder = async () => {
+    if (!currentUser || !currentUser.id) {
+      console.error("User not logged in or ID is missing.");
+      return;
+    }
+
+    const userId = currentUser.id;
+    const transactionId = generateTransactionID();
+
+    const shipmentData = JSON.parse(
+      localStorage.getItem("shipmentData") || "{}"
+    );
+
+    const newBill: Bill = {
+      id: transactionId,
+      fullname: shipmentData.fullname as string,
+      street: shipmentData.street as string,
+      city: shipmentData.city as string,
+      region: shipmentData.region as string,
+      postalcode: shipmentData.postalcode as string,
+      shippingMethod: shipmentData.shippingMethod as string,
+      shippingPrice: shipmentData.shippingPrice as number,
+      products: cartItems as any,
+      paymentType: selectedPayment,
+      paymentTransaction: transactionId,
+      amountPaid: grandTotal + shipmentData.shippingPrice,
+    };
+
+    const updatedUser: User = {
+      ...currentUser,
+      bill: [...(currentUser.bill || []), newBill],
+    };
+
+    dispatch(
+      addPaymentCardAndOrderThunk({ id: userId, currentUser: updatedUser })
+    );
+
+    localStorage.removeItem("shipmentData");
+    dispatch(clearCartItemThunk());
+    handleOpenSuccessModal(true);
+  };
+
   return (
     <>
       <div className="max-w-lg mx-auto mb-12">
@@ -93,13 +141,13 @@ const Payment = () => {
             <div className="flex gap-2">
               <div
                 className="bg-gray-F6F6F6 rounded-lg py-4 px-2 flex flex-1 justify-between"
-                onClick={() => handlePaymentChange("cr")}
+                onClick={() => handlePaymentChange("CreditCard")}
               >
                 <div className="flex items-center gap-2">
                   <input
                     type="radio"
                     name="payment"
-                    checked={selectedPayment === "cr"}
+                    checked={selectedPayment === "CreditCard"}
                     readOnly
                   />
                   <label>Credit Cards</label>
@@ -124,12 +172,12 @@ const Payment = () => {
             </div>
             <div
               className="bg-gray-F6F6F6 rounded-lg py-4 px-2 "
-              onClick={() => handlePaymentChange("pp")}
+              onClick={() => handlePaymentChange("PayPal")}
             >
               <input
                 type="radio"
                 name="payment"
-                checked={selectedPayment === "pp"}
+                checked={selectedPayment === "Paypal"}
                 className="mr-2"
                 readOnly
               />
@@ -161,7 +209,7 @@ const Payment = () => {
           <PaymentCard
             setGrandTotal={setGrandTotal}
             buttonLabel="Place order"
-            onClick={() => handleOpenSuccessModal(true)}
+            onClick={handlePlaceOrder}
             children={<OrderList cartItems={cartItems} />}
           />
         </div>
@@ -190,11 +238,13 @@ const Payment = () => {
             <div className="flex flex-col gap-4">
               <p className="text-base text-gray-717171 flex justify-between">
                 <span>Payment type</span>
-                <span>Net Banking</span>
+                <span>
+                  {selectedPayment === "cr" ? "Credit Card" : "PayPal"}
+                </span>
               </p>
               <p className="text-base text-gray-717171 flex justify-between">
                 <span>Phone number</span>
-                <span>+12345678910</span>
+                <span>{currentUser?.phoneNumber}</span>
               </p>
               <p className="text-base text-gray-717171 flex justify-between">
                 <span>Email</span>
@@ -202,14 +252,14 @@ const Payment = () => {
               </p>
               <p className="text-base text-gray-717171 flex justify-between">
                 <span>Transaction id</span>
-                <span>2345678910</span>
+                <span>{generateTransactionID()}</span>
               </p>
               <p className="text-base font-semibold text-gray-717171 flex justify-between">
                 <span>Amount Paid</span>
                 <span>${formatNumber(grandTotal)}</span>
               </p>
               <Button
-                onClick={() => handleOpenSuccessModal(false)}
+                onClick={() => navigate("/")}
                 className="w-1/2 self-end"
                 type="primary"
                 size="large"

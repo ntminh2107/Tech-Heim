@@ -8,7 +8,7 @@ type Props = {
 const ListBlogPost = ({ blogList }: Props) => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-4">
+      <div className="sm:flex flex-col lg:grid grid-cols-12 gap-4">
         {blogList.slice(0, 4).map((blog) => (
           <BlogCard
             className="col-span-6 min-w-full"

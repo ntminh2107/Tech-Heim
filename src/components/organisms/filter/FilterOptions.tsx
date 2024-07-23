@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "antd";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
@@ -5,9 +6,9 @@ import CollapseCheckbox from "../../molecules/collapse/Collapse";
 import Checkbox from "../../atoms/checkbox";
 import { useLocation, useNavigate } from "react-router-dom";
 import Switch from "../../atoms/switch/Switch";
-import { useState } from "react";
 import { mappingSpec } from "../../../utils/mappingSpec";
 import { Product } from "../../../types/Product";
+import queryString from "query-string";
 
 type FilterOptionsProps = {
   setFilteredProducts: (products: Product[]) => void;
@@ -29,6 +30,81 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
 
   const specProd = mappingSpec(productCatList);
 
+  useEffect(() => {
+    const savedFilters = localStorage.getItem("filterState");
+    if (savedFilters) {
+      const { brands, colors, specs, discount } = JSON.parse(savedFilters);
+      setCheckedBrands(brands || []);
+      setCheckedColors(colors || []);
+      setCheckedSpecs(specs || {});
+      setSwitched(discount || false);
+      filterProducts(brands, colors, specs, discount);
+    } else {
+      const currentParams = queryString.parse(location.search);
+
+      const brands = currentParams.brand
+        ? (currentParams.brand as string).split(",")
+        : [];
+      const colors = currentParams.color
+        ? (currentParams.color as string).split(",")
+        : [];
+      const discount = currentParams.discount === "true";
+
+      const specs = Object.keys(specProd).reduce((acc, key) => {
+        if (currentParams[key]) {
+          acc[key] = (currentParams[key] as string).split(",");
+        } else {
+          acc[key] = [];
+        }
+        return acc;
+      }, {} as { [key: string]: string[] });
+
+      setCheckedBrands(brands);
+      setCheckedColors(colors);
+      setCheckedSpecs(specs);
+      setSwitched(discount);
+
+      filterProducts(brands, colors, specs, discount);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Xóa filterState khỏi local storage và đặt lại các trạng thái khi URL thay đổi
+    const handleLocationChange = () => {
+      localStorage.removeItem("filterState");
+      setCheckedBrands([]);
+      setCheckedColors([]);
+      setCheckedSpecs({});
+      setSwitched(false);
+    };
+
+    handleLocationChange();
+  }, [location.pathname]);
+
+  useEffect(() => {
+    saveFiltersToLocalStorage(
+      checkedBrands,
+      checkedColors,
+      checkedSpecs,
+      switched
+    );
+  }, [checkedBrands, checkedColors, checkedSpecs, switched]);
+
+  const saveFiltersToLocalStorage = (
+    brands: string[],
+    colors: string[],
+    specs: { [key: string]: string[] },
+    discount: boolean
+  ) => {
+    const filterState = {
+      brands,
+      colors,
+      specs,
+      discount,
+    };
+    localStorage.setItem("filterState", JSON.stringify(filterState));
+  };
+
   const clearAllFilters = () => {
     navigate({
       pathname: location.pathname,
@@ -39,6 +115,7 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
     setCheckedSpecs({});
     setSwitched(false);
     setFilteredProducts(productCatList);
+    localStorage.removeItem("filterState");
   };
 
   const filterProducts = (
@@ -76,30 +153,75 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
   };
 
   const handleCheckedValuesChange = (queryKey: string, values: string[]) => {
+    const newParams = { ...queryString.parse(location.search) };
+
     if (queryKey === "brand") {
       setCheckedBrands(values);
+      newParams.brand = values.join(",");
     } else if (queryKey === "color") {
       setCheckedColors(values);
+      newParams.color = values.join(",");
     } else {
       setCheckedSpecs((prev) => ({
         ...prev,
         [queryKey]: values,
       }));
+      newParams[queryKey] = values.join(",");
     }
+
+    const searchString = queryString.stringify(newParams);
+    navigate(
+      { pathname: location.pathname, search: searchString },
+      { replace: true }
+    );
+
+    const newCheckedSpecs =
+      queryKey !== "brand" && queryKey !== "color"
+        ? { ...checkedSpecs, [queryKey]: values }
+        : checkedSpecs;
+
     filterProducts(
       queryKey === "brand" ? values : checkedBrands,
       queryKey === "color" ? values : checkedColors,
-      queryKey !== "brand" && queryKey !== "color"
-        ? { ...checkedSpecs, [queryKey]: values }
-        : checkedSpecs,
+      newCheckedSpecs,
+      switched
+    );
+
+    saveFiltersToLocalStorage(
+      queryKey === "brand" ? values : checkedBrands,
+      queryKey === "color" ? values : checkedColors,
+      newCheckedSpecs,
       switched
     );
   };
 
   const handleSwitchChange = (checked: boolean) => {
     setSwitched(checked);
+
+    const newParams = { ...queryString.parse(location.search) };
+    if (checked) {
+      newParams.discount = "true";
+    } else {
+      delete newParams.discount;
+    }
+
+    const searchString = queryString.stringify(newParams);
+    navigate(
+      { pathname: location.pathname, search: searchString },
+      { replace: true }
+    );
+
     filterProducts(checkedBrands, checkedColors, checkedSpecs, checked);
+
+    saveFiltersToLocalStorage(
+      checkedBrands,
+      checkedColors,
+      checkedSpecs,
+      checked
+    );
   };
+
+  const isProductPage = location.pathname === "/products";
 
   return (
     <div className="flex flex-col flex-1">
@@ -147,21 +269,22 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
         onCheckedChange={handleSwitchChange}
       />
 
-      {Object.keys(specProd).map((key) => (
-        <CollapseCheckbox
-          key={key}
-          label={key}
-          children={
-            <Checkbox
-              queryKey={key}
-              options={specProd[key]}
-              basePath={location.pathname}
-              checkedValues={checkedSpecs[key] || []}
-              onCheckedValuesChange={handleCheckedValuesChange}
-            />
-          }
-        />
-      ))}
+      {!isProductPage &&
+        Object.keys(specProd).map((key) => (
+          <CollapseCheckbox
+            key={key}
+            label={key}
+            children={
+              <Checkbox
+                queryKey={key}
+                options={specProd[key]}
+                basePath={location.pathname}
+                checkedValues={checkedSpecs[key] || []}
+                onCheckedValuesChange={handleCheckedValuesChange}
+              />
+            }
+          />
+        ))}
     </div>
   );
 };

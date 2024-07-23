@@ -438,7 +438,9 @@
       "id": 1,
       "fullName": "Juliet Oma",
       "email": "julie@yahoo.com",
-      "number": "08100000000",
+      "phoneNumber": "08100000000",
+      "password": "123456",
+      "address": "số 9 tt5.2 khu đô thị Hoàng Mai",
       "paymentCard": {
         "idPayment": "1721362298133",
         "cardNumber": "4012888888881881",
@@ -446,7 +448,162 @@
         "type": "Visa",
         "expired": "12/25",
         "cvv": "111"
-      }
+      },
+      "bill": [
+        {
+          "id": "txn_eulufto",
+          "fullname": "Nguyễn Tuấn Minh",
+          "street": "số 9 tt5.2 khu đô thị Hoàng Mai",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "100000",
+          "shippingMethod": "Express Shipping",
+          "shippingPrice": 22.5,
+          "products": [
+            {
+              "id": "517ef475-a9b5-42ac-accc-42fdac2f8d07",
+              "quantity": 1,
+              "productId": "4",
+              "color": "Rose Gold",
+              "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
+              "name": "Smartwatch A1",
+              "price": 250
+            },
+            {
+              "id": "9b05b430-09f2-4dc2-a997-7f99c4011886",
+              "quantity": 1,
+              "productId": "2",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+              "name": "Smartphone Y2",
+              "price": 800,
+              "salePrice": 750
+            }
+          ],
+          "paymentType": "cr",
+          "paymentTransaction": "txn_eulufto",
+          "amountPaid": 1045
+        },
+        {
+          "id": "txn_qwq037m",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "sea",
+          "postalcode": "11111",
+          "shippingMethod": "Express Shipping",
+          "shippingPrice": 22.5,
+          "products": [
+            {
+              "id": "df3b6c62-3106-4c7b-8455-e6d2184710dd",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            },
+            {
+              "id": "5b262fd0-9309-4c66-8c51-7f74dbfef937",
+              "quantity": 1,
+              "productId": "18",
+              "color": "Black",
+              "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
+              "name": "Fitness Tracker O15",
+              "price": 80
+            },
+            {
+              "id": "7c1ec034-7bbb-4099-bda8-c6b255edc3db",
+              "quantity": 1,
+              "productId": "15",
+              "color": "Blue",
+              "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
+              "name": "External HDD L12",
+              "price": 120
+            }
+          ],
+          "paymentType": "CreditCard",
+          "paymentTransaction": "txn_qwq037m",
+          "amountPaid": 1845
+        },
+        {
+          "id": "txn_gmm66u6",
+          "fullname": "Ha Viet Anh",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "12345",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "3b740a43-6c58-4fe8-80e4-ff287e7fef2b",
+              "quantity": 1,
+              "productId": "19",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/71ASACudpfL._AC_SL1500_.jpg",
+              "name": "Drone P16",
+              "price": 1000
+            },
+            {
+              "id": "0e9b360b-ed4c-4f9b-9e27-0ab586dd01ce",
+              "quantity": 1,
+              "productId": "15",
+              "color": "Blue",
+              "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
+              "name": "External HDD L12",
+              "price": 120
+            }
+          ],
+          "paymentType": "CreditCard",
+          "paymentTransaction": "txn_gmm66u6",
+          "amountPaid": 1135
+        },
+        {
+          "id": "txn_gi1bo92",
+          "fullname": "Ha Viet Anh",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "na",
+          "postalcode": "12345",
+          "shippingMethod": "Free Shipping",
+          "shippingPrice": 0,
+          "products": [
+            {
+              "id": "f175a8e6-7658-4e5f-95bd-c94617466112",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            },
+            {
+              "id": "e524005a-01b3-44b7-86a5-2fad0cf54eec",
+              "quantity": 1,
+              "productId": "18",
+              "color": "Black",
+              "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
+              "name": "Fitness Tracker O15",
+              "price": 80
+            },
+            {
+              "id": "630f1354-9757-48ea-865a-6db4653c4a78",
+              "quantity": 1,
+              "productId": "8",
+              "color": "Black",
+              "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
+              "name": "Keyboard E5",
+              "price": 80
+            }
+          ],
+          "paymentType": "CreditCard",
+          "paymentTransaction": "txn_gi1bo92",
+          "amountPaid": 1760
+        }
+      ]
     },
     {
       "id": 2,
@@ -481,57 +638,36 @@
   ],
   "cart": [
     {
-      "id": "1",
-      "name": "MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch",
-      "color": "Black",
-      "quantity": 0,
-      "price": 433,
-      "image": "/assets/images/cart/macbook.png"
+      "query": "\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ",
+      "id": "cna-oPb"
     },
     {
-      "id": "3",
-      "name": "Laptop Privacy Screen for 13 inch MacBook Pro & MacBook Air",
-      "color": "Black",
-      "quantity": 0,
-      "price": 23.26,
-      "image": "/assets/images/cart/laptop.png"
-    },
-    {
-      "id": "4",
-      "name": "Laptop Privacy Screen for 13 inch MacBook Pro & MacBook Air",
-      "color": "Black",
-      "quantity": 0,
-      "price": 23.26,
-      "image": "/assets/images/cart/macbook.png"
-    },
-    {
-      "id": "517ef475-a9b5-42ac-accc-42fdac2f8d07",
+      "id": "f175a8e6-7658-4e5f-95bd-c94617466112",
       "quantity": 1,
-      "productId": "4",
-      "color": "Rose Gold",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
-      "name": "Smartwatch A1",
-      "price": 250
-    },
-    {
-      "id": "9b05b430-09f2-4dc2-a997-7f99c4011886",
-      "quantity": 1,
-      "productId": "2",
-      "color": "Black",
-      "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
-      "name": "Smartphone Y2",
-      "price": 800,
-      "salePrice": 750
-    },
-    {
-      "id": "0583ec3a-7b33-4e37-a5e2-e72f47e7d585",
-      "quantity": 1,
-      "productId": "21",
+      "productId": "7",
       "color": "Silver",
-      "image": "https://example.com/images/laptop-a1.jpg",
-      "name": "Laptop A1",
-      "price": 1200,
-      "salePrice": 1100
+      "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+      "name": "Desktop D4",
+      "price": 1800,
+      "salePrice": 1600
+    },
+    {
+      "id": "e524005a-01b3-44b7-86a5-2fad0cf54eec",
+      "quantity": 1,
+      "productId": "18",
+      "color": "Black",
+      "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
+      "name": "Fitness Tracker O15",
+      "price": 80
+    },
+    {
+      "id": "630f1354-9757-48ea-865a-6db4653c4a78",
+      "quantity": 1,
+      "productId": "8",
+      "color": "Black",
+      "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
+      "name": "Keyboard E5",
+      "price": 80
     }
   ],
   "instalment": [

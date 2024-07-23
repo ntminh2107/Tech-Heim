@@ -121,7 +121,11 @@ const Checkout = () => {
 
             <InputFormField
               label="Ship to"
-              value={`${shipmentData.street}, ${shipmentData.city}, ${shipmentData.region}, ${shipmentData.postalcode}`}
+              value={
+                shipmentData.street
+                  ? `${shipmentData.street}, ${shipmentData.city}, ${shipmentData.region}, ${shipmentData.postalcode}`
+                  : "Shipping Address"
+              }
               disable
               icon={
                 <img

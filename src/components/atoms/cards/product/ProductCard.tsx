@@ -43,7 +43,7 @@ const ProductCard = ({
   };
 
   return (
-    <div className="relative rounded-md bg-white w-72 h-[347px]  flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4">
+    <div className="relative rounded-md bg-white w-full sm:w-60 md:w-48 lg:w-full h-auto flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4">
       {percent && (
         <p className="absolute top-2 left-0 py-1 px-[6px] text-secondary-400 bg-secondary-100 rounded-tr-xl rounded-br-xl group-hover:hidden">
           {percent}%
@@ -51,7 +51,7 @@ const ProductCard = ({
       )}
       <HeartTag id={id} favorite={favorite} key={id} />
       <div
-        className="flex justify-center items-center w-64 h-48"
+        className="flex justify-center items-center w-full h-40 md:h-32 lg:h-48"
         onClick={handleClick}
       >
         <img
@@ -60,11 +60,11 @@ const ProductCard = ({
           className="object-contain w-full h-full p-2"
         />
       </div>
-      {/* gradient */}
       <div className="gradient-black mx-2 group-hover:gradient"></div>
-      {/* title */}
       <div className="flex-1 flex flex-col justify-between pb-2 px-2">
-        <h5 className="pb-2 line-clamp-2 group-hover:text-primary">{name}</h5>
+        <h5 className="pb-2 line-clamp-2 group-hover:text-primary text-sm sm:text-base lg:text-lg">
+          {name}
+        </h5>
         <ProductCardFooter
           price={price}
           salePrice={salePrice}

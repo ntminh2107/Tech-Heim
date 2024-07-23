@@ -1,25 +1,37 @@
 import type { FormProps } from "antd";
 import { Button, Checkbox, Form, Input } from "antd";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { AppDispatch } from "../../../../redux/store";
+import { loginThunk } from "../../../../redux/slice/authSlice";
+import { setModalState } from "../../../../redux/slice/modalSlice";
 
 type FieldType = {
-  username?: string;
-  password?: string;
+  email: string;
+  password: string;
   remember?: string;
 };
 
-const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  console.log("Success:", values);
-};
-
 const LoginForm = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const [form] = Form.useForm();
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    dispatch(loginThunk({ email: values.email, password: values.password }));
+    dispatch(
+      setModalState({
+        key: "authModal",
+        isOpen: false,
+      })
+    );
+  };
+
   return (
     <>
       <h2 className="mt-4 text-center mb-5">Log in to Tech Heim</h2>
-      <Form onFinish={onFinish}>
+      <Form form={form} onFinish={onFinish}>
         <Form.Item<FieldType>
-          name="username"
-          rules={[{ required: true, message: "Please input your username!" }]}
+          name="email"
+          rules={[{ required: true, message: "Please input your email!" }]}
         >
           <Input
             size="large"

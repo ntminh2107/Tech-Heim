@@ -13,7 +13,10 @@ const ProductFilterBrand = () => {
   const { productCatList } = useSelector((state: RootState) => state.product);
 
   const [filteredProducts, setFilteredProducts] = useState(productCatList);
-
+  useEffect(() => {
+    // Xóa filterState khỏi local storage khi categoryId thay đổi
+    localStorage.removeItem("filterState");
+  }, [categoryId]);
   useEffect(() => {
     if (categoryId) {
       dispatch(getProductCatThunk(categoryId));
