@@ -249,3 +249,13 @@ export const getInstalmentsAPI = () => {
     })
     .catch((err) => err);
 };
+
+export const getProductsAPI = () => {
+  return axiosClient
+    .get(`product`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};

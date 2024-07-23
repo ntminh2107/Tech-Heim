@@ -1,14 +1,16 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CategoryListWithIcon } from "../../components/molecules/categoryList";
 import ListProduct from "../../components/molecules/product/ListProduct";
 import FilterOptions from "../../components/organisms/filter/FilterOptions";
-import { RootState } from "../../redux/store";
-import { Product } from "../../types/Product";
-import { useState } from "react";
+import { AppDispatch, RootState } from "../../redux/store";
+import { useEffect, useState } from "react";
+import { getProductThunk } from "../../redux/slice/productSlice";
 
 const Products = () => {
-  const { productCatList } = useSelector((state: RootState) => state.product);
-  const [filteredProducts, setFilteredProducts] = useState(productCatList);
+  const dispatch = useDispatch<AppDispatch>();
+  const { product } = useSelector((state: RootState) => state.product);
+
+  const [filteredProducts, setFilteredProducts] = useState(product);
   console.log(filteredProducts);
 
   return (
@@ -20,7 +22,7 @@ const Products = () => {
         </div>
         <div className="w-full md:basis-3/4">
           <ListProduct
-            productList={filteredProducts}
+            productList={product}
             className=" grid cols-2 md:grid-cols-3"
           />
         </div>

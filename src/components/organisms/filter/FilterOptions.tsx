@@ -66,10 +66,9 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
 
       filterProducts(brands, colors, specs, discount);
     }
-  }, []);
+  }, [productCatList]);
 
   useEffect(() => {
-    // Đặt lại các trạng thái khi URL thay đổi mà không xóa local storage
     const handleLocationChange = () => {
       const currentParams = queryString.parse(location.search);
 
@@ -99,7 +98,7 @@ const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
     };
 
     handleLocationChange();
-  }, [location.search]);
+  }, [location.search, specProd]);
 
   useEffect(() => {
     saveFiltersToLocalStorage(
