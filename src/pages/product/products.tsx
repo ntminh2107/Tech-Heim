@@ -1,13 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { CategoryListWithIcon } from "../../components/molecules/categoryList";
 import ListProduct from "../../components/molecules/product/ListProduct";
 import FilterOptions from "../../components/organisms/filter/FilterOptions";
-import { AppDispatch, RootState } from "../../redux/store";
-import { useEffect, useState } from "react";
-import { getProductThunk } from "../../redux/slice/productSlice";
+import { RootState } from "../../redux/store";
+import { useState } from "react";
 
 const Products = () => {
-  const dispatch = useDispatch<AppDispatch>();
   const { product } = useSelector((state: RootState) => state.product);
 
   const [filteredProducts, setFilteredProducts] = useState(product);

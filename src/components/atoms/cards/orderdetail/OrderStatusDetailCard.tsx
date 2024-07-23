@@ -1,5 +1,3 @@
-import { Progress } from "antd";
-
 const OrderStatusDetailCard = () => {
   return (
     <div>
