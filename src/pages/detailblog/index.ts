@@ -1,3 +1,1 @@
-import DetailBlog from "./[blogId]";
-
-export { DetailBlog };
+export { default } from "./[blogId]";

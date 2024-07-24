@@ -1,25 +1,36 @@
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { ConfigProvider } from "antd";
+import { lazy } from "react";
 
 import "./index.css";
 import MainLayout from "./layouts";
-import LandingPage from "./pages/landing";
-import { Blog } from "./pages/blog";
-import Products from "./pages/product/products";
-import { DetailBlog } from "./pages/detailblog";
-import Breadcrumb from "./components/atoms/breadcrumb";
-import DetailProduct from "./pages/detailproduct/[productId]";
-import Cart from "./pages/cart";
+const LandingPage = lazy(() => import("./pages/landing"));
+const Blog = lazy(() => import("./pages/blog"));
+const Products = lazy(() => import("./pages/product/products"));
+const DetailBlog = lazy(() => import("./pages/detailblog"));
+const Breadcrumb = lazy(() => import("./components/atoms/breadcrumb"));
+const DetailProduct = lazy(() => import("./pages/detailproduct/[productId]"));
+const Cart = lazy(() => import("./pages/cart"));
 import CheckoutLayout from "./layouts/CheckoutLayout";
-import Checkout from "./pages/cart/checkout";
-import Payment from "./pages/cart/payment";
-import ProductFilterBrand from "./pages/product/productFilterBrand";
-import DetailUser from "./pages/account-detail/[accountId]";
-import AccountDetailLayout from "./layouts/AccountDetailLayout";
-import PaymentInstallmentsPage from "./pages/account-detail/[paymentCardUserId]";
-import InstalmentsDetail from "./pages/account-detail/[instalmentUserId]";
-import OrderDetailPage from "./pages/account-detail/[orderDetailId]";
-import OrderDetailID from "./pages/account-detail/order/[orderId]";
+const Checkout = lazy(() => import("./pages/cart/checkout"));
+const Payment = lazy(() => import("./pages/cart/payment"));
+const ProductFilterBrand = lazy(
+  () => import("./pages/product/productFilterBrand")
+);
+const DetailUser = lazy(() => import("./pages/account-detail/[accountId]"));
+const AccountDetailLayout = lazy(() => import("./layouts/AccountDetailLayout"));
+const PaymentInstallmentsPage = lazy(
+  () => import("./pages/account-detail/[paymentCardUserId]")
+);
+const InstalmentsDetail = lazy(
+  () => import("./pages/account-detail/[instalmentUserId]")
+);
+const OrderDetailPage = lazy(
+  () => import("./pages/account-detail/[orderDetailId]")
+);
+const OrderDetailID = lazy(
+  () => import("./pages/account-detail/order/[orderId]")
+);
 
 const LayoutWithBreadCrumb = () => {
   return (
