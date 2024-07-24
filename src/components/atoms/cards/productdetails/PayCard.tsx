@@ -1,9 +1,29 @@
 import { Button, Radio, RadioChangeEvent } from "antd";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../../../redux/store";
+import { addCartItemThunk } from "../../../../redux/slice/productSlice";
 
-type Props = { price?: number; percent?: number };
+type Props = {
+  id: string;
+  price: number;
+  percent?: number;
+  color: string;
+  image: string;
+  name: string;
+  salePrice?: number;
+};
 
-const PayCard = ({ price, percent }: Props) => {
+const PayCard = ({
+  id,
+  price,
+  percent,
+  color,
+  image,
+  name,
+  salePrice,
+}: Props) => {
+  const dispatch = useDispatch<AppDispatch>();
   const [paymentMethod, setPaymentMethod] = useState(1);
   const [installmentPeriod, setInstallmentPeriod] = useState<
     number | undefined
@@ -22,7 +42,13 @@ const PayCard = ({ price, percent }: Props) => {
     }
   };
 
-  const salePrice = () => {
+  const handleAddToCart = () => {
+    dispatch(
+      addCartItemThunk({ productId: id, color, image, name, price, salePrice })
+    );
+  };
+
+  const salePriced = () => {
     const curPrice = price ?? 0;
     const curPercent = percent ?? 0;
     return (curPrice * curPercent) / 100;
@@ -32,7 +58,7 @@ const PayCard = ({ price, percent }: Props) => {
     const curPrice = price ?? 0;
     const curInstallmentPeriod = installmentPeriod ?? 0;
     if (percent) {
-      return (salePrice() / curInstallmentPeriod).toFixed(2);
+      return (salePriced() / curInstallmentPeriod).toFixed(2);
     }
     return (curPrice / curInstallmentPeriod).toFixed(2);
   };
@@ -42,7 +68,7 @@ const PayCard = ({ price, percent }: Props) => {
       {percent ? (
         <div className="flex flex-col gap-1">
           <div className="flex justify-between ">
-            <div className="font-medium text-2xl">{salePrice()}</div>
+            <div className="font-medium text-2xl">{salePriced()}</div>
             <div className="flex flex-row content-center gap-1 ">
               <img src="/assets/icons/discount/discount-shape.svg" />
               <div className="text-secondary text-base font-medium justify-center">
@@ -115,7 +141,10 @@ const PayCard = ({ price, percent }: Props) => {
       <Button type="primary" className="p-6">
         Buy Now
       </Button>
-      <Button className="p-6 text-primary border-primary hover:{">
+      <Button
+        className="p-6 text-primary border-primary"
+        onClick={handleAddToCart}
+      >
         Add to Cart
       </Button>
     </div>

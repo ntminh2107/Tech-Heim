@@ -44,7 +44,12 @@ const DetailProduct = () => {
         </div>
         <PayCard
           percent={detailProduct?.percent}
-          price={detailProduct?.price}
+          price={detailProduct?.price as number}
+          id={detailProduct?.id as string}
+          color={detailProduct?.color as string}
+          image={detailProduct?.image as string}
+          name={detailProduct?.name as string}
+          salePrice={detailProduct?.salePrice}
         />
       </div>
       <ProductTab />
