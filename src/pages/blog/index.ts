@@ -1,2 +1,1 @@
-import Blog from "./blog";
-export { Blog };
+export { default } from "./blog";
