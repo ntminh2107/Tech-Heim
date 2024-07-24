@@ -1,35 +1,42 @@
 import { Checkbox, Form, FormInstance, FormProps, Input, Select } from "antd";
 type FieldType = {
-  fullName?: string;
-  phone?: string;
-  address?: string;
+  fullname?: string;
+  phonenumber?: string;
+  street?: string;
   city?: string;
   region?: string;
-  postal?: string;
+  postalcode?: string;
   commit?: string;
   recipient?: string;
   rePhone?: string;
 };
-const AddressForm = ({ form }: { form: FormInstance }) => {
+const AddressForm = ({
+  form,
+  onSave,
+}: {
+  form: FormInstance;
+  onSave: (values: FieldType) => void;
+}) => {
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
     console.log("Success:", values);
+    onSave(values);
   };
   return (
     <Form form={form} initialValues={{ remember: true }} onFinish={onFinish}>
       <Form.Item<FieldType>
-        name="fullName"
+        name="fullname"
         rules={[{ required: true, message: "Please input your full name!" }]}
       >
         <Input size="large" placeholder="Full name" />
       </Form.Item>
       <Form.Item<FieldType>
-        name="phone"
+        name="phonenumber"
         rules={[{ required: true, message: "Please input your phone!" }]}
       >
         <Input size="large" placeholder="Phone number" />
       </Form.Item>
       <Form.Item<FieldType>
-        name="address"
+        name="street"
         rules={[{ required: true, message: "Please input your address!" }]}
       >
         <Input size="large" placeholder="Street name and house number" />
@@ -51,15 +58,15 @@ const AddressForm = ({ form }: { form: FormInstance }) => {
             size="large"
             placeholder="Select region"
             options={[
-              { value: "eu", label: "Europe" },
-              { value: "us", label: "United States" },
+              { value: "sea", label: "South East Asia" },
+              { value: "afr", label: "Africa" },
               { value: "na", label: "North America" },
             ]}
           />
         </Form.Item>
       </div>
       <Form.Item<FieldType>
-        name="postal"
+        name="postalcode"
         rules={[{ required: true, message: "Please input your postal code!" }]}
       >
         <Input size="large" placeholder="Postal code" />
@@ -69,13 +76,13 @@ const AddressForm = ({ form }: { form: FormInstance }) => {
       </Form.Item>
       <Form.Item<FieldType>
         name="recipient"
-        rules={[{ required: true, message: "Please input name!" }]}
+        rules={[{ required: false, message: "Please input name!" }]}
       >
         <Input size="large" placeholder="recipient name" />
       </Form.Item>
       <Form.Item<FieldType>
         name="rePhone"
-        rules={[{ required: true, message: "Please input phone!" }]}
+        rules={[{ required: false, message: "Please input phone!" }]}
       >
         <Input size="large" placeholder="Phone number" />
       </Form.Item>

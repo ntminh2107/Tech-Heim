@@ -1,9 +1,14 @@
 import { useParams } from "react-router-dom";
-
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../redux/store";
+import PayCard from "../../components/atoms/cards/productdetails/PayCard";
+import ProductInfoCard from "../../components/atoms/cards/productdetails/ProductInfoCard";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../redux/store";
 import { useEffect } from "react";
-// import { getDetailProductThunk } from "../../redux/slice/productSlice";
+import { getDetailProductThunk } from "../../redux/slice/productSlice";
+import ProductTab from "../../components/molecules/productDetail/ProductTab";
+import ImagePreview from "../../components/atoms/image/ImagePreview";
+import ProductSimilarCarousel from "../../components/molecules/productDetail/ProductSimilarCarousel";
+import VideoBlogCarousel from "../../components/molecules/blog/VideoBlogCarousel";
 
 const DetailProduct = () => {
   const { id } = useParams<{ id?: string }>() ?? {};
@@ -11,26 +16,43 @@ const DetailProduct = () => {
 
   useEffect(() => {
     if (id) {
-      // dispatch(getDetailProductThunk(id));
+      dispatch(getDetailProductThunk(id));
+      window.scrollTo(0, 0);
     }
   }, [dispatch, id]);
 
-  // const detailProduct = useSelector((state: RootState) => state.product.);
-  // console.log(detailProduct);
+  const detailProduct = useSelector(
+    (state: RootState) => state.product.detailProduct
+  );
+  const reviewVideo = useSelector(
+    (state: RootState) => state.blog.videoBlogsPost
+  );
 
   return (
-    <div className="flex flex-row gap-8">
-      <div className="flex flex-row gap-6 basis-2/3">
-        <div>
-          <img src="/assets/images/blog/blog1.png" className="w-108 h-96" />
+    <div className="flex flex-col gap-8 mb-14">
+      <div className="flex gap-8 mb-8">
+        <div className="flex gap-6">
+          <div className="flex-shrink w-full">
+            <ImagePreview
+              width="31rem"
+              imageUrl={detailProduct?.image || ""}
+              height="21.125rem"
+              imagePreview={detailProduct?.imagePreview || null}
+            />
+          </div>
+          <ProductInfoCard product={detailProduct} key={detailProduct?.id} />
         </div>
-        {/* <ProductInfoCard product={detailProduct} /> */}
-      </div>
-      <div className="basis-1/3">
-        {/* <PayCard
+        <PayCard
           percent={detailProduct?.percent}
           price={detailProduct?.price}
-        /> */}
+        />
+      </div>
+      <ProductTab />
+      <div>
+        <ProductSimilarCarousel product={detailProduct} />
+      </div>
+      <div>
+        <VideoBlogCarousel videoBlog={reviewVideo} />
       </div>
     </div>
   );

@@ -40,6 +40,7 @@ export default {
         "gray-505050": "#505050",
         "gray-444444": "#444444",
         "gray-2D2D2D": "#2D2D2D",
+        "gray-CBCBCB": "#CBCBCB",
 
         error: "#C91433",
         "error-light": "#FAE7EB",

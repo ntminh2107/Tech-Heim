@@ -13,6 +13,13 @@ import Cart from "./pages/cart";
 import CheckoutLayout from "./layouts/CheckoutLayout";
 import Checkout from "./pages/cart/checkout";
 import Payment from "./pages/cart/payment";
+import ProductFilterBrand from "./pages/product/productFilterBrand";
+import DetailUser from "./pages/account-detail/[accountId]";
+import AccountDetailLayout from "./layouts/AccountDetailLayout";
+import PaymentInstallmentsPage from "./pages/account-detail/[paymentCardUserId]";
+import InstalmentsDetail from "./pages/account-detail/[instalmentUserId]";
+import OrderDetailPage from "./pages/account-detail/[orderDetailId]";
+import OrderDetailID from "./pages/account-detail/order/[orderId]";
 
 const LayoutWithBreadCrumb = () => {
   return (
@@ -40,8 +47,24 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<DetailBlog />} />
               <Route path="/products" element={<Products />}></Route>
+              <Route
+                path="/products/categories/:categoryId"
+                element={<ProductFilterBrand />}
+              />
               <Route path="/products/:id" element={<DetailProduct />} />
+
+              <Route path="/" element={<AccountDetailLayout />}>
+                <Route path="/detail" element={<DetailUser />}></Route>
+                <Route
+                  path="/paymentinstallments"
+                  element={<PaymentInstallmentsPage />}
+                />
+                <Route path="/order" element={<OrderDetailPage />}></Route>
+                <Route path="/order/:orderId" element={<OrderDetailID />} />
+              </Route>
+              <Route path="/instalments" element={<InstalmentsDetail />} />
             </Route>
+
             <Route path="/" element={<CheckoutLayout />}>
               <Route path="/cart" element={<Cart />}></Route>
               <Route path="/checkout" element={<Checkout />}></Route>

@@ -18,7 +18,7 @@ const ImgAndNameCard = ({ img, name, className }: Props) => {
         <img
           src={img}
           alt={name}
-          className="object-cover aspect-square w-full h-full pt-2 px-4"
+          className="object-contain aspect-square w-full h-full pt-2 px-4"
         />
       </div>
       <h5 className="text-sm md:text-base font-inter py-2 text-gray-2D2D2D">

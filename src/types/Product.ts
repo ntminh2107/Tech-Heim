@@ -1,3 +1,5 @@
+import { Comment } from "./Comment";
+
 export type ProductCategory = {
   id: string;
   name: string;
@@ -26,6 +28,10 @@ export type Product = {
   GPU: string;
   memory: number;
   bestSeller?: boolean;
+  specifications: { key: string; value: string }[];
+  imagePreview: ImagePreview[];
+  comment?: Comment[];
+  ratingFunction: { key: string; value: number }[];
 };
 
 export type ProductInCart = {
@@ -44,4 +50,18 @@ export type Brand = {
   id: string;
   name: string;
   image: string;
+};
+
+export type ImagePreview = {
+  img: string;
+};
+
+export type Colors = {
+  color: string;
+};
+
+export type ShipCost = {
+  label: string;
+  time?: string;
+  price: number;
 };

@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 import { RootState } from "../../../redux/store";
-import BlogCard from "../../atoms/cards/BlogCard";
+import BlogCard from "../../atoms/cards/blog/BlogCard";
 
 const RecentBlog = () => {
   const blogsPost = useSelector((state: RootState) => state.blog.blogsPost);

@@ -12,7 +12,7 @@ const CategoryCarousel = () => {
 
   return (
     <section className="py-6 md:py-12">
-      <CarouselWithButton>
+      <CarouselWithButton slideToShow={6}>
         {categoriesList?.map((item) => {
           return (
             <ImgAndNameCard key={item.id} name={item.name} img={item.image} />

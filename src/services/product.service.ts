@@ -1,6 +1,5 @@
 import { ProductInCart } from "../types/Product";
 import axiosClient from "./api.service";
-import queryString from "query-string";
 import { v4 as uuidv4 } from "uuid";
 export const getCategoryAPI = () => {
   return axiosClient
@@ -149,20 +148,14 @@ export const getBrandAPI = () => {
 };
 
 export const getFilterProductAPI = ({
-  discount = false,
-  brand,
+  categoryId,
+  query,
 }: {
-  discount: boolean;
-  brand: string[];
+  categoryId: string;
+  query: string;
 }) => {
-  const newParams = {
-    brand: brand,
-  };
-  const filterParams = queryString.stringify(newParams);
-  console.log(filterParams);
-
   return axiosClient
-    .get(`product?discount=${discount}&${filterParams}`)
+    .get(`product?categoryId=${categoryId}&${query}`)
     .then((res) => {
       const { data, status } = res;
       return { data, status };
@@ -174,6 +167,92 @@ export const getDetailProductAPI = (id?: string) => {
   console.log(id);
   return axiosClient
     .get(`product/${id}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getSimilarProductAPI = (brand?: string) => {
+  return axiosClient
+    .get(`product?brand=${brand}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getProductAPI = () => {
+  return axiosClient
+    .get("product?_sort=name")
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getProductCatAPI = (category: string) => {
+  return axiosClient
+    .get(`product?categoryId=${category}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getColorAPI = () => {
+  return axiosClient
+    .get("colors")
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getSpecByCatAPI = (category: string) => {
+  return axiosClient
+    .get(`product?categoryId=${category}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getFilterPriceProductAPI = ({
+  min,
+  max,
+}: {
+  min: number;
+  max: number;
+}) => {
+  return axiosClient
+    .get(`product?price_gte=${min}&price_lte=${max}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getInstalmentsAPI = () => {
+  return axiosClient
+    .get(`instalment`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getProductsAPI = () => {
+  return axiosClient
+    .get(`product`)
     .then((res) => {
       const { data, status } = res;
       return { data, status };

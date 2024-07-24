@@ -3,7 +3,7 @@ import { RootState } from "../../redux/store";
 
 import ListProduct from "../../components/molecules/product/ListProduct";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
-import CardCart from "../../components/atoms/cards/CardCart";
+import CardCart from "../../components/atoms/cards/cart/CardCart";
 import Step from "../../components/atoms/step";
 import { useNavigate } from "react-router-dom";
 

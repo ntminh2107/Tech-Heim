@@ -35,11 +35,13 @@ const PaymentCard = ({
     return res;
   }, 0);
 
+  const shippingCost = shipCost?.price ?? 0; // Default to 0 if shipCost is null or undefined
+
   useEffect(() => {
     if (setGrandTotal) {
-      setGrandTotal(total - discount + shipCost);
+      setGrandTotal(total - discount + shippingCost);
     }
-  }, [discount, shipCost, total]);
+  }, [discount, shippingCost, total]);
 
   return (
     <div
@@ -61,13 +63,15 @@ const PaymentCard = ({
         </p>
         <p className="flex justify-between text-sm ">
           <span className="text-gray-717171">Shipment cost</span>
-          <span className="text-gray-444444">${formatNumber(shipCost)}</span>
+          <span className="text-gray-444444">
+            ${formatNumber(shippingCost)}
+          </span>
         </p>
 
         <Divider className="my-3" />
         <h6 className="flex justify-between text-gray-2D2D2D font-semibold">
           <span>Grand Total</span>
-          <span>${formatNumber(total - discount + shipCost)}</span>
+          <span>${formatNumber(total - discount + shippingCost)}</span>
         </h6>
       </div>
       <Button size="large" type="primary" onClick={onClick}>

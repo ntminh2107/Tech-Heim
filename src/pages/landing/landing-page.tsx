@@ -10,7 +10,7 @@ import ListProduct from "../../components/molecules/product/ListProduct";
 import HomeSection from "../../components/organisms/section";
 
 import { RootState } from "../../redux/store";
-import BlogCard from "../../components/atoms/cards/BlogCard";
+import BlogCard from "../../components/atoms/cards/blog/BlogCard";
 
 const LandingPage = () => {
   const { newProducts, bestSellers, brandList } = useSelector(
@@ -55,7 +55,7 @@ const LandingPage = () => {
       <HomeSection sectionName="Our Blogs" viewAllButton>
         <div className="flex flex-row gap-6">
           <BlogCard
-            className="basis-1/3"
+            className="w-full lg:basis-1/3"
             key={blogsPost[0]?.id}
             id={blogsPost[0]?.id}
             title={blogsPost[0]?.title}
@@ -66,7 +66,7 @@ const LandingPage = () => {
             image={blogsPost[0]?.image}
           />
 
-          <div className="flex flex-col flex-1 gap-6 basis-2/3">
+          <div className="hidden md:flex flex-col flex-1 gap-6 basis-2/3 ">
             <BlogCard
               mode="horizontal"
               key={blogsPost[1]?.id}

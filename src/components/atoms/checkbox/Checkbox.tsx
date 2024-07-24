@@ -1,40 +1,47 @@
-import { Checkbox as AntCheckbox, GetProp } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Checkbox as AntCheckbox } from "antd";
+import { useNavigate, useLocation } from "react-router-dom";
 import queryString from "query-string";
-// import { useDispatch } from "react-redux";
-// import { AppDispatch } from "../../../redux/store";
-// import { getProductThunk } from "../../../redux/slice/productSlice";
 
 type Props = {
   options: string[] | number[];
   basePath: string;
   queryKey: string;
-  defaultValue?: string[];
+  checkedValues: string[];
+  onCheckedValuesChange: (queryKey: string, checkedValues: string[]) => void;
 };
 
-const Checkbox = ({ options, basePath, queryKey, defaultValue }: Props) => {
+const Checkbox = ({
+  options,
+  basePath,
+  queryKey,
+  checkedValues,
+  onCheckedValuesChange,
+}: Props) => {
   const navigate = useNavigate();
-  // const dispatch = useDispatch<AppDispatch>();
+  const location = useLocation();
   const currentParams = queryString.parse(location.search);
 
-  const onChange: GetProp<typeof AntCheckbox.Group, "onChange"> = (
-    checkedValues
-  ) => {
-    console.log("checked = ", checkedValues);
-    const newParams = {
-      ...currentParams,
-      [queryKey]: checkedValues.join(","),
-    };
-    // dispatch(getProductThunk({ discount: true, brand: checkedValues }));
+  const onChange = (newCheckedValues: Array<string | number>) => {
+    const updatedValues = newCheckedValues as string[];
+    onCheckedValuesChange(queryKey, updatedValues);
+
+    const newParams = { ...currentParams };
+    if (updatedValues.length > 0) {
+      newParams[queryKey] = updatedValues.join(",");
+    } else {
+      delete newParams[queryKey];
+    }
+
     navigate({
       pathname: basePath,
       search: `?${queryString.stringify(newParams)}`,
     });
   };
+
   return (
     <AntCheckbox.Group
       options={options}
-      defaultValue={defaultValue}
+      value={checkedValues}
       onChange={onChange}
       className="flex flex-col gap-4"
     />

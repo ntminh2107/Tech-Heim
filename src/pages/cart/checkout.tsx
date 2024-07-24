@@ -1,16 +1,17 @@
-import { Button } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { Button } from "antd";
 import { AppDispatch, RootState } from "../../redux/store";
-
+import { setModalState } from "../../redux/slice/modalSlice";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
-import InputFormField from "../../components/atoms/formField/InputFormField";
-import RadioFormField from "../../components/atoms/formField/RadioFormField";
-import { useNavigate } from "react-router-dom";
 import OrderList from "../../components/organisms/order/OrderList";
 import Step from "../../components/atoms/step";
-import { setModalState } from "../../redux/slice/modalSlice";
+import InputFormField from "../../components/atoms/formField/InputFormField";
 import MapModal from "../../components/organisms/modal/MapModal";
+
 import AddressModal from "../../components/organisms/modal/AddressModal";
+import RadioFormField from "../../components/atoms/formField/RadioFormField";
 
 const Checkout = () => {
   const { cartItems, shipCost } = useSelector(
@@ -23,6 +24,39 @@ const Checkout = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
+  const location = useLocation();
+
+  const initialShipmentData = () => {
+    const savedShipmentData = localStorage.getItem("shipmentData");
+    if (savedShipmentData) {
+      return JSON.parse(savedShipmentData);
+    } else {
+      return {
+        fullname: currentUser?.fullName || "",
+        phonenumber: "",
+        street: "",
+        city: "",
+        region: "",
+        postalcode: "",
+        recipient: "",
+        rePhone: "",
+        shippingMethod: shipCost?.label || "",
+        shippingPrice: shipCost?.price || 0,
+      };
+    }
+  };
+
+  const [shipmentData, setShipmentData] = useState(initialShipmentData);
+
+  useEffect(() => {
+    // Clear localStorage if the route is not related to checkout
+    if (
+      !location.pathname.startsWith("/checkout") &&
+      !location.pathname.startsWith("/payment")
+    ) {
+      localStorage.removeItem("shipmentData");
+    }
+  }, [location]);
 
   const handleOpenMapModal = (isOpen: boolean) => {
     dispatch(
@@ -40,6 +74,26 @@ const Checkout = () => {
         isOpen: isOpen,
       })
     );
+  };
+
+  const handleAddressSubmit = (address: any) => {
+    const updatedShipmentData = {
+      ...shipmentData,
+      ...address,
+    };
+    setShipmentData(updatedShipmentData);
+    localStorage.setItem("shipmentData", JSON.stringify(updatedShipmentData));
+  };
+
+  const handleContinueToPay = () => {
+    const updatedShipmentData = {
+      ...shipmentData,
+      shippingMethod: shipCost?.label,
+      shippingPrice: shipCost?.price,
+    };
+    setShipmentData(updatedShipmentData);
+    localStorage.setItem("shipmentData", JSON.stringify(updatedShipmentData));
+    navigate("/payment");
   };
 
   return (
@@ -67,32 +121,39 @@ const Checkout = () => {
 
             <InputFormField
               label="Ship to"
-              value="HubSpot, 25 First Street, Cambridge MA 02141, United States"
+              value={
+                shipmentData.street
+                  ? `${shipmentData.street}, ${shipmentData.city}, ${shipmentData.region}, ${shipmentData.postalcode}`
+                  : "Shipping Address"
+              }
               disable
               icon={
                 <img
                   src="/assets/icons/email/edit_icon.svg"
                   className="w-5 cursor-pointer"
-                  onClick={() => handleOpenMapModal(true)}
+                  onClick={() => handleOpenAddressModal(true)}
                 />
               }
             ></InputFormField>
 
-            <RadioFormField value={shipCost} label="Shipping Method" />
+            <RadioFormField
+              label="Shipping Method"
+              value={shipCost?.price as number}
+            />
           </div>
           <Button
             size="large"
             className="text-primary"
             type="text"
-            onClick={() => navigate("/cart")}
+            onClick={handleContinueToPay}
           >
-            Return to cart
+            Continue to pay
           </Button>
         </div>
         <div className="basis-2/5">
           <PaymentCard
             buttonLabel="Continue to pay"
-            onClick={() => navigate("/payment")}
+            onClick={handleContinueToPay}
             children={<OrderList cartItems={cartItems} />}
           />
         </div>
@@ -104,6 +165,7 @@ const Checkout = () => {
         <AddressModal
           isOpen={addressModal}
           setIsOpen={handleOpenAddressModal}
+          onSubmit={handleAddressSubmit}
         />
       )}
     </>
