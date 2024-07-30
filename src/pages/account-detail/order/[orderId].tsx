@@ -7,7 +7,9 @@ const OrderDetailID = () => {
       <div className="text-base font-light text-gray-717171">
         Track your order
       </div>
-      <OrderStatusDetail />
+      <div className="justify-center">
+        <OrderStatusDetail />
+      </div>
     </div>
   );
 };
