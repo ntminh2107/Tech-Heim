@@ -24,10 +24,10 @@ const CategoryListWithIcon = () => {
               handleOnClick(item.name.toLowerCase());
             }}
             className={cn(
-              "flex flex-col items-center gap-4 cursor-pointer",
+              "relative flex flex-col items-center gap-4 cursor-pointer h-full border-transparent border-b-2",
               item.name.toLowerCase() === pathSnippets[length + 1]
-                ? "border-b-2 border-b-primary"
-                : "hover:border-b-2 hover:border-b-primary-50"
+                ? "border-b-2 border-b-transparent"
+                : "hover:border-b-2 hover:border-b-primary"
             )}
             key={item.id}
           >
