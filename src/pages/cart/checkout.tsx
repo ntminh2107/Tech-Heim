@@ -79,10 +79,10 @@ const Checkout = () => {
   const handleContinueToPay = () => {
     const transactionId = generateTransactionID();
     const totalAmount =
-      cartItems.reduce(
-        (sum: number, item: ProductInCart) => sum + item.price * item.quantity,
-        0
-      ) + shipmentData.shippingPrice;
+      cartItems.reduce((sum: number, item: ProductInCart) => {
+        const price = item.salePrice ? item.salePrice : item.price;
+        return sum + price * item.quantity;
+      }, 0) + shipmentData.shippingPrice;
 
     const newOrder: Order = {
       id: transactionId,

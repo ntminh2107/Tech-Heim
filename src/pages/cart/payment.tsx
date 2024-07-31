@@ -255,6 +255,7 @@ const Payment = () => {
             setGrandTotal={setGrandTotal}
             buttonLabel="Place order"
             onClick={handlePlaceOrder}
+            depositAmount={orderData?.depositAmount}
           >
             <OrderList cartItems={orderData?.Products || []} />
           </PaymentCard>

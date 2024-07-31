@@ -11,6 +11,7 @@ type Props = {
   buttonLabel: string;
   onClick?: () => void;
   setGrandTotal?: React.Dispatch<React.SetStateAction<number>>;
+  depositAmount?: number;
 };
 
 const PaymentCard = ({
@@ -19,13 +20,14 @@ const PaymentCard = ({
   onClick,
   className,
   setGrandTotal,
+  depositAmount = 0,
 }: Props) => {
   const { cartItems, shipCost } = useSelector(
     (state: RootState) => state.product
   );
 
   const total = cartItems.reduce((res, curr) => {
-    return res + curr.price * curr.quantity;
+    return res + (curr.salePrice ?? curr.price) * curr.quantity;
   }, 0);
 
   const discount = cartItems.reduce((res, curr) => {
@@ -37,11 +39,16 @@ const PaymentCard = ({
 
   const shippingCost = shipCost?.price ?? 0; // Default to 0 if shipCost is null or undefined
 
+  const grandTotal = total - discount + shippingCost;
+  const remainingAmount = grandTotal - depositAmount;
+  const adjustedRemainingAmount = remainingAmount < 0 ? 0 : remainingAmount;
+  const excessAmount = remainingAmount < 0 ? Math.abs(remainingAmount) : 0;
+
   useEffect(() => {
     if (setGrandTotal) {
-      setGrandTotal(total - discount + shippingCost);
+      setGrandTotal(grandTotal);
     }
-  }, [discount, shippingCost, total]);
+  }, [discount, shippingCost, total, depositAmount]);
 
   return (
     <div
@@ -71,12 +78,40 @@ const PaymentCard = ({
         <Divider className="my-3" />
         <h6 className="flex justify-between text-gray-2D2D2D font-semibold">
           <span>Grand Total</span>
-          <span>${formatNumber(total - discount + shippingCost)}</span>
+          <span>${formatNumber(grandTotal)}</span>
         </h6>
+        {depositAmount > 0 && (
+          <>
+            <p className="flex justify-between text-sm ">
+              <span className="text-gray-717171">Deposit Amount</span>
+              <span className="text-gray-444444">
+                ${formatNumber(depositAmount)}
+              </span>
+            </p>
+            <p className="flex justify-between text-sm ">
+              <span className="text-gray-717171">Remaining Amount</span>
+              <span className="text-gray-444444">
+                ${formatNumber(adjustedRemainingAmount)}
+              </span>
+            </p>
+            {excessAmount > 0 && (
+              <p className="flex justify-between text-sm text-green-500">
+                <span>Excess Amount</span>
+                <span>${formatNumber(excessAmount)}</span>
+              </p>
+            )}
+          </>
+        )}
       </div>
-      <Button size="large" type="primary" onClick={onClick}>
-        {buttonLabel}
-      </Button>
+      {adjustedRemainingAmount <= 0 ? (
+        <div className="text-green-500 text-lg font-medium">
+          This order is already done
+        </div>
+      ) : (
+        <Button size="large" type="primary" onClick={onClick}>
+          {buttonLabel}
+        </Button>
+      )}
     </div>
   );
 };

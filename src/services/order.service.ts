@@ -52,19 +52,3 @@ export const paidOrderAPI = ({
     })
     .catch((err) => err);
 };
-
-// export const updateUserBillAPI = async (
-//   userId: number | string,
-//   bill: Bill
-// ) => {
-//   try {
-//     const response = await axiosClient.get(`users/${userId}`);
-//     const user: User = response.data;
-//     user.bill = [...(user.bill || []), bill];
-//     const updatedUser = await axiosClient.put(`users/${userId}`, user);
-//     return updatedUser.data;
-//   } catch (error) {
-//     console.error("Error updating user bill:", error);
-//     throw error;
-//   }
-// };

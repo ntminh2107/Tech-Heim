@@ -529,6 +529,134 @@
           "paidTime": "2024-07-31T03:06:58.643Z"
         }
       ]
+    },
+    {
+      "id": "txn_y42orbr",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "minh nguyen",
+      "street": "dsd",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "100000",
+      "shippingMethod": "",
+      "shippingPrice": 0,
+      "Products": [
+        {
+          "id": "1496ffe9-2bb6-4ed1-aafb-ac1a49c24671",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        },
+        {
+          "id": "639a5273-e432-42d1-ab3d-883eee1399ee",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 2400,
+      "depositAmount": 2410,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "ce9f0ffe-55d5-48a7-bc94-1b9efc567717",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 2400,
+          "paidTime": "2024-07-31T03:14:32.271Z"
+        },
+        {
+          "id": "d0bbef6e-465c-4e46-b880-20e720a8208f",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 10,
+          "paidTime": "2024-07-31T03:14:52.653Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_5e6t3qe",
+      "userId": 1,
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "0b939e20-82f4-4ed5-bfea-bd815fba6387",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 400,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "508e9bfb-5643-4ef0-9d1c-bc19c94b4db0",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 400,
+          "paidTime": "2024-07-31T03:34:51.890Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_akxo0fk",
+      "userId": 1,
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "7549df2e-a97e-4a20-a07f-c55cecea3b6c",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1207.5,
+      "depositAmount": 1200,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "a77b301f-cf6d-435f-95cd-472fb21969a2",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 1000,
+          "paidTime": "2024-07-31T03:35:48.086Z"
+        },
+        {
+          "id": "0b1ae933-31e3-48f4-b40b-2f72eae01cc1",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 200,
+          "paidTime": "2024-07-31T03:36:00.338Z"
+        }
+      ]
     }
   ],
   "users": [
@@ -1025,24 +1153,13 @@
   ],
   "cart": [
     {
-      "id": "8c032cbf-1e99-4cde-a561-d5a0418fdeb2",
+      "id": "7549df2e-a97e-4a20-a07f-c55cecea3b6c",
       "quantity": 1,
-      "productId": "20",
+      "productId": "6",
       "color": "Black",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
-      "name": "Game Console Q17",
-      "price": 400,
-      "salePrice": 350
-    },
-    {
-      "id": "f75855c5-8a86-499e-9cb4-b969a98c6715",
-      "quantity": 1,
-      "productId": "5",
-      "color": "Blue",
-      "image": "https://resource.logitechg.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/products/g433/g433-gallery-red-1.png?v=1",
-      "name": "Headphones B2",
-      "price": 150,
-      "salePrice": 120
+      "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+      "name": "Camera C3",
+      "price": 1200
     }
   ],
   "instalment": [
