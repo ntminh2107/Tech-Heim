@@ -1,20 +1,25 @@
 import {
+  addBillToUserAPI,
   addOrderAPI,
   getDetailOrderAPI,
   getOrderAPI,
+  getUserAPI,
   paidOrderAPI,
 } from "../../services/order.service";
 import { Order } from "../../types/Order";
+import { User } from "../../types/User";
 import { createAppSlice } from "../appSlice";
 
 interface OrderState {
   orders: Order[];
   detailOrder: Order | null;
+  user: User | undefined;
 }
 
 const initialState: OrderState = {
   orders: [],
   detailOrder: null,
+  user: undefined,
 };
 
 export const orderSlice = createAppSlice({
@@ -103,7 +108,13 @@ export const orderSlice = createAppSlice({
       }
     ),
     paidOrderThunk: create.asyncThunk(
-      async ({ id, currentOrder }: { id: string; currentOrder: Order }) => {
+      async ({
+        id,
+        currentOrder,
+      }: {
+        id: string | number;
+        currentOrder: Order;
+      }) => {
         const res = await paidOrderAPI({ id, currentOrder });
         return res;
       },
@@ -131,35 +142,64 @@ export const orderSlice = createAppSlice({
         },
       }
     ),
-    // updateUserBillThunk: create.asyncThunk(
-    //   async ({ userId, bill }: { userId: number | string; bill: Bill }) => {
-    //     const res = await updateUserBillAPI(userId, bill);
-    //     return res;
-    //   },
-    //   {
-    //     pending: (state) => {
-    //       return {
-    //         ...state,
-    //         loading: false,
-    //       };
-    //     },
-    //     fulfilled: (state, action) => {
-    //       const { data, status } = action.payload;
-    //       return {
-    //         ...state,
-    //         status: status,
-    //         detailOrder: data,
-    //         loading: false,
-    //       };
-    //     },
-    //     rejected: (state) => {
-    //       return {
-    //         ...state,
-    //         loading: false,
-    //       };
-    //     },
-    //   }
-    // ),
+    getUserDetailThunk: create.asyncThunk(
+      async (id: string | number) => {
+        const res = await getUserAPI(id);
+        return res;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            user: data,
+            status: status,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
+    addBillToUserThunk: create.asyncThunk(
+      async ({ id, user }: { id: string | number; user: User }) => {
+        const res = await addBillToUserAPI({ id, user });
+        return res;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            user: data,
+            status: status,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
   }),
 });
 
@@ -168,6 +208,8 @@ export const {
   getOrderDetailThunk,
   addOrderThunk,
   paidOrderThunk,
+  getUserDetailThunk,
+  addBillToUserThunk,
 } = orderSlice.actions;
 
 export default orderSlice.reducer;

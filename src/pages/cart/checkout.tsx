@@ -5,7 +5,7 @@ import { Button } from "antd";
 import { AppDispatch, RootState } from "../../redux/store";
 import { setModalState } from "../../redux/slice/modalSlice";
 import { addOrderThunk } from "../../redux/slice/orderSlice";
-import PaymentCard from "../../components/molecules/payment/PaymentCard";
+import PaymentCartCard from "../../components/molecules/payment/PaymentCartCard";
 import OrderList from "../../components/organisms/order/OrderList";
 import Step from "../../components/atoms/step";
 import InputFormField from "../../components/atoms/formField/InputFormField";
@@ -27,14 +27,27 @@ const Checkout = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
-  const location = useLocation();
 
-  const initialShipmentData = () => {
-    const savedShipmentData = localStorage.getItem("shipmentData");
-    if (savedShipmentData) {
-      return JSON.parse(savedShipmentData);
-    } else {
-      return {
+  const [shipmentData, setShipmentData] = useState({
+    userId: currentUser?.id || "",
+    fullname: currentUser?.fullName || "",
+    phonenumber: "",
+    street: "",
+    city: "",
+    region: "",
+    postalcode: "",
+    recipient: "",
+    rePhone: "",
+    shippingMethod: shipCost?.label || "",
+    shippingPrice: shipCost?.price || 0,
+  });
+
+  useEffect(() => {
+    if (
+      !location.pathname.startsWith("/checkout") &&
+      !location.pathname.startsWith("/payment")
+    ) {
+      setShipmentData({
         userId: currentUser?.id || "",
         fullname: currentUser?.fullName || "",
         phonenumber: "",
@@ -44,23 +57,11 @@ const Checkout = () => {
         postalcode: "",
         recipient: "",
         rePhone: "",
-        shippingMethod: shipCost?.label || "",
-        shippingPrice: shipCost?.price || 0,
-      };
+        shippingMethod: "",
+        shippingPrice: 0,
+      });
     }
-  };
-
-  const [shipmentData, setShipmentData] = useState(initialShipmentData);
-
-  useEffect(() => {
-    // Clear localStorage if the route is not related to checkout
-    if (
-      !location.pathname.startsWith("/checkout") &&
-      !location.pathname.startsWith("/payment")
-    ) {
-      localStorage.removeItem("shipmentData");
-    }
-  }, [location]);
+  }, [location, currentUser]);
 
   const handleOpenMapModal = (isOpen: boolean) => {
     dispatch(setModalState({ key: "mapModal", isOpen: isOpen }));
@@ -71,9 +72,15 @@ const Checkout = () => {
   };
 
   const handleAddressSubmit = (address: any) => {
-    const updatedShipmentData = { ...shipmentData, ...address };
-    setShipmentData(updatedShipmentData);
-    localStorage.setItem("shipmentData", JSON.stringify(updatedShipmentData));
+    setShipmentData({ ...shipmentData, ...address });
+  };
+
+  const handleShippingChange = (method: { label: string; price: number }) => {
+    setShipmentData({
+      ...shipmentData,
+      shippingMethod: method.label,
+      shippingPrice: method.price,
+    });
   };
 
   const handleContinueToPay = () => {
@@ -148,7 +155,8 @@ const Checkout = () => {
 
             <RadioFormField
               label="Shipping Method"
-              value={shipCost?.price as number}
+              value={shipmentData.shippingPrice}
+              onShippingChange={handleShippingChange}
             />
           </div>
           <Button
@@ -161,12 +169,13 @@ const Checkout = () => {
           </Button>
         </div>
         <div className="basis-2/5">
-          <PaymentCard
+          <PaymentCartCard
             buttonLabel="Continue to pay"
             onClick={handleContinueToPay}
+            shippingCost={shipmentData.shippingPrice}
           >
             <OrderList cartItems={cartItems} />
-          </PaymentCard>
+          </PaymentCartCard>
         </div>
       </div>
       {mapModal && (

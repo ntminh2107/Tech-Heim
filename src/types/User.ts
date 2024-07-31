@@ -1,3 +1,4 @@
+import { Payment } from "./Order";
 import { ProductInCart } from "./Product";
 
 export type User = {
@@ -32,7 +33,7 @@ export type PaymentCard = {
 };
 
 export type Bill = {
-  id: string;
+  id: string | number;
   fullname: string;
   street: string;
   city: string;
@@ -43,5 +44,7 @@ export type Bill = {
   products: ProductInCart[];
   paymentType: string;
   paymentTransaction: string;
-  amountPaid: number;
+  change?: number;
+  grandTotal: number;
+  sharedWith: Payment[];
 };

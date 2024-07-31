@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { Button, Input } from "antd"; // Thêm Input từ Ant Design
+import { Button, Input, Spin } from "antd";
 import { AppDispatch, RootState } from "../../redux/store";
 import { setModalState } from "../../redux/slice/modalSlice";
-import PaymentCard from "../../components/molecules/payment/PaymentCard";
+
 import OrderList from "../../components/organisms/order/OrderList";
 import Step from "../../components/atoms/step";
 import InputFormField from "../../components/atoms/formField/InputFormField";
@@ -18,13 +18,20 @@ import { clearCartItemThunk } from "../../redux/slice/productSlice";
 import {
   paidOrderThunk,
   getOrderDetailThunk,
+  getUserDetailThunk,
+  addBillToUserThunk,
 } from "../../redux/slice/orderSlice";
+
 import { Order, Payment } from "../../types/Order";
 import { v4 as uuidv4 } from "uuid";
+import { Bill, User } from "../../types/User";
+import PaymentCard from "../../components/molecules/payment/PaymentCard";
 
 const Payment = () => {
   const { orderId } = useParams<{ orderId: string }>();
-  const { detailOrder } = useSelector((state: RootState) => state.order);
+  const detailOrder = useSelector(
+    (state: RootState) => state.order.detailOrder
+  );
   const { mapModal, chooseCardModal, addNewCardModal, successModal } =
     useSelector((state: RootState) => state.appModal);
   const { selectedCreditCard, currentUser } = useSelector(
@@ -34,6 +41,7 @@ const Payment = () => {
   const navigate = useNavigate();
 
   const [orderData, setOrderData] = useState<Order | null>(null);
+  const [loading, setLoading] = useState<boolean>(true); // Loading state
   const [paidAmount, setPaidAmount] = useState<number>(0); // State cho số tiền thanh toán
 
   useEffect(() => {
@@ -45,6 +53,7 @@ const Payment = () => {
   useEffect(() => {
     if (detailOrder) {
       setOrderData(detailOrder);
+      setLoading(false); // Set loading to false when detailOrder is available
     }
   }, [detailOrder]);
 
@@ -91,13 +100,6 @@ const Payment = () => {
         0
       ) + paidAmount;
 
-    // const updatedOrder : o = {
-    //   ...orderData,
-    //   amountPaid: updatedAmountPaid,
-    //   isPaid: updatedAmountPaid >= orderData.totalAmount,
-    //   payments: [...orderData.payments, newPayment],
-    // };
-
     const updatedOrder: Order = {
       ...orderData,
       depositAmount: updatedAmountPaid,
@@ -105,27 +107,52 @@ const Payment = () => {
       payments: [...(orderData.payments || []), newPayment],
     };
 
-    dispatch(paidOrderThunk({ id: orderData.id!, currentOrder: updatedOrder }));
-
-    dispatch(clearCartItemThunk());
-    handleOpenSuccessModal(true);
+    await dispatch(
+      paidOrderThunk({ id: orderData.id!, currentOrder: updatedOrder })
+    );
 
     if (updatedOrder.isPaid) {
-      // const bill: Bill = {
-      //   id: updatedOrder.id!,
-      //   fullname: updatedOrder.fullname,
-      //   street: updatedOrder.street,
-      //   city: updatedOrder.city,
-      //   region: updatedOrder.region,
-      //   postalcode: updatedOrder.postalcode,
-      //   shippingMethod: updatedOrder.shippingMethod,
-      //   shippingPrice: updatedOrder.shippingPrice,
-      //   products: updatedOrder.Products,
-      //   paymentType: selectedPayment,
-      //   paymentTransaction: updatedOrder.paymentTransaction!,
-      //   amountPaid: updatedOrder.totalAmount,
-      // };
-      // dispatch(updateUserBillThunk({ userId: currentUser.id, bill }));
+      const newBill: Bill = {
+        id: updatedOrder.id!,
+        fullname: updatedOrder.fullname,
+        street: updatedOrder.street,
+        city: updatedOrder.city,
+        region: updatedOrder.region,
+        postalcode: updatedOrder.postalcode,
+        shippingMethod: updatedOrder.shippingMethod,
+        shippingPrice: updatedOrder.shippingPrice,
+        products: updatedOrder.Products,
+        paymentType: selectedPayment,
+        paymentTransaction: updatedOrder.paymentTransaction!,
+        grandTotal: updatedOrder.totalAmount,
+        change: updatedOrder.depositAmount - updatedOrder.totalAmount,
+        sharedWith: updatedOrder.payments,
+      };
+
+      const updateUserBills = async () => {
+        const updateUserPromises = updatedOrder.payments.map(
+          async (payment) => {
+            const userResponse = await dispatch(
+              getUserDetailThunk(payment.userId.toString())
+            ).unwrap();
+            const user = userResponse.data as User;
+            user.bill = [...(user.bill || []), newBill];
+            return dispatch(
+              addBillToUserThunk({ id: payment.userId, user: user })
+            );
+          }
+        );
+
+        try {
+          await Promise.all(updateUserPromises);
+          alert("Bill has been saved for all users!");
+        } catch (error) {
+          console.error("Error updating user bills: ", error);
+        }
+      };
+
+      await updateUserBills();
+
       dispatch(clearCartItemThunk());
       handleOpenSuccessModal(true);
     } else {
@@ -151,6 +178,14 @@ const Payment = () => {
 
     return () => clearInterval(interval);
   }, [orderId, orderData, dispatch, detailOrder]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <Spin size="large" />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -231,7 +266,7 @@ const Payment = () => {
                 type="number"
                 value={paidAmount}
                 onChange={(e) => setPaidAmount(Number(e.target.value))}
-                min={1}
+                min={0.5}
                 max={
                   orderData
                     ? orderData.totalAmount - orderData.depositAmount
@@ -255,7 +290,7 @@ const Payment = () => {
             setGrandTotal={setGrandTotal}
             buttonLabel="Place order"
             onClick={handlePlaceOrder}
-            depositAmount={orderData?.depositAmount}
+            order={orderData as Order}
           >
             <OrderList cartItems={orderData?.Products || []} />
           </PaymentCard>

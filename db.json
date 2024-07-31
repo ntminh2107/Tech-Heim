@@ -435,50 +435,7 @@
   ],
   "order": [
     {
-      "id": "txn_hlupqmn",
-      "fullname": "Nguyen van thuan",
-      "street": "số 9 tt5.2 khu đô thị Ao Sào",
-      "city": "Hanoi",
-      "region": "afr",
-      "postalcode": "11111",
-      "shippingMethod": "Regular Shipping",
-      "shippingPrice": 7.5,
-      "Products": [
-        {
-          "id": "9970efad-2f5b-41a5-b941-b7ff1b50de7d",
-          "quantity": 1,
-          "productId": "15",
-          "color": "Blue",
-          "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
-          "name": "External HDD L12",
-          "price": 120
-        },
-        {
-          "id": "6d36e6d3-e9be-4e1a-b9d1-6c8f3eb005dd",
-          "quantity": 1,
-          "productId": "2",
-          "color": "Black",
-          "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
-          "name": "Smartphone Y2",
-          "price": 800,
-          "salePrice": 750
-        }
-      ],
-      "totalAmount": 927.5,
-      "depositAmount": 0,
-      "isPaid": false,
-      "sharedWith": [],
-      "payments": [],
-      "data": {
-        "id": "8c1d3d40-4094-4a4d-b638-b43644a37f58",
-        "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
-        "fullname": "Jimmy Smith",
-        "amountPaid": 77,
-        "paidTime": "2024-07-30T10:12:30.583Z"
-      }
-    },
-    {
-      "id": "txn_433hkz0",
+      "id": "txn_jlktddv",
       "userId": 1,
       "fullname": "Nguyen van thuan",
       "street": "số 9 tt5.2 khu đô thị Ao Sào",
@@ -489,7 +446,7 @@
       "shippingPrice": 7.5,
       "Products": [
         {
-          "id": "8c032cbf-1e99-4cde-a561-d5a0418fdeb2",
+          "id": "69f71f7f-62ef-49f1-8669-4429bb8320a1",
           "quantity": 1,
           "productId": "20",
           "color": "Black",
@@ -497,9 +454,82 @@
           "name": "Game Console Q17",
           "price": 400,
           "salePrice": 350
-        },
+        }
+      ],
+      "totalAmount": 357.5,
+      "depositAmount": 0,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": []
+    },
+    {
+      "id": "txn_ssv5d61",
+      "userId": 1,
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
         {
-          "id": "f75855c5-8a86-499e-9cb4-b969a98c6715",
+          "id": "69f71f7f-62ef-49f1-8669-4429bb8320a1",
+          "quantity": 1,
+          "productId": "20",
+          "color": "Black",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
+          "name": "Game Console Q17",
+          "price": 400,
+          "salePrice": 350
+        }
+      ],
+      "totalAmount": 357.5,
+      "depositAmount": 0,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": []
+    },
+    {
+      "id": "txn_6n533tt",
+      "userId": 1,
+      "fullname": "Juliet Oma",
+      "street": "",
+      "city": "",
+      "region": "",
+      "postalcode": "",
+      "shippingMethod": "",
+      "shippingPrice": 0,
+      "Products": [
+        {
+          "id": "3a09467d-1d07-4769-a7ef-bdad69b79449",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 400,
+      "depositAmount": 0,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": []
+    },
+    {
+      "id": "txn_nrq3c3h",
+      "userId": 1,
+      "fullname": "Juliet Oma",
+      "street": "",
+      "city": "",
+      "region": "",
+      "postalcode": "",
+      "shippingMethod": "Express Shipping",
+      "shippingPrice": 22.5,
+      "Products": [
+        {
+          "id": "baf09bdf-ae60-461e-a221-2dc576f12649",
           "quantity": 1,
           "productId": "5",
           "color": "Blue",
@@ -509,152 +539,74 @@
           "salePrice": 120
         }
       ],
-      "totalAmount": 557.5,
-      "depositAmount": 470,
-      "isPaid": false,
-      "sharedWith": [],
-      "payments": [
-        {
-          "id": "32c04f2e-fc53-4158-9cce-437858cdfa37",
-          "userId": 1,
-          "fullname": "Juliet Oma",
-          "amountPaid": 400,
-          "paidTime": "2024-07-31T03:05:22.916Z"
-        },
-        {
-          "id": "7333f52d-45b0-4759-aa17-e98dfbb3be04",
-          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
-          "fullname": "Jimmy Smith",
-          "amountPaid": 70,
-          "paidTime": "2024-07-31T03:06:58.643Z"
-        }
-      ]
-    },
-    {
-      "id": "txn_y42orbr",
-      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
-      "fullname": "minh nguyen",
-      "street": "dsd",
-      "city": "Hanoi",
-      "region": "afr",
-      "postalcode": "100000",
-      "shippingMethod": "",
-      "shippingPrice": 0,
-      "Products": [
-        {
-          "id": "1496ffe9-2bb6-4ed1-aafb-ac1a49c24671",
-          "quantity": 1,
-          "productId": "6",
-          "color": "Black",
-          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-          "name": "Camera C3",
-          "price": 1200
-        },
-        {
-          "id": "639a5273-e432-42d1-ab3d-883eee1399ee",
-          "quantity": 1,
-          "productId": "6",
-          "color": "Black",
-          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-          "name": "Camera C3",
-          "price": 1200
-        }
-      ],
-      "totalAmount": 2400,
-      "depositAmount": 2410,
+      "totalAmount": 142.5,
+      "depositAmount": 163,
       "isPaid": true,
       "sharedWith": [],
       "payments": [
         {
-          "id": "ce9f0ffe-55d5-48a7-bc94-1b9efc567717",
-          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
-          "fullname": "Jimmy Smith",
-          "amountPaid": 2400,
-          "paidTime": "2024-07-31T03:14:32.271Z"
-        },
-        {
-          "id": "d0bbef6e-465c-4e46-b880-20e720a8208f",
+          "id": "a856d085-b81b-4bcd-a1ed-c2e52d2ea3aa",
           "userId": 1,
           "fullname": "Juliet Oma",
-          "amountPaid": 10,
-          "paidTime": "2024-07-31T03:14:52.653Z"
+          "amountPaid": 43,
+          "paidTime": "2024-07-31T09:13:34.084Z"
+        },
+        {
+          "id": "e605f31f-719d-4b40-a36e-aba42eb6dd83",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 70,
+          "paidTime": "2024-07-31T09:58:27.603Z"
+        },
+        {
+          "id": "1ad66999-3ed5-4147-9c80-4d0e448a9607",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 50,
+          "paidTime": "2024-07-31T09:59:24.537Z"
         }
       ]
     },
     {
-      "id": "txn_5e6t3qe",
-      "userId": 1,
+      "id": "txn_wgevbf3",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
       "fullname": "Nguyen van thuan",
       "street": "số 9 tt5.2 khu đô thị Ao Sào",
       "city": "Hanoi",
-      "region": "afr",
+      "region": "sea",
       "postalcode": "11111",
-      "shippingMethod": "Regular Shipping",
-      "shippingPrice": 7.5,
+      "shippingMethod": "Express Shipping",
+      "shippingPrice": 22.5,
       "Products": [
         {
-          "id": "0b939e20-82f4-4ed5-bfea-bd815fba6387",
+          "id": "d2627c2f-ef88-43bb-a6ba-5e3b5fe7b9f8",
           "quantity": 1,
-          "productId": "16",
-          "color": "Black",
-          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
-          "name": "Camera Lens M13",
-          "price": 400
+          "productId": "7",
+          "color": "Silver",
+          "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+          "name": "Desktop D4",
+          "price": 1800,
+          "salePrice": 1600
         }
       ],
-      "totalAmount": 407.5,
-      "depositAmount": 400,
-      "isPaid": false,
+      "totalAmount": 1622.5,
+      "depositAmount": 1630,
+      "isPaid": true,
       "sharedWith": [],
       "payments": [
         {
-          "id": "508e9bfb-5643-4ef0-9d1c-bc19c94b4db0",
-          "userId": 1,
-          "fullname": "Juliet Oma",
-          "amountPaid": 400,
-          "paidTime": "2024-07-31T03:34:51.890Z"
-        }
-      ]
-    },
-    {
-      "id": "txn_akxo0fk",
-      "userId": 1,
-      "fullname": "Nguyen van thuan",
-      "street": "số 9 tt5.2 khu đô thị Ao Sào",
-      "city": "Hanoi",
-      "region": "afr",
-      "postalcode": "11111",
-      "shippingMethod": "Regular Shipping",
-      "shippingPrice": 7.5,
-      "Products": [
-        {
-          "id": "7549df2e-a97e-4a20-a07f-c55cecea3b6c",
-          "quantity": 1,
-          "productId": "6",
-          "color": "Black",
-          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-          "name": "Camera C3",
-          "price": 1200
-        }
-      ],
-      "totalAmount": 1207.5,
-      "depositAmount": 1200,
-      "isPaid": false,
-      "sharedWith": [],
-      "payments": [
-        {
-          "id": "a77b301f-cf6d-435f-95cd-472fb21969a2",
-          "userId": 1,
-          "fullname": "Juliet Oma",
-          "amountPaid": 1000,
-          "paidTime": "2024-07-31T03:35:48.086Z"
-        },
-        {
-          "id": "0b1ae933-31e3-48f4-b40b-2f72eae01cc1",
+          "id": "577f8acc-b30c-4136-b140-8403ae0b483a",
           "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
           "fullname": "Jimmy Smith",
-          "amountPaid": 200,
-          "paidTime": "2024-07-31T03:36:00.338Z"
+          "amountPaid": 1600,
+          "paidTime": "2024-07-31T10:00:31.054Z"
+        },
+        {
+          "id": "79cb8219-2f0f-449c-b121-09a0b3dd02cc",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 30,
+          "paidTime": "2024-07-31T10:00:46.425Z"
         }
       ]
     }
@@ -675,419 +627,7 @@
         "expired": "12/25",
         "cvv": "111"
       },
-      "bill": [
-        {
-          "id": "txn_eulufto",
-          "fullname": "Nguyễn Tuấn Minh",
-          "street": "số 9 tt5.2 khu đô thị Hoàng Mai",
-          "city": "Hanoi",
-          "region": "afr",
-          "postalcode": "100000",
-          "shippingMethod": "Express Shipping",
-          "shippingPrice": 22.5,
-          "products": [
-            {
-              "id": "517ef475-a9b5-42ac-accc-42fdac2f8d07",
-              "quantity": 1,
-              "productId": "4",
-              "color": "Rose Gold",
-              "image": "https://images-na.ssl-images-amazon.com/images/I/71TIOhVWQ5L.jpg",
-              "name": "Smartwatch A1",
-              "price": 250
-            },
-            {
-              "id": "9b05b430-09f2-4dc2-a997-7f99c4011886",
-              "quantity": 1,
-              "productId": "2",
-              "color": "Black",
-              "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
-              "name": "Smartphone Y2",
-              "price": 800,
-              "salePrice": 750
-            }
-          ],
-          "paymentType": "cr",
-          "paymentTransaction": "txn_eulufto",
-          "amountPaid": 1045
-        },
-        {
-          "id": "txn_qwq037m",
-          "fullname": "Nguyen van thuan",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Hanoi",
-          "region": "sea",
-          "postalcode": "11111",
-          "shippingMethod": "Express Shipping",
-          "shippingPrice": 22.5,
-          "products": [
-            {
-              "id": "df3b6c62-3106-4c7b-8455-e6d2184710dd",
-              "quantity": 1,
-              "productId": "7",
-              "color": "Silver",
-              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
-              "name": "Desktop D4",
-              "price": 1800,
-              "salePrice": 1600
-            },
-            {
-              "id": "5b262fd0-9309-4c66-8c51-7f74dbfef937",
-              "quantity": 1,
-              "productId": "18",
-              "color": "Black",
-              "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
-              "name": "Fitness Tracker O15",
-              "price": 80
-            },
-            {
-              "id": "7c1ec034-7bbb-4099-bda8-c6b255edc3db",
-              "quantity": 1,
-              "productId": "15",
-              "color": "Blue",
-              "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
-              "name": "External HDD L12",
-              "price": 120
-            }
-          ],
-          "paymentType": "CreditCard",
-          "paymentTransaction": "txn_qwq037m",
-          "amountPaid": 1845
-        },
-        {
-          "id": "txn_gmm66u6",
-          "fullname": "Ha Viet Anh",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Hanoi",
-          "region": "afr",
-          "postalcode": "12345",
-          "shippingMethod": "Regular Shipping",
-          "shippingPrice": 7.5,
-          "products": [
-            {
-              "id": "3b740a43-6c58-4fe8-80e4-ff287e7fef2b",
-              "quantity": 1,
-              "productId": "19",
-              "color": "Silver",
-              "image": "https://m.media-amazon.com/images/I/71ASACudpfL._AC_SL1500_.jpg",
-              "name": "Drone P16",
-              "price": 1000
-            },
-            {
-              "id": "0e9b360b-ed4c-4f9b-9e27-0ab586dd01ce",
-              "quantity": 1,
-              "productId": "15",
-              "color": "Blue",
-              "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
-              "name": "External HDD L12",
-              "price": 120
-            }
-          ],
-          "paymentType": "CreditCard",
-          "paymentTransaction": "txn_gmm66u6",
-          "amountPaid": 1135
-        },
-        {
-          "id": "txn_gi1bo92",
-          "fullname": "Ha Viet Anh",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Hanoi",
-          "region": "na",
-          "postalcode": "12345",
-          "shippingMethod": "Free Shipping",
-          "shippingPrice": 0,
-          "products": [
-            {
-              "id": "f175a8e6-7658-4e5f-95bd-c94617466112",
-              "quantity": 1,
-              "productId": "7",
-              "color": "Silver",
-              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
-              "name": "Desktop D4",
-              "price": 1800,
-              "salePrice": 1600
-            },
-            {
-              "id": "e524005a-01b3-44b7-86a5-2fad0cf54eec",
-              "quantity": 1,
-              "productId": "18",
-              "color": "Black",
-              "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
-              "name": "Fitness Tracker O15",
-              "price": 80
-            },
-            {
-              "id": "630f1354-9757-48ea-865a-6db4653c4a78",
-              "quantity": 1,
-              "productId": "8",
-              "color": "Black",
-              "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
-              "name": "Keyboard E5",
-              "price": 80
-            }
-          ],
-          "paymentType": "CreditCard",
-          "paymentTransaction": "txn_gi1bo92",
-          "amountPaid": 1760
-        },
-        {
-          "id": "txn_rbx5okl",
-          "fullname": "tuan minh",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Quận Hoàng Mai",
-          "region": "na",
-          "postalcode": "100000",
-          "shippingMethod": "Regular Shipping",
-          "shippingPrice": 7.5,
-          "products": [
-            {
-              "id": "9bc51ae8-633a-4ec1-a0eb-d16b7d9c43a1",
-              "quantity": 1,
-              "productId": "21",
-              "color": "Black",
-              "image": "https://media.wired.com/photos/593284aeaef9a462de98365f/master/w_2560%2Cc_limit/2014-09-23-iphone6-gallery-1.jpg",
-              "name": "Smartphone Y3",
-              "price": 800,
-              "salePrice": 750
-            },
-            {
-              "id": "b5822976-f0dd-46c1-a0f2-2ec82aeda084",
-              "quantity": 1,
-              "productId": "25",
-              "color": "Black",
-              "image": "https://example.com/images/smartphone-x1.jpg",
-              "name": "Smartphone X1",
-              "price": 900,
-              "salePrice": 850
-            },
-            {
-              "id": "b2372c01-363f-4a3a-98e1-fbb3352bfb23",
-              "quantity": 1,
-              "productId": "2",
-              "color": "Black",
-              "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
-              "name": "Smartphone Y2",
-              "price": 800,
-              "salePrice": 750
-            }
-          ],
-          "paymentType": "CreditCard",
-          "paymentTransaction": "txn_rbx5okl",
-          "amountPaid": 2365
-        },
-        {
-          "id": "txn_upvcgx3",
-          "fullname": "Nguyen van A",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Hanoi",
-          "region": "afr",
-          "postalcode": "11111",
-          "shippingMethod": "Regular Shipping",
-          "shippingPrice": 7.5,
-          "products": [
-            {
-              "id": "486bdb9f-150d-4c62-8339-dc6e751c094b",
-              "quantity": 1,
-              "productId": "16",
-              "color": "Black",
-              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
-              "name": "Camera Lens M13",
-              "price": 400
-            },
-            {
-              "id": "dc135d99-409f-46c3-9763-d893467012b2",
-              "quantity": 1,
-              "productId": "16",
-              "color": "Black",
-              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
-              "name": "Camera Lens M13",
-              "price": 400
-            }
-          ],
-          "paymentType": "CreditCard",
-          "paymentTransaction": "txn_upvcgx3",
-          "amountPaid": 815
-        },
-        {
-          "id": "txn_bmna5ak",
-          "fullname": "Nguyen van A",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Hanoi",
-          "region": "afr",
-          "postalcode": "11111",
-          "shippingMethod": "Regular Shipping",
-          "shippingPrice": 7.5,
-          "products": [
-            {
-              "id": "5ac9b6bd-659e-45b6-91df-b03200211397",
-              "quantity": 1,
-              "productId": "7",
-              "color": "Silver",
-              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
-              "name": "Desktop D4",
-              "price": 1800,
-              "salePrice": 1600
-            },
-            {
-              "id": "86b1f5e5-c995-4481-a12c-6c48243048f4",
-              "quantity": 1,
-              "productId": "15",
-              "color": "Blue",
-              "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
-              "name": "External HDD L12",
-              "price": 120
-            },
-            {
-              "id": "df794236-fa1e-4baf-86d9-424543c3c6fc",
-              "quantity": 1,
-              "productId": "18",
-              "color": "Black",
-              "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
-              "name": "Fitness Tracker O15",
-              "price": 80
-            }
-          ],
-          "paymentType": "CreditCard",
-          "paymentTransaction": "txn_bmna5ak",
-          "amountPaid": 1815
-        },
-        {
-          "id": "txn_ztibo20",
-          "fullname": "tuan minh",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Hanoi",
-          "region": "afr",
-          "postalcode": "1232132",
-          "shippingMethod": "Regular Shipping",
-          "shippingPrice": 7.5,
-          "products": [
-            {
-              "id": "5ac9b6bd-659e-45b6-91df-b03200211397",
-              "quantity": 1,
-              "productId": "7",
-              "color": "Silver",
-              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
-              "name": "Desktop D4",
-              "price": 1800,
-              "salePrice": 1600
-            },
-            {
-              "id": "86b1f5e5-c995-4481-a12c-6c48243048f4",
-              "quantity": 1,
-              "productId": "15",
-              "color": "Blue",
-              "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
-              "name": "External HDD L12",
-              "price": 120
-            },
-            {
-              "id": "df794236-fa1e-4baf-86d9-424543c3c6fc",
-              "quantity": 1,
-              "productId": "18",
-              "color": "Black",
-              "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
-              "name": "Fitness Tracker O15",
-              "price": 80
-            },
-            {
-              "id": "3050dd5d-376a-4c99-b3cf-93b132171e47",
-              "quantity": 1,
-              "productId": "6",
-              "color": "Black",
-              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-              "name": "Camera C3",
-              "price": 1200
-            }
-          ],
-          "paymentType": "CreditCard",
-          "paymentTransaction": "txn_ztibo20",
-          "amountPaid": 3015
-        },
-        {
-          "id": "txn_jimgegb",
-          "fullname": "tuan minh",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Quận Hoàng Mai",
-          "region": "afr",
-          "postalcode": "1232132",
-          "shippingMethod": "Regular Shipping",
-          "shippingPrice": 7.5,
-          "products": [
-            {
-              "id": "5ac9b6bd-659e-45b6-91df-b03200211397",
-              "quantity": 1,
-              "productId": "7",
-              "color": "Silver",
-              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
-              "name": "Desktop D4",
-              "price": 1800,
-              "salePrice": 1600
-            },
-            {
-              "id": "86b1f5e5-c995-4481-a12c-6c48243048f4",
-              "quantity": 1,
-              "productId": "15",
-              "color": "Blue",
-              "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
-              "name": "External HDD L12",
-              "price": 120
-            },
-            {
-              "id": "df794236-fa1e-4baf-86d9-424543c3c6fc",
-              "quantity": 1,
-              "productId": "18",
-              "color": "Black",
-              "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
-              "name": "Fitness Tracker O15",
-              "price": 80
-            },
-            {
-              "id": "3050dd5d-376a-4c99-b3cf-93b132171e47",
-              "quantity": 1,
-              "productId": "6",
-              "color": "Black",
-              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-              "name": "Camera C3",
-              "price": 1200
-            },
-            {
-              "id": "7395aa03-b49e-4e2c-a75d-995ed11be750",
-              "quantity": 1,
-              "productId": "6",
-              "color": "Black",
-              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-              "name": "Camera C3",
-              "price": 1200
-            }
-          ],
-          "paymentType": "CreditCard",
-          "paymentTransaction": "txn_jimgegb",
-          "amountPaid": 4215
-        },
-        {
-          "id": "txn_qepj3s4",
-          "fullname": "Nguyen van thuan",
-          "street": "số 9 tt5.2 khu đô thị Ao Sào",
-          "city": "Hanoi",
-          "region": "afr",
-          "postalcode": "11111",
-          "shippingMethod": "Regular Shipping",
-          "shippingPrice": 7.5,
-          "products": [
-            {
-              "id": "711ac737-9e30-4274-a0cf-804099eaaf06",
-              "quantity": 1,
-              "productId": "7",
-              "color": "Silver",
-              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
-              "name": "Desktop D4",
-              "price": 1800,
-              "salePrice": 1600
-            }
-          ],
-          "paymentType": "CreditCard",
-          "amountPaid": 3000
-        }
-      ]
+      "bill": []
     },
     {
       "id": 2,
@@ -1153,13 +693,14 @@
   ],
   "cart": [
     {
-      "id": "7549df2e-a97e-4a20-a07f-c55cecea3b6c",
+      "id": "d2627c2f-ef88-43bb-a6ba-5e3b5fe7b9f8",
       "quantity": 1,
-      "productId": "6",
-      "color": "Black",
-      "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-      "name": "Camera C3",
-      "price": 1200
+      "productId": "7",
+      "color": "Silver",
+      "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+      "name": "Desktop D4",
+      "price": 1800,
+      "salePrice": 1600
     }
   ],
   "instalment": [

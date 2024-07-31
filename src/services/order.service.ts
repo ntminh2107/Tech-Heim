@@ -2,6 +2,7 @@
 import axiosClient from "./api.service";
 import { Order } from "../types/Order";
 import { v4 as uuidv4 } from "uuid";
+import { User } from "../types/User";
 
 export const getOrderAPI = () => {
   return axiosClient
@@ -46,6 +47,32 @@ export const paidOrderAPI = ({
 }) => {
   return axiosClient
     .patch(`order/${id}`, currentOrder)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const getUserAPI = (id: string | number) => {
+  return axiosClient
+    .get(`users/${id}`)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const addBillToUserAPI = ({
+  id,
+  user,
+}: {
+  id: string | number;
+  user: User;
+}) => {
+  return axiosClient
+    .patch(`users/${id}`, user)
     .then((res) => {
       const { data, status } = res;
       return { data, status };
