@@ -79,7 +79,7 @@ function App() {
             <Route path="/" element={<CheckoutLayout />}>
               <Route path="/cart" element={<Cart />}></Route>
               <Route path="/checkout" element={<Checkout />}></Route>
-              <Route path="/payment" element={<Payment />}></Route>
+              <Route path="/payment/:orderId" element={<Payment />}></Route>
             </Route>
           </Route>
         </Routes>

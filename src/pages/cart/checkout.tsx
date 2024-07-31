@@ -4,14 +4,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "antd";
 import { AppDispatch, RootState } from "../../redux/store";
 import { setModalState } from "../../redux/slice/modalSlice";
+import { addOrderThunk } from "../../redux/slice/orderSlice";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import OrderList from "../../components/organisms/order/OrderList";
 import Step from "../../components/atoms/step";
 import InputFormField from "../../components/atoms/formField/InputFormField";
 import MapModal from "../../components/organisms/modal/MapModal";
-
 import AddressModal from "../../components/organisms/modal/AddressModal";
 import RadioFormField from "../../components/atoms/formField/RadioFormField";
+import { generateTransactionID } from "../../utils/orderUtils";
+import { ProductInCart } from "../../types/Product";
+import { Order } from "../../types/Order";
 
 const Checkout = () => {
   const { cartItems, shipCost } = useSelector(
@@ -32,6 +35,7 @@ const Checkout = () => {
       return JSON.parse(savedShipmentData);
     } else {
       return {
+        userId: currentUser?.id || "",
         fullname: currentUser?.fullName || "",
         phonenumber: "",
         street: "",
@@ -59,41 +63,47 @@ const Checkout = () => {
   }, [location]);
 
   const handleOpenMapModal = (isOpen: boolean) => {
-    dispatch(
-      setModalState({
-        key: "mapModal",
-        isOpen: isOpen,
-      })
-    );
+    dispatch(setModalState({ key: "mapModal", isOpen: isOpen }));
   };
 
   const handleOpenAddressModal = (isOpen: boolean) => {
-    dispatch(
-      setModalState({
-        key: "addressModal",
-        isOpen: isOpen,
-      })
-    );
+    dispatch(setModalState({ key: "addressModal", isOpen: isOpen }));
   };
 
   const handleAddressSubmit = (address: any) => {
-    const updatedShipmentData = {
-      ...shipmentData,
-      ...address,
-    };
+    const updatedShipmentData = { ...shipmentData, ...address };
     setShipmentData(updatedShipmentData);
     localStorage.setItem("shipmentData", JSON.stringify(updatedShipmentData));
   };
 
   const handleContinueToPay = () => {
-    const updatedShipmentData = {
-      ...shipmentData,
-      shippingMethod: shipCost?.label,
-      shippingPrice: shipCost?.price,
+    const transactionId = generateTransactionID();
+    const totalAmount =
+      cartItems.reduce(
+        (sum: number, item: ProductInCart) => sum + item.price * item.quantity,
+        0
+      ) + shipmentData.shippingPrice;
+
+    const newOrder: Order = {
+      id: transactionId,
+      userId: currentUser?.id as string | number,
+      fullname: shipmentData.fullname,
+      street: shipmentData.street,
+      city: shipmentData.city,
+      region: shipmentData.region,
+      postalcode: shipmentData.postalcode,
+      shippingMethod: shipmentData.shippingMethod,
+      shippingPrice: shipmentData.shippingPrice,
+      Products: cartItems,
+      totalAmount: totalAmount,
+      depositAmount: 0,
+      isPaid: false,
+      sharedWith: [],
+      payments: [],
     };
-    setShipmentData(updatedShipmentData);
-    localStorage.setItem("shipmentData", JSON.stringify(updatedShipmentData));
-    navigate("/payment");
+
+    dispatch(addOrderThunk(newOrder));
+    navigate(`/payment/${transactionId}`);
   };
 
   return (
@@ -154,8 +164,9 @@ const Checkout = () => {
           <PaymentCard
             buttonLabel="Continue to pay"
             onClick={handleContinueToPay}
-            children={<OrderList cartItems={cartItems} />}
-          />
+          >
+            <OrderList cartItems={cartItems} />
+          </PaymentCard>
         </div>
       </div>
       {mapModal && (

@@ -433,6 +433,104 @@
       ]
     }
   ],
+  "order": [
+    {
+      "id": "txn_hlupqmn",
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "9970efad-2f5b-41a5-b941-b7ff1b50de7d",
+          "quantity": 1,
+          "productId": "15",
+          "color": "Blue",
+          "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
+          "name": "External HDD L12",
+          "price": 120
+        },
+        {
+          "id": "6d36e6d3-e9be-4e1a-b9d1-6c8f3eb005dd",
+          "quantity": 1,
+          "productId": "2",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+          "name": "Smartphone Y2",
+          "price": 800,
+          "salePrice": 750
+        }
+      ],
+      "totalAmount": 927.5,
+      "depositAmount": 0,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": [],
+      "data": {
+        "id": "8c1d3d40-4094-4a4d-b638-b43644a37f58",
+        "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+        "fullname": "Jimmy Smith",
+        "amountPaid": 77,
+        "paidTime": "2024-07-30T10:12:30.583Z"
+      }
+    },
+    {
+      "id": "txn_433hkz0",
+      "userId": 1,
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "8c032cbf-1e99-4cde-a561-d5a0418fdeb2",
+          "quantity": 1,
+          "productId": "20",
+          "color": "Black",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
+          "name": "Game Console Q17",
+          "price": 400,
+          "salePrice": 350
+        },
+        {
+          "id": "f75855c5-8a86-499e-9cb4-b969a98c6715",
+          "quantity": 1,
+          "productId": "5",
+          "color": "Blue",
+          "image": "https://resource.logitechg.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/products/g433/g433-gallery-red-1.png?v=1",
+          "name": "Headphones B2",
+          "price": 150,
+          "salePrice": 120
+        }
+      ],
+      "totalAmount": 557.5,
+      "depositAmount": 470,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "32c04f2e-fc53-4158-9cce-437858cdfa37",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 400,
+          "paidTime": "2024-07-31T03:05:22.916Z"
+        },
+        {
+          "id": "7333f52d-45b0-4759-aa17-e98dfbb3be04",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 70,
+          "paidTime": "2024-07-31T03:06:58.643Z"
+        }
+      ]
+    }
+  ],
   "users": [
     {
       "id": 1,
@@ -836,6 +934,30 @@
           "paymentType": "CreditCard",
           "paymentTransaction": "txn_jimgegb",
           "amountPaid": 4215
+        },
+        {
+          "id": "txn_qepj3s4",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "11111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "711ac737-9e30-4274-a0cf-804099eaaf06",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            }
+          ],
+          "paymentType": "CreditCard",
+          "amountPaid": 3000
         }
       ]
     },
@@ -868,58 +990,59 @@
       "email": "vinxen2019@gmail.com",
       "fullName": "nguyễn tuấn minh",
       "password": "210720002"
+    },
+    {
+      "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "email": "vinxen2019@gmail.com",
+      "fullName": "Jimmy Smith",
+      "password": "123456",
+      "bill": [
+        {
+          "id": "txn_0al75xn",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "11111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "7395aa03-b49e-4e2c-a75d-995ed11be750",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "paymentType": "CreditCard",
+          "amountPaid": 1500
+        }
+      ]
     }
   ],
   "cart": [
     {
-      "query": "\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ",
-      "id": "cna-oPb"
+      "id": "8c032cbf-1e99-4cde-a561-d5a0418fdeb2",
+      "quantity": 1,
+      "productId": "20",
+      "color": "Black",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
+      "name": "Game Console Q17",
+      "price": 400,
+      "salePrice": 350
     },
     {
-      "id": "5ac9b6bd-659e-45b6-91df-b03200211397",
+      "id": "f75855c5-8a86-499e-9cb4-b969a98c6715",
       "quantity": 1,
-      "productId": "7",
-      "color": "Silver",
-      "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
-      "name": "Desktop D4",
-      "price": 1800,
-      "salePrice": 1600
-    },
-    {
-      "id": "86b1f5e5-c995-4481-a12c-6c48243048f4",
-      "quantity": 1,
-      "productId": "15",
+      "productId": "5",
       "color": "Blue",
-      "image": "https://4.imimg.com/data4/XT/JG/MY-9557037/external-hard-disk.jpg",
-      "name": "External HDD L12",
-      "price": 120
-    },
-    {
-      "id": "df794236-fa1e-4baf-86d9-424543c3c6fc",
-      "quantity": 1,
-      "productId": "18",
-      "color": "Black",
-      "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
-      "name": "Fitness Tracker O15",
-      "price": 80
-    },
-    {
-      "id": "3050dd5d-376a-4c99-b3cf-93b132171e47",
-      "quantity": 1,
-      "productId": "6",
-      "color": "Black",
-      "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-      "name": "Camera C3",
-      "price": 1200
-    },
-    {
-      "id": "7395aa03-b49e-4e2c-a75d-995ed11be750",
-      "quantity": 1,
-      "productId": "6",
-      "color": "Black",
-      "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-      "name": "Camera C3",
-      "price": 1200
+      "image": "https://resource.logitechg.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/products/g433/g433-gallery-red-1.png?v=1",
+      "name": "Headphones B2",
+      "price": 150,
+      "salePrice": 120
     }
   ],
   "instalment": [
