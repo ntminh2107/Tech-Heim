@@ -1,7 +1,7 @@
 import { ProductInCart } from "./Product";
 
 export type Order = {
-  id?: string;
+  id?: string | number;
   userId: string | number;
   fullname: string;
   street: string;
@@ -15,7 +15,6 @@ export type Order = {
   depositAmount: number;
   isPaid: boolean;
   sharedWith: string[];
-  paymentTransaction?: string;
   payments: Payment[];
 };
 

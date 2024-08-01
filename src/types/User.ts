@@ -42,8 +42,6 @@ export type Bill = {
   shippingMethod: string;
   shippingPrice: number;
   products: ProductInCart[];
-  paymentType: string;
-  paymentTransaction: string;
   change?: number;
   grandTotal: number;
   sharedWith: Payment[];

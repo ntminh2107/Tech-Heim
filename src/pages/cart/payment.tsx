@@ -24,8 +24,9 @@ import {
 
 import { Order, Payment } from "../../types/Order";
 import { v4 as uuidv4 } from "uuid";
-import { Bill, User } from "../../types/User";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
+import { Bill, User } from "../../types/User";
+import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
 
 const Payment = () => {
   const { orderId } = useParams<{ orderId: string }>();
@@ -111,47 +112,53 @@ const Payment = () => {
       paidOrderThunk({ id: orderData.id!, currentOrder: updatedOrder })
     );
 
-    if (updatedOrder.isPaid) {
+    const orderToBill = { ...updatedOrder, Products: orderData.Products }; // Ensure Products are included
+
+    if (orderToBill.isPaid) {
       const newBill: Bill = {
-        id: updatedOrder.id!,
-        fullname: updatedOrder.fullname,
-        street: updatedOrder.street,
-        city: updatedOrder.city,
-        region: updatedOrder.region,
-        postalcode: updatedOrder.postalcode,
-        shippingMethod: updatedOrder.shippingMethod,
-        shippingPrice: updatedOrder.shippingPrice,
-        products: updatedOrder.Products,
-        paymentType: selectedPayment,
-        paymentTransaction: updatedOrder.paymentTransaction!,
-        grandTotal: updatedOrder.totalAmount,
-        change: updatedOrder.depositAmount - updatedOrder.totalAmount,
-        sharedWith: updatedOrder.payments,
+        id: orderToBill.id!,
+        fullname: orderToBill.fullname,
+        street: orderToBill.street,
+        city: orderToBill.city,
+        region: orderToBill.region,
+        postalcode: orderToBill.postalcode,
+        shippingMethod: orderToBill.shippingMethod,
+        shippingPrice: orderToBill.shippingPrice,
+        products: orderToBill.Products,
+        change: orderToBill.depositAmount - orderToBill.totalAmount,
+        grandTotal: orderToBill.totalAmount,
+        sharedWith: orderToBill.payments,
       };
 
-      const updateUserBills = async () => {
-        const updateUserPromises = updatedOrder.payments.map(
-          async (payment) => {
-            const userResponse = await dispatch(
-              getUserDetailThunk(payment.userId.toString())
-            ).unwrap();
-            const user = userResponse.data as User;
-            user.bill = [...(user.bill || []), newBill];
-            return dispatch(
-              addBillToUserThunk({ id: payment.userId, user: user })
-            );
-          }
-        );
+      const updatedUserBills = async () => {
+        const updateUserPromise = orderToBill.payments.map(async (payment) => {
+          const userResponse = await dispatch(
+            getUserDetailThunk(payment.userId)
+          ).unwrap();
+          const user = userResponse.data as User;
+
+          const updatedUser: User = {
+            ...user,
+            bill: [...(user.bill || []), newBill],
+          };
+
+          return dispatch(
+            addPaymentCardAndOrderThunk({
+              id: updatedUser.id,
+              currentUser: updatedUser,
+            })
+          );
+        });
 
         try {
-          await Promise.all(updateUserPromises);
+          await Promise.all(updateUserPromise);
           alert("Bill has been saved for all users!");
         } catch (error) {
           console.error("Error updating user bills: ", error);
         }
       };
 
-      await updateUserBills();
+      await updatedUserBills();
 
       dispatch(clearCartItemThunk());
       handleOpenSuccessModal(true);
@@ -260,21 +267,23 @@ const Payment = () => {
                 />
               }
             />
-            <div className="mt-4">
-              <h5 className="text-xl mb-2 font-semibold">Paid Amount</h5>
-              <Input
-                type="number"
-                value={paidAmount}
-                onChange={(e) => setPaidAmount(Number(e.target.value))}
-                min={0.5}
-                max={
-                  orderData
-                    ? orderData.totalAmount - orderData.depositAmount
-                    : 0
-                }
-                placeholder="Enter amount to pay"
-              />
-            </div>
+            {!orderData?.isPaid && (
+              <div className="mt-4">
+                <h5 className="text-xl mb-2 font-semibold">Paid Amount</h5>
+                <Input
+                  type="number"
+                  value={paidAmount}
+                  onChange={(e) => setPaidAmount(Number(e.target.value))}
+                  min={0.5}
+                  max={
+                    orderData
+                      ? orderData.totalAmount - orderData.depositAmount
+                      : 0
+                  }
+                  placeholder="Enter amount to pay"
+                />
+              </div>
+            )}
           </div>
           <Button
             size="large"

@@ -609,6 +609,398 @@
           "paidTime": "2024-07-31T10:00:46.425Z"
         }
       ]
+    },
+    {
+      "id": "txn_6x0oxgl",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Jimmy Smith",
+      "street": "",
+      "city": "",
+      "region": "",
+      "postalcode": "",
+      "shippingMethod": "Express Shipping",
+      "shippingPrice": 22.5,
+      "Products": [
+        {
+          "id": "778565e9-c9e3-4c35-9210-1b674940b220",
+          "quantity": 1,
+          "productId": "18",
+          "color": "Black",
+          "image": "https://fitvii.com/cdn/shop/products/FitVII-HM08-SpO2-Wearable-Fitness-Tracker-with-Screen-Protector-MorePro-1681713567.jpg?v=1716544096&width=1445",
+          "name": "Fitness Tracker O15",
+          "price": 80
+        }
+      ],
+      "totalAmount": 102.5,
+      "depositAmount": 105,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "33fb52ef-8236-4aa3-9fc1-9d56dfa350f5",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 100,
+          "paidTime": "2024-07-31T10:46:00.557Z"
+        },
+        {
+          "id": "44682ab2-db3d-4ad0-aa92-25d5ba412636",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 5,
+          "paidTime": "2024-07-31T10:46:12.486Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_m7hhadq",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Express Shipping",
+      "shippingPrice": 22.5,
+      "Products": [
+        {
+          "id": "68b2bde2-0d47-4b77-8c5f-9e3e84a47724",
+          "quantity": 1,
+          "productId": "20",
+          "color": "Black",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
+          "name": "Game Console Q17",
+          "price": 400,
+          "salePrice": 350
+        }
+      ],
+      "totalAmount": 372.5,
+      "depositAmount": 373,
+      "paymentTransaction": "",
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "e84b3da3-fdef-4c02-afc6-88d6f72d7403",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 370,
+          "paidTime": "2024-08-01T02:53:36.074Z"
+        },
+        {
+          "id": "8a850c5c-4491-41f2-a858-bc87f70e4b61",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 3,
+          "paidTime": "2024-08-01T02:53:47.842Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_d7xabyw",
+      "userId": 1,
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Express Shipping",
+      "shippingPrice": 22.5,
+      "Products": [
+        {
+          "id": "be4e92b0-dce8-4231-b578-a241276a501c",
+          "quantity": 1,
+          "productId": "17",
+          "color": "White",
+          "image": "/assets/images/search/phone.png",
+          "name": "Smart Home Device N14",
+          "price": 150
+        }
+      ],
+      "totalAmount": 172.5,
+      "depositAmount": 173,
+      "paymentTransaction": "",
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "90ff14ce-2167-4e31-a8c5-f86fbb13f289",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 170,
+          "paidTime": "2024-08-01T02:56:45.639Z"
+        },
+        {
+          "id": "e6eb6cfe-493f-471d-88cd-2fa5b629a5fa",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 3,
+          "paidTime": "2024-08-01T02:56:55.010Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_cdlza32",
+      "userId": 1,
+      "fullname": "Juliet Oma",
+      "street": "",
+      "city": "",
+      "region": "",
+      "postalcode": "",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "751bff66-5874-41d1-b397-7b9fee64097a",
+          "quantity": 1,
+          "productId": "8",
+          "color": "Black",
+          "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
+          "name": "Keyboard E5",
+          "price": 80
+        }
+      ],
+      "totalAmount": 87.5,
+      "depositAmount": 88,
+      "paymentTransaction": "",
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "7895a40b-8e0a-4526-ab34-01516459e2a9",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 85,
+          "paidTime": "2024-08-01T03:01:50.502Z"
+        },
+        {
+          "id": "bb135962-ca65-4896-803d-ba2c8d8b819a",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 3,
+          "paidTime": "2024-08-01T03:01:58.584Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_shok99o",
+      "userId": 1,
+      "fullname": "Juliet Oma",
+      "street": "",
+      "city": "",
+      "region": "",
+      "postalcode": "",
+      "shippingMethod": "Free Shipping",
+      "shippingPrice": 0,
+      "Products": [
+        {
+          "id": "d5aa666b-b362-4c81-86c7-baea506e65fa",
+          "quantity": 1,
+          "productId": "5",
+          "color": "Blue",
+          "image": "https://resource.logitechg.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/products/g433/g433-gallery-red-1.png?v=1",
+          "name": "Headphones B2",
+          "price": 150,
+          "salePrice": 120
+        },
+        {
+          "id": "a8a6ec40-313e-4574-a4a6-89a12d38903a",
+          "quantity": 1,
+          "productId": "20",
+          "color": "Black",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nintendo-Switch-Pro-Controller-FL.jpg",
+          "name": "Game Console Q17",
+          "price": 400,
+          "salePrice": 350
+        }
+      ],
+      "totalAmount": 470,
+      "depositAmount": 470,
+      "paymentTransaction": "",
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "8950b69a-863d-4571-b8b1-daaf6ee2e429",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 400,
+          "paidTime": "2024-08-01T03:07:00.615Z"
+        },
+        {
+          "id": "b47c981e-ae4b-4122-bb7f-cd445e014ec3",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 70,
+          "paidTime": "2024-08-01T03:07:08.863Z"
+        }
+      ]
+    },
+    {
+      "data": {
+        "id": "txn_qzjbi65",
+        "userId": 1,
+        "fullname": "Juliet Oma",
+        "street": "",
+        "city": "",
+        "region": "",
+        "postalcode": "",
+        "shippingMethod": "Free Shipping",
+        "shippingPrice": 0,
+        "Products": [
+          {
+            "id": "e6572588-eaf0-43ed-9e6a-1aa5ebfaefd8",
+            "quantity": 1,
+            "productId": "8",
+            "color": "Black",
+            "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
+            "name": "Keyboard E5",
+            "price": 80
+          }
+        ],
+        "totalAmount": 80,
+        "depositAmount": 0,
+        "isPaid": false,
+        "sharedWith": [],
+        "payments": []
+      },
+      "id": "ka48NtJ"
+    },
+    {
+      "id": "txn_0k0jli7",
+      "userId": 1,
+      "fullname": "Juliet Oma",
+      "street": "",
+      "city": "",
+      "region": "",
+      "postalcode": "",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "e6572588-eaf0-43ed-9e6a-1aa5ebfaefd8",
+          "quantity": 1,
+          "productId": "8",
+          "color": "Black",
+          "image": "https://row.hyperx.com/cdn/shop/products/hyperx_alloy_core_rgb_es_1_top_down_1600x.jpg?v=1664011586",
+          "name": "Keyboard E5",
+          "price": 80
+        },
+        {
+          "id": "fe4b371b-d296-4a24-bbf9-d475d938ba71",
+          "quantity": 1,
+          "productId": "2",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+          "name": "Smartphone Y2",
+          "price": 800,
+          "salePrice": 750
+        }
+      ],
+      "totalAmount": 837.5,
+      "depositAmount": 837.5,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "222044f8-c937-4b32-94f6-8305de639153",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 837,
+          "paidTime": "2024-08-01T03:23:20.494Z"
+        },
+        {
+          "id": "cc97d5bc-2d57-43de-a092-9839b7cf55f5",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 0.5,
+          "paidTime": "2024-08-01T03:23:58.278Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_ngzeb9e",
+      "userId": 1,
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "na",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "fcc2513d-3b89-48b4-9a08-8f8503ddb10c",
+          "quantity": 1,
+          "productId": "19",
+          "color": "Silver",
+          "image": "https://m.media-amazon.com/images/I/71ASACudpfL._AC_SL1500_.jpg",
+          "name": "Drone P16",
+          "price": 1000
+        }
+      ],
+      "totalAmount": 1007.5,
+      "depositAmount": 1008,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "7d352450-85aa-4b15-b0cf-46addf3e6ff7",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 1000,
+          "paidTime": "2024-08-01T03:30:09.058Z"
+        },
+        {
+          "id": "c47f6965-3ebf-4fcf-ba0b-e97848fa83f4",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 8,
+          "paidTime": "2024-08-01T03:31:03.225Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_6th23aw",
+      "userId": 1,
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "na",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "c04632c0-53f8-42e9-bc68-68bb0e2fde35",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 408,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "3cd43bd4-70fd-4bde-b9e1-d45c0b8dad0a",
+          "userId": 1,
+          "fullname": "Juliet Oma",
+          "amountPaid": 400,
+          "paidTime": "2024-08-01T03:46:39.385Z"
+        },
+        {
+          "id": "cd0e5803-2b7a-4c56-8459-da9661f2ba37",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 8,
+          "paidTime": "2024-08-01T03:46:50.444Z"
+        }
+      ]
     }
   ],
   "users": [
@@ -627,7 +1019,47 @@
         "expired": "12/25",
         "cvv": "111"
       },
-      "bill": []
+      "bill": [
+        {
+          "id": "txn_6th23aw",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "na",
+          "postalcode": "11111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "c04632c0-53f8-42e9-bc68-68bb0e2fde35",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": -0.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "3cd43bd4-70fd-4bde-b9e1-d45c0b8dad0a",
+              "userId": 1,
+              "fullname": "Juliet Oma",
+              "amountPaid": 400,
+              "paidTime": "2024-08-01T03:46:39.385Z"
+            },
+            {
+              "id": "cd0e5803-2b7a-4c56-8459-da9661f2ba37",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 8,
+              "paidTime": "2024-08-01T03:46:50.444Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 2,
@@ -687,20 +1119,58 @@
           ],
           "paymentType": "CreditCard",
           "amountPaid": 1500
+        },
+        {
+          "id": "txn_6th23aw",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "na",
+          "postalcode": "11111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "c04632c0-53f8-42e9-bc68-68bb0e2fde35",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": -0.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "3cd43bd4-70fd-4bde-b9e1-d45c0b8dad0a",
+              "userId": 1,
+              "fullname": "Juliet Oma",
+              "amountPaid": 400,
+              "paidTime": "2024-08-01T03:46:39.385Z"
+            },
+            {
+              "id": "cd0e5803-2b7a-4c56-8459-da9661f2ba37",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 8,
+              "paidTime": "2024-08-01T03:46:50.444Z"
+            }
+          ]
         }
       ]
     }
   ],
   "cart": [
     {
-      "id": "d2627c2f-ef88-43bb-a6ba-5e3b5fe7b9f8",
+      "id": "c04632c0-53f8-42e9-bc68-68bb0e2fde35",
       "quantity": 1,
-      "productId": "7",
-      "color": "Silver",
-      "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
-      "name": "Desktop D4",
-      "price": 1800,
-      "salePrice": 1600
+      "productId": "16",
+      "color": "Black",
+      "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+      "name": "Camera Lens M13",
+      "price": 400
     }
   ],
   "instalment": [
