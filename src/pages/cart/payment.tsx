@@ -1,16 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "antd";
-
+import { Button, Input, Spin } from "antd";
 import { AppDispatch, RootState } from "../../redux/store";
 import { setModalState } from "../../redux/slice/modalSlice";
-import {
-  addPaymentCardAndOrderThunk,
-  getCreditCardThunk,
-} from "../../redux/slice/authSlice";
 
-import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import OrderList from "../../components/organisms/order/OrderList";
 import Step from "../../components/atoms/step";
 import InputFormField from "../../components/atoms/formField/InputFormField";
@@ -20,11 +14,25 @@ import AddNewCardModal from "../../components/organisms/modal/AddNewCardModal";
 import { SuccessModal } from "../../components/organisms/modal";
 import { formatNumber } from "../../utils/formatNumber";
 import { generateTransactionID } from "../../utils/orderUtils";
-import { Bill, User } from "../../types/User";
 import { clearCartItemThunk } from "../../redux/slice/productSlice";
+import {
+  paidOrderThunk,
+  getOrderDetailThunk,
+  getUserDetailThunk,
+  addBillToUserThunk,
+} from "../../redux/slice/orderSlice";
+
+import { Order, Payment } from "../../types/Order";
+import { v4 as uuidv4 } from "uuid";
+import PaymentCard from "../../components/molecules/payment/PaymentCard";
+import { Bill, User } from "../../types/User";
+import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
 
 const Payment = () => {
-  const cartItems = useSelector((state: RootState) => state.product.cartItems);
+  const { orderId } = useParams<{ orderId: string }>();
+  const detailOrder = useSelector(
+    (state: RootState) => state.order.detailOrder
+  );
   const { mapModal, chooseCardModal, addNewCardModal, successModal } =
     useSelector((state: RootState) => state.appModal);
   const { selectedCreditCard, currentUser } = useSelector(
@@ -33,92 +41,158 @@ const Payment = () => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
+  const [orderData, setOrderData] = useState<Order | null>(null);
+  const [loading, setLoading] = useState<boolean>(true); // Loading state
+  const [paidAmount, setPaidAmount] = useState<number>(0); // State cho số tiền thanh toán
+
   useEffect(() => {
-    dispatch(getCreditCardThunk());
-  }, [dispatch]);
+    if (orderId) {
+      dispatch(getOrderDetailThunk(orderId));
+    }
+  }, [dispatch, orderId]);
+
+  useEffect(() => {
+    if (detailOrder) {
+      setOrderData(detailOrder);
+      setLoading(false); // Set loading to false when detailOrder is available
+    }
+  }, [detailOrder]);
 
   const handleOpenMapModal = (isOpen: boolean) => {
-    dispatch(
-      setModalState({
-        key: "mapModal",
-        isOpen: isOpen,
-      })
-    );
+    dispatch(setModalState({ key: "mapModal", isOpen: isOpen }));
   };
 
   const handleOpenChooseModal = (isOpen: boolean) => {
-    dispatch(
-      setModalState({
-        key: "chooseCardModal",
-        isOpen: isOpen,
-      })
-    );
+    dispatch(setModalState({ key: "chooseCardModal", isOpen: isOpen }));
   };
+
   const handleOpenAddModal = (isOpen: boolean) => {
-    dispatch(
-      setModalState({
-        key: "addNewCardModal",
-        isOpen: isOpen,
-      })
-    );
+    dispatch(setModalState({ key: "addNewCardModal", isOpen: isOpen }));
   };
 
   const handleOpenSuccessModal = (isOpen: boolean) => {
-    dispatch(
-      setModalState({
-        key: "successModal",
-        isOpen: isOpen,
-      })
-    );
+    dispatch(setModalState({ key: "successModal", isOpen: isOpen }));
   };
 
-  const [selectedPayment, setSelectedPayment] = useState("cr");
+  const [selectedPayment, setSelectedPayment] = useState("CreditCard");
   const [grandTotal, setGrandTotal] = useState(0);
+
   const handlePaymentChange = (paymentMethod: string) => {
     setSelectedPayment(paymentMethod);
   };
 
   const handlePlaceOrder = async () => {
-    if (!currentUser || !currentUser.id) {
-      console.error("User not logged in or ID is missing.");
+    if (!currentUser || !currentUser.id || !orderData) {
+      console.error("User or order data missing.");
       return;
     }
 
-    const userId = currentUser.id;
-    const transactionId = generateTransactionID();
-
-    const shipmentData = JSON.parse(
-      localStorage.getItem("shipmentData") || "{}"
-    );
-
-    const newBill: Bill = {
-      id: transactionId,
-      fullname: shipmentData.fullname as string,
-      street: shipmentData.street as string,
-      city: shipmentData.city as string,
-      region: shipmentData.region as string,
-      postalcode: shipmentData.postalcode as string,
-      shippingMethod: shipmentData.shippingMethod as string,
-      shippingPrice: shipmentData.shippingPrice as number,
-      products: cartItems as any,
-      paymentType: selectedPayment,
-      paymentTransaction: transactionId,
-      amountPaid: grandTotal + shipmentData.shippingPrice,
+    const newPayment: Payment = {
+      id: uuidv4(),
+      userId: currentUser.id,
+      fullname: currentUser.fullName,
+      amountPaid: paidAmount, // Sử dụng paidAmount từ input
+      paidTime: new Date().toISOString(),
     };
 
-    const updatedUser: User = {
-      ...currentUser,
-      bill: [...(currentUser.bill || []), newBill],
+    const updatedAmountPaid =
+      orderData.payments.reduce(
+        (total, payment) => total + payment.amountPaid,
+        0
+      ) + paidAmount;
+
+    const updatedOrder: Order = {
+      ...orderData,
+      depositAmount: updatedAmountPaid,
+      isPaid: updatedAmountPaid >= orderData.totalAmount,
+      payments: [...(orderData.payments || []), newPayment],
     };
 
-    dispatch(
-      addPaymentCardAndOrderThunk({ id: userId, currentUser: updatedUser })
+    await dispatch(
+      paidOrderThunk({ id: orderData.id!, currentOrder: updatedOrder })
     );
 
-    localStorage.removeItem("shipmentData");
-    dispatch(clearCartItemThunk());
-    handleOpenSuccessModal(true);
+    const orderToBill = { ...updatedOrder, Products: orderData.Products }; // Ensure Products are included
+
+    if (orderToBill.isPaid) {
+      const newBill: Bill = {
+        id: orderToBill.id!,
+        fullname: orderToBill.fullname,
+        street: orderToBill.street,
+        city: orderToBill.city,
+        region: orderToBill.region,
+        postalcode: orderToBill.postalcode,
+        shippingMethod: orderToBill.shippingMethod,
+        shippingPrice: orderToBill.shippingPrice,
+        products: orderToBill.Products,
+        change: orderToBill.depositAmount - orderToBill.totalAmount,
+        grandTotal: orderToBill.totalAmount,
+        sharedWith: orderToBill.payments,
+      };
+
+      const updatedUserBills = async () => {
+        const updateUserPromise = orderToBill.payments.map(async (payment) => {
+          const userResponse = await dispatch(
+            getUserDetailThunk(payment.userId)
+          ).unwrap();
+          const user = userResponse.data as User;
+
+          const updatedUser: User = {
+            ...user,
+            bill: [...(user.bill || []), newBill],
+          };
+
+          return dispatch(
+            addPaymentCardAndOrderThunk({
+              id: updatedUser.id,
+              currentUser: updatedUser,
+            })
+          );
+        });
+
+        try {
+          await Promise.all(updateUserPromise);
+          alert("Bill has been saved for all users!");
+        } catch (error) {
+          console.error("Error updating user bills: ", error);
+        }
+      };
+
+      await updatedUserBills();
+
+      dispatch(clearCartItemThunk());
+      handleOpenSuccessModal(true);
+    } else {
+      const orderLink = `${window.location.origin}/payment/${orderId}`;
+      navigator.clipboard.writeText(orderLink).then(() => {
+        alert("Payment link copied to clipboard!");
+      });
+    }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (orderId) {
+        dispatch(getOrderDetailThunk(orderId));
+      }
+      const currentOrder = detailOrder;
+      if (currentOrder?.isPaid && !orderData?.isPaid) {
+        alert("The order has been fully paid!");
+        clearInterval(interval);
+      }
+      setOrderData(currentOrder || null);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [orderId, orderData, dispatch, detailOrder]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <Spin size="large" />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -157,9 +231,7 @@ const Payment = () => {
                   <img
                     src="/assets/icons/email/edit_icon.svg"
                     className="w-5 cursor-pointer"
-                    onClick={() => {
-                      handleOpenChooseModal(true);
-                    }}
+                    onClick={() => handleOpenChooseModal(true)}
                   />
                 </div>
               </div>
@@ -177,7 +249,7 @@ const Payment = () => {
               <input
                 type="radio"
                 name="payment"
-                checked={selectedPayment === "Paypal"}
+                checked={selectedPayment === "PayPal"}
                 className="mr-2"
                 readOnly
               />
@@ -194,7 +266,24 @@ const Payment = () => {
                   onClick={() => handleOpenMapModal(true)}
                 />
               }
-            ></InputFormField>
+            />
+            {!orderData?.isPaid && (
+              <div className="mt-4">
+                <h5 className="text-xl mb-2 font-semibold">Paid Amount</h5>
+                <Input
+                  type="number"
+                  value={paidAmount}
+                  onChange={(e) => setPaidAmount(Number(e.target.value))}
+                  min={0.5}
+                  max={
+                    orderData
+                      ? orderData.totalAmount - orderData.depositAmount
+                      : 0
+                  }
+                  placeholder="Enter amount to pay"
+                />
+              </div>
+            )}
           </div>
           <Button
             size="large"
@@ -210,8 +299,10 @@ const Payment = () => {
             setGrandTotal={setGrandTotal}
             buttonLabel="Place order"
             onClick={handlePlaceOrder}
-            children={<OrderList cartItems={cartItems} />}
-          />
+            order={orderData as Order}
+          >
+            <OrderList cartItems={orderData?.Products || []} />
+          </PaymentCard>
         </div>
       </div>
       {mapModal && (
@@ -234,41 +325,40 @@ const Payment = () => {
           title="Successful Payment"
           isOpen={successModal}
           setIsOpen={handleOpenSuccessModal}
-          children={
-            <div className="flex flex-col gap-4">
-              <p className="text-base text-gray-717171 flex justify-between">
-                <span>Payment type</span>
-                <span>
-                  {selectedPayment === "cr" ? "Credit Card" : "PayPal"}
-                </span>
-              </p>
-              <p className="text-base text-gray-717171 flex justify-between">
-                <span>Phone number</span>
-                <span>{currentUser?.phoneNumber}</span>
-              </p>
-              <p className="text-base text-gray-717171 flex justify-between">
-                <span>Email</span>
-                <span>{currentUser?.email}</span>
-              </p>
-              <p className="text-base text-gray-717171 flex justify-between">
-                <span>Transaction id</span>
-                <span>{generateTransactionID()}</span>
-              </p>
-              <p className="text-base font-semibold text-gray-717171 flex justify-between">
-                <span>Amount Paid</span>
-                <span>${formatNumber(grandTotal)}</span>
-              </p>
-              <Button
-                onClick={() => navigate("/")}
-                className="w-1/2 self-end"
-                type="primary"
-                size="large"
-              >
-                Order Status
-              </Button>
-            </div>
-          }
-        />
+        >
+          <div className="flex flex-col gap-4">
+            <p className="text-base text-gray-717171 flex justify-between">
+              <span>Payment type</span>
+              <span>
+                {selectedPayment === "CreditCard" ? "Credit Card" : "PayPal"}
+              </span>
+            </p>
+            <p className="text-base text-gray-717171 flex justify-between">
+              <span>Phone number</span>
+              <span>{currentUser?.phoneNumber}</span>
+            </p>
+            <p className="text-base text-gray-717171 flex justify-between">
+              <span>Email</span>
+              <span>{currentUser?.email}</span>
+            </p>
+            <p className="text-base text-gray-717171 flex justify-between">
+              <span>Transaction id</span>
+              <span>{generateTransactionID()}</span>
+            </p>
+            <p className="text-base font-semibold text-gray-717171 flex justify-between">
+              <span>Amount Paid</span>
+              <span>${formatNumber(grandTotal)}</span>
+            </p>
+            <Button
+              onClick={() => navigate("/")}
+              className="w-1/2 self-end"
+              type="primary"
+              size="large"
+            >
+              Order Status
+            </Button>
+          </div>
+        </SuccessModal>
       )}
     </>
   );

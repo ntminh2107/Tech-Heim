@@ -2,16 +2,19 @@ import { useNavigate } from "react-router-dom";
 import { Bill } from "../../../../types/User";
 
 type Props = {
-  order: Bill;
+  bill: Bill;
 };
 
-const OrderDetailCard = ({ order }: Props) => {
+const OrderDetailCard = ({ bill }: Props) => {
   const navigate = useNavigate();
   const keys = [
-    { label: "Order code", key: order.id },
-    { label: "Ship Method", key: order.shippingMethod },
-    { label: "Total", key: `$${order.amountPaid.toFixed(2)}` },
-    { label: "Sent to", key: order.fullname },
+    { label: "Order code", key: bill.id },
+    { label: "Ship Method", key: bill.shippingMethod },
+    {
+      label: "Total",
+      key: `$${bill.grandTotal}`,
+    },
+    { label: "Sent to", key: bill.fullname },
   ];
   return (
     <div className="flex flex-col bg-white p-4 rounded-lg h-full">
@@ -26,7 +29,7 @@ const OrderDetailCard = ({ order }: Props) => {
         </div>
         <div
           className="flex flex-row justify-center cursor-pointer basis-1/5"
-          onClick={() => navigate(`${order.id}`)}
+          onClick={() => navigate(`${bill.id}`)}
         >
           <div className="text-primary text-sm font-light">Order Status</div>
           <img
@@ -37,7 +40,7 @@ const OrderDetailCard = ({ order }: Props) => {
         </div>
       </div>
       <div className="grid grid-cols-7 gap-5">
-        {order.products.map((images) => (
+        {bill.products.map((images) => (
           <img
             key={images.image}
             src={images.image}

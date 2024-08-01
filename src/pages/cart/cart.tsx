@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 
 import ListProduct from "../../components/molecules/product/ListProduct";
-import PaymentCard from "../../components/molecules/payment/PaymentCard";
+import PaymentCartCard from "../../components/molecules/payment/PaymentCartCard";
 import CardCart from "../../components/atoms/cards/cart/CardCart";
 import Step from "../../components/atoms/step";
 import { useNavigate } from "react-router-dom";
@@ -45,7 +45,7 @@ const Cart = () => {
           })}
         </div>
         <div className="basis-4/12  mt-6 md:mt-0">
-          <PaymentCard
+          <PaymentCartCard
             buttonLabel="Proceed to checkout"
             onClick={() => navigate("/checkout")}
             className="gap-4"
