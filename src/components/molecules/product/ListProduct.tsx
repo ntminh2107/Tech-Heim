@@ -38,7 +38,7 @@ const ListProduct = ({ productList, className }: Props) => {
             isTransitioning ? "opacity-0" : "opacity-100"
           }`,
           className,
-          "grid-cols-2 lg:grid-cols-3"
+          "grid-cols-2 lg:grid-cols-4"
         )}
       >
         {currentProducts?.map((product) => {

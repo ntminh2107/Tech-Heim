@@ -4,6 +4,7 @@ import AuthReducer from "./slice/authSlice";
 import ModalReducer from "./slice/modalSlice";
 import ProductReducer from "./slice/productSlice";
 import BlogReducer from "./slice/blogSlice";
+import OrderReducer from "./slice/orderSlice";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     product: ProductReducer,
     appModal: ModalReducer,
     blog: BlogReducer,
+    order: OrderReducer,
   },
 });
 

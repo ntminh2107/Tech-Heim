@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Button, Divider } from "antd";
-
+import { RootState } from "../../../redux/store";
 import { cn } from "../../../utils/utils";
 import { formatNumber } from "../../../utils/formatNumber";
-import { Order } from "../../../types/Order";
 
 type Props = {
   children?: React.ReactNode;
@@ -11,41 +11,43 @@ type Props = {
   buttonLabel: string;
   onClick?: () => void;
   setGrandTotal?: React.Dispatch<React.SetStateAction<number>>;
-  order: Order; // Use the Order type to get necessary props
+  depositAmount?: number;
+  shippingCost?: number;
 };
 
-const PaymentCard = ({
+const PaymentCartCard = ({
   children,
   buttonLabel,
   onClick,
   className,
   setGrandTotal,
-  order,
+  depositAmount = 0,
 }: Props) => {
-  const total = order?.Products.reduce((res, curr) => {
+  const { cartItems, shipCost } = useSelector(
+    (state: RootState) => state.product
+  );
+
+  const total = cartItems.reduce((res, curr) => {
     return res + curr.price * curr.quantity;
   }, 0);
 
-  const discount = order?.Products.reduce((res, curr) => {
+  const discount = cartItems.reduce((res, curr) => {
     if (curr.salePrice) {
       return res + (curr.price - curr.salePrice) * curr.quantity;
     }
     return res;
   }, 0);
 
-  const shippingCost = order.shippingPrice;
-  const depositAmount = order.depositAmount;
+  const shippingCost = shipCost?.price ?? 0; // Default to 0 if shipCost is null or undefined
 
   const grandTotal = total - discount + shippingCost;
   const remainingAmount = grandTotal - depositAmount;
-  const adjustedRemainingAmount = remainingAmount < 0 ? 0 : remainingAmount;
-  const excessAmount = remainingAmount < 0 ? Math.abs(remainingAmount) : 0;
 
   useEffect(() => {
     if (setGrandTotal) {
       setGrandTotal(grandTotal);
     }
-  }, [discount, shippingCost, total, depositAmount, grandTotal, setGrandTotal]);
+  }, [discount, shippingCost, total, depositAmount]);
 
   return (
     <div
@@ -68,7 +70,7 @@ const PaymentCard = ({
         <p className="flex justify-between text-sm ">
           <span className="text-gray-717171">Shipment cost</span>
           <span className="text-gray-444444">
-            ${formatNumber(shippingCost)}
+            {shippingCost ? `$${formatNumber(shippingCost)}` : `$ ${0.0}`}
           </span>
         </p>
 
@@ -77,7 +79,7 @@ const PaymentCard = ({
           <span>Grand Total</span>
           <span>${formatNumber(grandTotal)}</span>
         </h6>
-        {depositAmount > 0 && (
+        {depositAmount && (
           <>
             <p className="flex justify-between text-sm ">
               <span className="text-gray-717171">Deposit Amount</span>
@@ -88,29 +90,27 @@ const PaymentCard = ({
             <p className="flex justify-between text-sm ">
               <span className="text-gray-717171">Remaining Amount</span>
               <span className="text-gray-444444">
-                ${formatNumber(adjustedRemainingAmount)}
+                ${formatNumber(remainingAmount)}
               </span>
             </p>
-            {excessAmount > 0 && (
-              <p className="flex justify-between text-sm text-green-500">
-                <span>Excess Amount</span>
-                <span>${formatNumber(excessAmount)}</span>
-              </p>
-            )}
           </>
         )}
       </div>
-      {order.isPaid ? (
-        <div className="text-green-500 text-lg font-medium">
-          This order is already done
-        </div>
+      {depositAmount && remainingAmount <= 0 ? (
+        <>
+          <div className="text-green-500 text-lg font-medium">
+            This order is already done
+          </div>
+        </>
       ) : (
-        <Button size="large" type="primary" onClick={onClick}>
-          {buttonLabel}
-        </Button>
+        <>
+          <Button size="large" type="primary" onClick={onClick}>
+            {buttonLabel}
+          </Button>
+        </>
       )}
     </div>
   );
 };
 
-export default PaymentCard;
+export default PaymentCartCard;
