@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate, useLocation, useParams } from "react-router-dom";
 import { setModalState } from "../redux/slice/modalSlice";
 import { useEffect } from "react";
 
@@ -19,7 +19,6 @@ const ProtectedRoute: React.FC<protectedRouteProps> = ({ children }) => {
   }, [isLoggedIn, dispatch]);
 
   if (isLoggedIn) {
-    <Navigate to="/" state={{ from: location }} replace />;
   }
   return children;
 };
