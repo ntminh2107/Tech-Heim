@@ -19,7 +19,6 @@ import {
   paidOrderThunk,
   getOrderDetailThunk,
   getUserDetailThunk,
-  addBillToUserThunk,
 } from "../../redux/slice/orderSlice";
 
 import { Order, Payment } from "../../types/Order";
@@ -27,6 +26,7 @@ import { v4 as uuidv4 } from "uuid";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import { Bill, User } from "../../types/User";
 import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
+import { sendMessageToSW } from "../../utils/serviceWorketUtils";
 
 const Payment = () => {
   const { orderId } = useParams<{ orderId: string }>();
@@ -153,12 +153,17 @@ const Payment = () => {
         try {
           await Promise.all(updateUserPromise);
           alert("Bill has been saved for all users!");
+
+          const userIds = orderToBill.payments.map((payment) => payment.userId);
+          sendMessageToSW({
+            title: "Order Completed",
+            message: "Your payment has been successfully completed!",
+            userIds,
+          });
         } catch (error) {
           console.error("Error updating user bills: ", error);
         }
       };
-
-      await updatedUserBills();
 
       dispatch(clearCartItemThunk());
       handleOpenSuccessModal(true);

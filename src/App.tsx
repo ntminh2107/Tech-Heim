@@ -1,6 +1,6 @@
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { ConfigProvider } from "antd";
-import { lazy } from "react";
+import React, { lazy, useEffect } from "react";
 
 import "./index.css";
 import MainLayout from "./layouts";
@@ -12,6 +12,11 @@ const Breadcrumb = lazy(() => import("./components/atoms/breadcrumb"));
 const DetailProduct = lazy(() => import("./pages/detailproduct/[productId]"));
 const Cart = lazy(() => import("./pages/cart"));
 import CheckoutLayout from "./layouts/CheckoutLayout";
+import { serviceWorkerUtils } from "./utils/serviceWorketUtils";
+import { JSXSource } from "react/jsx-dev-runtime";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "./redux/store";
+import { setModalState } from "./redux/slice/modalSlice";
 const Checkout = lazy(() => import("./pages/cart/checkout"));
 const Payment = lazy(() => import("./pages/cart/payment"));
 const ProductFilterBrand = lazy(
@@ -42,6 +47,9 @@ const LayoutWithBreadCrumb = () => {
 };
 
 function App() {
+  useEffect(() => {
+    serviceWorkerUtils();
+  }, []);
   return (
     <ConfigProvider
       theme={{
