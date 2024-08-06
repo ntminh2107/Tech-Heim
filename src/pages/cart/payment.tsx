@@ -191,15 +191,16 @@ const Payment = () => {
       if (orderId) {
         dispatch(getOrderDetailThunk(orderId));
       }
-
-      if (noti) {
+      const currentUser = localStorage.getItem("token") as string | number;
+      const userIds = detailOrder?.payments.map(
+        (Payment) => Payment.userId
+      ) as (string | number)[];
+      if (noti && userIds.includes(currentUser)) {
+        console.log(userIds.includes(currentUser));
         sendMessageToSW({
           title: "Order Completed",
           message: "Your payment has been successfully completed!",
-          userIds: detailOrder?.payments.map((Payment) => Payment.userId) as (
-            | string
-            | number
-          )[],
+          userIds: userIds,
         });
         setNoti(false);
       }
