@@ -27,6 +27,9 @@ import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import { Bill, User } from "../../types/User";
 import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
 import { sendMessageToSW } from "../../utils/serviceWorketUtils";
+import { ToastContainer, toast } from "react-toastify";
+import { Toaster } from "sonner";
+import "react-toastify/dist/ReactToastify.css";
 
 const Payment = () => {
   const { orderId } = useParams<{ orderId: string }>();
@@ -43,7 +46,20 @@ const Payment = () => {
 
   const [orderData, setOrderData] = useState<Order | null>(null);
   const [loading, setLoading] = useState<boolean>(true); // Loading state
-  const [paidAmount, setPaidAmount] = useState<number>(0); // State cho số tiền thanh toán
+  const [paidAmount, setPaidAmount] = useState<number>(0);
+  const [noti, setNoti] = useState(true); // State cho số tiền thanh toán
+  const onclickTest = () => {
+    toast.error("hi", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
 
   useEffect(() => {
     if (orderId) {
@@ -153,20 +169,15 @@ const Payment = () => {
         try {
           await Promise.all(updateUserPromise);
           alert("Bill has been saved for all users!");
-
-          const userIds = orderToBill.payments.map((payment) => payment.userId);
-          sendMessageToSW({
-            title: "Order Completed",
-            message: "Your payment has been successfully completed!",
-            userIds,
-          });
         } catch (error) {
           console.error("Error updating user bills: ", error);
         }
       };
 
+      await updatedUserBills();
+
       dispatch(clearCartItemThunk());
-      handleOpenSuccessModal(true);
+      toast.warn("done"); // handleOpenSuccessModal(true);
     } else {
       const orderLink = `${window.location.origin}/payment/${orderId}`;
       navigator.clipboard.writeText(orderLink).then(() => {
@@ -180,11 +191,26 @@ const Payment = () => {
       if (orderId) {
         dispatch(getOrderDetailThunk(orderId));
       }
+
+      if (noti) {
+        sendMessageToSW({
+          title: "Order Completed",
+          message: "Your payment has been successfully completed!",
+          userIds: detailOrder?.payments.map((Payment) => Payment.userId) as (
+            | string
+            | number
+          )[],
+        });
+        setNoti(false);
+      }
+
       const currentOrder = detailOrder;
       if (currentOrder?.isPaid && !orderData?.isPaid) {
         alert("The order has been fully paid!");
+
         clearInterval(interval);
       }
+
       setOrderData(currentOrder || null);
     }, 3000);
 
@@ -308,6 +334,7 @@ const Payment = () => {
           >
             <OrderList cartItems={orderData?.Products || []} />
           </PaymentCard>
+          <Button onClick={() => toast("hello")}></Button>
         </div>
       </div>
       {mapModal && (

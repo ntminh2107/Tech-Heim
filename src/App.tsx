@@ -14,6 +14,8 @@ const Cart = lazy(() => import("./pages/cart"));
 import CheckoutLayout from "./layouts/CheckoutLayout";
 import { serviceWorkerUtils } from "./utils/serviceWorketUtils";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = lazy(() => import("./pages/cart/checkout"));
 const Payment = lazy(() => import("./pages/cart/payment"));
@@ -56,6 +58,7 @@ function App() {
         },
       }}
     >
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>

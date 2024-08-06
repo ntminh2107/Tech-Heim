@@ -1,24 +1,22 @@
 self.addEventListener("install", (event) => {
   console.log("Service Worker installed");
+  self.skipWaiting(); // Activate worker immediately
 });
 
 self.addEventListener("activate", (event) => {
   console.log("Service Worker activated");
+  return self.clients.claim(); // Become available to all pages
 });
 
+// Listen for messages from the main script
 self.addEventListener("message", (event) => {
   const { title, message, userIds } = event.data;
-  console.log("Service Worker received message:", { title, message, userIds });
+  console.log("Received message from client:", event.data);
 
-  // Gửi thông điệp đến tất cả các client
-  self.clients.matchAll().then((clients) => {
+  // Iterate over all clients (open windows/tabs)
+  self.clients.matchAll({ includeUncontrolled: true }).then((clients) => {
     clients.forEach((client) => {
-      console.log("Sending message to client:", client, {
-        title,
-        message,
-        userIds,
-      }); // Debug log
-
+      // Send message to each client
       client.postMessage({ title, message, userIds });
     });
   });

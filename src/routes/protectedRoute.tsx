@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { Navigate, useLocation, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { setModalState } from "../redux/slice/modalSlice";
 import { useEffect } from "react";
 
@@ -10,7 +10,7 @@ interface protectedRouteProps {
 
 const ProtectedRoute: React.FC<protectedRouteProps> = ({ children }) => {
   const dispatch = useDispatch();
-  const location = useLocation();
+  const nav = useNavigate();
   const { isLoggedIn } = useSelector((state: RootState) => state.auth);
   useEffect(() => {
     if (!isLoggedIn) {
@@ -18,7 +18,8 @@ const ProtectedRoute: React.FC<protectedRouteProps> = ({ children }) => {
     }
   }, [isLoggedIn, dispatch]);
 
-  if (isLoggedIn) {
+  if (!isLoggedIn) {
+    nav("/");
   }
   return children;
 };
