@@ -12,9 +12,12 @@ const OrderStatusDetail = () => {
     { label: "Order code", value: `#${order?.id}` },
     { label: "Person receive", value: order?.fullname },
     { label: "Sent to", value: `${order?.street}, ${order?.city}` },
-    { label: "Payment type", value: order?.paymentType },
-    { label: "Transaction id", value: order?.paymentTransaction },
-    { label: "Amount Paid", value: `$${order?.amountPaid.toFixed(2)}` },
+    { label: "Shipping method", value: order?.shippingMethod },
+    { label: "Total", value: `$${order?.grandTotal.toFixed(2)}` },
+    {
+      label: "Amount paid",
+      value: `$${(order?.grandTotal as number) + (order?.change as number)}`,
+    },
   ];
   return (
     <div>
