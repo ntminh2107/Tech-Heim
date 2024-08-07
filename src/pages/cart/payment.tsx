@@ -27,11 +27,10 @@ import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import { Bill, User } from "../../types/User";
 import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
 import { sendMessageToSW } from "../../utils/serviceWorketUtils";
-import { ToastContainer, toast } from "react-toastify";
-import { Toaster } from "sonner";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Payment = () => {
+const Payments = () => {
   const { orderId } = useParams<{ orderId: string }>();
   const detailOrder = useSelector(
     (state: RootState) => state.order.detailOrder
@@ -48,18 +47,6 @@ const Payment = () => {
   const [loading, setLoading] = useState<boolean>(true); // Loading state
   const [paidAmount, setPaidAmount] = useState<number>(0);
   const [noti, setNoti] = useState(true); // State cho số tiền thanh toán
-  const onclickTest = () => {
-    toast.error("hi", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  };
 
   useEffect(() => {
     if (orderId) {
@@ -177,12 +164,21 @@ const Payment = () => {
       await updatedUserBills();
 
       dispatch(clearCartItemThunk());
-      toast.warn("done"); // handleOpenSuccessModal(true);
+      toast.warn("done");
+      // handleOpenSuccessModal(true);
     } else {
       const orderLink = `${window.location.origin}/payment/${orderId}`;
       navigator.clipboard.writeText(orderLink).then(() => {
         alert("Payment link copied to clipboard!");
       });
+      const updatedUser = updatedOrder.payments.map(
+        (payment) => payment.userId
+      );
+      if (updatedUser.includes(currentUser.id)) {
+        navigate("/redirect-to-homepage");
+      } else {
+        alert("something wents wrong, pls try again");
+      }
     }
   };
 
@@ -195,17 +191,19 @@ const Payment = () => {
       const userIds = detailOrder?.payments.map(
         (Payment) => Payment.userId
       ) as (string | number)[];
-      if (noti && userIds.includes(currentUser)) {
+      const currentOrder = detailOrder;
+      console.log(currentOrder?.isPaid);
+      if (currentOrder?.isPaid && noti && userIds.includes(currentUser)) {
         console.log(userIds.includes(currentUser));
         sendMessageToSW({
           title: "Order Completed",
           message: "Your payment has been successfully completed!",
           userIds: userIds,
         });
+        navigate("/redirect-to-homepage");
         setNoti(false);
       }
 
-      const currentOrder = detailOrder;
       if (currentOrder?.isPaid && !orderData?.isPaid) {
         alert("The order has been fully paid!");
 
@@ -335,7 +333,6 @@ const Payment = () => {
           >
             <OrderList cartItems={orderData?.Products || []} />
           </PaymentCard>
-          <Button onClick={() => toast("hello")}></Button>
         </div>
       </div>
       {mapModal && (
@@ -383,7 +380,7 @@ const Payment = () => {
               <span>${formatNumber(grandTotal)}</span>
             </p>
             <Button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/redirect-to-homepage")}
               className="w-1/2 self-end"
               type="primary"
               size="large"
@@ -397,4 +394,4 @@ const Payment = () => {
   );
 };
 
-export default Payment;
+export default Payments;

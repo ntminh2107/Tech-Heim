@@ -2703,6 +2703,388 @@
           "paidTime": "2024-08-06T07:44:07.178Z"
         }
       ]
+    },
+    {
+      "id": "txn_6ajrwl0",
+      "userId": "1",
+      "fullname": "Jon Stewart Doe",
+      "street": "1600 Amphitheatre Parkway",
+      "city": "Mountain View",
+      "region": "afr",
+      "postalcode": "94043",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "814b7644-0704-40c2-ab6d-474624567f70",
+          "quantity": 1,
+          "productId": "7",
+          "color": "Silver",
+          "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+          "name": "Desktop D4",
+          "price": 1800,
+          "salePrice": 1600
+        }
+      ],
+      "totalAmount": 1607.5,
+      "depositAmount": 1608,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "d4bee9d9-d711-49a9-b1a0-086ca07143ce",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 1600,
+          "paidTime": "2024-08-06T08:52:31.143Z"
+        },
+        {
+          "id": "8101365e-965f-45fc-a3ce-3c61d36de5c1",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 8,
+          "paidTime": "2024-08-06T08:53:46.811Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_9ed6l31",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "minh nguyen",
+      "street": "dsd",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "100000",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "348fbbc6-cd96-4334-848c-08929b535a90",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1207.5,
+      "depositAmount": 1208,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "9735f19c-9c01-4e33-bebc-342c759ed4d9",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 1200,
+          "paidTime": "2024-08-06T08:56:14.877Z"
+        },
+        {
+          "id": "2c6a2ed6-7d5f-424c-a91e-c41e7f7e3893",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 8,
+          "paidTime": "2024-08-06T08:56:37.128Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_zcjdu7p",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "João Souza Silva",
+      "street": "Av. dos Andradas, 3000",
+      "city": "Belo Horizonte",
+      "region": "afr",
+      "postalcode": "30260-070",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "259fa807-ff53-4b30-bab6-499fc821f731",
+          "quantity": 1,
+          "productId": "7",
+          "color": "Silver",
+          "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+          "name": "Desktop D4",
+          "price": 1800,
+          "salePrice": 1600
+        }
+      ],
+      "totalAmount": 1607.5,
+      "depositAmount": 1608,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "23d858a0-fac4-41f0-a3be-17dba9d39667",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 1607,
+          "paidTime": "2024-08-06T09:32:23.833Z"
+        },
+        {
+          "id": "06637b9a-8f22-47b1-8d44-b3fb22b9574c",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 1,
+          "paidTime": "2024-08-06T09:32:35.950Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_pr39lbq",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "João Souza Silva",
+      "street": "Av. dos Andradas, 3000",
+      "city": "Belo Horizonte",
+      "region": "afr",
+      "postalcode": "30260-070",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "f694ca86-8c96-48a4-be46-cc79d0134d4d",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 400,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "98427164-a619-4014-8741-82422a8933c7",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 400,
+          "paidTime": "2024-08-06T09:36:14.161Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_mhbkp0z",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "minh e",
+      "street": "dsd",
+      "city": "dasd",
+      "region": "afr",
+      "postalcode": "100000",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "510938c5-563f-49ac-b632-e3a0460eda7a",
+          "quantity": 1,
+          "productId": "2",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+          "name": "Smartphone Y2",
+          "price": 800,
+          "salePrice": 750
+        }
+      ],
+      "totalAmount": 757.5,
+      "depositAmount": 700,
+      "isPaid": false,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "3190f65c-b7fd-4c9e-91d1-8ef5c5d63749",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 700,
+          "paidTime": "2024-08-06T09:39:39.929Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_lxrsn2u",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Gottfried Wilhelm Leibniz",
+      "street": "Erika-Mann-Straße 33",
+      "city": "München",
+      "region": "na",
+      "postalcode": "80636",
+      "shippingMethod": "Express Shipping",
+      "shippingPrice": 22.5,
+      "Products": [
+        {
+          "id": "297081e4-ac94-402e-8b1e-3edbbe78212c",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 422.5,
+      "depositAmount": 423,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "facaa71b-b7a1-4bc0-a8ef-dfe4ec2e0583",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 400,
+          "paidTime": "2024-08-07T06:07:21.876Z"
+        },
+        {
+          "id": "9482bac9-51ef-4719-a1cf-dfe90447ed06",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 23,
+          "paidTime": "2024-08-07T06:07:47.495Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_af64iuj",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Jon Stewart Doe",
+      "street": "1600 Amphitheatre Parkway",
+      "city": "Mountain View",
+      "region": "afr",
+      "postalcode": "94043",
+      "shippingMethod": "",
+      "shippingPrice": 0,
+      "Products": [
+        {
+          "id": "8dfb0ea9-10db-4df5-828b-e82b9920bc6f",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 400,
+      "depositAmount": 400,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "b2bbaeb1-82e6-4af5-92c1-7089126bc5e1",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 400,
+          "paidTime": "2024-08-07T06:09:52.710Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_jr49yuv",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "tuan minh",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Quận Hoàng Mai",
+      "region": "afr",
+      "postalcode": "1212321",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "07e2af0b-2318-4792-b9e4-4ab07a13839a",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 500,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "03430991-753a-439b-b9b4-f4f2f9149b38",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 500,
+          "paidTime": "2024-08-07T06:11:16.809Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_augqsng",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "minh nguyen",
+      "street": "dsd",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "100000",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "ed7352f2-ff68-43eb-bbf8-c8ebd2a43775",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 500,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "a363123b-841e-49ff-9e1f-a131e0241e35",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 500,
+          "paidTime": "2024-08-07T06:12:56.925Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_gosuf5l",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "minh nguyen",
+      "street": "dsd",
+      "city": "Hanoi",
+      "region": "na",
+      "postalcode": "100000",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "a10ccd1e-e94b-4d5e-b4c1-2617864124c7",
+          "quantity": 1,
+          "productId": "2",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+          "name": "Smartphone Y2",
+          "price": 800,
+          "salePrice": 750
+        }
+      ],
+      "totalAmount": 757.5,
+      "depositAmount": 800,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "667f3f2a-a0f5-4154-a637-a9f7ad638698",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 800,
+          "paidTime": "2024-08-07T06:14:39.841Z"
+        }
+      ]
     }
   ],
   "users": [
@@ -3521,6 +3903,125 @@
               "fullname": "Juliet Oma",
               "amountPaid": 23,
               "paidTime": "2024-08-06T07:44:07.178Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_6ajrwl0",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "afr",
+          "postalcode": "94043",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "814b7644-0704-40c2-ab6d-474624567f70",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1607.5,
+          "sharedWith": [
+            {
+              "id": "d4bee9d9-d711-49a9-b1a0-086ca07143ce",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1600,
+              "paidTime": "2024-08-06T08:52:31.143Z"
+            },
+            {
+              "id": "8101365e-965f-45fc-a3ce-3c61d36de5c1",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 8,
+              "paidTime": "2024-08-06T08:53:46.811Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_9ed6l31",
+          "fullname": "minh nguyen",
+          "street": "dsd",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "100000",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "348fbbc6-cd96-4334-848c-08929b535a90",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1207.5,
+          "sharedWith": [
+            {
+              "id": "9735f19c-9c01-4e33-bebc-342c759ed4d9",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 1200,
+              "paidTime": "2024-08-06T08:56:14.877Z"
+            },
+            {
+              "id": "2c6a2ed6-7d5f-424c-a91e-c41e7f7e3893",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 8,
+              "paidTime": "2024-08-06T08:56:37.128Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_zcjdu7p",
+          "fullname": "João Souza Silva",
+          "street": "Av. dos Andradas, 3000",
+          "city": "Belo Horizonte",
+          "region": "afr",
+          "postalcode": "30260-070",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "259fa807-ff53-4b30-bab6-499fc821f731",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1607.5,
+          "sharedWith": [
+            {
+              "id": "23d858a0-fac4-41f0-a3be-17dba9d39667",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 1607,
+              "paidTime": "2024-08-06T09:32:23.833Z"
+            },
+            {
+              "id": "06637b9a-8f22-47b1-8d44-b3fb22b9574c",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1,
+              "paidTime": "2024-08-06T09:32:35.950Z"
             }
           ]
         }
@@ -4588,28 +5089,307 @@
               "paidTime": "2024-08-06T07:44:07.178Z"
             }
           ]
+        },
+        {
+          "id": "txn_6ajrwl0",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "afr",
+          "postalcode": "94043",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "814b7644-0704-40c2-ab6d-474624567f70",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1607.5,
+          "sharedWith": [
+            {
+              "id": "d4bee9d9-d711-49a9-b1a0-086ca07143ce",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1600,
+              "paidTime": "2024-08-06T08:52:31.143Z"
+            },
+            {
+              "id": "8101365e-965f-45fc-a3ce-3c61d36de5c1",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 8,
+              "paidTime": "2024-08-06T08:53:46.811Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_9ed6l31",
+          "fullname": "minh nguyen",
+          "street": "dsd",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "100000",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "348fbbc6-cd96-4334-848c-08929b535a90",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1207.5,
+          "sharedWith": [
+            {
+              "id": "9735f19c-9c01-4e33-bebc-342c759ed4d9",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 1200,
+              "paidTime": "2024-08-06T08:56:14.877Z"
+            },
+            {
+              "id": "2c6a2ed6-7d5f-424c-a91e-c41e7f7e3893",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 8,
+              "paidTime": "2024-08-06T08:56:37.128Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_zcjdu7p",
+          "fullname": "João Souza Silva",
+          "street": "Av. dos Andradas, 3000",
+          "city": "Belo Horizonte",
+          "region": "afr",
+          "postalcode": "30260-070",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "259fa807-ff53-4b30-bab6-499fc821f731",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1607.5,
+          "sharedWith": [
+            {
+              "id": "23d858a0-fac4-41f0-a3be-17dba9d39667",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 1607,
+              "paidTime": "2024-08-06T09:32:23.833Z"
+            },
+            {
+              "id": "06637b9a-8f22-47b1-8d44-b3fb22b9574c",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1,
+              "paidTime": "2024-08-06T09:32:35.950Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_lxrsn2u",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "na",
+          "postalcode": "80636",
+          "shippingMethod": "Express Shipping",
+          "shippingPrice": 22.5,
+          "products": [
+            {
+              "id": "297081e4-ac94-402e-8b1e-3edbbe78212c",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 422.5,
+          "sharedWith": [
+            {
+              "id": "facaa71b-b7a1-4bc0-a8ef-dfe4ec2e0583",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 400,
+              "paidTime": "2024-08-07T06:07:21.876Z"
+            },
+            {
+              "id": "9482bac9-51ef-4719-a1cf-dfe90447ed06",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 23,
+              "paidTime": "2024-08-07T06:07:47.495Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_af64iuj",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "afr",
+          "postalcode": "94043",
+          "shippingMethod": "",
+          "shippingPrice": 0,
+          "products": [
+            {
+              "id": "8dfb0ea9-10db-4df5-828b-e82b9920bc6f",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 0,
+          "grandTotal": 400,
+          "sharedWith": [
+            {
+              "id": "b2bbaeb1-82e6-4af5-92c1-7089126bc5e1",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 400,
+              "paidTime": "2024-08-07T06:09:52.710Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_jr49yuv",
+          "fullname": "tuan minh",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Quận Hoàng Mai",
+          "region": "afr",
+          "postalcode": "1212321",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "07e2af0b-2318-4792-b9e4-4ab07a13839a",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "03430991-753a-439b-b9b4-f4f2f9149b38",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 500,
+              "paidTime": "2024-08-07T06:11:16.809Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_augqsng",
+          "fullname": "minh nguyen",
+          "street": "dsd",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "100000",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "ed7352f2-ff68-43eb-bbf8-c8ebd2a43775",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "a363123b-841e-49ff-9e1f-a131e0241e35",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 500,
+              "paidTime": "2024-08-07T06:12:56.925Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_gosuf5l",
+          "fullname": "minh nguyen",
+          "street": "dsd",
+          "city": "Hanoi",
+          "region": "na",
+          "postalcode": "100000",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "a10ccd1e-e94b-4d5e-b4c1-2617864124c7",
+              "quantity": 1,
+              "productId": "2",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+              "name": "Smartphone Y2",
+              "price": 800,
+              "salePrice": 750
+            }
+          ],
+          "change": 42.5,
+          "grandTotal": 757.5,
+          "sharedWith": [
+            {
+              "id": "667f3f2a-a0f5-4154-a637-a9f7ad638698",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 800,
+              "paidTime": "2024-08-07T06:14:39.841Z"
+            }
+          ]
         }
       ]
     }
   ],
   "cart": [
     {
-      "id": "7cbab0fe-9bdb-4b6a-9449-971472ba55a3",
+      "id": "a10ccd1e-e94b-4d5e-b4c1-2617864124c7",
       "quantity": 1,
-      "productId": "16",
+      "productId": "2",
       "color": "Black",
-      "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
-      "name": "Camera Lens M13",
-      "price": 400
-    },
-    {
-      "id": "cf5d103a-5610-4b4c-8167-1ab3c6594c33",
-      "quantity": 1,
-      "productId": "16",
-      "color": "Black",
-      "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
-      "name": "Camera Lens M13",
-      "price": 400
+      "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+      "name": "Smartphone Y2",
+      "price": 800,
+      "salePrice": 750
     }
   ],
   "instalment": [

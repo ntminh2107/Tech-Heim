@@ -5,7 +5,6 @@ import { Content } from "antd/es/layout/layout";
 import Header from "../components/molecules/header";
 import Footer from "../components/molecules/footer";
 import { Suspense } from "react";
-import { Toaster } from "sonner";
 
 const MainLayout = () => {
   return (
