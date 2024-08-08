@@ -36,7 +36,7 @@ const BlogCard = ({
   return (
     <div
       key={id}
-      className={cn(mode === "vertical" ? "w-1/3" : "w-full", className)}
+      className={cn(mode === "vertical" ? "w-1/3" : "w-full h-44", className)}
       onClick={handleClick}
     >
       <div
