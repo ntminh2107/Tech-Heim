@@ -1,4 +1,6 @@
+import { Tag } from "antd";
 import { Order } from "../../../types/Order";
+import { CheckCircleOutlined } from "@ant-design/icons";
 
 type Props = {
   order: Order;
@@ -15,9 +17,9 @@ const DetailBill = ({ order }: Props) => {
   ];
 
   return (
-    <div>
-      <div>Your Order Status Complete </div>
-      <table className="w-full">
+    <div className="mt-10">
+      <div className="text-2xl font-medium">Your Order Status Complete </div>
+      <table className="w-full border-b-2">
         <tbody>
           {keys.map((item, index) => (
             <tr
@@ -38,24 +40,30 @@ const DetailBill = ({ order }: Props) => {
           ))}
         </tbody>
       </table>
-      <div>Transaction history </div>
-      <table className="w-full">
-        <tr>
-          <td>transaction ID</td>
-          <td>Person</td>
-          <td>amount</td>
-          <td>Timeline</td>
+      <div className="text-2xl font-medium mb-4">Transaction history</div>
+      <table className="w-full text-left font-light border-b-2 ">
+        <tr className="text-base font-medium">
+          <th>transaction ID</th>
+          <th>Person</th>
+          <th>amount</th>
+          <th>Timeline</th>
+          <th>Status</th>
         </tr>
         {order.payments.map((payment) => (
-          <tr>
-            <th>{payment.id}</th>
-            <th>{payment.fullname}</th>
-            <th>{payment.amountPaid}</th>
-            <th>{payment.paidTime}</th>
+          <tr className="text-base font-light ">
+            <td className="py-3">{payment.id}</td>
+            <td className="py-3">{payment.fullname}</td>
+            <td className="py-3">{payment.amountPaid}</td>
+            <td className="py-3">{payment.paidTime}</td>
+            <td className="py-3">
+              <Tag icon={<CheckCircleOutlined />} color="success">
+                success
+              </Tag>
+            </td>
           </tr>
         ))}
       </table>
-      <div className="flex flex-col gap-[10px] mt-5 bg-white divide-y divide-gray-CBCBCB">
+      <div className="flex flex-col gap-[10px] mt-5 bg-white divide-y divide-gray-CBCBCB border-b-2">
         {order?.Products.map((product) => (
           <div className="flex flex-row p-[6px] gap-[6px] h-full ">
             <div className="w-[87px] h-[74px]">

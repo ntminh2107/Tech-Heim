@@ -36,7 +36,7 @@ const ProductSaleCard = ({
         />
       </div>
       <div className="pb-2 px-2">
-        <h5 className="text-xs line-clamp-2">{name}</h5>
+        <h5 className="text-xs line-clamp-1">{name}</h5>
         <div className="flex justify-between pt-2">
           <p className="text-gray-717171 line-through text-xs">
             ${formatNumber(oldPrice)}

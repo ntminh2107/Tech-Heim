@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
 import DetailBill from "../../components/molecules/checkout/DetailBill";
+import CompleteTransaction from "../../components/molecules/checkout/CompleteTransaction";
 
 const Complete = () => {
   const { detailOrder } = useSelector((state: RootState) => state.order);
@@ -23,12 +24,15 @@ const Complete = () => {
   };
 
   return (
-    <div className="text-center mt-20">
-      <CheckCircleTwoTone
-        twoToneColor="#52c41a"
-        style={{ fontSize: "200px" }}
-        className="mb-10"
-      />
+    <div className="m-20">
+      <div className="text-center">
+        <CheckCircleTwoTone
+          twoToneColor="#52c41a"
+          style={{ fontSize: "200px" }}
+          className="mb-10"
+        />
+      </div>
+
       {detailOrder?.isPaid ? (
         <div>
           <div className="text-4xl font-medium text-center">
@@ -38,15 +42,23 @@ const Complete = () => {
           <DetailBill order={detailOrder} />
         </div>
       ) : (
-        <div className="text-4xl font-light text-center text-gray-444444">
-          Your transaction is complete redirecting to Home page in{" "}
-          <span className="font-medium">{counter}</span> seconds...
+        <div>
+          <div className="text-4xl font-light text-center text-gray-444444">
+            Your transaction is complete redirecting to Home page in{" "}
+            <span className="font-medium">{counter}</span> seconds...
+          </div>
+          <CompleteTransaction order={detailOrder} />
         </div>
       )}
-
-      <Button onClick={handleButton} type="link">
-        Click here to redirect to home page immediately
-      </Button>
+      <div className="text-right mt-4">
+        <Button
+          onClick={handleButton}
+          type="link"
+          className="font-light text-xl"
+        >
+          Click here to redirect to home page immediately
+        </Button>
+      </div>
     </div>
   );
 };

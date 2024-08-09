@@ -46,7 +46,7 @@ const Payments = () => {
   const [orderData, setOrderData] = useState<Order | null>(null);
   const [loading, setLoading] = useState<boolean>(true); // Loading state
   const [paidAmount, setPaidAmount] = useState<number>(0);
-  const [noti, setNoti] = useState(true); // State cho số tiền thanh toán
+  // State cho số tiền thanh toán
 
   useEffect(() => {
     if (orderId) {
@@ -175,7 +175,7 @@ const Payments = () => {
         (payment) => payment.userId
       );
       if (updatedUser.includes(currentUser.id)) {
-        navigate("/redirect-to-homepage");
+        // navigate("/redirect-to-homepage");
       } else {
         alert("something wents wrong, pls try again");
       }
@@ -193,15 +193,14 @@ const Payments = () => {
       ) as (string | number)[];
       const currentOrder = detailOrder;
       console.log(currentOrder?.isPaid);
-      if (currentOrder?.isPaid && noti && userIds.includes(currentUser)) {
+      if (currentOrder?.isPaid && userIds.includes(currentUser)) {
         console.log(userIds.includes(currentUser));
         sendMessageToSW({
           title: "Order Completed",
           message: "Your payment has been successfully completed!",
           userIds: userIds,
         });
-        navigate("/redirect-to-homepage");
-        setNoti(false);
+        // navigate("/redirect-to-homepage");
       }
 
       if (currentOrder?.isPaid && !orderData?.isPaid) {
