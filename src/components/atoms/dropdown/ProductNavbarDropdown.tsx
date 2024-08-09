@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Dropdown, MenuProps } from "antd";
+import { Button, Dropdown } from "antd";
 import { Link } from "react-router-dom";
 import ImgAndNameCard from "../cards/ImgAndNameCard";
 import { cn } from "../../../utils/utils";
