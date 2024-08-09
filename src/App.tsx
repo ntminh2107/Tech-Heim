@@ -13,7 +13,6 @@ const DetailProduct = lazy(() => import("./pages/detailproduct/[productId]"));
 const Cart = lazy(() => import("./pages/cart"));
 import CheckoutLayout from "./layouts/CheckoutLayout";
 import { serviceWorkerUtils } from "./utils/serviceWorketUtils";
-import ProtectedRoute from "./routes/protectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Complete = lazy(() => import("./pages/redirect/Complete"));
@@ -73,14 +72,7 @@ function App() {
                 element={<ProductFilterBrand />}
               />
               <Route path="/products/:id" element={<DetailProduct />} />
-              <Route
-                path="/"
-                element={
-                  <ProtectedRoute>
-                    <AccountDetailLayout />
-                  </ProtectedRoute>
-                }
-              >
+              <Route path="/" element={<AccountDetailLayout />}>
                 <Route path="/detail" element={<DetailUser />}></Route>
                 <Route
                   path="/paymentinstallments"
@@ -95,14 +87,7 @@ function App() {
               </Route>
             </Route>
 
-            <Route
-              path="/"
-              element={
-                <ProtectedRoute>
-                  <CheckoutLayout />
-                </ProtectedRoute>
-              }
-            >
+            <Route path="/" element={<CheckoutLayout />}>
               <Route path="/cart" element={<Cart />}></Route>
               <Route path="/checkout" element={<Checkout />}></Route>
               <Route path="/payment/:orderId" element={<Payments />}></Route>
