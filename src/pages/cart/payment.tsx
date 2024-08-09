@@ -19,7 +19,6 @@ import {
   paidOrderThunk,
   getOrderDetailThunk,
   getUserDetailThunk,
-  addBillToUserThunk,
 } from "../../redux/slice/orderSlice";
 
 import { Order, Payment } from "../../types/Order";
@@ -27,8 +26,11 @@ import { v4 as uuidv4 } from "uuid";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import { Bill, User } from "../../types/User";
 import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
+import { sendMessageToSW } from "../../utils/serviceWorketUtils";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const Payment = () => {
+const Payments = () => {
   const { orderId } = useParams<{ orderId: string }>();
   const detailOrder = useSelector(
     (state: RootState) => state.order.detailOrder
@@ -43,7 +45,8 @@ const Payment = () => {
 
   const [orderData, setOrderData] = useState<Order | null>(null);
   const [loading, setLoading] = useState<boolean>(true); // Loading state
-  const [paidAmount, setPaidAmount] = useState<number>(0); // State cho số tiền thanh toán
+  const [paidAmount, setPaidAmount] = useState<number>(0);
+  // State cho số tiền thanh toán
 
   useEffect(() => {
     if (orderId) {
@@ -161,12 +164,21 @@ const Payment = () => {
       await updatedUserBills();
 
       dispatch(clearCartItemThunk());
-      handleOpenSuccessModal(true);
+      toast.warn("done");
+      // handleOpenSuccessModal(true);
     } else {
       const orderLink = `${window.location.origin}/payment/${orderId}`;
       navigator.clipboard.writeText(orderLink).then(() => {
         alert("Payment link copied to clipboard!");
       });
+      const updatedUser = updatedOrder.payments.map(
+        (payment) => payment.userId
+      );
+      if (updatedUser.includes(currentUser.id)) {
+        // navigate("/redirect-to-homepage");
+      } else {
+        alert("something wents wrong, pls try again");
+      }
     }
   };
 
@@ -175,11 +187,28 @@ const Payment = () => {
       if (orderId) {
         dispatch(getOrderDetailThunk(orderId));
       }
+      const currentUser = localStorage.getItem("token") as string | number;
+      const userIds = detailOrder?.payments.map(
+        (Payment) => Payment.userId
+      ) as (string | number)[];
       const currentOrder = detailOrder;
+      console.log(currentOrder?.isPaid);
+      if (currentOrder?.isPaid && userIds.includes(currentUser)) {
+        console.log(userIds.includes(currentUser));
+        sendMessageToSW({
+          title: "Order Completed",
+          message: "Your payment has been successfully completed!",
+          userIds: userIds,
+        });
+        // navigate("/redirect-to-homepage");
+      }
+
       if (currentOrder?.isPaid && !orderData?.isPaid) {
         alert("The order has been fully paid!");
+
         clearInterval(interval);
       }
+
       setOrderData(currentOrder || null);
     }, 3000);
 
@@ -350,7 +379,7 @@ const Payment = () => {
               <span>${formatNumber(grandTotal)}</span>
             </p>
             <Button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/redirect-to-homepage")}
               className="w-1/2 self-end"
               type="primary"
               size="large"
@@ -364,4 +393,4 @@ const Payment = () => {
   );
 };
 
-export default Payment;
+export default Payments;

@@ -53,7 +53,7 @@ const LandingPage = () => {
       </HomeSection>
       <ThirdBanner />
       <HomeSection sectionName="Our Blogs" viewAllButton>
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-row gap-6 h-full">
           <BlogCard
             className="w-full lg:basis-1/3"
             key={blogsPost[0]?.id}
@@ -66,7 +66,7 @@ const LandingPage = () => {
             image={blogsPost[0]?.image}
           />
 
-          <div className="hidden md:flex flex-col flex-1 gap-6 basis-2/3 ">
+          <div className="flex flex-col flex-1 gap-6 basis-2/3 h-fit">
             <BlogCard
               mode="horizontal"
               key={blogsPost[1]?.id}

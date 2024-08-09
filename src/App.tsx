@@ -1,6 +1,6 @@
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { ConfigProvider } from "antd";
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 
 import "./index.css";
 import MainLayout from "./layouts";
@@ -12,8 +12,14 @@ const Breadcrumb = lazy(() => import("./components/atoms/breadcrumb"));
 const DetailProduct = lazy(() => import("./pages/detailproduct/[productId]"));
 const Cart = lazy(() => import("./pages/cart"));
 import CheckoutLayout from "./layouts/CheckoutLayout";
+import { serviceWorkerUtils } from "./utils/serviceWorketUtils";
+import ProtectedRoute from "./routes/protectedRoute";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const Complete = lazy(() => import("./pages/redirect/Complete"));
+
 const Checkout = lazy(() => import("./pages/cart/checkout"));
-const Payment = lazy(() => import("./pages/cart/payment"));
+const Payments = lazy(() => import("./pages/cart/payment"));
 const ProductFilterBrand = lazy(
   () => import("./pages/product/productFilterBrand")
 );
@@ -42,6 +48,9 @@ const LayoutWithBreadCrumb = () => {
 };
 
 function App() {
+  useEffect(() => {
+    serviceWorkerUtils();
+  }, []);
   return (
     <ConfigProvider
       theme={{
@@ -50,6 +59,7 @@ function App() {
         },
       }}
     >
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
@@ -63,25 +73,42 @@ function App() {
                 element={<ProductFilterBrand />}
               />
               <Route path="/products/:id" element={<DetailProduct />} />
-
-              <Route path="/" element={<AccountDetailLayout />}>
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <AccountDetailLayout />
+                  </ProtectedRoute>
+                }
+              >
                 <Route path="/detail" element={<DetailUser />}></Route>
                 <Route
                   path="/paymentinstallments"
                   element={<PaymentInstallmentsPage />}
                 />
                 <Route path="/order" element={<OrderDetailPage />}></Route>
-                <Route path="/order/:orderId" element={<OrderDetailID />} />
+                <Route
+                  path="/order/:orderId"
+                  element={<OrderDetailID />}
+                />{" "}
+                <Route path="/instalments" element={<InstalmentsDetail />} />
               </Route>
-              <Route path="/instalments" element={<InstalmentsDetail />} />
             </Route>
 
-            <Route path="/" element={<CheckoutLayout />}>
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <CheckoutLayout />
+                </ProtectedRoute>
+              }
+            >
               <Route path="/cart" element={<Cart />}></Route>
               <Route path="/checkout" element={<Checkout />}></Route>
-              <Route path="/payment/:orderId" element={<Payment />}></Route>
+              <Route path="/payment/:orderId" element={<Payments />}></Route>
             </Route>
-          </Route>
+          </Route>{" "}
+          <Route path="/redirect-to-homepage" element={<Complete />} />
         </Routes>
       </BrowserRouter>
     </ConfigProvider>
