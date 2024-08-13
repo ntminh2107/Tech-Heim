@@ -10,7 +10,6 @@ export const initServiceWorker = async () => {
       "/service-worker.js"
     );
     console.log("Service Worker registered with scope:", registration.scope);
-    receiveMSG();
   } catch (error) {
     console.error("Service Worker registration failed:", error);
   }

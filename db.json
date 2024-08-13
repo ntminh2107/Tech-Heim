@@ -8365,6 +8365,552 @@
           "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
         }
       ]
+    },
+    {
+      "id": "38671ef7-9115-44c9-9552-7146a1e03170",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:38:49.931Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "fcc48b79-b93f-47d1-a137-49cc4f00f935",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:09.916Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "66d09dfb-003d-4ef5-97ba-10494ae93fb2",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:13.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "6446da41-fd45-4ba8-adfe-861deebf3770",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:16.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "a3e22677-cf63-4b1c-ae18-3a6457c18b28",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:17.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "88a1bcf0-16a6-4566-a2a3-87b36f3fed7d",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:20.919Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "16ee82dc-3026-4e0f-8b05-c714abb8154b",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:21.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "7c46e470-829d-41fe-b173-0917a9189c12",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:24.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "46e12672-f83a-4a4a-907e-ab4b37f10cde",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:25.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "8dbc82a2-9f80-4b13-a8bd-85602bfc147a",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:28.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "77c47ee3-6aea-4a65-9f58-75b2d804cc89",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:29.916Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "ce470e82-c891-418f-9b33-2e07f44bbeb6",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:32.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "d284cff0-ea9f-4382-ab42-172266d00997",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:33.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "8dde538e-7276-4d9e-b32e-53cddf9df8b2",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:36.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "156b9d51-afa0-4ada-a05b-f6e739290c82",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:37.916Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "5ed9165b-6556-49ab-bebf-350a4bf543cd",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:40.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "d2a77548-e6b4-4063-aee3-c728b2fb784a",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:41.916Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "9f780031-3b5b-4714-9412-d3bee0dcd341",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:44.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "c4bcd11f-4f49-470f-8794-cc83a4efc2fb",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:45.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "7850a766-2c9e-48de-a698-b854db84cd72",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:48.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "4219cdfb-0eef-47be-8742-7deac43444f0",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:49.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "5364cd8a-30d0-41f0-a3de-ad763ef837e9",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:52.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "0a437e90-8da0-495a-851d-3d873bbc7764",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:53.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "7005e2ad-6509-4e90-8a2b-7df0b1f1fcde",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:56.919Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "5965e65d-94d3-40f1-b66b-a84830c34d23",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:43:57.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "b455a4b2-a2ba-4f19-9b4a-d31d9a74d9ee",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:00.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "f1dcbd81-05aa-4b8f-ab90-c24841def741",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:01.916Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "f3d794a1-5b6a-4acb-b901-6520d6f50c06",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:04.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "967eb243-7c5e-4e64-a947-ec55440dc369",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:05.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "7a19e0f4-244e-4bfe-b9a0-7c15dd74fc2f",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:08.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "6ad5deab-bb19-43d5-976a-31f25412bff4",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:09.916Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "cb09bc64-5fc1-4879-853d-7dc915a40ac0",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:12.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "b744684c-de9d-4967-a747-4c9bcf3902ae",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:13.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "b9f68ee4-94d8-4f83-8e56-dcf0b11f4265",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:16.918Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "22de8540-46e3-4033-96ce-f65aeb86e125",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:17.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "b7e7a7d4-4839-480f-857d-09b9a91e6b20",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:20.917Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "8cd81e09-8d5d-4eaa-a1a1-8377c720ef56",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:21.916Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "4eec951d-8054-4c4f-a8eb-e310cb3ea4b7",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:24.919Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "5c7f1a58-4b42-4678-b79d-b5bde11e4c63",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-13T10:44:25.916Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
     }
   ],
   "product-category": [
@@ -9637,6 +10183,48 @@
           "paidTime": "2024-08-13T10:05:11.874Z"
         }
       ]
+    },
+    {
+      "id": "txn_fdp8s3v",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "João Souza Silva",
+      "street": "Av. dos Andradas, 3000",
+      "city": "Belo Horizonte",
+      "region": "afr",
+      "postalcode": "30260-070",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "a21646dd-6f72-4dc8-90a1-77eb8c3e50e9",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 407.5,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "72ea71c6-5b6c-4d4c-bfdd-81a82681c567",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 207.5,
+          "paidTime": "2024-08-13T10:38:39.849Z"
+        },
+        {
+          "id": "d1df7802-cbac-4b12-90e0-161998e42f7b",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 200,
+          "paidTime": "2024-08-13T10:38:49.912Z"
+        }
+      ]
     }
   ],
   "users": [
@@ -9968,6 +10556,45 @@
               "fullname": "Jimmy Smith",
               "amountPaid": 8,
               "paidTime": "2024-08-13T10:05:11.874Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_fdp8s3v",
+          "fullname": "João Souza Silva",
+          "street": "Av. dos Andradas, 3000",
+          "city": "Belo Horizonte",
+          "region": "afr",
+          "postalcode": "30260-070",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "a21646dd-6f72-4dc8-90a1-77eb8c3e50e9",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 0,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "72ea71c6-5b6c-4d4c-bfdd-81a82681c567",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 207.5,
+              "paidTime": "2024-08-13T10:38:39.849Z"
+            },
+            {
+              "id": "d1df7802-cbac-4b12-90e0-161998e42f7b",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 200,
+              "paidTime": "2024-08-13T10:38:49.912Z"
             }
           ]
         }
@@ -10364,6 +10991,45 @@
               "paidTime": "2024-08-13T10:05:11.874Z"
             }
           ]
+        },
+        {
+          "id": "txn_fdp8s3v",
+          "fullname": "João Souza Silva",
+          "street": "Av. dos Andradas, 3000",
+          "city": "Belo Horizonte",
+          "region": "afr",
+          "postalcode": "30260-070",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "a21646dd-6f72-4dc8-90a1-77eb8c3e50e9",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 0,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "72ea71c6-5b6c-4d4c-bfdd-81a82681c567",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 207.5,
+              "paidTime": "2024-08-13T10:38:39.849Z"
+            },
+            {
+              "id": "d1df7802-cbac-4b12-90e0-161998e42f7b",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 200,
+              "paidTime": "2024-08-13T10:38:49.912Z"
+            }
+          ]
         }
       ]
     },
@@ -10384,13 +11050,13 @@
   ],
   "cart": [
     {
-      "id": "0ab4857f-d63d-41dc-88f6-84b77cfefe27",
+      "id": "a21646dd-6f72-4dc8-90a1-77eb8c3e50e9",
       "quantity": 1,
-      "productId": "6",
+      "productId": "16",
       "color": "Black",
-      "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-      "name": "Camera C3",
-      "price": 1200
+      "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+      "name": "Camera Lens M13",
+      "price": 400
     }
   ],
   "instalment": [
