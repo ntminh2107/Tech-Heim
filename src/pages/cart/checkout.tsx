@@ -127,7 +127,7 @@ const Checkout = () => {
           }
         />
       </div>
-      <div className="flex px-20 gap-6 mb-14">
+      <div className="flex flex-col lg:flex-row px-6 lg:px-20 gap-6 mb-14">
         <div className="basis-3/5">
           <div className=" flex flex-col border gap-8 border-gray-CBCBCB rounded-lg py-6 px-8">
             <InputFormField

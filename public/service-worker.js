@@ -1,23 +1,62 @@
 self.addEventListener("install", (event) => {
   console.log("Service Worker installed");
-  self.skipWaiting(); // Activate worker immediately
+  event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener("activate", (event) => {
   console.log("Service Worker activated");
-  return self.clients.claim(); // Become available to all pages
+  event.waitUntil(self.clients.claim());
 });
 
-// Listen for messages from the main script
-self.addEventListener("message", (event) => {
-  const { title, message, userIds } = event.data;
-  console.log("Received message from client:", event.data);
+let fetchInterval;
 
-  // Iterate over all clients (open windows/tabs)
-  self.clients.matchAll({ includeUncontrolled: true }).then((clients) => {
-    clients.forEach((client) => {
-      // Send message to each client
-      client.postMessage({ title, message, userIds });
-    });
-  });
+self.addEventListener("message", async (event) => {
+  const { id } = event.data;
+  console.log(id);
+  try {
+    await fetchNotificationID(id);
+
+    fetchInterval = setInterval(() => {
+      fetchNotificationID(id);
+    }, 3000);
+  } catch {
+    console.error("fetching data not found:", error);
+  }
 });
+
+async function fetchNotificationID(id) {
+  try {
+    const res = await fetch(`http://localhost:3000/notification/${id}`);
+    console.log(res.status);
+    console.log(`http://localhost:3000/notification/${id}`);
+    if (res.ok) {
+      const data = await res.json();
+      console.log(data);
+      const { title, message, userIDs } = data;
+
+      console.log(
+        `Received message from client:", ${title}, ${message}, ${userIDs.id}`
+      );
+
+      const allClients = await self.clients.matchAll({
+        includeUncontrolled: true,
+      });
+      allClients.forEach((client) => {
+        client.postMessage({ title, message, userIDs });
+      });
+
+      self.registration.showNotification(title, {
+        body: message,
+        icon: "/assets/icons/device/audio_icon.svg",
+        tag: id,
+      });
+      clearInterval(fetchInterval);
+    } else {
+      console.error("cannot catch message:", res.statusText);
+      clearInterval(fetchInterval);
+    }
+  } catch (error) {
+    console.error("Error fetching notification data:", error);
+    clearInterval(fetchInterval);
+  }
+}

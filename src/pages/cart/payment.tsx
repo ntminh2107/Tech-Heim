@@ -19,14 +19,15 @@ import {
   paidOrderThunk,
   getOrderDetailThunk,
   getUserDetailThunk,
+  addNotificationThunk,
 } from "../../redux/slice/orderSlice";
 
-import { Order, Payment } from "../../types/Order";
+import { Order, Payment, Notification } from "../../types/Order";
 import { v4 as uuidv4 } from "uuid";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import { Bill, User } from "../../types/User";
 import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
-import { sendMessageToSW } from "../../utils/serviceWorketUtils";
+import { sendMessageToSW } from "../../utils/serviceWorkerUtils";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -132,6 +133,18 @@ const Payments = () => {
         grandTotal: orderToBill.totalAmount,
         sharedWith: orderToBill.payments,
       };
+      const newNotification: Notification = {
+        id: uuidv4(),
+        title: "Order Complete",
+        message: "Your Order is successfully paid!!!!!",
+        date: new Date().toISOString(),
+        userIDs: orderToBill.payments.map((payment) => ({
+          id: payment.userId,
+        })),
+      };
+
+      dispatch(addNotificationThunk(newNotification));
+      sendMessageToSW({ id: newNotification.id });
 
       const updatedUserBills = async () => {
         const updateUserPromise = orderToBill.payments.map(async (payment) => {
@@ -165,6 +178,7 @@ const Payments = () => {
 
       dispatch(clearCartItemThunk());
       toast.warn("done");
+
       // handleOpenSuccessModal(true);
     } else {
       const orderLink = `${window.location.origin}/payment/${orderId}`;
@@ -175,6 +189,9 @@ const Payments = () => {
         (payment) => payment.userId
       );
       if (updatedUser.includes(currentUser.id)) {
+        // sendMessageToSW({
+        //   notificationId: ,
+        // });
         // navigate("/redirect-to-homepage");
       } else {
         alert("something wents wrong, pls try again");
@@ -187,28 +204,10 @@ const Payments = () => {
       if (orderId) {
         dispatch(getOrderDetailThunk(orderId));
       }
-      const currentUser = localStorage.getItem("token") as string | number;
-      const userIds = detailOrder?.payments.map(
-        (Payment) => Payment.userId
-      ) as (string | number)[];
+
       const currentOrder = detailOrder;
-      console.log(currentOrder?.isPaid);
-      if (currentOrder?.isPaid && userIds.includes(currentUser)) {
-        console.log(userIds.includes(currentUser));
-        sendMessageToSW({
-          title: "Order Completed",
-          message: "Your payment has been successfully completed!",
-          userIds: userIds,
-        });
-        // navigate("/redirect-to-homepage");
-      }
 
-      if (currentOrder?.isPaid && !orderData?.isPaid) {
-        alert("The order has been fully paid!");
-
-        clearInterval(interval);
-      }
-
+      clearInterval(interval);
       setOrderData(currentOrder || null);
     }, 3000);
 
