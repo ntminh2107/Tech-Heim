@@ -133,6 +133,7 @@ const Payments = () => {
         grandTotal: orderToBill.totalAmount,
         sharedWith: orderToBill.payments,
       };
+
       const newNotification: Notification = {
         id: uuidv4(),
         title: "Order Complete",
@@ -142,7 +143,6 @@ const Payments = () => {
           id: payment.userId,
         })),
       };
-
       dispatch(addNotificationThunk(newNotification));
       sendMessageToSW({ id: newNotification.id });
 
@@ -199,20 +199,28 @@ const Payments = () => {
     }
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (orderId) {
-        dispatch(getOrderDetailThunk(orderId));
-      }
+  // useEffect(() => {
+  //   if (orderId) {
+  //     dispatch(getOrderDetailThunk(orderId));
+  //   }
+  //   const currentOrder = detailOrder;
 
-      const currentOrder = detailOrder;
+  //   if (currentOrder && currentOrder.isPaid) {
+  //     const newNotification: Notification = {
+  //       id: uuidv4(),
+  //       title: "Order Complete",
+  //       message: "Your Order is successfully paid!!!!!",
+  //       date: new Date().toISOString(),
+  //       userIDs: currentOrder.payments.map((payment) => ({
+  //         id: payment.userId,
+  //       })),
+  //     };
+  //     dispatch(addNotificationThunk(newNotification));
+  //     sendMessageToSW({ id: newNotification.id });
+  //   }
 
-      clearInterval(interval);
-      setOrderData(currentOrder || null);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [orderId, orderData, dispatch, detailOrder]);
+  //   setOrderData(currentOrder || null);
+  // }, [orderId, orderData, dispatch, detailOrder]);
 
   if (loading) {
     return (

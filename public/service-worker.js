@@ -40,6 +40,7 @@ async function fetchNotificationID(id) {
 
       const allClients = await self.clients.matchAll({
         includeUncontrolled: true,
+        type: "window",
       });
       allClients.forEach((client) => {
         client.postMessage({ title, message, userIDs });
