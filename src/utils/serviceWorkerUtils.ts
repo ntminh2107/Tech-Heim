@@ -52,3 +52,7 @@ export const receiveMSG = async () => {
     handleServiceWorkerMessage(title, message, userIDs);
   });
 };
+
+export const cleanUpServiceWorker = () => {
+  navigator.serviceWorker.removeEventListener("message", () => {});
+};

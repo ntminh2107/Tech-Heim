@@ -14,7 +14,11 @@ const Cart = lazy(() => import("./pages/cart"));
 import CheckoutLayout from "./layouts/CheckoutLayout";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { initServiceWorker, receiveMSG } from "./utils/serviceWorkerUtils";
+import {
+  cleanUpServiceWorker,
+  initServiceWorker,
+  receiveMSG,
+} from "./utils/serviceWorkerUtils";
 const Complete = lazy(() => import("./pages/redirect/Complete"));
 
 const Checkout = lazy(() => import("./pages/cart/checkout"));
@@ -50,7 +54,10 @@ function App() {
   useEffect(() => {
     initServiceWorker();
     receiveMSG();
-  });
+    return () => {
+      cleanUpServiceWorker();
+    };
+  }, []);
   return (
     <ConfigProvider
       theme={{

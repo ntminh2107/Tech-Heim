@@ -45,9 +45,9 @@ const Payments = () => {
   const navigate = useNavigate();
 
   const [orderData, setOrderData] = useState<Order | null>(null);
-  const [loading, setLoading] = useState<boolean>(true); // Loading state
+  const [loading, setLoading] = useState<boolean>(true);
   const [paidAmount, setPaidAmount] = useState<number>(0);
-  // State cho số tiền thanh toán
+  const [notification, setNotification] = useState<string>();
 
   useEffect(() => {
     if (orderId) {
@@ -144,7 +144,10 @@ const Payments = () => {
         })),
       };
       dispatch(addNotificationThunk(newNotification));
-      sendMessageToSW({ id: newNotification.id });
+      setNotification(newNotification.id);
+      console.log(newNotification.id);
+      // dispatch(addNotificationThunk(newNotification));
+      // sendMessageToSW({ id: newNotification.id });
 
       const updatedUserBills = async () => {
         const updateUserPromise = orderToBill.payments.map(async (payment) => {
@@ -178,54 +181,32 @@ const Payments = () => {
 
       dispatch(clearCartItemThunk());
       toast.warn("done");
+      // navigate("/redirect-to-homepage");
 
+      // setTimeout(() => navigate("/redirect-to-homepage"), 5000);
       // handleOpenSuccessModal(true);
     } else {
       const orderLink = `${window.location.origin}/payment/${orderId}`;
       navigator.clipboard.writeText(orderLink).then(() => {
         alert("Payment link copied to clipboard!");
       });
+      // navigate("/redirect-to-homepage");
       const updatedUser = updatedOrder.payments.map(
         (payment) => payment.userId
       );
-      if (updatedUser.includes(currentUser.id)) {
-        // sendMessageToSW({
-        //   notificationId: ,
-        // });
-        // navigate("/redirect-to-homepage");
-      } else {
-        alert("something wents wrong, pls try again");
-      }
     }
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (orderId) {
-        dispatch(getOrderDetailThunk(orderId));
-      }
-      const currentOrder = detailOrder;
-      // const currentUserID = localStorage.getItem("token");
-      // if (currentOrder && currentOrder.isPaid) {
-      //   const newNotification: Notification = {
-      //     id: uuidv4(),
-      //     title: "Order Complete",
-      //     message: "Your Order is successfully paid!!!!!",
-      //     date: new Date().toISOString(),
-      //     userIDs: currentOrder.payments.map((payment) => ({
-      //       id: payment.userId,
-      //     })),
-      //   };
-      //   dispatch(addNotificationThunk(newNotification));
-      //   sendMessageToSW({ id: newNotification.id });
-      clearInterval(interval);
-      // }
-
-      setOrderData(currentOrder || null);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [orderId, orderData, dispatch, detailOrder]);
+    if (orderId) {
+      dispatch(getOrderDetailThunk(orderId));
+    }
+    const currentOrder = detailOrder;
+    if (currentOrder?.isPaid && currentOrder && notification) {
+      console.log(notification);
+      sendMessageToSW({ id: notification as string });
+    }
+  }, [dispatch, orderId, detailOrder]);
 
   if (loading) {
     return (
