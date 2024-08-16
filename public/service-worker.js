@@ -62,21 +62,29 @@ let fetchInterval;
 //   }
 // }
 
-self.addEventListener("push", async (event) => {
+self.addEventListener("message", async (event) => {
   const { id } = event.data;
+  console.log("check push", id);
   try {
     const res = await fetch(`http://localhost:3000/notification/${id}`);
-    const data = await res.json;
+    const data = await res.json();
     const { title, message, userIDs } = data;
     event.waitUntil(
-      self.registration.showNotification(title, {
-        body: message,
-        icon: "//assets/icons/device/audio_icon.svg",
-        tag: id,
+      clients.matchAll({ type: "window" }).then((windowClients) => {
+        windowClients.forEach((client) => {
+          client.postMessage({ title, message, userIDs });
+          if (userIDs.some((user) => user.id === client.id)) {
+            self.registration.showNotification(title, {
+              body: message,
+              icon: "/assets/icons/device/audio_icon.svg",
+              tag: id,
+            });
+          }
+        });
       })
     );
   } catch (err) {
-    console.error("some thing happend");
+    console.error("some thing happens", err);
   }
 });
 

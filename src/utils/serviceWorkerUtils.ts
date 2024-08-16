@@ -10,6 +10,10 @@ export const initServiceWorker = async () => {
       "/service-worker.js"
     );
     console.log("Service Worker registered with scope:", registration.scope);
+    Notification.requestPermission(function (status) {
+      console.log("Notification permission status:", status);
+    });
+    return registration.update();
   } catch (error) {
     console.error("Service Worker registration failed:", error);
   }
@@ -49,10 +53,29 @@ export const receiveMSG = async () => {
   navigator.serviceWorker.addEventListener("message", (event) => {
     const { title, message, userIDs } = event.data;
     console.log("pass", title, message, userIDs);
-    handleServiceWorkerMessage(title, message, userIDs);
+    // handleServiceWorkerMessage(title, message, userIDs);
+    Notification.requestPermission().then((result) => {
+      if (result === "granted") {
+        navigator.serviceWorker.ready.then((registration) => {
+          registration.showNotification(title, {
+            body: message,
+            vibrate: [200, 100, 200, 100, 200, 100, 200],
+          });
+        });
+      }
+    });
   });
 };
 
 export const cleanUpServiceWorker = () => {
   navigator.serviceWorker.removeEventListener("message", () => {});
+};
+
+export const receiveNotification = async () => {
+  if (Notification.permission !== "granted") {
+    console.log("notification permission denied");
+    return;
+  }
+  const registration = await navigator.serviceWorker.getRegistration();
+  registration?.showNotification("Notification without Push API");
 };

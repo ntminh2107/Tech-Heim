@@ -147,7 +147,7 @@ const Payments = () => {
       setNotification(newNotification.id);
       console.log(newNotification.id);
       // dispatch(addNotificationThunk(newNotification));
-      // sendMessageToSW({ id: newNotification.id });
+      sendMessageToSW({ id: newNotification.id });
 
       const updatedUserBills = async () => {
         const updateUserPromise = orderToBill.payments.map(async (payment) => {
@@ -201,11 +201,11 @@ const Payments = () => {
     if (orderId) {
       dispatch(getOrderDetailThunk(orderId));
     }
-    const currentOrder = detailOrder;
-    if (currentOrder?.isPaid && currentOrder && notification) {
-      console.log(notification);
-      sendMessageToSW({ id: notification as string });
-    }
+    // const currentOrder = detailOrder;
+    // if (currentOrder?.isPaid && currentOrder && notification) {
+    //   console.log(notification);
+    //   // sendMessageToSW({ id: notification as string });
+    // }
   }, [dispatch, orderId, detailOrder]);
 
   if (loading) {

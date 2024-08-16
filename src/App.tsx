@@ -54,10 +54,11 @@ function App() {
   useEffect(() => {
     initServiceWorker();
     receiveMSG();
+
     return () => {
       cleanUpServiceWorker();
     };
-  }, []);
+  }, [receiveMSG]);
   return (
     <ConfigProvider
       theme={{

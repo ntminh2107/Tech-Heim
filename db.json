@@ -1,10 +1,10 @@
 {
   "notification": [
     {
-      "id": "19f388a9-722a-4583-bdb2-8d3a3e7c61ec",
+      "id": "965aafb2-f5b8-486b-85ea-f5aef4bfa887",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T06:54:44.405Z",
+      "date": "2024-08-15T09:52:08.581Z",
       "userIDs": [
         {
           "id": "1"
@@ -12,10 +12,57 @@
       ]
     },
     {
-      "id": "791cf82a-4f85-4dd2-b63b-75469e5a0d4d",
+      "id": "5a41de7b-a6ff-4fbc-bcaf-9e9bc6b84849",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T06:55:45.437Z",
+      "date": "2024-08-15T09:53:24.446Z",
+      "userIDs": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "4dfbf2e3-4b2a-4804-ace3-4024b04987b5",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-15T10:24:28.546Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        }
+      ]
+    },
+    {
+      "id": "0503ec70-a3ab-4b06-96e5-486a87ce6ff2",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-15T10:25:13.831Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "662cb4bd-aa02-4c5c-aab8-f28ee2281bf7",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-15T10:26:06.249Z",
+      "userIDs": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "1f18fc15-e1d6-4d2b-a0d2-6de86e656963",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-15T10:26:56.488Z",
       "userIDs": [
         {
           "id": "1"
@@ -26,32 +73,46 @@
       ]
     },
     {
-      "id": "b496b1f1-a7e5-4f5f-a797-e897c9fccca7",
+      "id": "7982a978-03c0-40c9-b79f-b58e4ae841c2",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T07:04:22.021Z",
+      "date": "2024-08-15T10:29:00.540Z",
       "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
         {
           "id": "1"
         }
       ]
     },
     {
-      "id": "90c76af5-3bc1-4b21-a539-22173606cecf",
+      "id": "85f26d27-5c9b-442f-acd0-18e842cb24f6",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T07:05:55.864Z",
+      "date": "2024-08-15T10:29:33.707Z",
       "userIDs": [
         {
-          "id": "1"
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
         }
       ]
     },
     {
-      "id": "623c836d-ca83-4084-ad99-a17cf2f3dc73",
+      "id": "d6903c04-107c-4c74-bf3c-002d0a7fa565",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T07:15:30.776Z",
+      "date": "2024-08-15T10:38:05.770Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        }
+      ]
+    },
+    {
+      "id": "95579a6d-9d6d-4150-b85d-4b87cddbdd5b",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-15T10:40:53.833Z",
       "userIDs": [
         {
           "id": "1"
@@ -62,10 +123,10 @@
       ]
     },
     {
-      "id": "7aacc86b-9c1d-43a4-a124-f1e371a89005",
+      "id": "57152b46-7fca-4777-8d2b-c2fb636654ef",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T07:17:58.151Z",
+      "date": "2024-08-15T10:57:42.106Z",
       "userIDs": [
         {
           "id": "1"
@@ -76,13 +137,27 @@
       ]
     },
     {
-      "id": "656bfb39-878d-4fdb-9d62-4a18d21d7191",
+      "id": "8a6cf594-1527-4b4d-9a37-ed74888fe4f9",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T07:20:23.817Z",
+      "date": "2024-08-15T10:59:11.868Z",
       "userIDs": [
         {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        },
+        {
           "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "d056f76c-1fab-410a-851c-0533e4413b4b",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-15T11:01:21.120Z",
+      "userIDs": [
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
         },
         {
           "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
@@ -90,24 +165,24 @@
       ]
     },
     {
-      "id": "609d438e-efe0-45b4-99e1-d5569ccae6f5",
+      "id": "2f6f46ad-fd38-4831-b796-997bf4c40dfe",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T08:12:25.275Z",
+      "date": "2024-08-16T02:25:07.412Z",
       "userIDs": [
         {
-          "id": "1"
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
         },
         {
-          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+          "id": "1"
         }
       ]
     },
     {
-      "id": "69500fbd-c8ed-4d5f-9d97-cb2a36b61df9",
+      "id": "a549889c-ac6d-4726-9ec2-aea18a39a35d",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T08:14:36.634Z",
+      "date": "2024-08-16T02:27:19.349Z",
       "userIDs": [
         {
           "id": "1"
@@ -115,38 +190,10 @@
       ]
     },
     {
-      "id": "6551e300-bed3-425c-89de-feec886e7384",
+      "id": "57a2f1e8-823c-4f71-b13b-e963911c2a08",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T08:15:41.082Z",
-      "userIDs": [
-        {
-          "id": "1"
-        },
-        {
-          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
-        }
-      ]
-    },
-    {
-      "id": "984693d9-5f2b-40ea-8a8d-e2ee43f19ed8",
-      "title": "Order Complete",
-      "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-14T08:17:31.673Z",
-      "userIDs": [
-        {
-          "id": "1"
-        },
-        {
-          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
-        }
-      ]
-    },
-    {
-      "id": "7f51b61f-d590-4cda-9df4-91b6c104c89b",
-      "title": "Order Complete",
-      "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-15T06:57:17.615Z",
+      "date": "2024-08-16T02:29:02.076Z",
       "userIDs": [
         {
           "id": "1"
@@ -154,13 +201,24 @@
       ]
     },
     {
-      "id": "204bc1cf-e6d9-4ca6-9899-39d469d1664d",
+      "id": "7bbba350-7c3b-41a4-8569-651ed1e87433",
       "title": "Order Complete",
       "message": "Your Order is successfully paid!!!!!",
-      "date": "2024-08-15T08:42:32.532Z",
+      "date": "2024-08-16T02:32:02.065Z",
       "userIDs": [
         {
-          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "b1cc3bab-74e4-44e2-95fe-a581961ccd4d",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-16T02:32:50.962Z",
+      "userIDs": [
+        {
+          "id": "1"
         }
       ]
     }
@@ -2740,6 +2798,697 @@
           "paidTime": "2024-08-15T08:42:32.517Z"
         }
       ]
+    },
+    {
+      "id": "txn_1oj78fy",
+      "userId": "1",
+      "fullname": "minh nguyen",
+      "street": "dsd",
+      "city": "Hanoi",
+      "region": "na",
+      "postalcode": "100000",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "4638d760-499e-4c73-9ebf-19e476d8c01a",
+          "quantity": 1,
+          "productId": "13",
+          "color": "Grey",
+          "image": "https://images-cdn.ubuy.co.id/633af66c2ed4376854580abf-60w-portable-bluetooth-speaker-with.jpg",
+          "name": "Speaker J10",
+          "price": 100,
+          "salePrice": 90
+        }
+      ],
+      "totalAmount": 97.5,
+      "depositAmount": 100,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "cf4200f1-4c3c-4365-b68e-92a1ee643c03",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 100,
+          "paidTime": "2024-08-15T09:52:08.558Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_5gqy4t5",
+      "userId": "1",
+      "fullname": "Gottfried Wilhelm Leibniz",
+      "street": "Erika-Mann-Straße 33",
+      "city": "München",
+      "region": "afr",
+      "postalcode": "80636",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "4638d760-499e-4c73-9ebf-19e476d8c01a",
+          "quantity": 1,
+          "productId": "13",
+          "color": "Grey",
+          "image": "https://images-cdn.ubuy.co.id/633af66c2ed4376854580abf-60w-portable-bluetooth-speaker-with.jpg",
+          "name": "Speaker J10",
+          "price": 100,
+          "salePrice": 90
+        }
+      ],
+      "totalAmount": 97.5,
+      "depositAmount": 10000,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "b006cd86-32e0-4461-866d-e350e47cffec",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 10000,
+          "paidTime": "2024-08-15T09:53:24.428Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_94e2w77",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Gottfried Wilhelm Leibniz",
+      "street": "Erika-Mann-Straße 33",
+      "city": "München",
+      "region": "afr",
+      "postalcode": "80636",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "4638d760-499e-4c73-9ebf-19e476d8c01a",
+          "quantity": 1,
+          "productId": "13",
+          "color": "Grey",
+          "image": "https://images-cdn.ubuy.co.id/633af66c2ed4376854580abf-60w-portable-bluetooth-speaker-with.jpg",
+          "name": "Speaker J10",
+          "price": 100,
+          "salePrice": 90
+        }
+      ],
+      "totalAmount": 97.5,
+      "depositAmount": 100,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "80490f15-8230-4439-aa19-274141dee6a1",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 100,
+          "paidTime": "2024-08-15T10:24:28.531Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_iz01boa",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Nguyen Tuan Minh",
+      "street": "vietnam",
+      "city": "vietnam",
+      "region": "afr",
+      "postalcode": "111111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "3188510e-f93f-471f-a8eb-af6f6829bf73",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 1300,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "f9ddfc72-2f4b-42a1-8f5d-f322c606fa83",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 300,
+          "paidTime": "2024-08-15T10:24:55.946Z"
+        },
+        {
+          "id": "fd4e4d32-5f1e-4003-b10b-e0c92f882e00",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 1000,
+          "paidTime": "2024-08-15T10:25:13.809Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_986yxvf",
+      "userId": "1",
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "3188510e-f93f-471f-a8eb-af6f6829bf73",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 600,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "13765ab0-d7c3-4e77-a21d-11bf73db8ea7",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 600,
+          "paidTime": "2024-08-15T10:26:06.230Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_nupgg8e",
+      "userId": "1",
+      "fullname": "minh nguyen",
+      "street": "dsd",
+      "city": "Hanoi",
+      "region": "na",
+      "postalcode": "100000",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "3188510e-f93f-471f-a8eb-af6f6829bf73",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 500,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "a9bac46c-a6ca-4a5f-bf21-52af5133c298",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 300,
+          "paidTime": "2024-08-15T10:26:34.593Z"
+        },
+        {
+          "id": "3e6a0453-aa51-41b5-86e8-a0e6fc8dd35f",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 200,
+          "paidTime": "2024-08-15T10:26:56.459Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_gxejeqg",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "dev",
+      "street": "csđa",
+      "city": "12321",
+      "region": "afr",
+      "postalcode": "123123213",
+      "shippingMethod": "Express Shipping",
+      "shippingPrice": 22.5,
+      "Products": [
+        {
+          "id": "57b03fa8-69c7-4f07-bb8e-865019f4567d",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 422.5,
+      "depositAmount": 430,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "1c527d70-1cb8-4810-a8dc-c633b7ff2484",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 400,
+          "paidTime": "2024-08-15T10:28:37.569Z"
+        },
+        {
+          "id": "344ac96e-1e6e-4bcc-9e24-a0738b09f686",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 30,
+          "paidTime": "2024-08-15T10:29:00.519Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_voy9thf",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "dád",
+      "street": "adsđas",
+      "city": "adsadá",
+      "region": "afr",
+      "postalcode": "ađấ",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "1061d46b-1652-4f16-b9c2-b35ef54860c9",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 500,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "50766655-14ef-4c7b-8494-e6a243f70829",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 500,
+          "paidTime": "2024-08-15T10:29:33.674Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_t6dk9wz",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "áđấ",
+      "street": "sadsđấ",
+      "city": "adsadsadsa",
+      "region": "afr",
+      "postalcode": "adsda",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "79f9dfe1-f103-477e-b259-bcfeb98ff28e",
+          "quantity": 1,
+          "productId": "7",
+          "color": "Silver",
+          "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+          "name": "Desktop D4",
+          "price": 1800,
+          "salePrice": 1600
+        }
+      ],
+      "totalAmount": 1607.5,
+      "depositAmount": 1700,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "bf73604a-61fe-41b6-96c4-d9eb00c9c32b",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 1700,
+          "paidTime": "2024-08-15T10:38:05.711Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_0z7xrc0",
+      "userId": "1",
+      "fullname": "Gottfried Wilhelm Leibniz",
+      "street": "Erika-Mann-Straße 33",
+      "city": "München",
+      "region": "afr",
+      "postalcode": "80636",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "5477da72-b167-4bf5-b5c2-51bce8971c1e",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 408,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "3cc5b194-c7f8-4a57-8e2c-a74b79f53acc",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 400,
+          "paidTime": "2024-08-15T10:40:41.606Z"
+        },
+        {
+          "id": "b1a0f774-719c-453f-bb8a-8fc4460aa1be",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 8,
+          "paidTime": "2024-08-15T10:40:53.783Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_14wrdw5",
+      "userId": "1",
+      "fullname": "Jon Stewart Doe",
+      "street": "1600 Amphitheatre Parkway",
+      "city": "Mountain View",
+      "region": "afr",
+      "postalcode": "94043",
+      "shippingMethod": "",
+      "shippingPrice": 0,
+      "Products": [
+        {
+          "id": "9fc12220-08df-46e7-946d-a2b276b2af01",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 400,
+      "depositAmount": 400,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "a3a49daf-1e42-4903-8c73-739ce9b645a1",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 200,
+          "paidTime": "2024-08-15T10:56:35.664Z"
+        },
+        {
+          "id": "5f7adf02-abdb-402c-a023-43e622a947c8",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 200,
+          "paidTime": "2024-08-15T10:57:42.076Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_qy3enva",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Gottfried Wilhelm Leibniz",
+      "street": "Erika-Mann-Straße 33",
+      "city": "München",
+      "region": "afr",
+      "postalcode": "80636",
+      "shippingMethod": "",
+      "shippingPrice": 0,
+      "Products": [
+        {
+          "id": "e2a38b98-c70b-45dd-9264-f72b0f90c00f",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1200,
+      "depositAmount": 1300,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "66188a25-5d7c-467a-a63f-203a45233500",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 1000,
+          "paidTime": "2024-08-15T10:59:00.886Z"
+        },
+        {
+          "id": "31724943-e5e0-44fe-b686-83feca5db6f7",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 300,
+          "paidTime": "2024-08-15T10:59:11.827Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_hw64pus",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Nguyen Tuan Minh",
+      "street": "vietnam",
+      "city": "vietnam",
+      "region": "sea",
+      "postalcode": "111111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "0089bac9-d8ee-4db4-8f5f-e445a840860c",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1207.5,
+      "depositAmount": 1300,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "31fd473c-12f0-4a4c-a588-05958cd9e44b",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 0,
+          "paidTime": "2024-08-15T11:01:13.978Z"
+        },
+        {
+          "id": "0288f335-06f7-4fb7-8ea5-aefd271c96ed",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 1300,
+          "paidTime": "2024-08-15T11:01:21.068Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_ar5eud4",
+      "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+      "fullname": "Gottfried Wilhelm Leibniz",
+      "street": "Erika-Mann-Straße 33",
+      "city": "München",
+      "region": "afr",
+      "postalcode": "80636",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "3ffaf7bb-3ca4-4ac0-ada6-723b6cf088b8",
+          "quantity": 1,
+          "productId": "2",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+          "name": "Smartphone Y2",
+          "price": 800,
+          "salePrice": 750
+        }
+      ],
+      "totalAmount": 757.5,
+      "depositAmount": 800,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "63661874-84e3-460b-828f-b333400a4e90",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 700,
+          "paidTime": "2024-08-16T02:24:41.243Z"
+        },
+        {
+          "id": "c9176a26-3d0c-403f-9e1e-9d0197353804",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 100,
+          "paidTime": "2024-08-16T02:25:07.394Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_c89qzsx",
+      "userId": "1",
+      "fullname": "Jon Stewart Doe",
+      "street": "1600 Amphitheatre Parkway",
+      "city": "Mountain View",
+      "region": "afr",
+      "postalcode": "94043",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "2ee249f7-fd0c-4675-aa65-83127fd51209",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1207.5,
+      "depositAmount": 1208,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "f9cad368-3a8e-46b5-8e42-9e1775cb6f42",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 1208,
+          "paidTime": "2024-08-16T02:27:19.325Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_pgf3i95",
+      "userId": "1",
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "f09ad7d1-84d5-41ae-af8e-0b46cde57cf5",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 600,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "92e61355-2483-42a6-a318-4dfbf8cfe04c",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 600,
+          "paidTime": "2024-08-16T02:29:02.035Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_vbi2orh",
+      "userId": "1",
+      "fullname": "Juliet Oma",
+      "street": "",
+      "city": "",
+      "region": "",
+      "postalcode": "",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "b917fb7c-c3fc-4b1c-8ace-9ed24449f1d0",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 500,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "32e8ab5c-e405-4b29-aa81-75f2418bb895",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 500,
+          "paidTime": "2024-08-16T02:32:02.038Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_4rlveg5",
+      "userId": "1",
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "sea",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "9c75d8e4-f1c6-4340-a369-4ec6a565c434",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1207.5,
+      "depositAmount": 2000,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "01351ce0-4807-4980-8d21-0c0355240579",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 2000,
+          "paidTime": "2024-08-16T02:32:50.918Z"
+        }
+      ]
     }
   ],
   "users": [
@@ -4173,6 +4922,506 @@
               "paidTime": "2024-08-15T06:57:17.587Z"
             }
           ]
+        },
+        {
+          "id": "txn_1oj78fy",
+          "fullname": "minh nguyen",
+          "street": "dsd",
+          "city": "Hanoi",
+          "region": "na",
+          "postalcode": "100000",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "4638d760-499e-4c73-9ebf-19e476d8c01a",
+              "quantity": 1,
+              "productId": "13",
+              "color": "Grey",
+              "image": "https://images-cdn.ubuy.co.id/633af66c2ed4376854580abf-60w-portable-bluetooth-speaker-with.jpg",
+              "name": "Speaker J10",
+              "price": 100,
+              "salePrice": 90
+            }
+          ],
+          "change": 2.5,
+          "grandTotal": 97.5,
+          "sharedWith": [
+            {
+              "id": "cf4200f1-4c3c-4365-b68e-92a1ee643c03",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 100,
+              "paidTime": "2024-08-15T09:52:08.558Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_5gqy4t5",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "4638d760-499e-4c73-9ebf-19e476d8c01a",
+              "quantity": 1,
+              "productId": "13",
+              "color": "Grey",
+              "image": "https://images-cdn.ubuy.co.id/633af66c2ed4376854580abf-60w-portable-bluetooth-speaker-with.jpg",
+              "name": "Speaker J10",
+              "price": 100,
+              "salePrice": 90
+            }
+          ],
+          "change": 9902.5,
+          "grandTotal": 97.5,
+          "sharedWith": [
+            {
+              "id": "b006cd86-32e0-4461-866d-e350e47cffec",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 10000,
+              "paidTime": "2024-08-15T09:53:24.428Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_iz01boa",
+          "fullname": "Nguyen Tuan Minh",
+          "street": "vietnam",
+          "city": "vietnam",
+          "region": "afr",
+          "postalcode": "111111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "3188510e-f93f-471f-a8eb-af6f6829bf73",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 892.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "f9ddfc72-2f4b-42a1-8f5d-f322c606fa83",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 300,
+              "paidTime": "2024-08-15T10:24:55.946Z"
+            },
+            {
+              "id": "fd4e4d32-5f1e-4003-b10b-e0c92f882e00",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1000,
+              "paidTime": "2024-08-15T10:25:13.809Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_986yxvf",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "11111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "3188510e-f93f-471f-a8eb-af6f6829bf73",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 192.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "13765ab0-d7c3-4e77-a21d-11bf73db8ea7",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 600,
+              "paidTime": "2024-08-15T10:26:06.230Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_nupgg8e",
+          "fullname": "minh nguyen",
+          "street": "dsd",
+          "city": "Hanoi",
+          "region": "na",
+          "postalcode": "100000",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "3188510e-f93f-471f-a8eb-af6f6829bf73",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "a9bac46c-a6ca-4a5f-bf21-52af5133c298",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 300,
+              "paidTime": "2024-08-15T10:26:34.593Z"
+            },
+            {
+              "id": "3e6a0453-aa51-41b5-86e8-a0e6fc8dd35f",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 200,
+              "paidTime": "2024-08-15T10:26:56.459Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_gxejeqg",
+          "fullname": "dev",
+          "street": "csđa",
+          "city": "12321",
+          "region": "afr",
+          "postalcode": "123123213",
+          "shippingMethod": "Express Shipping",
+          "shippingPrice": 22.5,
+          "products": [
+            {
+              "id": "57b03fa8-69c7-4f07-bb8e-865019f4567d",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 7.5,
+          "grandTotal": 422.5,
+          "sharedWith": [
+            {
+              "id": "1c527d70-1cb8-4810-a8dc-c633b7ff2484",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 400,
+              "paidTime": "2024-08-15T10:28:37.569Z"
+            },
+            {
+              "id": "344ac96e-1e6e-4bcc-9e24-a0738b09f686",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 30,
+              "paidTime": "2024-08-15T10:29:00.519Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_0z7xrc0",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "5477da72-b167-4bf5-b5c2-51bce8971c1e",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "3cc5b194-c7f8-4a57-8e2c-a74b79f53acc",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 400,
+              "paidTime": "2024-08-15T10:40:41.606Z"
+            },
+            {
+              "id": "b1a0f774-719c-453f-bb8a-8fc4460aa1be",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 8,
+              "paidTime": "2024-08-15T10:40:53.783Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_14wrdw5",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "afr",
+          "postalcode": "94043",
+          "shippingMethod": "",
+          "shippingPrice": 0,
+          "products": [
+            {
+              "id": "9fc12220-08df-46e7-946d-a2b276b2af01",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 0,
+          "grandTotal": 400,
+          "sharedWith": [
+            {
+              "id": "a3a49daf-1e42-4903-8c73-739ce9b645a1",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 200,
+              "paidTime": "2024-08-15T10:56:35.664Z"
+            },
+            {
+              "id": "5f7adf02-abdb-402c-a023-43e622a947c8",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 200,
+              "paidTime": "2024-08-15T10:57:42.076Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_qy3enva",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "",
+          "shippingPrice": 0,
+          "products": [
+            {
+              "id": "e2a38b98-c70b-45dd-9264-f72b0f90c00f",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 100,
+          "grandTotal": 1200,
+          "sharedWith": [
+            {
+              "id": "66188a25-5d7c-467a-a63f-203a45233500",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 1000,
+              "paidTime": "2024-08-15T10:59:00.886Z"
+            },
+            {
+              "id": "31724943-e5e0-44fe-b686-83feca5db6f7",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 300,
+              "paidTime": "2024-08-15T10:59:11.827Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_ar5eud4",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "3ffaf7bb-3ca4-4ac0-ada6-723b6cf088b8",
+              "quantity": 1,
+              "productId": "2",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+              "name": "Smartphone Y2",
+              "price": 800,
+              "salePrice": 750
+            }
+          ],
+          "change": 42.5,
+          "grandTotal": 757.5,
+          "sharedWith": [
+            {
+              "id": "63661874-84e3-460b-828f-b333400a4e90",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 700,
+              "paidTime": "2024-08-16T02:24:41.243Z"
+            },
+            {
+              "id": "c9176a26-3d0c-403f-9e1e-9d0197353804",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 100,
+              "paidTime": "2024-08-16T02:25:07.394Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_c89qzsx",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "afr",
+          "postalcode": "94043",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "2ee249f7-fd0c-4675-aa65-83127fd51209",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1207.5,
+          "sharedWith": [
+            {
+              "id": "f9cad368-3a8e-46b5-8e42-9e1775cb6f42",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1208,
+              "paidTime": "2024-08-16T02:27:19.325Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_pgf3i95",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "11111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "f09ad7d1-84d5-41ae-af8e-0b46cde57cf5",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 192.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "92e61355-2483-42a6-a318-4dfbf8cfe04c",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 600,
+              "paidTime": "2024-08-16T02:29:02.035Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_vbi2orh",
+          "fullname": "Juliet Oma",
+          "street": "",
+          "city": "",
+          "region": "",
+          "postalcode": "",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "b917fb7c-c3fc-4b1c-8ace-9ed24449f1d0",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "32e8ab5c-e405-4b29-aa81-75f2418bb895",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 500,
+              "paidTime": "2024-08-16T02:32:02.038Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_4rlveg5",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "sea",
+          "postalcode": "11111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "9c75d8e4-f1c6-4340-a369-4ec6a565c434",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 792.5,
+          "grandTotal": 1207.5,
+          "sharedWith": [
+            {
+              "id": "01351ce0-4807-4980-8d21-0c0355240579",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 2000,
+              "paidTime": "2024-08-16T02:32:50.918Z"
+            }
+          ]
         }
       ]
     },
@@ -5152,6 +6401,417 @@
               "paidTime": "2024-08-15T08:42:32.517Z"
             }
           ]
+        },
+        {
+          "id": "txn_94e2w77",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "4638d760-499e-4c73-9ebf-19e476d8c01a",
+              "quantity": 1,
+              "productId": "13",
+              "color": "Grey",
+              "image": "https://images-cdn.ubuy.co.id/633af66c2ed4376854580abf-60w-portable-bluetooth-speaker-with.jpg",
+              "name": "Speaker J10",
+              "price": 100,
+              "salePrice": 90
+            }
+          ],
+          "change": 2.5,
+          "grandTotal": 97.5,
+          "sharedWith": [
+            {
+              "id": "80490f15-8230-4439-aa19-274141dee6a1",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 100,
+              "paidTime": "2024-08-15T10:24:28.531Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_iz01boa",
+          "fullname": "Nguyen Tuan Minh",
+          "street": "vietnam",
+          "city": "vietnam",
+          "region": "afr",
+          "postalcode": "111111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "3188510e-f93f-471f-a8eb-af6f6829bf73",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 892.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "f9ddfc72-2f4b-42a1-8f5d-f322c606fa83",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 300,
+              "paidTime": "2024-08-15T10:24:55.946Z"
+            },
+            {
+              "id": "fd4e4d32-5f1e-4003-b10b-e0c92f882e00",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1000,
+              "paidTime": "2024-08-15T10:25:13.809Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_nupgg8e",
+          "fullname": "minh nguyen",
+          "street": "dsd",
+          "city": "Hanoi",
+          "region": "na",
+          "postalcode": "100000",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "3188510e-f93f-471f-a8eb-af6f6829bf73",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "a9bac46c-a6ca-4a5f-bf21-52af5133c298",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 300,
+              "paidTime": "2024-08-15T10:26:34.593Z"
+            },
+            {
+              "id": "3e6a0453-aa51-41b5-86e8-a0e6fc8dd35f",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 200,
+              "paidTime": "2024-08-15T10:26:56.459Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_gxejeqg",
+          "fullname": "dev",
+          "street": "csđa",
+          "city": "12321",
+          "region": "afr",
+          "postalcode": "123123213",
+          "shippingMethod": "Express Shipping",
+          "shippingPrice": 22.5,
+          "products": [
+            {
+              "id": "57b03fa8-69c7-4f07-bb8e-865019f4567d",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 7.5,
+          "grandTotal": 422.5,
+          "sharedWith": [
+            {
+              "id": "1c527d70-1cb8-4810-a8dc-c633b7ff2484",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 400,
+              "paidTime": "2024-08-15T10:28:37.569Z"
+            },
+            {
+              "id": "344ac96e-1e6e-4bcc-9e24-a0738b09f686",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 30,
+              "paidTime": "2024-08-15T10:29:00.519Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_voy9thf",
+          "fullname": "dád",
+          "street": "adsđas",
+          "city": "adsadá",
+          "region": "afr",
+          "postalcode": "ađấ",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "1061d46b-1652-4f16-b9c2-b35ef54860c9",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "50766655-14ef-4c7b-8494-e6a243f70829",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 500,
+              "paidTime": "2024-08-15T10:29:33.674Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_t6dk9wz",
+          "fullname": "áđấ",
+          "street": "sadsđấ",
+          "city": "adsadsadsa",
+          "region": "afr",
+          "postalcode": "adsda",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "79f9dfe1-f103-477e-b259-bcfeb98ff28e",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 1607.5,
+          "sharedWith": [
+            {
+              "id": "bf73604a-61fe-41b6-96c4-d9eb00c9c32b",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 1700,
+              "paidTime": "2024-08-15T10:38:05.711Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_0z7xrc0",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "5477da72-b167-4bf5-b5c2-51bce8971c1e",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "3cc5b194-c7f8-4a57-8e2c-a74b79f53acc",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 400,
+              "paidTime": "2024-08-15T10:40:41.606Z"
+            },
+            {
+              "id": "b1a0f774-719c-453f-bb8a-8fc4460aa1be",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 8,
+              "paidTime": "2024-08-15T10:40:53.783Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_14wrdw5",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "afr",
+          "postalcode": "94043",
+          "shippingMethod": "",
+          "shippingPrice": 0,
+          "products": [
+            {
+              "id": "9fc12220-08df-46e7-946d-a2b276b2af01",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 0,
+          "grandTotal": 400,
+          "sharedWith": [
+            {
+              "id": "a3a49daf-1e42-4903-8c73-739ce9b645a1",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 200,
+              "paidTime": "2024-08-15T10:56:35.664Z"
+            },
+            {
+              "id": "5f7adf02-abdb-402c-a023-43e622a947c8",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 200,
+              "paidTime": "2024-08-15T10:57:42.076Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_qy3enva",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "",
+          "shippingPrice": 0,
+          "products": [
+            {
+              "id": "e2a38b98-c70b-45dd-9264-f72b0f90c00f",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 100,
+          "grandTotal": 1200,
+          "sharedWith": [
+            {
+              "id": "66188a25-5d7c-467a-a63f-203a45233500",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 1000,
+              "paidTime": "2024-08-15T10:59:00.886Z"
+            },
+            {
+              "id": "31724943-e5e0-44fe-b686-83feca5db6f7",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 300,
+              "paidTime": "2024-08-15T10:59:11.827Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_hw64pus",
+          "fullname": "Nguyen Tuan Minh",
+          "street": "vietnam",
+          "city": "vietnam",
+          "region": "sea",
+          "postalcode": "111111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "0089bac9-d8ee-4db4-8f5f-e445a840860c",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 1207.5,
+          "sharedWith": [
+            {
+              "id": "31fd473c-12f0-4a4c-a588-05958cd9e44b",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 0,
+              "paidTime": "2024-08-15T11:01:13.978Z"
+            },
+            {
+              "id": "0288f335-06f7-4fb7-8ea5-aefd271c96ed",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 1300,
+              "paidTime": "2024-08-15T11:01:21.068Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_ar5eud4",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "3ffaf7bb-3ca4-4ac0-ada6-723b6cf088b8",
+              "quantity": 1,
+              "productId": "2",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/61nzbNdA7hL.jpg",
+              "name": "Smartphone Y2",
+              "price": 800,
+              "salePrice": 750
+            }
+          ],
+          "change": 42.5,
+          "grandTotal": 757.5,
+          "sharedWith": [
+            {
+              "id": "63661874-84e3-460b-828f-b333400a4e90",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 700,
+              "paidTime": "2024-08-16T02:24:41.243Z"
+            },
+            {
+              "id": "c9176a26-3d0c-403f-9e1e-9d0197353804",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 100,
+              "paidTime": "2024-08-16T02:25:07.394Z"
+            }
+          ]
         }
       ]
     },
@@ -5172,7 +6832,7 @@
   ],
   "cart": [
     {
-      "id": "81d3ad33-047b-402a-b2f9-0fd2e5fba0c9",
+      "id": "9c75d8e4-f1c6-4340-a369-4ec6a565c434",
       "quantity": 1,
       "productId": "6",
       "color": "Black",
@@ -8675,7 +10335,11 @@
       "releaseDate": "2024-07-01",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/blog1.png",
-      "tags": ["electric", "phone", "music"],
+      "tags": [
+        "electric",
+        "phone",
+        "music"
+      ],
       "content": "As the world faces the challenges of climate change and dwindling fossil fuel reserves, green energy emerges as a beacon of hope. Renewable energy sources are becoming increasingly vital in our quest for a sustainable future.\n\n**2. Solar Power**\nSolar energy is one of the most abundant and accessible sources of green energy. Advances in solar panel technology and energy storage solutions have made it more efficient and affordable for both residential and commercial use.\n\n**3. Wind Energy**\nWind power is another key player in the green energy sector. With the development of larger and more efficient turbines, wind farms are generating substantial amounts of clean electricity, contributing significantly to the global energy mix.\n\n**4. Hydropower**\nHydropower, one of the oldest forms of renewable energy, continues to be a reliable and significant source of power. Innovations in small-scale hydro projects and pumped storage are enhancing its role in sustainable energy production.\n\n**5. Biomass Energy**\nBiomass energy, derived from organic materials, offers a versatile and renewable option for energy production. Advances in biofuel technology are making it a more viable alternative to traditional fossil fuels.\n\n**6. Geothermal Energy**\nGeothermal energy harnesses the Earth's internal heat to generate power. With new drilling techniques and improved technology, geothermal energy is becoming a more accessible and efficient renewable energy source.\n\n**7. Challenges and Solutions**\nDespite the progress, the transition to green energy faces challenges such as high initial costs, storage issues, and grid integration. However, ongoing research and development are paving the way for overcoming these obstacles, making renewable energy more practical and widespread.\n\n**8. The Role of Policy and Investment**\nGovernment policies and investments play a crucial role in promoting green energy. Incentives, subsidies, and international cooperation are essential for accelerating the adoption of renewable energy technologies and infrastructure.\n\n**Conclusion**\nThe shift towards green energy is not only essential for environmental sustainability but also for economic resilience and energy security. By embracing renewable energy sources, we can ensure a cleaner, greener future for generations to come."
     },
     {
@@ -8685,7 +10349,13 @@
       "releaseDate": "2024-07-02",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/blog2.png",
-      "tags": ["headphone", "phone", "music", "accesories", "hifi"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "hifi"
+      ],
       "content": "Electric vehicles (EVs) are transforming the automotive industry, offering a sustainable alternative to traditional gasoline-powered cars. With advancements in battery technology and a growing charging infrastructure, EVs are becoming more accessible and practical for everyday use.\n\n**2. Advantages of EVs**\nEVs produce zero emissions, reducing air pollution and dependence on fossil fuels. They also offer lower operating costs, as electricity is cheaper than gasoline and EVs require less maintenance.\n\n**3. Challenges in Adoption**\nDespite their benefits, EVs face challenges such as limited range, long charging times, and higher upfront costs. However, ongoing research and development are addressing these issues, making EVs more viable for a wider audience.\n\n**4. Government Incentives**\nMany governments are offering incentives to promote EV adoption, including tax credits, rebates, and investment in charging infrastructure. These measures are helping to accelerate the transition to electric transportation.\n\n**5. The Role of Automakers**\nAutomakers are investing heavily in EV technology, developing new models with longer ranges and faster charging capabilities. Collaborations with technology companies are also driving innovation in the EV market.\n\n**6. Future Trends**\nThe future of EVs looks promising, with trends such as autonomous driving, vehicle-to-grid technology, and wireless charging on the horizon. These advancements will further enhance the convenience and sustainability of electric transportation.\n\n**Conclusion**\nElectric vehicles are poised to play a crucial role in the future of transportation. By overcoming current challenges and embracing new technologies, EVs can lead the way to a cleaner, more sustainable future."
     },
     {
@@ -8695,7 +10365,13 @@
       "releaseDate": "2024-07-03",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/blog3.png",
-      "tags": ["headphone", "phone", "music", "accesories", "hifi"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "hifi"
+      ],
       "content": "Artificial Intelligence (AI) is revolutionizing healthcare by improving diagnostics, treatment planning, and patient care. AI algorithms can analyze vast amounts of data quickly and accurately, leading to more effective and personalized healthcare solutions.\n\n**2. AI in Diagnostics**\nAI-powered diagnostic tools can identify diseases and conditions from medical images with high accuracy. This technology is particularly useful in radiology, dermatology, and pathology, where early detection is critical.\n\n**3. Treatment Planning**\nAI can assist in creating personalized treatment plans based on a patient's medical history, genetic information, and current health status. This approach can lead to more effective treatments with fewer side effects.\n\n**4. Patient Care**\nAI-powered chatbots and virtual assistants can provide patients with instant access to medical information and support, improving patient engagement and satisfaction. These tools can also help healthcare providers manage patient inquiries and appointments more efficiently.\n\n**5. Challenges and Considerations**\nWhile AI offers significant benefits, it also raises ethical and privacy concerns. Ensuring the security of patient data and maintaining transparency in AI decision-making processes are critical for building trust in AI-powered healthcare solutions.\n\n**6. Future of AI in Healthcare**\nThe future of AI in healthcare looks promising, with ongoing advancements in machine learning, natural language processing, and robotics. These technologies will continue to enhance healthcare delivery, making it more efficient, accurate, and patient-centered.\n\n**Conclusion**\nAI is transforming healthcare by providing innovative solutions for diagnostics, treatment planning, and patient care. By addressing ethical and privacy concerns and embracing new technologies, AI can lead to a more effective and personalized healthcare system."
     },
     {
@@ -8705,7 +10381,13 @@
       "releaseDate": "2024-07-04",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/greenscreen.png",
-      "tags": ["headphone", "phone", "music", "accesories", "story"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "story"
+      ],
       "content": "Blockchain technology, best known for underpinning cryptocurrencies like Bitcoin, has far-reaching applications beyond digital currencies. Its decentralized, secure, and transparent nature makes it ideal for various industries, including finance, supply chain, and healthcare.\n\n**2. Financial Services**\nBlockchain can streamline financial transactions by eliminating intermediaries, reducing costs, and increasing transaction speed. It also enhances security and transparency, reducing the risk of fraud.\n\n**3. Supply Chain Management**\nBlockchain enables real-time tracking of goods and materials throughout the supply chain. This transparency helps prevent counterfeiting, ensures product authenticity, and improves efficiency in logistics.\n\n**4. Healthcare**\nBlockchain can securely store and share patient medical records, ensuring data integrity and privacy. It also facilitates seamless communication between healthcare providers, improving patient care and coordination.\n\n**5. Smart Contracts**\nSmart contracts are self-executing contracts with the terms directly written into code. They automatically enforce agreements when predefined conditions are met, reducing the need for intermediaries and increasing efficiency.\n\n**6. Challenges and Limitations**\nDespite its potential, blockchain faces challenges such as scalability, energy consumption, and regulatory uncertainty. Ongoing research and development are addressing these issues, making blockchain more viable for widespread adoption.\n\n**Future of Blockchain**\nThe future of blockchain technology is promising, with potential applications in voting systems, intellectual property, and the Internet of Things (IoT). As the technology matures, it will continue to revolutionize various industries, offering new opportunities for innovation and efficiency.\n\n**Conclusion**\nBlockchain technology has the potential to transform multiple industries by providing secure, transparent, and efficient solutions. By addressing current challenges and exploring new applications, blockchain can lead to a more decentralized and trustworthy digital world."
     },
     {
@@ -8715,7 +10397,13 @@
       "releaseDate": "2024-07-05",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/ip14.png",
-      "tags": ["headphone", "phone", "music", "accesories", "hifi"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "hifi"
+      ],
       "content": "The rollout of 5G technology is set to revolutionize communication, offering faster speeds, lower latency, and greater connectivity. This next-generation wireless technology will impact various industries, including telecommunications, healthcare, and manufacturing.\n\n**2. Enhanced Mobile Connectivity**\n5G provides significantly faster download and upload speeds compared to previous generations, enabling seamless streaming, gaming, and real-time communication. This enhanced connectivity will improve user experiences and drive innovation in mobile applications.\n\n**3. Internet of Things (IoT)**\n5G will enable the widespread adoption of IoT devices by providing the necessary bandwidth and low latency for real-time data exchange. This connectivity will support smart cities, autonomous vehicles, and industrial automation, leading to increased efficiency and innovation.\n\n**4. Healthcare Applications**\n5G will transform healthcare by enabling remote monitoring, telemedicine, and robotic surgeries. High-speed, low-latency connections will allow for real-time data transmission and communication, improving patient outcomes and access to care.\n\n**5. Manufacturing and Industry 4.0**\n5G will drive the next industrial revolution by supporting advanced manufacturing technologies such as robotics, AI, and IoT. This connectivity will enable real-time monitoring, predictive maintenance, and efficient resource management, increasing productivity and reducing costs.\n\n**6. Challenges and Considerations**\nThe deployment of 5G faces challenges such as high infrastructure costs, spectrum allocation, and security concerns. Addressing these challenges will require collaboration between governments, telecom companies, and technology providers.\n\n**Future of 5G**\nThe future of 5G technology is promising, with potential applications in augmented reality (AR), virtual reality (VR), and immersive experiences. As 5G networks expand, they will continue to drive innovation and transform various industries.\n\n**Conclusion**\n5G technology is poised to revolutionize communication and connectivity across multiple industries. By overcoming current challenges and embracing new applications, 5G can lead to a more connected, efficient, and innovative future."
     },
     {
@@ -8725,7 +10413,13 @@
       "releaseDate": "2024-07-06",
       "readTime": "7 mins read",
       "image": "/assets/images/blog/blog1.png",
-      "tags": ["headphone", "phone", "music", "accesories", "hifi"],
+      "tags": [
+        "headphone",
+        "phone",
+        "music",
+        "accesories",
+        "hifi"
+      ],
       "content": "Artificial Intelligence (AI) has evolved significantly since its inception, transforming from a theoretical concept to a practical tool with wide-ranging applications. This evolution has been driven by advances in machine learning, data processing, and computational power.\n\n**2. Early Development**\nThe early development of AI focused on creating systems that could mimic human intelligence, such as early neural networks and expert systems. These foundational concepts laid the groundwork for modern AI technologies.\n\n**3. Machine Learning**\nMachine learning, a subset of AI, has been a key driver of AI's evolution. By enabling systems to learn from data and improve over time, machine learning has led to significant advancements in natural language processing, computer vision, and predictive analytics.\n\n**4. Deep Learning**\nDeep learning, a more advanced form of machine learning, uses neural networks with multiple layers to process complex data. This technology has revolutionized fields such as image recognition, speech synthesis, and autonomous driving.\n\n**5. AI in Everyday Life**\nAI is now integrated into many aspects of our daily lives, from virtual assistants like Siri and Alexa to recommendation algorithms on streaming services and social media platforms. These applications enhance convenience, personalization, and efficiency.\n\n**6. Ethical Considerations**\nAs AI continues to evolve, it raises important ethical questions about privacy, bias, and accountability. Ensuring that AI systems are developed and deployed responsibly is critical for maintaining public trust and maximizing the benefits of AI technology.\n\n**Future of AI**\nThe future of AI holds exciting possibilities, including advancements in quantum computing, AI-driven healthcare solutions, and more sophisticated autonomous systems. Continued research and innovation will drive the next wave of AI evolution, shaping the future of technology and society.\n\n**Conclusion**\nThe evolution of AI has transformed it from a theoretical concept to a practical tool with wide-ranging applications. By addressing ethical considerations and embracing new advancements, AI can continue to enhance our lives and drive innovation across various industries."
     }
   ],
