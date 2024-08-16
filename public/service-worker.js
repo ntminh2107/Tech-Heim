@@ -70,17 +70,10 @@ self.addEventListener("message", async (event) => {
     const data = await res.json();
     const { title, message, userIDs } = data;
     event.waitUntil(
-      clients.matchAll({ type: "window" }).then((windowClients) => {
-        windowClients.forEach((client) => {
-          client.postMessage({ title, message, userIDs });
-          if (userIDs.some((user) => user.id === client.id)) {
-            self.registration.showNotification(title, {
-              body: message,
-              icon: "/assets/icons/device/audio_icon.svg",
-              tag: id,
-            });
-          }
-        });
+      self.registration.showNotification(title, {
+        body: message,
+        icon: "/assets/icons/device/audio_icon.svg",
+        tag: id,
       })
     );
   } catch (err) {

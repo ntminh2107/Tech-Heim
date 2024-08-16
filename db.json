@@ -221,6 +221,75 @@
           "id": "1"
         }
       ]
+    },
+    {
+      "id": "ddf6512f-c08f-459d-a3f5-3e5284c7d6a2",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-16T02:47:21.837Z",
+      "userIDs": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "0545e3a1-e7df-42fa-bcdb-ed00624f8a8c",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-16T02:49:09.968Z",
+      "userIDs": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "48989d70-516d-4181-b3d0-e015c93453ef",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-16T02:50:38.305Z",
+      "userIDs": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "9de5890a-9d32-4dc8-9acf-9b49056e52f1",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-16T02:53:44.417Z",
+      "userIDs": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "e152ecb7-38e8-4129-81ea-8fb0fad2819b",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-16T03:07:11.920Z",
+      "userIDs": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "8ca6ba5b-b95a-47cb-91bb-c6dcc05e11e7",
+      "title": "Order Complete",
+      "message": "Your Order is successfully paid!!!!!",
+      "date": "2024-08-16T03:07:59.445Z",
+      "userIDs": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "d8c74e0d-7511-48fe-8b05-11569c06a9bf"
+        }
+      ]
     }
   ],
   "product-category": [
@@ -3489,6 +3558,224 @@
           "paidTime": "2024-08-16T02:32:50.918Z"
         }
       ]
+    },
+    {
+      "id": "txn_tvktio7",
+      "userId": "1",
+      "fullname": "Jon Stewart Doe",
+      "street": "1600 Amphitheatre Parkway",
+      "city": "Mountain View",
+      "region": "afr",
+      "postalcode": "94043",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "9c75d8e4-f1c6-4340-a369-4ec6a565c434",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1207.5,
+      "depositAmount": 1300,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "4ffd3484-120f-4d50-8efa-08dfa5ebcb24",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 1300,
+          "paidTime": "2024-08-16T02:47:21.808Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_6x6rs5u",
+      "userId": "1",
+      "fullname": "Gottfried Wilhelm Leibniz",
+      "street": "Erika-Mann-Straße 33",
+      "city": "München",
+      "region": "afr",
+      "postalcode": "80636",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "40236c07-3f99-4136-b5e8-409a593e9085",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 500,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "6d9244cb-faad-4654-87d3-f91970eaf52a",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 500,
+          "paidTime": "2024-08-16T02:49:09.942Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_xmxmrc1",
+      "userId": "1",
+      "fullname": "Gottfried Wilhelm Leibniz",
+      "street": "Erika-Mann-Straße 33",
+      "city": "München",
+      "region": "afr",
+      "postalcode": "80636",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "5236609c-e4a0-4032-8b14-ff3ee32491d6",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1207.5,
+      "depositAmount": 1300,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "e287599f-633a-46c7-9bde-273f1345f6c3",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 1300,
+          "paidTime": "2024-08-16T02:50:38.273Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_5max0q4",
+      "userId": "1",
+      "fullname": "Jon Stewart Doe",
+      "street": "1600 Amphitheatre Parkway",
+      "city": "Mountain View",
+      "region": "afr",
+      "postalcode": "94043",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "9a756cee-0b33-487f-9101-8f8b696cc7ea",
+          "quantity": 1,
+          "productId": "6",
+          "color": "Black",
+          "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+          "name": "Camera C3",
+          "price": 1200
+        }
+      ],
+      "totalAmount": 1207.5,
+      "depositAmount": 1300,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "c0588fad-7b21-462f-8bf2-e7956b3cf33b",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 1300,
+          "paidTime": "2024-08-16T02:53:44.384Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_mw2qeo4",
+      "userId": "1",
+      "fullname": "Nguyen van thuan",
+      "street": "số 9 tt5.2 khu đô thị Ao Sào",
+      "city": "Hanoi",
+      "region": "afr",
+      "postalcode": "11111",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "52bf8f06-d8f4-40c4-86df-22eeb0127831",
+          "quantity": 1,
+          "productId": "16",
+          "color": "Black",
+          "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+          "name": "Camera Lens M13",
+          "price": 400
+        }
+      ],
+      "totalAmount": 407.5,
+      "depositAmount": 500,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "44e8b9b4-08e3-48e4-857d-9c970a43f990",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 500,
+          "paidTime": "2024-08-16T03:07:11.884Z"
+        }
+      ]
+    },
+    {
+      "id": "txn_mvz1vlt",
+      "userId": "1",
+      "fullname": "Jon Stewart Doe",
+      "street": "1600 Amphitheatre Parkway",
+      "city": "Mountain View",
+      "region": "sea",
+      "postalcode": "94043",
+      "shippingMethod": "Regular Shipping",
+      "shippingPrice": 7.5,
+      "Products": [
+        {
+          "id": "6486a1dc-7483-4047-b4f0-c4f6eae990e7",
+          "quantity": 1,
+          "productId": "7",
+          "color": "Silver",
+          "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+          "name": "Desktop D4",
+          "price": 1800,
+          "salePrice": 1600
+        }
+      ],
+      "totalAmount": 1607.5,
+      "depositAmount": 1608,
+      "isPaid": true,
+      "sharedWith": [],
+      "payments": [
+        {
+          "id": "16fbc3ff-ff17-4eb3-bcce-76466e327e51",
+          "userId": "1",
+          "fullname": "Juliet Oma",
+          "amountPaid": 1600,
+          "paidTime": "2024-08-16T03:07:49.564Z"
+        },
+        {
+          "id": "e8beee4e-0a91-4610-bbae-580c49b17290",
+          "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+          "fullname": "Jimmy Smith",
+          "amountPaid": 8,
+          "paidTime": "2024-08-16T03:07:59.421Z"
+        }
+      ]
     }
   ],
   "users": [
@@ -5422,6 +5709,206 @@
               "paidTime": "2024-08-16T02:32:50.918Z"
             }
           ]
+        },
+        {
+          "id": "txn_tvktio7",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "afr",
+          "postalcode": "94043",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "9c75d8e4-f1c6-4340-a369-4ec6a565c434",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 1207.5,
+          "sharedWith": [
+            {
+              "id": "4ffd3484-120f-4d50-8efa-08dfa5ebcb24",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1300,
+              "paidTime": "2024-08-16T02:47:21.808Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_6x6rs5u",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "40236c07-3f99-4136-b5e8-409a593e9085",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "6d9244cb-faad-4654-87d3-f91970eaf52a",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 500,
+              "paidTime": "2024-08-16T02:49:09.942Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_xmxmrc1",
+          "fullname": "Gottfried Wilhelm Leibniz",
+          "street": "Erika-Mann-Straße 33",
+          "city": "München",
+          "region": "afr",
+          "postalcode": "80636",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "5236609c-e4a0-4032-8b14-ff3ee32491d6",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 1207.5,
+          "sharedWith": [
+            {
+              "id": "e287599f-633a-46c7-9bde-273f1345f6c3",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1300,
+              "paidTime": "2024-08-16T02:50:38.273Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_5max0q4",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "afr",
+          "postalcode": "94043",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "9a756cee-0b33-487f-9101-8f8b696cc7ea",
+              "quantity": 1,
+              "productId": "6",
+              "color": "Black",
+              "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
+              "name": "Camera C3",
+              "price": 1200
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 1207.5,
+          "sharedWith": [
+            {
+              "id": "c0588fad-7b21-462f-8bf2-e7956b3cf33b",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1300,
+              "paidTime": "2024-08-16T02:53:44.384Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_mw2qeo4",
+          "fullname": "Nguyen van thuan",
+          "street": "số 9 tt5.2 khu đô thị Ao Sào",
+          "city": "Hanoi",
+          "region": "afr",
+          "postalcode": "11111",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "52bf8f06-d8f4-40c4-86df-22eeb0127831",
+              "quantity": 1,
+              "productId": "16",
+              "color": "Black",
+              "image": "https://vn.canon/media/image/2023/10/04/7e87d9f1109e44dda380b24e785c5163_RF10-20mm+f4L+IS+STM+Front+Slant+02.png",
+              "name": "Camera Lens M13",
+              "price": 400
+            }
+          ],
+          "change": 92.5,
+          "grandTotal": 407.5,
+          "sharedWith": [
+            {
+              "id": "44e8b9b4-08e3-48e4-857d-9c970a43f990",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 500,
+              "paidTime": "2024-08-16T03:07:11.884Z"
+            }
+          ]
+        },
+        {
+          "id": "txn_mvz1vlt",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "sea",
+          "postalcode": "94043",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "6486a1dc-7483-4047-b4f0-c4f6eae990e7",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1607.5,
+          "sharedWith": [
+            {
+              "id": "16fbc3ff-ff17-4eb3-bcce-76466e327e51",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1600,
+              "paidTime": "2024-08-16T03:07:49.564Z"
+            },
+            {
+              "id": "e8beee4e-0a91-4610-bbae-580c49b17290",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 8,
+              "paidTime": "2024-08-16T03:07:59.421Z"
+            }
+          ]
         }
       ]
     },
@@ -6812,6 +7299,46 @@
               "paidTime": "2024-08-16T02:25:07.394Z"
             }
           ]
+        },
+        {
+          "id": "txn_mvz1vlt",
+          "fullname": "Jon Stewart Doe",
+          "street": "1600 Amphitheatre Parkway",
+          "city": "Mountain View",
+          "region": "sea",
+          "postalcode": "94043",
+          "shippingMethod": "Regular Shipping",
+          "shippingPrice": 7.5,
+          "products": [
+            {
+              "id": "6486a1dc-7483-4047-b4f0-c4f6eae990e7",
+              "quantity": 1,
+              "productId": "7",
+              "color": "Silver",
+              "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+              "name": "Desktop D4",
+              "price": 1800,
+              "salePrice": 1600
+            }
+          ],
+          "change": 0.5,
+          "grandTotal": 1607.5,
+          "sharedWith": [
+            {
+              "id": "16fbc3ff-ff17-4eb3-bcce-76466e327e51",
+              "userId": "1",
+              "fullname": "Juliet Oma",
+              "amountPaid": 1600,
+              "paidTime": "2024-08-16T03:07:49.564Z"
+            },
+            {
+              "id": "e8beee4e-0a91-4610-bbae-580c49b17290",
+              "userId": "d8c74e0d-7511-48fe-8b05-11569c06a9bf",
+              "fullname": "Jimmy Smith",
+              "amountPaid": 8,
+              "paidTime": "2024-08-16T03:07:59.421Z"
+            }
+          ]
         }
       ]
     },
@@ -6832,13 +7359,14 @@
   ],
   "cart": [
     {
-      "id": "9c75d8e4-f1c6-4340-a369-4ec6a565c434",
+      "id": "6486a1dc-7483-4047-b4f0-c4f6eae990e7",
       "quantity": 1,
-      "productId": "6",
-      "color": "Black",
-      "image": "https://m.media-amazon.com/images/I/51VM-M2T0DL._AC_UF894,1000_QL80_.jpg",
-      "name": "Camera C3",
-      "price": 1200
+      "productId": "7",
+      "color": "Silver",
+      "image": "https://m.media-amazon.com/images/I/61qplm+4S3L.jpg",
+      "name": "Desktop D4",
+      "price": 1800,
+      "salePrice": 1600
     }
   ],
   "instalment": [

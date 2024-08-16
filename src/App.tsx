@@ -18,6 +18,7 @@ import {
   cleanUpServiceWorker,
   initServiceWorker,
   receiveMSG,
+  receiveNotification,
 } from "./utils/serviceWorkerUtils";
 const Complete = lazy(() => import("./pages/redirect/Complete"));
 
@@ -52,13 +53,14 @@ const LayoutWithBreadCrumb = () => {
 
 function App() {
   useEffect(() => {
+    receiveNotification();
     initServiceWorker();
     receiveMSG();
 
     return () => {
       cleanUpServiceWorker();
     };
-  }, [receiveMSG]);
+  }, [receiveMSG()]);
   return (
     <ConfigProvider
       theme={{
