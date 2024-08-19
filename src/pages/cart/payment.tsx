@@ -144,10 +144,7 @@ const Payments = () => {
         })),
       };
       dispatch(addNotificationThunk(newNotification));
-      setNotification(newNotification.id);
       console.log(newNotification.id);
-      // dispatch(addNotificationThunk(newNotification));
-      sendMessageToSW({ id: newNotification.id });
 
       const updatedUserBills = async () => {
         const updateUserPromise = orderToBill.payments.map(async (payment) => {
@@ -183,17 +180,14 @@ const Payments = () => {
       toast.warn("done");
       // navigate("/redirect-to-homepage");
 
-      // setTimeout(() => navigate("/redirect-to-homepage"), 5000);
+      setTimeout(() => navigate("/redirect-to-homepage"), 2000);
       // handleOpenSuccessModal(true);
     } else {
       const orderLink = `${window.location.origin}/payment/${orderId}`;
       navigator.clipboard.writeText(orderLink).then(() => {
         alert("Payment link copied to clipboard!");
       });
-      // navigate("/redirect-to-homepage");
-      const updatedUser = updatedOrder.payments.map(
-        (payment) => payment.userId
-      );
+      navigate("/redirect-to-homepage");
     }
   };
 

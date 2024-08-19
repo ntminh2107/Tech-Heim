@@ -2,20 +2,30 @@ import { toast } from "react-toastify";
 
 export const initServiceWorker = async () => {
   if (!("serviceWorker" in navigator)) {
-    console.warn("Service Worker is not supported in this browser.");
+    console.warn("[swUtil] Service Worker is not supported in this browser.");
     return;
   }
   try {
     const registration = await navigator.serviceWorker.register(
       "/service-worker.js"
     );
-    console.log("Service Worker registered with scope:", registration.scope);
+    console.log(
+      "[swUtil] Service Worker registered with scope:",
+      registration.scope
+    );
     Notification.requestPermission(function (status) {
-      console.log("Notification permission status:", status);
+      console.log("[swUtil] Notification permission status:", status);
     });
+    const currentUser = localStorage.getItem("token");
+    navigator.serviceWorker.controller?.postMessage({
+      type: "SET_USER",
+      token: currentUser,
+    });
+    console.log(`[swUtil] post token: ${currentUser} complete`);
+
     return registration.update();
   } catch (error) {
-    console.error("Service Worker registration failed:", error);
+    console.error("[swUtil] Service Worker registration failed:", error);
   }
 };
 
@@ -42,29 +52,11 @@ export const handleServiceWorkerMessage = (
 
 export const sendMessageToSW = (message: { id: string }) => {
   if (navigator.serviceWorker.controller) {
-    console.log("Sending message to Service Worker:", message);
+    console.log("[swUtil] Sending message to Service Worker:", message);
     navigator.serviceWorker.controller.postMessage(message);
   } else {
     console.warn("No active Service Worker controller found.");
   }
-};
-
-export const receiveMSG = async () => {
-  navigator.serviceWorker.addEventListener("message", (event) => {
-    const { title, message, userIDs } = event.data;
-    console.log("pass", title, message, userIDs);
-    // handleServiceWorkerMessage(title, message, userIDs);
-    Notification.requestPermission().then((result) => {
-      if (result === "granted") {
-        navigator.serviceWorker.ready.then((registration) => {
-          registration.showNotification(title, {
-            body: message,
-            vibrate: [200, 100, 200, 100, 200, 100, 200],
-          });
-        });
-      }
-    });
-  });
 };
 
 export const cleanUpServiceWorker = () => {
@@ -76,6 +68,4 @@ export const receiveNotification = async () => {
     console.log("notification permission denied");
     return;
   }
-  const registration = await navigator.serviceWorker.getRegistration();
-  registration?.showNotification("Notification without Push API");
 };

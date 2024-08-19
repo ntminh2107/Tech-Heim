@@ -17,7 +17,6 @@ import "react-toastify/dist/ReactToastify.css";
 import {
   cleanUpServiceWorker,
   initServiceWorker,
-  receiveMSG,
   receiveNotification,
 } from "./utils/serviceWorkerUtils";
 const Complete = lazy(() => import("./pages/redirect/Complete"));
@@ -55,12 +54,11 @@ function App() {
   useEffect(() => {
     receiveNotification();
     initServiceWorker();
-    receiveMSG();
 
     return () => {
       cleanUpServiceWorker();
     };
-  }, [receiveMSG()]);
+  });
   return (
     <ConfigProvider
       theme={{
