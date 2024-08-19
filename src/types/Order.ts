@@ -25,3 +25,11 @@ export type Payment = {
   amountPaid: number;
   paidTime: string;
 };
+
+export type Notification = {
+  id: string;
+  title: string;
+  message: string;
+  date: string;
+  userIDs: { id: string | number }[];
+};
