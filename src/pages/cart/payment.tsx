@@ -27,7 +27,7 @@ import { v4 as uuidv4 } from "uuid";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import { Bill, User } from "../../types/User";
 import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
-import { sendMessageToSW } from "../../utils/serviceWorkerUtils";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -47,7 +47,6 @@ const Payments = () => {
   const [orderData, setOrderData] = useState<Order | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [paidAmount, setPaidAmount] = useState<number>(0);
-  const [notification, setNotification] = useState<string>();
 
   useEffect(() => {
     if (orderId) {
