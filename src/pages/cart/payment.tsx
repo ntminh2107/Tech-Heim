@@ -19,14 +19,15 @@ import {
   paidOrderThunk,
   getOrderDetailThunk,
   getUserDetailThunk,
+  addNotificationThunk,
 } from "../../redux/slice/orderSlice";
 
-import { Order, Payment } from "../../types/Order";
+import { Order, Payment, Notification } from "../../types/Order";
 import { v4 as uuidv4 } from "uuid";
 import PaymentCard from "../../components/molecules/payment/PaymentCard";
 import { Bill, User } from "../../types/User";
 import { addPaymentCardAndOrderThunk } from "../../redux/slice/authSlice";
-import { sendMessageToSW } from "../../utils/serviceWorketUtils";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -44,9 +45,8 @@ const Payments = () => {
   const navigate = useNavigate();
 
   const [orderData, setOrderData] = useState<Order | null>(null);
-  const [loading, setLoading] = useState<boolean>(true); // Loading state
+  const [loading, setLoading] = useState<boolean>(true);
   const [paidAmount, setPaidAmount] = useState<number>(0);
-  // State cho số tiền thanh toán
 
   useEffect(() => {
     if (orderId) {
@@ -133,6 +133,18 @@ const Payments = () => {
         sharedWith: orderToBill.payments,
       };
 
+      const newNotification: Notification = {
+        id: uuidv4(),
+        title: "Order Complete",
+        message: "Your Order is successfully paid!!!!!",
+        date: new Date().toISOString(),
+        userIDs: orderToBill.payments.map((payment) => ({
+          id: payment.userId,
+        })),
+      };
+      dispatch(addNotificationThunk(newNotification));
+      console.log(newNotification.id);
+
       const updatedUserBills = async () => {
         const updateUserPromise = orderToBill.payments.map(async (payment) => {
           const userResponse = await dispatch(
@@ -165,55 +177,29 @@ const Payments = () => {
 
       dispatch(clearCartItemThunk());
       toast.warn("done");
+      // navigate("/redirect-to-homepage");
+
+      setTimeout(() => navigate("/redirect-to-homepage"), 2000);
       // handleOpenSuccessModal(true);
     } else {
       const orderLink = `${window.location.origin}/payment/${orderId}`;
       navigator.clipboard.writeText(orderLink).then(() => {
         alert("Payment link copied to clipboard!");
       });
-      const updatedUser = updatedOrder.payments.map(
-        (payment) => payment.userId
-      );
-      if (updatedUser.includes(currentUser.id)) {
-        // navigate("/redirect-to-homepage");
-      } else {
-        alert("something wents wrong, pls try again");
-      }
+      navigate("/redirect-to-homepage");
     }
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (orderId) {
-        dispatch(getOrderDetailThunk(orderId));
-      }
-      const currentUser = localStorage.getItem("token") as string | number;
-      const userIds = detailOrder?.payments.map(
-        (Payment) => Payment.userId
-      ) as (string | number)[];
-      const currentOrder = detailOrder;
-      console.log(currentOrder?.isPaid);
-      if (currentOrder?.isPaid && userIds.includes(currentUser)) {
-        console.log(userIds.includes(currentUser));
-        sendMessageToSW({
-          title: "Order Completed",
-          message: "Your payment has been successfully completed!",
-          userIds: userIds,
-        });
-        // navigate("/redirect-to-homepage");
-      }
-
-      if (currentOrder?.isPaid && !orderData?.isPaid) {
-        alert("The order has been fully paid!");
-
-        clearInterval(interval);
-      }
-
-      setOrderData(currentOrder || null);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [orderId, orderData, dispatch, detailOrder]);
+    if (orderId) {
+      dispatch(getOrderDetailThunk(orderId));
+    }
+    // const currentOrder = detailOrder;
+    // if (currentOrder?.isPaid && currentOrder && notification) {
+    //   console.log(notification);
+    //   // sendMessageToSW({ id: notification as string });
+    // }
+  }, [dispatch, orderId, detailOrder]);
 
   if (loading) {
     return (

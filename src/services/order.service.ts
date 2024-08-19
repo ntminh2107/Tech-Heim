@@ -1,6 +1,6 @@
 // src/services/order.service.ts
 import axiosClient from "./api.service";
-import { Order } from "../types/Order";
+import { Notification, Order } from "../types/Order";
 import { v4 as uuidv4 } from "uuid";
 import { User } from "../types/User";
 
@@ -73,6 +73,26 @@ export const addBillToUserAPI = ({
 }) => {
   return axiosClient
     .patch(`users/${id}`, user)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const addNotificationAPI = (data: Notification) => {
+  return axiosClient
+    .post(`notification`, data)
+    .then((res) => {
+      const { data, status } = res;
+      return { data, status };
+    })
+    .catch((err) => err);
+};
+
+export const fetchNotificationAPI = (id: string) => {
+  return axiosClient
+    .get(`notification/${id}`)
     .then((res) => {
       const { data, status } = res;
       return { data, status };

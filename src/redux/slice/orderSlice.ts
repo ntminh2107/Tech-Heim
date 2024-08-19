@@ -1,12 +1,14 @@
 import {
   addBillToUserAPI,
+  addNotificationAPI,
   addOrderAPI,
+  fetchNotificationAPI,
   getDetailOrderAPI,
   getOrderAPI,
   getUserAPI,
   paidOrderAPI,
 } from "../../services/order.service";
-import { Order } from "../../types/Order";
+import { Notification, Order } from "../../types/Order";
 import { User } from "../../types/User";
 import { createAppSlice } from "../appSlice";
 
@@ -14,12 +16,14 @@ interface OrderState {
   orders: Order[];
   detailOrder: Order | null;
   user: User | undefined;
+  notification: Notification | null;
 }
 
 const initialState: OrderState = {
   orders: [],
   detailOrder: null,
   user: undefined,
+  notification: null,
 };
 
 export const orderSlice = createAppSlice({
@@ -200,6 +204,64 @@ export const orderSlice = createAppSlice({
         },
       }
     ),
+    addNotificationThunk: create.asyncThunk(
+      async (data: Notification) => {
+        const res = await addNotificationAPI(data);
+        return res;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            notification: data,
+            status: status,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
+    fetchNotificationThunk: create.asyncThunk(
+      async (id: string) => {
+        const res = await fetchNotificationAPI(id);
+        return res;
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true,
+          };
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload;
+          return {
+            ...state,
+            loading: false,
+            notification: data,
+            status: status,
+          };
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false,
+          };
+        },
+      }
+    ),
   }),
 });
 
@@ -210,6 +272,8 @@ export const {
   paidOrderThunk,
   getUserDetailThunk,
   addBillToUserThunk,
+  addNotificationThunk,
+  fetchNotificationThunk,
 } = orderSlice.actions;
 
 export default orderSlice.reducer;
