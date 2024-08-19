@@ -17,8 +17,8 @@ self.addEventListener("message", (event) => {
   console.log(userToken);
 });
 
+let latestId = null;
 const setPooler = async () => {
-  let latestId = null;
   const interval = setInterval(async () => {
     console.log("[service worker] pooling notification...");
     const res = await fetch(`http://localhost:3000/notification?_sort=-date`);
@@ -27,11 +27,12 @@ const setPooler = async () => {
       const data = await res.json();
       console.log(data);
       const { id, title, message, userIDs } = data[0];
-      console.log(
-        `[service worker] received notification\n title: ${title}\n message: ${message}\n these user can be received message: ${userIDs}`
-      );
+
       console.log(userIDs);
       if (id != latestId) {
+        console.log(
+          `[service worker] received notification\n title: ${title}\n message: ${message}\n these user can be received message: ${userIDs}`
+        );
         if (userIDs.some((user) => user.id == userToken)) {
           self.registration.showNotification(title, {
             body: message,
@@ -41,7 +42,6 @@ const setPooler = async () => {
         latestId = id;
       } else {
         console.log("[service worker] no new notification found");
-        clearInterval(interval);
       }
     }
   }, 3000);
