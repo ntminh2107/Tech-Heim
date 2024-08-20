@@ -9600,6 +9600,12 @@
       "fullName": "nguyen van a",
       "password": "Minhmeo389",
       "bill": []
+    },
+    {
+      "id": "85c66e1d-f718-4f0b-9d55-44508301f717",
+      "email": "abc@gmail.com.vn",
+      "fullName": "nguyen tuan minh",
+      "password": "123456"
     }
   ],
   "cart": [
