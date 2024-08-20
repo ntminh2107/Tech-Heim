@@ -22,7 +22,7 @@ const setPooler = async () => {
   const interval = setInterval(async () => {
     console.log("[service worker] pooling notification...");
     const res = await fetch(
-      `https://75dc-222-252-27-212.ngrok-free.app/notification?_sort=-date`
+      `https://1a87-222-252-27-212.ngrok-free.app/notification?_sort=-date`
     );
     console.log(res.status);
     if (res.ok) {
