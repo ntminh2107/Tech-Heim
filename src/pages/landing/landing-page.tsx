@@ -6,11 +6,11 @@ import Banner, {
 } from "../../components/molecules/banner";
 import CategoryHomeList from "../../components/molecules/categoryList";
 import { ProductSale } from "../../components/molecules/product";
-import ListProduct from "../../components/molecules/product/ListProduct";
 import HomeSection from "../../components/organisms/section";
 
 import { RootState } from "../../redux/store";
 import BlogCard from "../../components/atoms/cards/blog/BlogCard";
+import ListProductFromLanding from "../../components/molecules/product/ListProductFromLanding";
 
 const LandingPage = () => {
   const { newProducts, bestSellers, brandList } = useSelector(
@@ -24,20 +24,20 @@ const LandingPage = () => {
       <CategoryHomeList />
       <ProductSale />
       <HomeSection sectionName="New Products" viewAllButton>
-        <ListProduct
+        <ListProductFromLanding
           productList={newProducts}
           className="grid-cols-2 lg:grid-cols-4"
         />
       </HomeSection>
       <SecondBanner />
       <HomeSection sectionName="Best Sellers" viewAllButton>
-        <ListProduct
+        <ListProductFromLanding
           productList={bestSellers}
           className="grid-cols-2 lg:grid-cols-4"
         />
       </HomeSection>
       <HomeSection sectionName="Top Brands" viewAllButton={false}>
-        <div className="flex flex-row overflow-hidden justify-between mb-24">
+        <div className="flex flex-row overflow-hidden justify-between mb-12">
           {brandList.map((brand) => {
             return (
               <div className="w-14 md:w-auto mx-auto" key={brand.id}>
@@ -53,7 +53,7 @@ const LandingPage = () => {
       </HomeSection>
       <ThirdBanner />
       <HomeSection sectionName="Our Blogs" viewAllButton>
-        <div className="flex flex-row gap-6 h-full">
+        <div className="flex flex-col lg:flex-row gap-6 h-full">
           <BlogCard
             className="w-full lg:basis-1/3"
             key={blogsPost[0]?.id}
@@ -65,7 +65,6 @@ const LandingPage = () => {
             content={blogsPost[0]?.content}
             image={blogsPost[0]?.image}
           />
-
           <div className="flex flex-col flex-1 gap-6 basis-2/3 h-fit">
             <BlogCard
               mode="horizontal"

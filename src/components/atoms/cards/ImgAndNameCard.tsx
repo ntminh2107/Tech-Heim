@@ -10,18 +10,18 @@ const ImgAndNameCard = ({ img, name, className }: Props) => {
   return (
     <div
       className={cn(
-        "flex flex-col items-center w-44 rounded-lg shadow-md",
+        "flex flex-col items-center w-[184px] md:w-[200px] rounded-lg shadow-md",
         className
       )}
     >
-      <div className="h-16 md:h-36">
+      <div className="h-16 md:h-20">
         <img
           src={img}
           alt={name}
-          className="object-contain aspect-square w-full h-full pt-2 px-4"
+          className="object-contain aspect-square w-full h-full pt-4 "
         />
       </div>
-      <h5 className="text-sm md:text-base font-inter py-2 text-gray-2D2D2D">
+      <h5 className="text-sm md:text-base font-inter py-4 text-gray-2D2D2D">
         {name}
       </h5>
     </div>

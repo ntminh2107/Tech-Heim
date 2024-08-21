@@ -61,10 +61,10 @@ const CardCart = ({
   };
 
   return (
-    <div className={cn("w-full h-44", className)}>
+    <div className={cn("w-full h-44 bg-gray-F9F9F9", className)}>
       <div className="flex shadow-md rounded-lg overflow-hidden h-full gap-2">
-        <div className="w-2/5">
-          <img className="object-cover h-full w-full" src={image} alt="" />
+        <div className="w-2/5 bg-white">
+          <img className="object-contain h-full w-full" src={image} alt="" />
         </div>
 
         <div className="px-5 py-2 flex flex-col justify-center w-3/5">

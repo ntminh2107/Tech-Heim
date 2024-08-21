@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Product } from "../../../types/Product";
 import { cn } from "../../../utils/utils";
 import ProductCard from "../../atoms/cards/product/ProductCard";
@@ -9,11 +9,11 @@ type Props = {
   className?: string;
 };
 
-const ListProduct = ({ productList, className }: Props) => {
+const ListProductFromLanding = ({ productList, className }: Props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const [productPerPage] = useState(9);
+  const [productPerPage, setProductPerPage] = useState(4);
 
   const indexOfLastProduct = currentPage * productPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productPerPage;
@@ -21,6 +21,23 @@ const ListProduct = ({ productList, className }: Props) => {
     indexOfFirstProduct,
     indexOfLastProduct
   );
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      switch (true) {
+        case screenWidth <= 1000:
+          setProductPerPage(3);
+          break;
+        default:
+          setProductPerPage(4);
+          break;
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const onPageChange = (page: number) => {
     setIsTransitioning(true);
@@ -34,11 +51,11 @@ const ListProduct = ({ productList, className }: Props) => {
     <div>
       <div
         className={cn(
-          `grid gap-6 transition-opacity duration-300 ${
+          `grid gap-6 md:gap-4 transition-opacity duration-300 ${
             isTransitioning ? "opacity-0" : "opacity-100"
           }`,
           className,
-          "grid-cols-2 lg:grid-cols-3"
+          `sm:grid-cols-${productPerPage} md:grid-cols-${productPerPage} lg:grid-cols-4 grid-cols-4`
         )}
       >
         {currentProducts?.map((product) => {
@@ -71,4 +88,4 @@ const ListProduct = ({ productList, className }: Props) => {
   );
 };
 
-export default ListProduct;
+export default ListProductFromLanding;

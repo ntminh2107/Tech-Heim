@@ -40,6 +40,7 @@ const OrderDetailPage = lazy(
 const OrderDetailID = lazy(
   () => import("./pages/account-detail/order/[orderId]")
 );
+const NotFoundPage = lazy(() => import("./pages/404NotFound/notFound"));
 
 const LayoutWithBreadCrumb = () => {
   return (
@@ -72,6 +73,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<LandingPage />} />
+            <Route path="*" element={<NotFoundPage />} />
             <Route path="/" element={<LayoutWithBreadCrumb />}>
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<DetailBlog />} />

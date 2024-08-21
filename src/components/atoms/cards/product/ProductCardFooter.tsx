@@ -44,7 +44,7 @@ const ProductCardFooter = ({ price, rating, salePrice, onClick }: Props) => {
               className="w-4 h-4"
             />
           }
-          className="text-primary border-primary border-2"
+          className="text-primary border-primary border-2 "
           size="middle"
           onClick={onClick}
         >

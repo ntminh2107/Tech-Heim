@@ -58,19 +58,22 @@ const CarouselWithButton = ({
       const screenWidth = window.innerWidth;
       switch (true) {
         case screenWidth < 640:
-          setSlidesToShow(1);
-          break;
-        case screenWidth >= 640 && screenWidth < 768:
-          setSlidesToShow(2);
-          break;
-        case screenWidth >= 768 && screenWidth <= 1024:
           setSlidesToShow(3);
           break;
-        case screenWidth > 1300:
+        case screenWidth >= 640 && screenWidth < 768:
+          setSlidesToShow(slideToShow - 2);
+          break;
+        case screenWidth >= 768 && screenWidth <= 1024:
+          setSlidesToShow(slideToShow - 2);
+          break;
+        case screenWidth > 1024 && screenWidth <= 1200:
+          setSlidesToShow(slideToShow - 1);
+          break;
+        case screenWidth > 1280 && screenWidth <= 1536:
           setSlidesToShow(slideToShow);
           break;
         default:
-          setSlidesToShow(4);
+          setSlidesToShow(5);
           break;
       }
     };
