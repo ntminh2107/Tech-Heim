@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Skeleton } from "antd";
+import { Button } from "antd";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 import CollapseCheckbox from "../../molecules/collapse/Collapse";
@@ -15,7 +15,7 @@ type FilterOptionsProps = {
 };
 
 const FilterOptions = ({ setFilteredProducts }: FilterOptionsProps) => {
-  const { brandList, colorList, productCatList, loading } = useSelector(
+  const { brandList, colorList, productCatList } = useSelector(
     (state: RootState) => state.product
   );
   const location = useLocation();

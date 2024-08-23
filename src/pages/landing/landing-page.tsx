@@ -11,7 +11,7 @@ import HomeSection from "../../components/organisms/section";
 import { RootState } from "../../redux/store";
 import BlogCard from "../../components/atoms/cards/blog/BlogCard";
 import ListProductFromLanding from "../../components/molecules/product/ListProductFromLanding";
-import { Carousel } from "antd";
+
 import BrandCarousel from "../../components/molecules/brandList/BrandCarousel";
 
 const LandingPage = () => {

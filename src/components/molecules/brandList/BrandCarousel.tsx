@@ -1,6 +1,5 @@
 import { Carousel } from "antd";
 import { Brand } from "../../../types/Product";
-import CarouselWithButton from "../../atoms/carousel/CarouselWithButton";
 
 type Props = {
   brand: Brand[];
