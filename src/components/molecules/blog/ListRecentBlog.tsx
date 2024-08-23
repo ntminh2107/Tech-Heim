@@ -6,8 +6,9 @@ import BlogCard from "../../atoms/cards/blog/BlogCard";
 
 type Props = {
   recentBlogList: Blog[];
+  loading: boolean;
 };
-const ListRecentBlog = ({ recentBlogList }: Props) => {
+const ListRecentBlog = ({ recentBlogList, loading }: Props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const blogsPerPage = 4;
@@ -35,6 +36,7 @@ const ListRecentBlog = ({ recentBlogList }: Props) => {
       >
         {currentBlogs.map((blog) => (
           <BlogCard
+            loading={loading}
             key={blog.id}
             id={blog.id}
             mode="horizontal"

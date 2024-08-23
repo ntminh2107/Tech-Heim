@@ -11,12 +11,12 @@ const ProductSale = () => {
 
   return (
     <section className="bg-primary-500 rounded-lg">
-      <div className="pt-12 pb-2 grid grid-cols-12 pl-6">
-        <div className="text-white pt-4 col-span-3 mr-16 text-center">
+      <div className="xl:pt-12 pb-2 xl:grid xl:grid-cols-12  px-6 flex flex-col">
+        <div className="text-white col-span-12 pt-4 content-center  lg:col-span-3 mr-16 xl:text-center flex xl:flex-col">
           <h4 className="text-2xl font-semibold">Products On Sale</h4>
-          <h5 className="text-xl mt-2">Shop Now!</h5>
+          <h5 className="text-xl mt-2 hidden xl:block">Shop Now!</h5>
         </div>
-        <div className="min-h-0 min-w-0 col-span-9">
+        <div className="xl:col-span-9 w-full">
           <CarouselWithButton slideToShow={5} arrows={false} slideButton>
             {productSale.map((item) => {
               return (

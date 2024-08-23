@@ -5,6 +5,7 @@ import { getSimilarProductThunk } from "../../../redux/slice/productSlice";
 import CarouselWithButton from "../../atoms/carousel/CarouselWithButton";
 import ProductCard from "../../atoms/cards/product/ProductCard";
 import { Product } from "../../../types/Product";
+import ProductCardSKE from "../skeleton/ProductCardSKE";
 
 type Props = {
   product?: Product | null;
@@ -15,15 +16,22 @@ const ProductSimilarCarousel = ({ product }: Props) => {
   useEffect(() => {
     if (product) dispatch(getSimilarProductThunk(product));
   }, [dispatch, product]);
-  const similarProd = useSelector(
-    (state: RootState) => state.product.similarProduct
+  const { similarProduct, loading } = useSelector(
+    (state: RootState) => state.product
   );
 
+  if (loading) {
+    <div className="grid grid-cols-4">
+      {Array(4).map((_, index) => (
+        <ProductCardSKE key={index} />
+      ))}
+    </div>;
+  }
   return (
     <div>
       <div className="font-medium text-xl mb-8">Similar Product</div>
       <CarouselWithButton slideToShow={4}>
-        {similarProd?.map((product) => {
+        {similarProduct?.map((product) => {
           return (
             <ProductCard
               color={product.color}

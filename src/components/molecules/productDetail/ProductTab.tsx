@@ -35,13 +35,13 @@ const ProductTab = () => {
       </div>
       <div id="comments" className="mt-12 flex flex-col gap-6">
         <div className="font-medium text-xl">Comments</div>
-        <div className="flex gap-6">
-          <div className="basis-1/4">
+        <div className="flex lg:flex-row flex-col gap-6">
+          <div className="lg:basis-1/4">
             <CommentInputCard
               ratingFunction={productDes?.ratingFunction ?? []}
             />
           </div>
-          <div className="basis-3/4">
+          <div className="lg:basis-3/4">
             <ListComment comments={productDes?.comment} />
           </div>
         </div>

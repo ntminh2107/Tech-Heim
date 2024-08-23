@@ -10,7 +10,7 @@ const VideoBlogCarousel = ({ videoBlog }: Props) => {
   return (
     <div>
       <div className="text-xl font-medium mb-8">Reviews</div>
-      <CarouselWithButton slideToShow={3} className="px-6 w-full">
+      <CarouselWithButton slideToShow={4} className="px-6 w-full">
         {videoBlog.map((blog) => {
           return (
             <VideoCard

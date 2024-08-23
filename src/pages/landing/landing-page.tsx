@@ -6,38 +6,41 @@ import Banner, {
 } from "../../components/molecules/banner";
 import CategoryHomeList from "../../components/molecules/categoryList";
 import { ProductSale } from "../../components/molecules/product";
-import ListProduct from "../../components/molecules/product/ListProduct";
 import HomeSection from "../../components/organisms/section";
 
 import { RootState } from "../../redux/store";
 import BlogCard from "../../components/atoms/cards/blog/BlogCard";
+import ListProductFromLanding from "../../components/molecules/product/ListProductFromLanding";
+import { Carousel } from "antd";
+import BrandCarousel from "../../components/molecules/brandList/BrandCarousel";
 
 const LandingPage = () => {
   const { newProducts, bestSellers, brandList } = useSelector(
     (state: RootState) => state.product
   );
   const blogsPost = useSelector((state: RootState) => state.blog.newBlogPost);
+  const blogLoading = useSelector((state: RootState) => state.blog.loading);
 
   return (
-    <div className="px-6 md:px-28">
+    <div className="px-6 md:px-28 mb-14">
       <Banner />
       <CategoryHomeList />
       <ProductSale />
       <HomeSection sectionName="New Products" viewAllButton>
-        <ListProduct
+        <ListProductFromLanding
           productList={newProducts}
           className="grid-cols-2 lg:grid-cols-4"
         />
       </HomeSection>
       <SecondBanner />
       <HomeSection sectionName="Best Sellers" viewAllButton>
-        <ListProduct
+        <ListProductFromLanding
           productList={bestSellers}
           className="grid-cols-2 lg:grid-cols-4"
         />
       </HomeSection>
       <HomeSection sectionName="Top Brands" viewAllButton={false}>
-        <div className="flex flex-row overflow-hidden justify-between mb-24">
+        <div className="lg:flex flex-row overflow-hidden justify-between mb-12 hidden">
           {brandList.map((brand) => {
             return (
               <div className="w-14 md:w-auto mx-auto" key={brand.id}>
@@ -50,11 +53,13 @@ const LandingPage = () => {
             );
           })}
         </div>
+        <BrandCarousel brand={brandList} />
       </HomeSection>
       <ThirdBanner />
       <HomeSection sectionName="Our Blogs" viewAllButton>
-        <div className="flex flex-row gap-6 h-full">
+        <div className="flex flex-col lg:flex-row gap-6 h-full">
           <BlogCard
+            loading={blogLoading}
             className="w-full lg:basis-1/3"
             key={blogsPost[0]?.id}
             id={blogsPost[0]?.id}
@@ -65,9 +70,9 @@ const LandingPage = () => {
             content={blogsPost[0]?.content}
             image={blogsPost[0]?.image}
           />
-
           <div className="flex flex-col flex-1 gap-6 basis-2/3 h-fit">
             <BlogCard
+              loading={blogLoading}
               mode="horizontal"
               key={blogsPost[1]?.id}
               id={blogsPost[1]?.id}
@@ -79,6 +84,7 @@ const LandingPage = () => {
               image={blogsPost[1]?.image}
             />
             <BlogCard
+              loading={blogLoading}
               mode="horizontal"
               key={blogsPost[2]?.id}
               id={blogsPost[2]?.id}
@@ -92,8 +98,8 @@ const LandingPage = () => {
           </div>
         </div>
       </HomeSection>
-      <section className="flex flex-col gap-4 md:flex-row justify-between items-start md:items-center my-14">
-        <div className="flex gap-4">
+      <section className="lg:flex flex-col gap-4 md:flex-row justify-between items-start md:items-center my-14 hidden">
+        <div className="flex gap-4 ">
           <img src="/assets/icons/service/computer_icon.svg" alt="" />
           <p className="text-xl self-center">Latest and Greatest Tech</p>
         </div>

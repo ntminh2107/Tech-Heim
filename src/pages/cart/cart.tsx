@@ -8,7 +8,7 @@ import Step from "../../components/atoms/step";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, newProducts } = useSelector(
+  const { cartItems, newProducts, loading } = useSelector(
     (state: RootState) => state.product
   );
   const navigate = useNavigate();
@@ -64,6 +64,7 @@ const Cart = () => {
           Customers who viewed items in your browsing history also viewed
         </h5>
         <ListProduct
+          loading={loading}
           productList={newProducts}
           className="grid-cols-2 md:grid-cols-4 "
         />

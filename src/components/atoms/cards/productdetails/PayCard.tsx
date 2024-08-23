@@ -64,11 +64,11 @@ const PayCard = ({
   };
 
   return (
-    <div className="flex flex-col gap-4 shadow-md  p-6  rounded-md w-fit h-fit">
+    <div className="flex flex-col gap-4 justify-between shadow-md  p-6  rounded-md min-w-fit h-full">
       {percent ? (
         <div className="flex flex-col gap-1">
           <div className="flex justify-between ">
-            <div className="font-medium text-2xl">{salePriced()}</div>
+            <div className="font-medium text-2xl">$ {salePriced()}</div>
             <div className="flex flex-row content-center gap-1 ">
               <img src="/assets/icons/discount/discount-shape.svg" />
               <div className="text-secondary text-base font-medium justify-center">
@@ -138,7 +138,11 @@ const PayCard = ({
           <span className="text-gray-717171 font-light text-xs">/Month</span>
         </div>
       </div>
-      <Button type="primary" className="p-6">
+      <Button
+        type="primary"
+        className="p-6"
+        onClick={() => alert("on Progress....")}
+      >
         Buy Now
       </Button>
       <Button

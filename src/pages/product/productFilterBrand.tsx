@@ -10,7 +10,9 @@ import { getProductCatThunk } from "../../redux/slice/productSlice";
 const ProductFilterBrand = () => {
   const { categoryId } = useParams<{ categoryId?: string }>() ?? {};
   const dispatch = useDispatch<AppDispatch>();
-  const { productCatList } = useSelector((state: RootState) => state.product);
+  const { productCatList, loading } = useSelector(
+    (state: RootState) => state.product
+  );
 
   const [filteredProducts, setFilteredProducts] = useState(productCatList);
 
@@ -72,7 +74,11 @@ const ProductFilterBrand = () => {
           <FilterOptions setFilteredProducts={setFilteredProducts} />
         </div>
         <div className="basis-3/4">
-          <ListProduct productList={filteredProducts} className="grid-cols-3" />
+          <ListProduct
+            loading={loading}
+            productList={filteredProducts}
+            className="grid-cols-3"
+          />
         </div>
       </div>
       <div>

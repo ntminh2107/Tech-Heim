@@ -23,11 +23,11 @@ const DetailBlog = () => {
 
   return (
     <>
-      <div className="flex flex-row  mb-14 gap-6">
-        <div className="basis-2/3">
+      <div className="flex lg:flex-row flex-col  mb-14 lg:gap-6 gap-2">
+        <div className="lg:basis-2/3  py-4">
           <BlogContent detailBlogPost={detailBlogPost} />
         </div>
-        <div className="basis-1/3 mt-[4.2rem] flex flex-col">
+        <div className="lg:basis-1/3 lg:mt-[4.2rem] flex flex-col">
           <BlogCategorieslist />
           <RecentBlog />
         </div>

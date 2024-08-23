@@ -43,35 +43,42 @@ const ProductCard = ({
   };
 
   return (
-    <div className="relative rounded-md bg-white w-full sm:w-60 md:w-48 lg:w-full h-auto flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4">
-      {percent && (
-        <p className="absolute top-2 left-0 py-1 px-[6px] text-secondary-400 bg-secondary-100 rounded-tr-xl rounded-br-xl group-hover:hidden">
-          {percent}%
-        </p>
-      )}
-      <HeartTag id={id} favorite={favorite} key={id} />
-      <div
-        className="flex justify-center items-center w-full h-40 md:h-32 lg:h-48"
-        onClick={handleClick}
-      >
-        <img
-          src={image}
-          alt={name}
-          className="object-contain w-full h-full p-2"
-        />
-      </div>
-      <div className="gradient-black mx-2 group-hover:gradient"></div>
-      <div className="flex-1 flex flex-col justify-between pb-2 px-2">
-        <h5 className="pb-2 line-clamp-2 group-hover:text-primary text-sm sm:text-base lg:text-lg">
-          {name}
-        </h5>
-        <ProductCardFooter
-          price={price}
-          salePrice={salePrice}
-          rating={rating}
-          onClick={handleAddToCart}
-        />
-      </div>
+    <div
+      className="relative rounded-md bg-white  sm:w-full
+     md:w-full lg:w-full xl:w-72 h-auto flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4 "
+    >
+      <>
+        {percent && (
+          <p className="absolute top-2 left-0 py-1 px-[6px] text-secondary-400 bg-secondary-100 rounded-tr-xl rounded-br-xl group-hover:hidden">
+            {percent}%
+          </p>
+        )}
+        <HeartTag id={id} favorite={favorite} key={id} />
+        <div
+          className="flex justify-center items-center w-full h-40 md:h-32 lg:h-48"
+          onClick={handleClick}
+        >
+          <img
+            src={image}
+            alt={name}
+            className="object-contain w-full h-full p-2"
+          />
+        </div>
+        <div className="gradient-black mx-2"></div>
+        <div className="flex-1 flex flex-col justify-between pb-2 px-2">
+          <div className="pb-2 group-hover:text-primary text-sm sm:text-base lg:text-lg max-h-fit truncate ">
+            {name}
+          </div>
+          <div className="static h-[30px] content-end">
+            <ProductCardFooter
+              price={price}
+              salePrice={salePrice}
+              rating={rating}
+              onClick={handleAddToCart}
+            />
+          </div>
+        </div>
+      </>
     </div>
   );
 };
