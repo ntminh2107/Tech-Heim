@@ -7,12 +7,12 @@ type Props = {
 
 const CommentInputCard = ({ ratingFunction }: Props) => {
   return (
-    <div className="flex flex-col gap-6 w-fit">
+    <div className="flex flex-col gap-6 w-full">
       <div>Leave your comments here for other customers</div>
       <TextArea
         placeholder="Share your thoughts about this product here"
         className="border-gray-9E9E9E "
-        autoSize
+        autoSize={{ minRows: 3, maxRows: 4 }}
       />
       <Button className="border-primary text-primary py-[14.5px] px-[107px]">
         Comment
@@ -20,7 +20,7 @@ const CommentInputCard = ({ ratingFunction }: Props) => {
 
       <div className="flex flex-col gap-2">
         <div className="font-medium text-base">By feature</div>
-        <table>
+        <table className="w-fit">
           {ratingFunction?.map((rating) => (
             <tr>
               <td className="text-sm text-gray-600">{rating.key}</td>

@@ -21,26 +21,28 @@ const DetailProduct = () => {
     }
   }, [dispatch, id]);
 
-  const detailProduct = useSelector(
-    (state: RootState) => state.product.detailProduct
+  const { detailProduct, loading } = useSelector(
+    (state: RootState) => state.product
   );
   const reviewVideo = useSelector(
     (state: RootState) => state.blog.videoBlogsPost
   );
 
+  if (loading) {
+  }
   return (
     <div className="flex flex-col gap-8 mb-14">
-      <div className="flex gap-8 mb-8">
-        <div className="flex gap-6">
-          <div className="flex-shrink">
+      <div className="flex xl:flex-row flex-col gap-8 mb-8">
+        <div className="flex lg:flex-row flex-col gap-6">
+          <div className="xl:basis-3/5 lg:basis-1/2">
             <ImagePreview
-              width="496px"
               imageUrl={detailProduct?.image || ""}
-              height="338px"
               imagePreview={detailProduct?.imagePreview || null}
             />
           </div>
-          <ProductInfoCard product={detailProduct} key={detailProduct?.id} />
+          <div className="xl:basis-2/5 lg:basis-1/2">
+            <ProductInfoCard product={detailProduct} key={detailProduct?.id} />
+          </div>
         </div>
         <PayCard
           percent={detailProduct?.percent}

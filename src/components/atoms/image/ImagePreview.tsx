@@ -3,15 +3,13 @@ import type { ImagePreview as ImagePreviewType } from "../../../types/Product";
 
 type ImagePreviewProps = {
   imageUrl: string;
-  width: string | number;
-  height: string | number;
+
   imagePreview: ImagePreviewType[] | null;
 };
 
 const ImagePreview: React.FC<ImagePreviewProps> = ({
   imageUrl,
-  width,
-  height,
+
   imagePreview,
 }) => {
   const [selectedImage, setSelectedImage] = useState(imageUrl);
@@ -27,21 +25,22 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
   };
 
   return (
-    <div className="flex flex-col gap-6">
-      <div className={`w-[${width}] h-[${height}] bg-white`}>
-        <img
-          className="h-[338px] w-[496px] object-contain"
-          src={selectedImage}
-          alt=""
-        />
-      </div>
-      <div>
-        <div className="grid grid-cols-5 gap-6 w-full">
+    <div>
+      <div className={` grid grid-cols-5 grid-flow-row gap-3  w-full`}>
+        <div className={` bg-white col-span-5`}>
+          <img
+            className="h-full w-full object-contain"
+            src={selectedImage}
+            alt=""
+          />
+        </div>
+
+        <div className="grid grid-cols-5 col-span-5 gap-2">
           {imagePreview?.slice(0, 5).map((item) => (
             <img
               key={item.img}
               src={item?.img || ""}
-              className="w-full max-h-[5rem] cursor-pointer object-contain"
+              className="w-full h-full cursor-pointer object-contain"
               onClick={() => handleChangeImg(item?.img)}
             />
           ))}

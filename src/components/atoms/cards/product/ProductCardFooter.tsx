@@ -20,7 +20,10 @@ const ProductCardFooter = ({ price, rating, salePrice, onClick }: Props) => {
       <p className="text-sm">${formatNumber(salePrice)}</p>
     </div>
   ) : (
-    <p className="text-sm">${formatNumber(price)}</p>
+    <div className="flex-1">
+      <p className="h-4"></p>
+      <p className="text-sm">${formatNumber(price)}</p>
+    </div>
   );
 
   return (
@@ -44,7 +47,7 @@ const ProductCardFooter = ({ price, rating, salePrice, onClick }: Props) => {
               className="w-4 h-4"
             />
           }
-          className="text-primary border-primary border-2"
+          className="text-primary border-primary border-2 "
           size="middle"
           onClick={onClick}
         >

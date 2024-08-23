@@ -51,7 +51,7 @@ const setPooler = async () => {
         console.log("[service worker] no new notification found");
       }
     }
-  }, 3000);
+  }, 30000);
 };
 
 setPooler();

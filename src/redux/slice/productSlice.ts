@@ -76,7 +76,7 @@ const initialState: ProductState = {
   // specifications: [],
   filterProduct: [],
   instalments: [],
-  loading: false,
+  loading: true,
   status: 0,
   shipCost: null,
 };
@@ -505,8 +505,8 @@ export const productSlice = createAppSlice({
         const { data, status } = action.payload;
         return {
           ...state,
-          loading: false,
           product: data,
+          loading: false,
           status: status,
         };
       },

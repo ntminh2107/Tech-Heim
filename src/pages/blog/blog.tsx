@@ -9,16 +9,16 @@ import { RootState } from "../../redux/store";
 ListBlogPost;
 
 const Blog = () => {
-  const { blogsPost, videoBlogsPost } = useSelector(
+  const { blogsPost, videoBlogsPost, loading } = useSelector(
     (state: RootState) => state.blog
   );
   return (
     <>
       <div className="flex lg:flex-row sm:flex-col gap-6 mt-10 mb-14">
         <div className="basis-2/3">
-          <ListBlogPost blogList={blogsPost} />
+          <ListBlogPost loading={loading} blogList={blogsPost} />
           <div className="mt-12 lg:mr-32 mb-14">
-            <ListRecentBlog recentBlogList={blogsPost} />
+            <ListRecentBlog loading={loading} recentBlogList={blogsPost} />
           </div>
         </div>
         <div className="basis-1/3">

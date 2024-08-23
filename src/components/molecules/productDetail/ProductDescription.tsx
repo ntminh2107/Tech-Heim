@@ -12,7 +12,7 @@ const ProductDescription = ({ product }: Props) => {
     setShowMore(!showMore);
   };
   return (
-    <div className="flex flex-col w-2/3">
+    <div className="flex flex-col xl:w-2/3">
       <div className="font-medium text-xl">Technical Details</div>
       <table className="w-full text-left border-collapse">
         <tbody>

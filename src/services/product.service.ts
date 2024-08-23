@@ -102,7 +102,7 @@ export const getProductSaleAPI = () => {
 
 export const getNewProductsAPI = () => {
   return axiosClient
-    .get(`product?_limit=4`)
+    .get(`product?_limit=8`)
     .then((res) => {
       const { data, status } = res;
       return { data, status };
@@ -112,7 +112,7 @@ export const getNewProductsAPI = () => {
 
 export const getBestSellerProductsAPI = () => {
   return axiosClient
-    .get(`product?bestSeller=true&_limit=4`)
+    .get(`product?bestSeller=true&_limit=8`)
     .then((res) => {
       const { data, status } = res;
       return { data, status };
