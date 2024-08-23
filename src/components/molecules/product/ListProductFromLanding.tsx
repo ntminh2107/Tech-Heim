@@ -26,7 +26,10 @@ const ListProductFromLanding = ({ productList, className }: Props) => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       switch (true) {
-        case screenWidth <= 1000:
+        case screenWidth < 1024 && screenWidth >= 768:
+          setProductPerPage(3);
+          break;
+        case screenWidth < 768 && screenWidth >= 360:
           setProductPerPage(3);
           break;
         default:
@@ -51,11 +54,11 @@ const ListProductFromLanding = ({ productList, className }: Props) => {
     <div>
       <div
         className={cn(
-          `grid gap-6 md:gap-4 transition-opacity duration-300 ${
+          `grid gap-6 lg:gap-3 transition-opacity duration-300 ${
             isTransitioning ? "opacity-0" : "opacity-100"
           }`,
           className,
-          `sm:grid-cols-${productPerPage} md:grid-cols-${productPerPage} lg:grid-cols-4 grid-cols-4`
+          `sm:grid-cols-${productPerPage} md:grid-cols-${productPerPage} grid-cols-4 sm:grid-cols-3`
         )}
       >
         {currentProducts?.map((product) => {

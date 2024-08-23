@@ -4,7 +4,7 @@ import { RootState } from "../../../redux/store";
 import BlogCard from "../../atoms/cards/blog/BlogCard";
 
 const RecentBlog = () => {
-  const blogsPost = useSelector((state: RootState) => state.blog.blogsPost);
+  const { blogsPost, loading } = useSelector((state: RootState) => state.blog);
   const limitPost = blogsPost.slice(0, 3);
   return (
     <div>
@@ -12,6 +12,7 @@ const RecentBlog = () => {
       <div className={`flex flex-col gap-4 transition-opacity duration-300`}>
         {limitPost.map((blog) => (
           <BlogCard
+            loading={loading}
             key={blog.id}
             id={blog.id}
             mode="horizontal"

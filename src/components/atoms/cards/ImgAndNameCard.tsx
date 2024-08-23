@@ -10,7 +10,7 @@ const ImgAndNameCard = ({ img, name, className }: Props) => {
   return (
     <div
       className={cn(
-        "flex flex-col items-center w-[184px] md:w-[200px] rounded-lg shadow-md",
+        "flex flex-col items-center rounded-lg shadow-md",
         className
       )}
     >

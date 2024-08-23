@@ -15,7 +15,7 @@ const ProductInfoCard = ({ product }: Props) => {
     <div className="flex flex-col gap-8 w-full" key={product?.id}>
       <div className="flex flex-col gap-6">
         <div className="font-medium text-xl">{product?.name}</div>
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 lg:border-b-transparent border-b-black">
           <div className="bg-primary-500 rounded-lg text-white p-1 flex flex-row justify-center w-fit ">
             <img src="/assets/icons/like/white_star.svg" className="p-[2.5] " />
             <div className="font-medium text-xs content-center">

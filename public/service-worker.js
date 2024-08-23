@@ -22,7 +22,7 @@ const setPooler = async () => {
   const interval = setInterval(async () => {
     console.log("[service worker] pooling notification...");
     const res = await fetch(
-      `${import.meta.env.VITE_API_URL}notification?_sort=date&_order=desc`,
+      `https://hamster-merry-bat.ngrok-free.app/notification?_sort=date&_order=desc`,
       {
         headers: {
           "ngrok-skip-browser-warning": "true",
@@ -51,7 +51,7 @@ const setPooler = async () => {
         console.log("[service worker] no new notification found");
       }
     }
-  }, 3000);
+  }, 30000);
 };
 
 setPooler();

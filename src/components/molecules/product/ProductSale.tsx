@@ -11,24 +11,13 @@ const ProductSale = () => {
 
   return (
     <section className="bg-primary-500 rounded-lg">
-      <div className="lg:pt-12 pb-2 grid lg:grid-rows-1 grid-cols-12 px-6 ">
-        <div className="text-white col-span-12 pt-4  lg:col-span-3 mr-16 lg:text-center flex lg:flex-col">
-          <h4 className="text-2xl font-semibold">
-            Products On Sale
-            <span className="text-xl mt-2 font-light lg:hidden">
-              {" "}
-              Shop now!
-            </span>
-          </h4>
-          <h5 className="text-xl mt-2 hidden lg:block">Shop Now!</h5>
+      <div className="xl:pt-12 pb-2 xl:grid xl:grid-cols-12  px-6 flex flex-col">
+        <div className="text-white col-span-12 pt-4 content-center  lg:col-span-3 mr-16 xl:text-center flex xl:flex-col">
+          <h4 className="text-2xl font-semibold">Products On Sale</h4>
+          <h5 className="text-xl mt-2 hidden xl:block">Shop Now!</h5>
         </div>
-        <div className="min-h-0 min-w-0 lg:col-span-9 col-span-12">
-          <CarouselWithButton
-            slideToShow={4}
-            arrows={false}
-            slideButton
-            className="gap-10"
-          >
+        <div className="xl:col-span-9 w-full">
+          <CarouselWithButton slideToShow={5} arrows={false} slideButton>
             {productSale.map((item) => {
               return (
                 <ProductSaleCard

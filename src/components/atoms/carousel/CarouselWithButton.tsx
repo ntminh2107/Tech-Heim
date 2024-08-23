@@ -58,10 +58,10 @@ const CarouselWithButton = ({
       const screenWidth = window.innerWidth;
       switch (true) {
         case screenWidth < 640:
-          setSlidesToShow(3);
+          setSlidesToShow(1);
           break;
         case screenWidth >= 640 && screenWidth < 768:
-          setSlidesToShow(slideToShow - 2);
+          setSlidesToShow(slidesToShow - 2);
           break;
         case screenWidth >= 768 && screenWidth <= 1024:
           setSlidesToShow(slideToShow - 2);

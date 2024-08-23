@@ -31,7 +31,7 @@ const ProductSaleCard = ({
   });
 
   return (
-    <div className="relative rounded-md bg-white w-44 flex flex-col gap-3 shadow-md group cursor-pointer">
+    <div className="relative rounded-md bg-white xl:w-43 lg:w-40 w-full flex flex-col shadow-md group cursor-pointer">
       {loading ? (
         <div className="flex flex-col gap-2">
           <Skeleton.Image
@@ -45,7 +45,7 @@ const ProductSaleCard = ({
           />
         </div>
       ) : (
-        <>
+        <div>
           {" "}
           {percent && (
             <p className="absolute top-2 left-0 py-1 px-[6px] text-secondary-400 bg-secondary-100 rounded-tr-xl rounded-br-xl group-hover:hidden">
@@ -53,12 +53,8 @@ const ProductSaleCard = ({
             </p>
           )}
           <HeartTag favorite={favorite} id={id} key={id} />
-          <div className="flex justify-center items-center w-44 h-36">
-            <img
-              src={image}
-              alt={name}
-              className="object-contain w-full h-full p-2"
-            />
+          <div className=" flex flex-col items-center w-full h-full">
+            <img src={image} alt={name} className="object-contain w-44 h-36" />
           </div>
           <div className="pb-2 px-2">
             <h5 className="text-xs line-clamp-1">{name}</h5>
@@ -69,7 +65,7 @@ const ProductSaleCard = ({
               <p className="text-sm">${formatNumber(newPrice)}</p>
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

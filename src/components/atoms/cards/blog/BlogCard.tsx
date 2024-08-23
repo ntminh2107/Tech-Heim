@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { cn } from "../../../../utils/utils";
-import { useEffect, useState } from "react";
 import { Skeleton } from "antd";
 
 type BlogProps = {
@@ -13,6 +12,7 @@ type BlogProps = {
   content: string;
   author: string;
   image: string;
+  loading: boolean;
 };
 
 const BlogCard = ({
@@ -24,20 +24,13 @@ const BlogCard = ({
   readTime,
   content,
   image,
+  loading,
 }: BlogProps) => {
   const nav = useNavigate();
 
   const handleClick = () => {
     nav(`/blog/${id}`);
   };
-
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
 
   return (
     <div
