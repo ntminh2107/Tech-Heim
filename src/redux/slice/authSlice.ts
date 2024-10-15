@@ -119,7 +119,6 @@ export const authSlice = createAppSlice({
         },
         fulfilled: (state, action) => {
           const { data, status } = action.payload
-
           return {
             ...state,
             loading: false,
@@ -143,6 +142,7 @@ export const authSlice = createAppSlice({
           ...state,
           loading: false,
           currentUser: data,
+          isLoggedIn: true,
           status: status
         }
       },

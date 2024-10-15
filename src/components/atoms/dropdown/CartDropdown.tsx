@@ -25,6 +25,9 @@ const CartDropdown = () => {
 
   useEffect(() => {
     if (isLoggedIn) dispatch(getCartThunk())
+    return () => {
+      console.log('cart updated')
+    }
   }, [isLoggedIn])
 
   return (
