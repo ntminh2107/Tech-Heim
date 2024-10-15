@@ -13,47 +13,20 @@ interface CartState {
   cart: Cart | null
   cartItem: CartItem | null
   cartItems: CartItem[]
+  message: string | null
 }
 const initialState: CartState = {
   loading: true,
   cart: null,
   cartItem: null,
-  cartItems: []
+  cartItems: [],
+  message: null
 }
 
 export const cartSlice = createAppSlice({
   name: 'cart',
   initialState,
   reducers: (create) => ({
-    addToCartThunk: create.asyncThunk(
-      async (productID: number) => {
-        const res = await addToCartAPI(productID)
-        return res
-      },
-      {
-        pending: (state) => {
-          return {
-            ...state,
-            loading: false
-          }
-        },
-        fulfilled: (state, action) => {
-          const { data, status } = action.payload
-          return {
-            ...state,
-            loading: false,
-            cart: data,
-            status: status
-          }
-        },
-        rejected: (state) => {
-          return {
-            ...state,
-            loading: false
-          }
-        }
-      }
-    ),
     getCartThunk: create.asyncThunk(getCartAPI, {
       pending: (state) => {
         return {
@@ -77,6 +50,38 @@ export const cartSlice = createAppSlice({
         }
       }
     }),
+    addToCartThunk: create.asyncThunk(
+      async (productID: number, { dispatch }) => {
+        const res = await addToCartAPI(productID)
+        if (res.status === 202) {
+          dispatch(getCartThunk())
+        }
+        return res
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: false
+          }
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload
+          return {
+            ...state,
+            loading: false,
+            message: data,
+            status: status
+          }
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false
+          }
+        }
+      }
+    ),
 
     deleteCartThunk: create.asyncThunk(deleteCartAPI, {
       pending: (state) => {
@@ -86,10 +91,11 @@ export const cartSlice = createAppSlice({
         }
       },
       fulfilled: (state, action) => {
-        const { status } = action.payload
+        const { data, status } = action.payload
         return {
           ...state,
           loading: false,
+          message: data,
           status: status
         }
       },
@@ -101,43 +107,11 @@ export const cartSlice = createAppSlice({
       }
     }),
     deleteCartItemThunk: create.asyncThunk(
-      async (cartItemID: number) => {
-        const res = deleteCartItemAPI(cartItemID)
-        return res
-      },
-      {
-        pending: (state) => {
-          return {
-            ...state,
-            loading: true
-          }
-        },
-        fulfilled: (state, action) => {
-          return {
-            ...state,
-            loading: false,
-            cartItems: state.cartItems.filter((item) => {
-              return item.id !== action.payload.cartItemID
-            })
-          }
-        },
-        rejected: (state) => {
-          return {
-            ...state,
-            loading: false
-          }
+      async (cartItemID: number, { dispatch }) => {
+        const res = await deleteCartItemAPI(cartItemID)
+        if (res.status === 202) {
+          dispatch(getCartThunk())
         }
-      }
-    ),
-    updateQuantityThunk: create.asyncThunk(
-      async ({
-        cartItemID,
-        quantity
-      }: {
-        cartItemID: number
-        quantity: number
-      }) => {
-        const res = updateQuantityAPI({ cartItemID, quantity })
         return res
       },
       {
@@ -152,9 +126,48 @@ export const cartSlice = createAppSlice({
           return {
             ...state,
             loading: false,
-            cartItems: state.cartItems.map((item) =>
-              item.id === data.cartItemID ? data : item
-            ),
+            message: data,
+            status: status
+          }
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false
+          }
+        }
+      }
+    ),
+    updateQuantityThunk: create.asyncThunk(
+      async (
+        {
+          cartItemID,
+          quantity
+        }: {
+          cartItemID: number
+          quantity: number
+        },
+        { dispatch }
+      ) => {
+        const res = await updateQuantityAPI({ cartItemID, quantity })
+        if (res.status === 202) {
+          dispatch(getCartThunk())
+        }
+        return res
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true
+          }
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload
+          return {
+            ...state,
+            loading: false,
+            message: data,
             status: status
           }
         },

@@ -40,7 +40,7 @@ const NotFoundPage = lazy(() => import('./pages/404NotFound/notFound'))
 
 const LayoutWithBreadCrumb = () => {
   return (
-    <div className='mx-28 mt-6'>
+    <div className='md:mx-28 mx-10 mt-6'>
       <Breadcrumb className='mb-10' />
       <Outlet />
     </div>

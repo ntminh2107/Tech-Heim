@@ -1,4 +1,4 @@
-import { Comment } from './Comment'
+import { Comments } from './Comment'
 
 export type Blog = {
   id: string
@@ -9,7 +9,7 @@ export type Blog = {
   releaseDate: Date
   content: string
   image: string
-  comment?: Comment[]
+  comment?: Comments[]
 }
 
 export type VideoBlog = {

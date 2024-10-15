@@ -14,14 +14,14 @@ const Blog = () => {
   )
   return (
     <>
-      <div className='flex lg:flex-row sm:flex-col gap-6 mt-10 mb-14'>
-        <div className='basis-2/3'>
+      <div className='flex lg:flex-row flex-col gap-6 mt-10 mb-14'>
+        <div className='lg:basis-2/3'>
           <ListBlogPost loading={loading} blogList={listBlogs} />
           <div className='mt-12 lg:mr-32 mb-14'>
             <ListRecentBlog loading={loading} recentBlogList={listBlogs} />
           </div>
         </div>
-        <div className='basis-1/3'>
+        <div className='lg:basis-1/3'>
           <ListVideoBlog videoBlogList={listvideoBlogsPost} />
         </div>
       </div>
