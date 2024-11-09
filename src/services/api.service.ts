@@ -7,7 +7,7 @@ const axiosClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
   headers: {
     'Content-Type': 'application/json',
-    'ngrok-skip-browser-warning': 'true'
+    'Access-Control-Allow-Origin': '*'
   }
 })
 

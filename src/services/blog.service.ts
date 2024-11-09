@@ -2,7 +2,7 @@ import axiosClient from './api.service'
 
 export const getListBlogAPI = () => {
   return axiosClient
-    .get('/blog')
+    .get('/api/blog')
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -12,7 +12,7 @@ export const getListBlogAPI = () => {
 
 export const getListNewBlogsAPI = () => {
   return axiosClient
-    .get('/blog?limit=4')
+    .get('/api/blog?limit=4')
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -22,7 +22,7 @@ export const getListNewBlogsAPI = () => {
 
 export const getBlogDetailAPI = (blogID: number) => {
   return axiosClient
-    .get(`/blog/${blogID}`)
+    .get(`/api/blog/${blogID}`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -32,7 +32,7 @@ export const getBlogDetailAPI = (blogID: number) => {
 
 export const getListVideoBlogAPI = () => {
   return axiosClient
-    .get('/blog/video')
+    .get('/api/blog/video')
     .then((res) => {
       const { data, status } = res
       return { data, status }

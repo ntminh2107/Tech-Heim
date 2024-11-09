@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vite --mode test",
-    "serve-json": "json-server --watch db.json"
+    "serve-json": "json-server --watch db.json",
+    "proxy": "http://localhost:4000"
   },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",

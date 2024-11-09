@@ -13,7 +13,7 @@ export const registerAPI = ({
 }) => {
   const body = { fullName, email, password, phoneNumber }
   return axiosClient
-    .post('auth/register', body)
+    .post('/api/auth/register', body)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -30,7 +30,7 @@ export const loginAPI = ({
 }) => {
   const body = { email, password }
   return axiosClient
-    .post('auth/login', body)
+    .post('/api/auth/login', body)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -41,7 +41,7 @@ export const loginAPI = ({
 export const getCurrentUserAPI = () => {
   const token = localStorage.getItem('token')
   return axiosClient
-    .get('auth/user/me', { headers: { Authorization: `Bearer ${token}` } })
+    .get('/api/auth/user/me', { headers: { Authorization: `Bearer ${token}` } })
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -65,7 +65,7 @@ export const addAddressUserAPI = ({
   const token = localStorage.getItem('token')
   const body = { name, address, district, city, country }
   return axiosClient
-    .post('address/add', body, {
+    .post('/api/address/add', body, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
