@@ -4,7 +4,7 @@ export const addOrderAPI = (addressID: number) => {
   const token = localStorage.getItem('token')
   const body = { addressID }
   return axiosClient
-    .post('order/add', body, {
+    .post('/api/order/add', body, {
       headers: { Authorization: token }
     })
     .then((res) => {
@@ -17,7 +17,7 @@ export const addOrderAPI = (addressID: number) => {
 export const getDetailOrderAPI = (orderID: string) => {
   const token = localStorage.getItem('token')
   return axiosClient
-    .get(`/order/${orderID}`, {
+    .get(`/api/order/${orderID}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
@@ -39,7 +39,7 @@ export const addtransactionAPI = ({
   const token = localStorage.getItem('token')
   const body = { orderID, type, deposit }
   return axiosClient
-    .post('order/transaction/add', body, {
+    .post('/api/order/transaction/add', body, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {

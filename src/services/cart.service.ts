@@ -63,7 +63,7 @@ export const updateQuantityAPI = ({
   const token = localStorage.getItem('token')
   const body = { quantity }
   return axiosClient
-    .patch(`cart/update/${cartItemID}`, body, {
+    .patch(`/api/cart/update/${cartItemID}`, body, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {

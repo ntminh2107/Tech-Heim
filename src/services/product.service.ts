@@ -8,7 +8,7 @@ export const getProductByCatAPI = ({
   query: { [key: string]: string }
 }) => {
   return axiosClient
-    .get(`product/category/${category}`, { params: query })
+    .get(`/api/product/category/${category}`, { params: query })
     .then((res) => {
       console.log()
       const { data, status } = res
@@ -19,7 +19,7 @@ export const getProductByCatAPI = ({
 
 export const getProductByBrandAPI = (brand: string) => {
   return axiosClient
-    .get(`product/brand/${brand}`)
+    .get(`/api/product/brand/${brand}`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -29,7 +29,7 @@ export const getProductByBrandAPI = (brand: string) => {
 
 export const getSpecFilterAPI = (category: string) => {
   return axiosClient
-    .get(`product/spec/${category}`)
+    .get(`/api/product/spec/${category}`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -39,7 +39,7 @@ export const getSpecFilterAPI = (category: string) => {
 
 export const getProductDetailAPI = (productID: number) => {
   return axiosClient
-    .get(`product/detail/${productID}`)
+    .get(`/api/product/detail/${productID}`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -49,7 +49,7 @@ export const getProductDetailAPI = (productID: number) => {
 
 export const getNewProductsAPI = () => {
   return axiosClient
-    .get(`product?limit=10`)
+    .get(`/api/product?limit=10`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -59,7 +59,7 @@ export const getNewProductsAPI = () => {
 
 export const getBestSellerProductsAPI = () => {
   return axiosClient
-    .get(`product?limit=10`)
+    .get(`/api/product?limit=10`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -67,9 +67,17 @@ export const getBestSellerProductsAPI = () => {
     .catch((err) => err)
 }
 
+export const checkHealth = () => {
+  return axiosClient.get(`healthcheck`).then((res) => {
+    console.log(res)
+  })
+}
+
+checkHealth()
+
 export const getSearchProductsAPI = (search: string) => {
   return axiosClient
-    .get(`product/search-product?search=${search}`)
+    .get(`/api/product/search-product?search=${search}`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -79,7 +87,7 @@ export const getSearchProductsAPI = (search: string) => {
 
 export const getSaleProductsAPI = () => {
   return axiosClient
-    .get('product/sale?limit=10')
+    .get('/api/product/sale?limit=10')
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -89,7 +97,7 @@ export const getSaleProductsAPI = () => {
 
 export const getBrandListAPI = () => {
   return axiosClient
-    .get('product/brand-list')
+    .get('/api/product/brand-list')
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -99,7 +107,7 @@ export const getBrandListAPI = () => {
 
 export const getCategoriesListAPI = () => {
   return axiosClient
-    .get('/product/category-list')
+    .get('/api/product/category-list')
     .then((res) => {
       const { data, status } = res
       return { data, status }
