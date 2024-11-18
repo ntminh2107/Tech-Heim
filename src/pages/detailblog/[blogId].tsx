@@ -27,7 +27,7 @@ const DetailBlog = () => {
           <BlogContent detailBlogPost={detailBlogPost} />
         </div>
         <div className='lg:basis-1/3 lg:mt-[4.2rem] flex flex-col'>
-          <BlogCategorieslist />
+          <BlogCategorieslist tags={detailBlogPost?.tags} />
           <RecentBlog />
         </div>
       </div>

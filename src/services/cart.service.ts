@@ -4,7 +4,7 @@ export const addToCartAPI = (productID: number) => {
   const token = localStorage.getItem('token')
   const body = { productID }
   return axiosClient
-    .post(`cart/add`, body, {
+    .post(`/api/cart/add`, body, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
@@ -17,7 +17,7 @@ export const addToCartAPI = (productID: number) => {
 export const getCartAPI = () => {
   const token = localStorage.getItem('token')
   return axiosClient
-    .get('cart/me', {
+    .get('/api/cart/me', {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
@@ -30,7 +30,7 @@ export const getCartAPI = () => {
 export const deleteCartItemAPI = (cartItemID: number) => {
   const token = localStorage.getItem('token')
   return axiosClient
-    .delete(`cart/delete/${cartItemID}`, {
+    .delete(`/api/cart/delete/${cartItemID}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
@@ -43,7 +43,7 @@ export const deleteCartItemAPI = (cartItemID: number) => {
 export const deleteCartAPI = () => {
   const token = localStorage.getItem('token')
   return axiosClient
-    .delete('cart/delete/all', {
+    .delete('/api/cart/delete/all', {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {

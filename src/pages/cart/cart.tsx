@@ -10,8 +10,9 @@ import { useNavigate } from 'react-router-dom'
 const Cart = () => {
   const { listNewProducts } = useSelector((state: RootState) => state.product)
 
-  const { currentUser } = useSelector((state: RootState) => state.auth)
-  const cart = currentUser?.cart
+  const { cart } = useSelector((state: RootState) => state.cart)
+  const cartItems = cart?.cartItems
+  console.log('cart: ', cartItems)
   const navigate = useNavigate()
 
   return (
@@ -30,7 +31,7 @@ const Cart = () => {
       </div>
       <div className='flex flex-col md:flex-row justify-between'>
         <div className='flex flex-col gap-3 basis-7/12'>
-          {cart?.map((item) => {
+          {cartItems?.map((item) => {
             return <CardCart cartItem={item} />
           })}
         </div>

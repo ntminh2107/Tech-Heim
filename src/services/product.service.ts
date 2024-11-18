@@ -114,3 +114,44 @@ export const getCategoriesListAPI = () => {
     })
     .catch((err) => err)
 }
+
+export const addProductAPI = ({
+  name,
+  image,
+  price,
+  color,
+  category,
+  brand,
+  specifications,
+  percent,
+  imagePreview
+}: {
+  name: string
+  image: string
+  price: number
+  color: string
+  category: string
+  brand: string
+  specifications: { key: string; value: string }[]
+  percent?: number
+  imagePreview?: string[]
+}) => {
+  const body = {
+    name,
+    image,
+    price,
+    color,
+    category,
+    brand,
+    specifications,
+    percent,
+    imagePreview
+  }
+  return axiosClient
+    .post('/api/product/add', body)
+    .then((res) => {
+      const { data, status } = res
+      return { data, status }
+    })
+    .catch((err) => err)
+}

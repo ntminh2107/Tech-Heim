@@ -5,7 +5,7 @@ export type Blog = {
   title: string
   author: string
   readTime: string
-  tags: []
+  tags: string[]
   releaseDate: Date
   content: string
   image: string

@@ -16,7 +16,7 @@ const CategoryCarousel = () => {
             <ImgAndNameCard
               key={item.id}
               name={item.categoryName}
-              img={item.image}
+              img={`/assets/icons/device/icon${item.categoryName}.svg`}
               className='my-3'
             />
           )
