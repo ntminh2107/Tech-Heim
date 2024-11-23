@@ -1,8 +1,14 @@
 import axiosClient from './api.service'
 
-export const addOrderAPI = (addressID: number) => {
+export const addOrderAPI = ({
+  addressID,
+  shipMethodID
+}: {
+  addressID: number
+  shipMethodID: number
+}) => {
   const token = localStorage.getItem('token')
-  const body = { addressID }
+  const body = { addressID, shipMethodID }
   return axiosClient
     .post('/api/order/add', body, {
       headers: { Authorization: token }
@@ -42,6 +48,16 @@ export const addtransactionAPI = ({
     .post('/api/order/transaction/add', body, {
       headers: { Authorization: `Bearer ${token}` }
     })
+    .then((res) => {
+      const { data, status } = res
+      return { data, status }
+    })
+    .catch((err) => err)
+}
+
+export const getListMethodAPI = () => {
+  return axiosClient
+    .get('api/order/ship')
     .then((res) => {
       const { data, status } = res
       return { data, status }

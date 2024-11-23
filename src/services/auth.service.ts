@@ -50,22 +50,37 @@ export const getCurrentUserAPI = () => {
 }
 
 export const addAddressUserAPI = ({
-  name,
+  fullName,
+  phoneNumber,
   address,
   district,
   city,
   country
 }: {
-  name: string
+  fullName: string
+  phoneNumber: string
   address: string
   district: string
   city: string
   country: string
 }) => {
   const token = localStorage.getItem('token')
-  const body = { name, address, district, city, country }
+  const body = { fullName, phoneNumber, address, district, city, country }
   return axiosClient
     .post('/api/address/add', body, {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+    .then((res) => {
+      const { data, status } = res
+      return { data, status }
+    })
+    .then((err) => err)
+}
+
+export const getAddressUserAPI = () => {
+  const token = localStorage.getItem('token')
+  return axiosClient
+    .get('/api/auth/address/me', {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {

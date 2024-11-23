@@ -16,7 +16,7 @@ type RadioCardProps = {
   price: number
 }
 
-const RadioCard = ({ label, price, time }: RadioCardProps) => {
+export const RadioCard = ({ label, price, time }: RadioCardProps) => {
   return (
     <div>
       <p className='text-base'>{label}</p>
@@ -25,6 +25,21 @@ const RadioCard = ({ label, price, time }: RadioCardProps) => {
         <span className='absolute right-0'>${price}</span>
       </p>
     </div>
+  )
+}
+
+export const RadioMethodCard = ({ label, price, time }: RadioCardProps) => {
+  return (
+    <>
+      {' '}
+      <div className='w-full'>
+        <p className='text-base w-full'>{label}</p>
+        <p className='text-sm font-inter text-gray-505050 flex gap-80 justify-between w-full'>
+          <span>{time}</span>
+          <span>${price}</span>
+        </p>
+      </div>
+    </>
   )
 }
 

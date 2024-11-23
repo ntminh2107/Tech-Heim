@@ -2,25 +2,27 @@ import { PayloadAction } from '@reduxjs/toolkit'
 import {
   addOrderAPI,
   addtransactionAPI,
-  getDetailOrderAPI
+  getDetailOrderAPI,
+  getListMethodAPI
 } from '../../services/order.service'
-import { Order, Transaction } from '../../types/Order'
+import { Order, ShipMethod, Transaction } from '../../types/Order'
 
 import { createAppSlice } from '../appSlice'
-import { ShipCost } from '../../types/Product'
 
 interface OrderState {
   loading: boolean
   order: Order | null
   transaction: Transaction | null
-  shipCost: ShipCost | null
+  shipCost: ShipMethod | null
+  shipCostList: ShipMethod[]
 }
 
 const initialState: OrderState = {
   loading: true,
   order: null,
   transaction: null,
-  shipCost: null
+  shipCost: null,
+  shipCostList: []
 }
 
 export const orderSlice = createAppSlice({
@@ -28,7 +30,7 @@ export const orderSlice = createAppSlice({
   initialState,
   reducers: (create) => ({
     chooseShipCostAction: create.reducer(
-      (state, action: PayloadAction<ShipCost>) => {
+      (state, action: PayloadAction<ShipMethod>) => {
         const data = action.payload
         return {
           ...state,
@@ -37,8 +39,14 @@ export const orderSlice = createAppSlice({
       }
     ),
     addOrderThunk: create.asyncThunk(
-      async (addressID: number) => {
-        const res = await addOrderAPI(addressID)
+      async ({
+        addressID,
+        shipMethodID
+      }: {
+        addressID: number
+        shipMethodID: number
+      }) => {
+        const res = await addOrderAPI({ addressID, shipMethodID })
         return res
       },
       {
@@ -130,7 +138,30 @@ export const orderSlice = createAppSlice({
           }
         }
       }
-    )
+    ),
+    getListMethodShipThunk: create.asyncThunk(getListMethodAPI, {
+      pending: (state) => {
+        return {
+          ...state,
+          loading: true
+        }
+      },
+      fulfilled: (state, action) => {
+        const { data, status } = action.payload
+        return {
+          ...state,
+          shipCostList: data,
+          status: status,
+          loading: false
+        }
+      },
+      rejected: (state) => {
+        return {
+          ...state,
+          loading: false
+        }
+      }
+    })
   })
 })
 
@@ -138,7 +169,8 @@ export const {
   addOrderThunk,
   getOrderDetailThunk,
   addTransactionThunk,
-  chooseShipCostAction
+  chooseShipCostAction,
+  getListMethodShipThunk
 } = orderSlice.actions
 
 export default orderSlice.reducer

@@ -1,11 +1,10 @@
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
-
-import ListProduct from '../../components/molecules/product/ListProduct'
-import PaymentCartCard from '../../components/molecules/payment/PaymentCartCard'
 import CardCart from '../../components/atoms/cards/cart/CardCart'
 import Step from '../../components/atoms/step'
 import { useNavigate } from 'react-router-dom'
+import TotalCartCard from '../../components/molecules/payment/TotalCartCard'
+import ListProductFromLanding from '../../components/molecules/product/ListProductFromLanding'
 
 const Cart = () => {
   const { listNewProducts } = useSelector((state: RootState) => state.product)
@@ -36,7 +35,8 @@ const Cart = () => {
           })}
         </div>
         <div className='basis-4/12  mt-6 md:mt-0'>
-          <PaymentCartCard
+          <TotalCartCard
+            cartItems={cartItems}
             buttonLabel='Proceed to checkout'
             onClick={() => navigate('/checkout')}
             className='gap-4'
@@ -54,9 +54,9 @@ const Cart = () => {
         <h5 className='font-semibold text-xl mb-6'>
           Customers who viewed items in your browsing history also viewed
         </h5>
-        <ListProduct
+        <ListProductFromLanding
           productList={listNewProducts}
-          className='grid-cols-2 md:grid-cols-4 '
+          className='grid-cols-2 lg:grid-cols-4'
         />
       </div>
     </>

@@ -4,7 +4,7 @@ import ListProduct from '../../components/molecules/product/ListProduct'
 import FilterOptions from '../../components/organisms/filter/FilterOptions'
 import { AppDispatch, RootState } from '../../redux/store'
 import { useLocation, useParams } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import {
   getFilterProductListThunk,
   getSpecFilterListThunk
@@ -14,10 +14,11 @@ const ProductFilterBrand = () => {
   const { category } = useParams<{ category?: string }>() ?? {}
   const location = useLocation()
 
-  const queryParams = new URLSearchParams(location.search)
-  const queryObject: { [key: string]: string } = Object.fromEntries(
-    queryParams.entries()
-  )
+  // const queryParams = new URLSearchParams(location.search)
+  const queryObject = useMemo(() => {
+    return Object.fromEntries(new URLSearchParams(location.search).entries())
+  }, [location.search])
+
   const dispatch = useDispatch<AppDispatch>()
   const { listProducts } = useSelector((state: RootState) => state.product)
   const { specFilter } = useSelector((state: RootState) => state.product)
@@ -32,7 +33,7 @@ const ProductFilterBrand = () => {
         })
       )
     }
-  }, [listProducts])
+  }, [category, queryObject])
 
   // const updatedQueryParams = (newsParams: { [key: string]: string }) => {
   //   const searchParams = new URLSearchParams(location.search)

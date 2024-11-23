@@ -1,21 +1,21 @@
-import { Modal } from "antd";
+import { Modal } from 'antd'
 
-import AuthTab from "../../molecules/tabs";
+import AuthTab from '../../molecules/tabs'
 
 type ModalProps = {
-  open: boolean;
-  setOpen: (isOpen: boolean) => void;
-};
+  open: boolean
+  setOpen: (isOpen: boolean) => void
+}
 
 const AuthModal = ({ open, setOpen }: ModalProps) => {
   return (
     <>
       <Modal
-        className="max-w-[600px]"
+        className='max-w-[600px]'
         title={
           <img
-            src="/assets/images/logo_text.svg"
-            className="mx-auto block md:hidden"
+            src='/assets/images/logo_text.svg'
+            className='mx-auto block md:hidden'
           />
         }
         centered
@@ -26,7 +26,7 @@ const AuthModal = ({ open, setOpen }: ModalProps) => {
         <AuthTab />
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default AuthModal;
+export default AuthModal

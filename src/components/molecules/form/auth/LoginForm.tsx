@@ -19,18 +19,19 @@ const LoginForm = () => {
   const [form] = Form.useForm()
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
     dispatch(loginThunk({ email: values.email, password: values.password }))
-    dispatch(
-      setModalState({
-        key: 'authModal',
-        isOpen: false
-      })
-    )
   }
+
   const handleToggleModalSuccess = (isOpen: boolean) => {
     dispatch(
       setModalState({
         key: 'successModal',
         isOpen: isOpen
+      })
+    )
+    dispatch(
+      setModalState({
+        key: 'authModal',
+        isOpen: false
       })
     )
   }

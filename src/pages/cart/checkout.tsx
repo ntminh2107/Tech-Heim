@@ -1,187 +1,161 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { Button } from "antd";
-import { AppDispatch, RootState } from "../../redux/store";
-import { setModalState } from "../../redux/slice/modalSlice";
-import { addOrderThunk } from "../../redux/slice/orderSlice";
-import PaymentCartCard from "../../components/molecules/payment/PaymentCartCard";
-import OrderList from "../../components/organisms/order/OrderList";
-import Step from "../../components/atoms/step";
-import InputFormField from "../../components/atoms/formField/InputFormField";
-import MapModal from "../../components/organisms/modal/MapModal";
-import AddressModal from "../../components/organisms/modal/AddressModal";
-import RadioFormField from "../../components/atoms/formField/RadioFormField";
-import { generateTransactionID } from "../../utils/orderUtils";
-import { ProductInCart } from "../../types/Product";
-import { Order } from "../../types/Order";
+import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { Button, Radio, Space } from 'antd'
+import { AppDispatch, RootState } from '../../redux/store'
+
+import Step from '../../components/atoms/step'
+import InputFormField from '../../components/atoms/formField/InputFormField'
+
+import AddressModal from '../../components/organisms/modal/AddressModal'
+import {
+  RadioCard,
+  RadioMethodCard
+} from '../../components/atoms/formField/RadioFormField'
+import PaymentCartCard from '../../components/molecules/payment/PaymentCartCard'
+import OrderList from '../../components/organisms/order/OrderList'
+import { useState } from 'react'
+import { setModalState } from '../../redux/slice/modalSlice'
 
 const Checkout = () => {
-  const { shipCost } = useSelector((state: RootState) => state.product);
-  const { currentUser } = useSelector((state: RootState) => state.auth);
-  const cartItems = currentUser?.cart;
-  const { mapModal, addressModal } = useSelector(
-    (state: RootState) => state.appModal
-  );
+  const { currentUser } = useSelector((state: RootState) => state.auth)
+  const { cart } = useSelector((state: RootState) => state.cart)
+  const cartItems = cart?.cartItems
+  const { addressList } = useSelector((state: RootState) => state.auth)
+  const { shipCostList } = useSelector((state: RootState) => state.order)
+  const { addressModal } = useSelector((state: RootState) => state.appModal)
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch<AppDispatch>();
-
-  const [shipmentData, setShipmentData] = useState({
-    userId: currentUser?.id || "",
-    fullname: currentUser?.fullName || "",
-    phonenumber: "",
-    street: "",
-    city: "",
-    region: "",
-    postalcode: "",
-    recipient: "",
-    rePhone: "",
-    shippingMethod: shipCost?.label || "",
-    shippingPrice: shipCost?.price || 0,
-  });
-
-  useEffect(() => {
-    if (
-      !location.pathname.startsWith("/checkout") &&
-      !location.pathname.startsWith("/payment")
-    ) {
-      setShipmentData({
-        userId: currentUser?.id || "",
-        fullname: currentUser?.fullName || "",
-        phonenumber: "",
-        street: "",
-        city: "",
-        region: "",
-        postalcode: "",
-        recipient: "",
-        rePhone: "",
-        shippingMethod: "",
-        shippingPrice: 0,
-      });
-    }
-  }, [location, currentUser]);
-
-  const handleOpenMapModal = (isOpen: boolean) => {
-    dispatch(setModalState({ key: "mapModal", isOpen: isOpen }));
-  };
+  const navigate = useNavigate()
+  const dispatch = useDispatch<AppDispatch>()
 
   const handleOpenAddressModal = (isOpen: boolean) => {
-    dispatch(setModalState({ key: "addressModal", isOpen: isOpen }));
-  };
+    dispatch(setModalState({ key: 'addressModal', isOpen: isOpen }))
+  }
 
-  const handleAddressSubmit = (address: any) => {
-    setShipmentData({ ...shipmentData, ...address });
-  };
+  const [selectedMethod, setSelectedMethod] = useState<number | null>(null)
+  const [selectedAddress, setSelectedAddress] = useState<number | null>(null)
+  const [selectedPrice, setSelectedPrice] = useState<number | null>(null)
 
-  const handleShippingChange = (method: { label: string; price: number }) => {
-    setShipmentData({
-      ...shipmentData,
-      shippingMethod: method.label,
-      shippingPrice: method.price,
-    });
-  };
+  const handleShippingChange = (methodId: number, price: number) => {
+    setSelectedMethod(methodId)
+    setSelectedPrice(price)
+    console.log('Selected Method Price:', price)
+  }
 
-  const handleContinueToPay = () => {
-    if (cartItems) {
-      const transactionId = generateTransactionID();
-      const totalAmount =
-        cartItems.reduce((sum: number, item: ProductInCart) => {
-          const price = item.salePrice ? item.salePrice : item.price;
-          return sum + price * item.quantity;
-        }, 0) + shipmentData.shippingPrice;
+  const handleAddressChange = (addressID: number) => {
+    setSelectedAddress(addressID)
+    console.log('address: ', selectedAddress)
+  }
 
-      const newOrder: Order = {
-        id: transactionId,
-        userId: currentUser?.id as string | number,
-        fullname: shipmentData.fullname,
-        street: shipmentData.street,
-        city: shipmentData.city,
-        region: shipmentData.region,
-        postalcode: shipmentData.postalcode,
-        shippingMethod: shipmentData.shippingMethod,
-        shippingPrice: shipmentData.shippingPrice,
-        Products: cartItems,
-        totalAmount: totalAmount,
-        depositAmount: 0,
-        isPaid: false,
-        sharedWith: [],
-        payments: [],
-      };
+  const handleAddressSubmit = (address: any) => {}
 
-      dispatch(addOrderThunk(newOrder));
-      navigate(`/payment/${transactionId}`);
-    }
-  };
+  const handleContinueToPay = () => {}
 
   return (
     <>
-      <div className="max-w-lg mx-auto mb-12">
+      <div className='max-w-lg mx-auto mb-12'>
         <Step
           current={1}
-          iconCart={<img src="/assets/icons/shopping/cart_finish_icon.svg" />}
+          iconCart={<img src='/assets/icons/shopping/cart_finish_icon.svg' />}
           iconCheckout={
-            <img src="/assets/icons/shopping/checkout_active_icon.svg" />
+            <img src='/assets/icons/shopping/checkout_active_icon.svg' />
           }
           iconPayment={
-            <img src="/assets/icons/shopping/payment_wait_icon.svg" />
+            <img src='/assets/icons/shopping/payment_wait_icon.svg' />
           }
         />
       </div>
-      <div className="flex flex-col lg:flex-row px-6 lg:px-20 gap-6 mb-14">
-        <div className="basis-3/5">
-          <div className=" flex flex-col border gap-8 border-gray-CBCBCB rounded-lg py-6 px-8">
-            <InputFormField
-              label="User"
-              value={currentUser?.fullName}
-              disable
-            />
+      <div className='flex flex-col lg:flex-row px-6 lg:px-20 gap-6 mb-14'>
+        <div className='basis-3/5'>
+          <div className=' flex flex-col border gap-8 border-gray-CBCBCB rounded-lg py-6 px-8'>
+            <h5 className='text-xl mb-2 font-semibold'>Address</h5>
+
+            <Radio.Group
+              className='w-full'
+              onChange={(e) => {
+                const selectedAddressId = e.target.value
+                const selectedAddress = addressList.find(
+                  (address) => address.id === selectedAddressId
+                )
+                if (selectedAddress) handleAddressChange(selectedAddress.id)
+              }}
+              value={selectedAddress}
+            >
+              <Space direction='vertical' className='w-full'>
+                {addressList.map((address) => (
+                  <Radio value={address.id} className='w-full'>
+                    <div className='w-full'>
+                      <div className='text-md mb-2 font-semibold'>
+                        {address.fullname || 'no name'}
+                      </div>
+                      <div className='text-md mb-2'>{`${address.address}, ${address.city}, ${address.country}`}</div>
+                    </div>
+                  </Radio>
+                ))}
+              </Space>
+            </Radio.Group>
 
             <InputFormField
-              label="Ship to"
-              value={
-                shipmentData.street
-                  ? `${shipmentData.street}, ${shipmentData.city}, ${shipmentData.region}, ${shipmentData.postalcode}`
-                  : "Shipping Address"
-              }
+              label='Ship to'
+              // value={
+              //   shipmentData.street
+              //     ? `${shipmentData.street}, ${shipmentData.city}, ${shipmentData.region}, ${shipmentData.postalcode}`
+              //     : 'Shipping Address'
+              // }
               disable
               icon={
                 <img
-                  src="/assets/icons/email/edit_icon.svg"
-                  className="w-5 cursor-pointer"
+                  src='/assets/icons/email/edit_icon.svg'
+                  className='w-5 cursor-pointer'
                   onClick={() => handleOpenAddressModal(true)}
                 />
               }
-            ></InputFormField>
-
-            <RadioFormField
-              label="Shipping Method"
-              value={shipmentData.shippingPrice}
-              onShippingChange={handleShippingChange}
             />
+
+            <Radio.Group
+              className='w-full'
+              onChange={(e) => {
+                const selectedId = e.target.value
+                const selected = shipCostList.find(
+                  (method) => method.id === selectedId
+                )
+                if (selected) handleShippingChange(selected.id, selected.price)
+              }}
+              value={selectedMethod}
+            >
+              <Space direction='vertical' className='w-full'>
+                {shipCostList.map((method) => (
+                  <Radio value={method.id} className='w-full'>
+                    <div className='w-full'>
+                      <RadioMethodCard
+                        label={method.method}
+                        price={method.price}
+                        time={method.detail}
+                      />
+                    </div>
+                  </Radio>
+                ))}
+              </Space>
+            </Radio.Group>
           </div>
           <Button
-            size="large"
-            className="text-primary"
-            type="text"
+            size='large'
+            className='text-primary'
+            type='text'
             onClick={handleContinueToPay}
           >
             Continue to pay
           </Button>
         </div>
-        <div className="basis-2/5">
+        <div className='basis-2/5'>
           <PaymentCartCard
-            buttonLabel="Continue to pay"
-            onClick={handleContinueToPay}
-            shippingCost={shipmentData.shippingPrice}
+            buttonLabel='Continue to pay'
+            shipCost={selectedPrice as number}
           >
             <OrderList cartItems={cartItems || []} />
           </PaymentCartCard>
         </div>
       </div>
-      {mapModal && (
-        <MapModal isOpen={mapModal} setIsOpen={handleOpenMapModal} />
-      )}
+
       {addressModal && (
         <AddressModal
           isOpen={addressModal}
@@ -190,7 +164,7 @@ const Checkout = () => {
         />
       )}
     </>
-  );
-};
+  )
+}
 
-export default Checkout;
+export default Checkout

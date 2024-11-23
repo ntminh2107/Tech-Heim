@@ -13,15 +13,5 @@ export const navBarItems = [
     key: 'blog',
     label: 'Blog',
     link: '/blog'
-  },
-  {
-    key: 'faq',
-    label: 'FAQ',
-    link: '/faq'
-  },
-  {
-    key: 'contact',
-    label: 'Contact Us',
-    link: '/contact-us'
   }
 ]

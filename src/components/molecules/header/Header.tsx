@@ -20,8 +20,12 @@ import {
   getListNewBlogsThunk,
   getListVideoBlogsThunk
 } from '../../../redux/slice/blogSlice'
-import { getUserDetailThunk } from '../../../redux/slice/authSlice'
+import {
+  getAddressListThunk,
+  getUserDetailThunk
+} from '../../../redux/slice/authSlice'
 import MenuSlider from '../../atoms/MenuSlider'
+import { getListMethodShipThunk } from '../../../redux/slice/orderSlice'
 
 const Header = () => {
   const dispatch = useDispatch<AppDispatch>()
@@ -38,6 +42,8 @@ const Header = () => {
     dispatch(getListVideoBlogsThunk())
     dispatch(getSaleProductListThunk())
     dispatch(getCategoriesListThunk())
+    dispatch(getAddressListThunk())
+    dispatch(getListMethodShipThunk())
     if (token) {
       dispatch(getUserDetailThunk())
     }

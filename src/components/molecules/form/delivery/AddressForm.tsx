@@ -1,93 +1,63 @@
-import { Checkbox, Form, FormInstance, FormProps, Input, Select } from "antd";
+import { Form, FormInstance, FormProps, Input } from 'antd'
 type FieldType = {
-  fullname?: string;
-  phonenumber?: string;
-  street?: string;
-  city?: string;
-  region?: string;
-  postalcode?: string;
-  commit?: string;
-  recipient?: string;
-  rePhone?: string;
-};
+  fullname: string
+  address: string
+  district: string
+  city: string
+  country: string
+}
 const AddressForm = ({
   form,
-  onSave,
+  onSave
 }: {
-  form: FormInstance;
-  onSave: (values: FieldType) => void;
+  form: FormInstance
+  onSave: (values: FieldType) => void
 }) => {
-  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-    console.log("Success:", values);
-    onSave(values);
-  };
+  const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
+    console.log('Success:', values)
+    onSave(values)
+  }
   return (
     <Form form={form} initialValues={{ remember: true }} onFinish={onFinish}>
       <Form.Item<FieldType>
-        name="fullname"
-        rules={[{ required: true, message: "Please input your full name!" }]}
+        name='fullname'
+        rules={[{ required: true, message: 'Please input your full name!' }]}
       >
-        <Input size="large" placeholder="Full name" />
+        <Input size='large' placeholder='Full name' />
       </Form.Item>
+
       <Form.Item<FieldType>
-        name="phonenumber"
-        rules={[{ required: true, message: "Please input your phone!" }]}
+        name='address'
+        rules={[{ required: true, message: 'Please input your address!' }]}
       >
-        <Input size="large" placeholder="Phone number" />
+        <Input size='large' placeholder='Street name and house number' />
       </Form.Item>
-      <Form.Item<FieldType>
-        name="street"
-        rules={[{ required: true, message: "Please input your address!" }]}
-      >
-        <Input size="large" placeholder="Street name and house number" />
-      </Form.Item>
-      <div className="flex gap-4">
+
+      <div className='flex gap-4'>
         <Form.Item<FieldType>
-          name="city"
-          rules={[{ required: true, message: "Please input your city!" }]}
-          className="flex-1"
+          name='district'
+          rules={[{ required: true, message: 'Please input your city!' }]}
+          className='flex-1'
         >
-          <Input size="large" placeholder="City" />
+          <Input size='large' placeholder='district' />
         </Form.Item>
+
         <Form.Item<FieldType>
-          name="region"
-          rules={[{ required: true, message: "Please input your region!" }]}
-          className="flex-1"
+          name='city'
+          rules={[{ required: true, message: 'Please input your region!' }]}
+          className='flex-1'
         >
-          <Select
-            size="large"
-            placeholder="Select region"
-            options={[
-              { value: "sea", label: "South East Asia" },
-              { value: "afr", label: "Africa" },
-              { value: "na", label: "North America" },
-            ]}
-          />
+          <Input size='large' placeholder='city' />
         </Form.Item>
       </div>
       <Form.Item<FieldType>
-        name="postalcode"
-        rules={[{ required: true, message: "Please input your postal code!" }]}
+        name='country'
+        rules={[{ required: true, message: 'Please input your postal code!' }]}
       >
-        <Input size="large" placeholder="Postal code" />
-      </Form.Item>
-      <Form.Item<FieldType> name="commit" valuePropName="checked">
-        <Checkbox>I am the recipient of my order</Checkbox>
-      </Form.Item>
-      <Form.Item<FieldType>
-        name="recipient"
-        rules={[{ required: false, message: "Please input name!" }]}
-      >
-        <Input size="large" placeholder="recipient name" />
-      </Form.Item>
-      <Form.Item<FieldType>
-        name="rePhone"
-        rules={[{ required: false, message: "Please input phone!" }]}
-      >
-        <Input size="large" placeholder="Phone number" />
+        <Input size='large' placeholder='Country' />
       </Form.Item>
     </Form>
-  );
-};
+  )
+}
 
-export default AddressForm;
+export default AddressForm

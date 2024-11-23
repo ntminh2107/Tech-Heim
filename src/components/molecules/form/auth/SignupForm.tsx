@@ -29,12 +29,6 @@ const SignupForm = () => {
           password: values?.password
         })
       )
-      dispatch(
-        setModalState({
-          key: 'authModal',
-          isOpen: false
-        })
-      )
     }
   }
 

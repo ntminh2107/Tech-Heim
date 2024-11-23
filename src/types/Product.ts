@@ -42,9 +42,3 @@ export type ImagePreview = {
 export type Colors = {
   color: string
 }
-
-export type ShipCost = {
-  label: string
-  time?: string
-  price: number
-}

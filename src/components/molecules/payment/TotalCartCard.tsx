@@ -12,33 +12,30 @@ type Props = {
   setGrandTotal?: React.Dispatch<React.SetStateAction<number>>
   depositAmount?: number
   shippingCost?: number
-  shipCost?: number
   cartItems?: CartItem[]
 }
 
-const PaymentCartCard = ({
+const TotalCartCard = ({
   children,
   buttonLabel,
   onClick,
   className,
   setGrandTotal,
-  cartItems,
-  shipCost,
-  depositAmount = 0
+  cartItems
 }: Props) => {
+  console.log(cartItems)
+
   const total = cartItems?.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   )
   const grandTotal = total
 
-  const shippingCost = shipCost ?? 0 // Default to 0 if shipCost is null or undefined
-
   useEffect(() => {
     if (setGrandTotal) {
-      setGrandTotal(grandTotal as number)
+      setGrandTotal(total as number)
     }
-  }, [shippingCost, total, depositAmount])
+  }, [grandTotal, setGrandTotal])
 
   return (
     <div
@@ -50,15 +47,8 @@ const PaymentCartCard = ({
       {children}
       <div>
         <p className='flex justify-between text-sm '>
-          <span className='text-gray-717171'>Total</span>
+          <span className='text-gray-717171'>total</span>
           <span className='text-gray-444444'>${formatNumber(total)}</span>
-        </p>
-
-        <p className='flex justify-between text-sm '>
-          <span className='text-gray-717171'>Shipment cost</span>
-          <span className='text-gray-444444'>
-            {shippingCost ? `$${formatNumber(shippingCost)}` : `$ ${0.0}`}
-          </span>
         </p>
 
         <Divider className='my-3' />
@@ -67,7 +57,6 @@ const PaymentCartCard = ({
           <span>${formatNumber(grandTotal)}</span>
         </h6>
       </div>
-
       <Button size='large' type='primary' onClick={onClick}>
         {buttonLabel}
       </Button>
@@ -75,4 +64,4 @@ const PaymentCartCard = ({
   )
 }
 
-export default PaymentCartCard
+export default TotalCartCard

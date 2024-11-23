@@ -3,17 +3,20 @@ import { createAppSlice } from '../appSlice'
 import { setModalState } from './modalSlice'
 import {
   addAddressUserAPI,
+  getAddressUserAPI,
   getCurrentUserAPI,
   loginAPI,
   registerAPI
 } from '../../services/auth.service'
 import { Address, User } from '../../types/User'
+import { getCartThunk } from './cartSlice'
 
 interface AuthState {
   isLoggedIn: boolean
   token: string | null
   currentUser: User | null
   address: Address | null
+  addressList: Address[]
   loading: boolean
 }
 
@@ -22,6 +25,7 @@ const initialState: AuthState = {
   token: null,
   address: null,
   loading: true,
+  addressList: [],
   isLoggedIn: false
 }
 
@@ -62,7 +66,6 @@ export const authSlice = createAppSlice({
               isOpen: true
             })
           )
-          window.location.reload()
         }
         return res
       },
@@ -101,9 +104,10 @@ export const authSlice = createAppSlice({
         if (res.status === 202) {
           localStorage.setItem('token', res.data)
           dispatch(getUserDetailThunk())
+          dispatch(getCartThunk())
           dispatch(setModalState({ key: 'successModal', isOpen: true }))
         }
-        if (res.status === 500) {
+        if (res.status === 401) {
           dispatch(setModalState({ key: 'errorModal', isOpen: true }))
           localStorage.removeItem('token')
         }
@@ -129,7 +133,40 @@ export const authSlice = createAppSlice({
         }
       }
     ),
-    getUserDetailThunk: create.asyncThunk(getCurrentUserAPI, {
+    getUserDetailThunk: create.asyncThunk(
+      async () => {
+        const res = await getCurrentUserAPI()
+        if (res.status === 401) {
+          localStorage.removeItem('token')
+        }
+        return res
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true
+          }
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload
+          return {
+            ...state,
+            loading: false,
+            currentUser: data,
+            isLoggedIn: true,
+            status: status
+          }
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false
+          }
+        }
+      }
+    ),
+    getAddressListThunk: create.asyncThunk(getAddressUserAPI, {
       pending: (state) => {
         return {
           ...state,
@@ -141,8 +178,7 @@ export const authSlice = createAppSlice({
         return {
           ...state,
           loading: false,
-          currentUser: data,
-          isLoggedIn: true,
+          addressList: data,
           status: status
         }
       },
@@ -155,20 +191,23 @@ export const authSlice = createAppSlice({
     }),
     addAddressThunk: create.asyncThunk(
       async ({
-        name,
+        fullName,
+        phoneNumber,
         address,
         district,
         city,
         country
       }: {
-        name: string
+        fullName: string
+        phoneNumber: string
         address: string
         district: string
         city: string
         country: string
       }) => {
         const res = await addAddressUserAPI({
-          name,
+          fullName,
+          phoneNumber,
           address,
           district,
           city,
@@ -207,6 +246,7 @@ export const {
   registerThunk,
   loginThunk,
   getUserDetailThunk,
-  addAddressThunk
+  addAddressThunk,
+  getAddressListThunk
 } = authSlice.actions
 export default authSlice.reducer
