@@ -13,6 +13,7 @@ const AddressModal = ({ isOpen, setIsOpen, onSubmit }: ModalProps) => {
   const handleSave = (values: any) => {
     if (onSubmit) {
       onSubmit(values)
+      setIsOpen(false)
     }
   }
   return (

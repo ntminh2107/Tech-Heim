@@ -67,7 +67,7 @@ export const addAddressUserAPI = ({
   const token = localStorage.getItem('token')
   const body = { fullName, phoneNumber, address, district, city, country }
   return axiosClient
-    .post('/api/address/add', body, {
+    .post('/api/auth/address/add', body, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
@@ -81,6 +81,19 @@ export const getAddressUserAPI = () => {
   const token = localStorage.getItem('token')
   return axiosClient
     .get('/api/auth/address/me', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+    .then((res) => {
+      const { data, status } = res
+      return { data, status }
+    })
+    .then((err) => err)
+}
+
+export const deleteSelectedAddressAPI = (addressID: number) => {
+  const token = localStorage.getItem('token')
+  return axiosClient
+    .delete(`/api/auth/address/delete/${addressID}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {

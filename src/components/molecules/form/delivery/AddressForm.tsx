@@ -1,6 +1,8 @@
 import { Form, FormInstance, FormProps, Input } from 'antd'
+
 type FieldType = {
-  fullname: string
+  fullName: string
+  phoneNumber: string
   address: string
   district: string
   city: string
@@ -15,15 +17,23 @@ const AddressForm = ({
 }) => {
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
     console.log('Success:', values)
+
     onSave(values)
   }
   return (
     <Form form={form} initialValues={{ remember: true }} onFinish={onFinish}>
       <Form.Item<FieldType>
-        name='fullname'
+        name='fullName'
         rules={[{ required: true, message: 'Please input your full name!' }]}
       >
         <Input size='large' placeholder='Full name' />
+      </Form.Item>
+
+      <Form.Item<FieldType>
+        name='phoneNumber'
+        rules={[{ required: true, message: 'Please input your phone number!' }]}
+      >
+        <Input size='large' placeholder='Phone number' />
       </Form.Item>
 
       <Form.Item<FieldType>
@@ -36,7 +46,7 @@ const AddressForm = ({
       <div className='flex gap-4'>
         <Form.Item<FieldType>
           name='district'
-          rules={[{ required: true, message: 'Please input your city!' }]}
+          rules={[{ required: true, message: 'Please input your district!' }]}
           className='flex-1'
         >
           <Input size='large' placeholder='district' />
@@ -44,7 +54,7 @@ const AddressForm = ({
 
         <Form.Item<FieldType>
           name='city'
-          rules={[{ required: true, message: 'Please input your region!' }]}
+          rules={[{ required: true, message: 'Please input your city!' }]}
           className='flex-1'
         >
           <Input size='large' placeholder='city' />
@@ -52,7 +62,7 @@ const AddressForm = ({
       </div>
       <Form.Item<FieldType>
         name='country'
-        rules={[{ required: true, message: 'Please input your postal code!' }]}
+        rules={[{ required: true, message: 'Please input your country!' }]}
       >
         <Input size='large' placeholder='Country' />
       </Form.Item>

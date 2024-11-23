@@ -11,7 +11,7 @@ export const addOrderAPI = ({
   const body = { addressID, shipMethodID }
   return axiosClient
     .post('/api/order/add', body, {
-      headers: { Authorization: token }
+      headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
       const { data, status } = res

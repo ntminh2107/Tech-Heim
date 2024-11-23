@@ -3,6 +3,7 @@ import { createAppSlice } from '../appSlice'
 import { setModalState } from './modalSlice'
 import {
   addAddressUserAPI,
+  deleteSelectedAddressAPI,
   getAddressUserAPI,
   getCurrentUserAPI,
   loginAPI,
@@ -18,6 +19,7 @@ interface AuthState {
   address: Address | null
   addressList: Address[]
   loading: boolean
+  deleteAddressMsg: string
 }
 
 const initialState: AuthState = {
@@ -26,7 +28,8 @@ const initialState: AuthState = {
   address: null,
   loading: true,
   addressList: [],
-  isLoggedIn: false
+  isLoggedIn: false,
+  deleteAddressMsg: ''
 }
 
 export const authSlice = createAppSlice({
@@ -238,6 +241,35 @@ export const authSlice = createAppSlice({
           }
         }
       }
+    ),
+    deleteSelectedAddressThunk: create.asyncThunk(
+      async (addressID: number) => {
+        const res = await deleteSelectedAddressAPI(addressID)
+        return res
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true
+          }
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload
+          return {
+            ...state,
+            deleteAddressMsg: data,
+            status: status,
+            loading: false
+          }
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false
+          }
+        }
+      }
     )
   })
 })
@@ -247,6 +279,7 @@ export const {
   loginThunk,
   getUserDetailThunk,
   addAddressThunk,
-  getAddressListThunk
+  getAddressListThunk,
+  deleteSelectedAddressThunk
 } = authSlice.actions
 export default authSlice.reducer

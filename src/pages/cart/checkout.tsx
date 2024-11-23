@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button, Radio, Space } from 'antd'
@@ -7,17 +8,19 @@ import Step from '../../components/atoms/step'
 import InputFormField from '../../components/atoms/formField/InputFormField'
 
 import AddressModal from '../../components/organisms/modal/AddressModal'
-import {
-  RadioCard,
-  RadioMethodCard
-} from '../../components/atoms/formField/RadioFormField'
+import { RadioMethodCard } from '../../components/atoms/formField/RadioFormField'
 import PaymentCartCard from '../../components/molecules/payment/PaymentCartCard'
 import OrderList from '../../components/organisms/order/OrderList'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { setModalState } from '../../redux/slice/modalSlice'
+import {
+  addAddressThunk,
+  deleteSelectedAddressThunk,
+  getAddressListThunk
+} from '../../redux/slice/authSlice'
+import { addOrderThunk } from '../../redux/slice/orderSlice'
 
 const Checkout = () => {
-  const { currentUser } = useSelector((state: RootState) => state.auth)
   const { cart } = useSelector((state: RootState) => state.cart)
   const cartItems = cart?.cartItems
   const { addressList } = useSelector((state: RootState) => state.auth)
@@ -27,28 +30,82 @@ const Checkout = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch<AppDispatch>()
 
-  const handleOpenAddressModal = (isOpen: boolean) => {
-    dispatch(setModalState({ key: 'addressModal', isOpen: isOpen }))
-  }
-
   const [selectedMethod, setSelectedMethod] = useState<number | null>(null)
   const [selectedAddress, setSelectedAddress] = useState<number | null>(null)
   const [selectedPrice, setSelectedPrice] = useState<number | null>(null)
 
+  const handleOpenAddressModal = (isOpen: boolean) => {
+    dispatch(setModalState({ key: 'addressModal', isOpen: isOpen }))
+  }
+
   const handleShippingChange = (methodId: number, price: number) => {
     setSelectedMethod(methodId)
     setSelectedPrice(price)
-    console.log('Selected Method Price:', price)
   }
 
   const handleAddressChange = (addressID: number) => {
     setSelectedAddress(addressID)
-    console.log('address: ', selectedAddress)
   }
 
-  const handleAddressSubmit = (address: any) => {}
+  const handleAddressSubmit = async (values: any) => {
+    try {
+      // Dispatch the addAddressThunk with the appropriate data structure
+      await dispatch(
+        addAddressThunk({
+          fullName: values.fullName,
+          phoneNumber: values.phoneNumber,
+          address: values.address,
+          district: values.district,
+          city: values.city,
+          country: values.country
+        })
+      )
 
-  const handleContinueToPay = () => {}
+      // Fetch the updated address list
+      await dispatch(getAddressListThunk())
+
+      // Close the address modal and show success feedback
+      dispatch(setModalState({ key: 'addressModal', isOpen: false }))
+      dispatch(setModalState({ key: 'successModal', isOpen: true }))
+    } catch (error) {
+      console.error('Error adding address:', error)
+      // Handle error, such as displaying an error modal or message
+    }
+  }
+
+  const handleDeleteSelectedAddress = async (addressID: number) => {
+    await dispatch(deleteSelectedAddressThunk(addressID))
+    await dispatch(getAddressListThunk())
+  }
+
+  const handleAddOrder = async (addressID: number, shipMethodID: number) => {
+    console.log('address: ', addressID, 'shipmethod: ', shipMethodID)
+
+    const resultAction = await dispatch(
+      addOrderThunk({ addressID: addressID, shipMethodID: shipMethodID })
+    )
+
+    if (addOrderThunk.fulfilled.match(resultAction)) {
+      const orderID = resultAction.payload.data.id // Adjust according to API response
+
+      // navigate(`/payment/${orderID}`)
+      console.log('order ID created: ', orderID)
+    } else {
+      console.error('Add order failed:', resultAction.payload)
+    }
+  }
+
+  useEffect(() => {
+    if (selectedMethod === null && shipCostList.length > 0) {
+      setSelectedMethod(shipCostList[0].id)
+    }
+    if (addressList.length > 0 && selectedAddress === null) {
+      setSelectedAddress(addressList[0].id) // Set the first item's id as default
+    }
+  }, [addressList, selectedAddress, selectedMethod, shipCostList])
+
+  console.log('ship selected: ', selectedMethod)
+  console.log('address selected: ', selectedAddress)
 
   return (
     <>
@@ -82,14 +139,26 @@ const Checkout = () => {
             >
               <Space direction='vertical' className='w-full'>
                 {addressList.map((address) => (
-                  <Radio value={address.id} className='w-full'>
-                    <div className='w-full'>
-                      <div className='text-md mb-2 font-semibold'>
-                        {address.fullname || 'no name'}
+                  <div className='w-full flex justify-center'>
+                    <Radio value={address.id} className='w-full'>
+                      <div className='w-full'>
+                        <div className='text-md mb-2 font-semibold'>
+                          {address.fullname || 'no name'}
+                        </div>
+                        <div className='text-md mb-2'>{`${address.address}, ${address.city}, ${address.country}`}</div>
                       </div>
-                      <div className='text-md mb-2'>{`${address.address}, ${address.city}, ${address.country}`}</div>
-                    </div>
-                  </Radio>
+                    </Radio>
+                    <Button
+                      type='text'
+                      className='p-0'
+                      onClick={() => handleDeleteSelectedAddress(address.id)}
+                    >
+                      <img
+                        src='/assets/icons/essential/trash_icon.svg'
+                        alt=''
+                      />
+                    </Button>
+                  </div>
                 ))}
               </Space>
             </Radio.Group>
@@ -137,19 +206,18 @@ const Checkout = () => {
               </Space>
             </Radio.Group>
           </div>
-          <Button
-            size='large'
-            className='text-primary'
-            type='text'
-            onClick={handleContinueToPay}
-          >
-            Continue to pay
-          </Button>
         </div>
         <div className='basis-2/5'>
           <PaymentCartCard
             buttonLabel='Continue to pay'
+            cartItems={cartItems}
             shipCost={selectedPrice as number}
+            onClick={() =>
+              handleAddOrder(
+                selectedAddress as number,
+                selectedMethod as number
+              )
+            }
           >
             <OrderList cartItems={cartItems || []} />
           </PaymentCartCard>

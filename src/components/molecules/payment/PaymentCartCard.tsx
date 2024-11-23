@@ -26,17 +26,18 @@ const PaymentCartCard = ({
   shipCost,
   depositAmount = 0
 }: Props) => {
+  console.log('cartItems; ', cartItems)
   const total = cartItems?.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   )
-  const grandTotal = total
 
   const shippingCost = shipCost ?? 0 // Default to 0 if shipCost is null or undefined
+  const grandTotal: number = (total as number) + shippingCost
 
   useEffect(() => {
     if (setGrandTotal) {
-      setGrandTotal(grandTotal as number)
+      setGrandTotal(grandTotal)
     }
   }, [shippingCost, total, depositAmount])
 
