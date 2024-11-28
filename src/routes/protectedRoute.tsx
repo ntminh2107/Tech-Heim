@@ -1,27 +1,27 @@
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../redux/store";
-import { useNavigate } from "react-router-dom";
-import { setModalState } from "../redux/slice/modalSlice";
-import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../redux/store'
+import { useNavigate } from 'react-router-dom'
+import { setModalState } from '../redux/slice/modalSlice'
+import { useEffect } from 'react'
 
 interface protectedRouteProps {
-  children: JSX.Element;
+  children: JSX.Element
 }
 
 const ProtectedRoute: React.FC<protectedRouteProps> = ({ children }) => {
-  const dispatch = useDispatch();
-  const nav = useNavigate();
-  const { isLoggedIn } = useSelector((state: RootState) => state.auth);
+  const dispatch = useDispatch()
+  const nav = useNavigate()
+  const { isLoggedIn } = useSelector((state: RootState) => state.auth)
   useEffect(() => {
     if (!isLoggedIn) {
-      dispatch(setModalState({ key: "authModal", isOpen: true }));
+      dispatch(setModalState({ key: 'authModal', isOpen: true }))
     }
-  }, [isLoggedIn, dispatch]);
+  }, [isLoggedIn, dispatch])
 
   if (!isLoggedIn) {
-    nav("/");
+    nav('/')
   }
-  return children;
-};
+  return children
+}
 
-export default ProtectedRoute;
+export default ProtectedRoute

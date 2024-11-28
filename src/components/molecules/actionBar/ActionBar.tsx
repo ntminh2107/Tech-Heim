@@ -55,9 +55,13 @@ const ActionBar = () => {
           }
         />
 
-        <div className={cn('md:p-2 md:block', !isLoggedIn && 'hidden')}>
-          <CartDropdown />
-        </div>
+        {token && (
+          <>
+            <div className={cn('md:p-2 md:block', !isLoggedIn && 'hidden')}>
+              <CartDropdown />
+            </div>
+          </>
+        )}
         {token ? (
           <>
             <ProfileMenu />

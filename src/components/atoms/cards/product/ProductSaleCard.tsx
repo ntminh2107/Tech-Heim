@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { formatNumber } from '../../../../utils/formatNumber'
 
 import { Skeleton } from 'antd'
@@ -9,6 +10,7 @@ type Props = {
   price: number
   percent: number
   loading: boolean
+  onClick?: () => void
 }
 
 const ProductSaleCard = ({
@@ -19,12 +21,17 @@ const ProductSaleCard = ({
   percent,
   loading
 }: Props) => {
+  const navigate = useNavigate()
   const newPrice: number = price - (price * percent) / 100
+  const handleOnClickNavigateProduct = (id: number) => {
+    navigate(`/products/${id}`)
+  }
 
   return (
     <div
       className='relative rounded-md bg-white xl:w-43 lg:w-40 w-full flex flex-col shadow-md group cursor-pointer'
       id={id.toString()}
+      onClick={() => handleOnClickNavigateProduct(id)}
     >
       {loading ? (
         <div className='flex flex-col gap-2'>

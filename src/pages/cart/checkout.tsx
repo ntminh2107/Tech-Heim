@@ -90,6 +90,7 @@ const Checkout = () => {
 
       // navigate(`/payment/${orderID}`)
       console.log('order ID created: ', orderID)
+      navigate(`/payment/${orderID}`)
     } else {
       console.error('Add order failed:', resultAction.payload)
     }

@@ -47,6 +47,7 @@ export type Bill = {
 
 export type Address = {
   id: number
+  phoneNumber: string
   fullname: string
   address: string
   district: string

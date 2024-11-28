@@ -89,7 +89,7 @@ function App() {
             <Route path='/' element={<CheckoutLayout />}>
               <Route path='/cart' element={<Cart />}></Route>
               <Route path='/checkout' element={<Checkout />}></Route>
-              <Route path='/payment/:orderId' element={<Payments />}></Route>
+              <Route path='/payment/:orderID' element={<Payments />}></Route>
             </Route>
           </Route>{' '}
           <Route path='/redirect-to-homepage' element={<Complete />} />
