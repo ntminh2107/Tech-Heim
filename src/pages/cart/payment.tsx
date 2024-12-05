@@ -5,10 +5,7 @@ import { Button, Spin } from 'antd'
 import { AppDispatch, RootState } from '../../redux/store'
 import { setModalState } from '../../redux/slice/modalSlice'
 import Step from '../../components/atoms/step'
-import InputFormField from '../../components/atoms/formField/InputFormField'
-import MapModal from '../../components/organisms/modal/MapModal'
-import ChooseCardModal from '../../components/organisms/modal/ChooseCardModal'
-import AddNewCardModal from '../../components/organisms/modal/AddNewCardModal'
+
 import { SuccessModal } from '../../components/organisms/modal'
 import { formatNumber } from '../../utils/formatNumber'
 import { generateTransactionID } from '../../utils/orderUtils'
@@ -16,43 +13,53 @@ import { Order } from '../../types/Order'
 import PaymentCard from '../../components/molecules/payment/PaymentCard'
 import 'react-toastify/dist/ReactToastify.css'
 import { getOrderDetailThunk } from '../../redux/slice/orderSlice'
+import OrderList from '../../components/organisms/order/OrderList'
+import { loadStripe } from '@stripe/stripe-js'
+import PaymentForm from '../../components/molecules/form/payment/paymentForm'
+import { Elements } from '@stripe/react-stripe-js'
 
-const PaymentData = {
-  orderDetail: {
-    id: '5d4d591f-509a-4330-8706-fb4a6845cd7c',
-    userID: '467678d7-1b86-45ee-ac21-353eb8315b2a',
-    address: {
-      id: 5,
-      fullname: 'minh e',
-      address: 'dsd',
-      city: 'dasd',
-      country: 'Việt Nam'
-    },
-    shipMethod: {
-      id: 1,
-      method: 'Free Shipping',
-      detail: '7-30 business days',
-      price: 0
-    },
-    status: 'pending',
-    orderItems: [
-      {
-        id: 10,
-        name: 'Dell XPS 13',
-        image:
-          'https://product.hstatic.net/1000331874/product/dell_xps_13_dc9a366cc90c495b9a3da844f2a08cb9.jpg',
-        quantity: 1,
-        price: 1399
-      }
-    ],
-    total: 1399,
-    createdAt: '2024-11-28T14:28:19.782Z',
-    updatedAt: '2024-11-28T14:28:19.782Z'
-  },
-  stripeID: 'pi_3QQ2FuKg88uI13X41UeaonYn',
-  stripeClientSecret:
-    'pi_3QQ2FuKg88uI13X41UeaonYn_secret_85JAtMFKBBq15mZCOVDQlT49L'
-}
+const stripePromise = loadStripe(
+  'pk_test_51QOsXXKg88uI13X4K67Vh216k6UpMSI47nT3eWJF4pyM73bYwzWBHHmMj6GGy8DaCOPqfckPkzjgyAqvJDh69dR1005KaCCZTe'
+)
+
+// const PaymentData = {
+//   orderDetail: {
+//     id: '5d4d591f-509a-4330-8706-fb4a6845cd7c',
+//     userID: '467678d7-1b86-45ee-ac21-353eb8315b2a',
+//     address: {
+//       id: 5,
+//       fullname: 'minh e',
+//       phoneNumber: '0339633289',
+//       district: '123',
+//       address: 'dsd',
+//       city: 'dasd',
+//       country: 'Việt Nam'
+//     },
+//     shipMethod: {
+//       id: 1,
+//       method: 'Free Shipping',
+//       detail: '7-30 business days',
+//       price: 0
+//     },
+//     status: 'pending',
+//     orderItems: [
+//       {
+//         id: 10,
+//         name: 'Dell XPS 13',
+//         image:
+//           'https://product.hstatic.net/1000331874/product/dell_xps_13_dc9a366cc90c495b9a3da844f2a08cb9.jpg',
+//         quantity: 1,
+//         price: 1399
+//       }
+//     ],
+//     total: 1399,
+//     createdAt: '2024-11-28T14:28:19.782Z',
+//     updatedAt: '2024-11-28T14:28:19.782Z'
+//   },
+//   stripeID: 'pi_3QQ4YNKg88uI13X40xyvHiFP',
+//   stripeClientSecret:
+//     'pi_3QQ4YNKg88uI13X40xyvHiFP_secret_keLzMxDy3yN2ZBOk5r2MlqvV8'
+// }
 
 const Payments = () => {
   const { orderID } = useParams<{ orderID: string }>()
@@ -63,9 +70,11 @@ const Payments = () => {
   const dispatch = useDispatch<AppDispatch>()
   const navigate = useNavigate()
 
-  const [orderData, setOrderData] = useState<Order | null>(null)
-  const [loading, setLoading] = useState<boolean>(true)
-  const [paidAmount, setPaidAmount] = useState<number>(0)
+  const { order, loading } = useSelector((state: RootState) => state.order)
+
+  // const [orderDetail, setOrderData] = useState<Order | null>(null)
+  // const [loading, setLoading] = useState<boolean>(true)
+  // const [paidAmount, setPaidAmount] = useState<number>(0)
 
   // useEffect(() => {
   //   if (orderID) {
@@ -92,8 +101,17 @@ const Payments = () => {
     setSelectedPayment(paymentMethod)
   }
 
+  if (!order) {
+    console.error('not found')
+  }
+
+  const handlePaymentSuccess = () => {
+    console.log('Payment successful')
+    // Navigate or update state as needed
+  }
+
   const handlePlaceOrder = async () => {
-    if (!currentUser || !currentUser.id || !orderData) {
+    if (!currentUser || !currentUser.id || !order) {
       console.error('User or order data missing.')
       return
     }
@@ -106,6 +124,10 @@ const Payments = () => {
       )
     }
   }
+
+  useEffect(() => {
+    if (orderID) dispatch(getOrderDetailThunk(orderID))
+  }, [])
 
   return (
     <>
@@ -123,98 +145,29 @@ const Payments = () => {
       </div>
       <div className='flex flex-col lg:flex-row px-6 lg:px-20 gap-6 mb-14'>
         <div className='basis-3/5'>
-          <div className=' flex flex-col border gap-2 border-gray-CBCBCB bg-white rounded-lg py-6 px-8'>
-            <h5 className='text-xl mb-2 font-semibold'>Payment</h5>
-            <div className='flex gap-2'>
-              <div
-                className='bg-gray-F6F6F6 rounded-lg py-4 px-2 flex flex-1 justify-between'
-                onClick={() => handlePaymentChange('CreditCard')}
-              >
-                <div className='flex items-center gap-2'>
-                  <input
-                    type='radio'
-                    name='payment'
-                    checked={selectedPayment === 'CreditCard'}
-                    readOnly
-                  />
-                  <label>Credit Cards</label>
-                </div>
-                {/* <div className="flex gap-2">
-                <img src={selectedCreditCard?.image} className="w-14" />
-                <img
-                  src="/assets/icons/email/edit_icon.svg"
-                  className="w-5 cursor-pointer"
-                  onClick={() => handleOpenChooseModal(true)}
+          <Elements stripe={stripePromise}>
+            <div className='flex w-full h-full'>
+              {order && (
+                <PaymentForm
+                  stripeClientSecret={order.stripeClientSecret as string}
+                  orderTotal={order.orderDetail.total}
+                  orderDetail={order.orderDetail}
+                  onSuccess={handlePaymentSuccess}
                 />
-              </div> */}
-              </div>
-              <button
-                className='p-3 bg-primary-25 rounded-lg'
-                onClick={() => handleOpenAddModal(true)}
-              >
-                <span className='p-2 text-primary text-xl'>+</span>
-              </button>
+              )}
             </div>
-            <div
-              className='bg-gray-F6F6F6 rounded-lg py-4 px-2 '
-              onClick={() => handlePaymentChange('PayPal')}
-            >
-              <input
-                type='radio'
-                name='payment'
-                checked={selectedPayment === 'PayPal'}
-                className='mr-2'
-                readOnly
-              />
-              <label>PayPal</label>
-            </div>
-            <InputFormField
-              label='Billing address'
-              value='Same as shipping address'
-              disable
-              icon={
-                <img
-                  src='/assets/icons/email/edit_icon.svg'
-                  className='w-5 cursor-pointer'
-                  onClick={() => handleOpenMapModal(true)}
-                />
-              }
-            />
-            {/* {!orderData?.isPaid && (
-            <div className="mt-4">
-              <h5 className="text-xl mb-2 font-semibold">Paid Amount</h5>
-              <Input
-                type="number"
-                value={paidAmount}
-                onChange={(e) => setPaidAmount(Number(e.target.value))}
-                min={0.5}
-                max={
-                  orderData
-                    ? orderData.totalAmount - orderData.depositAmount
-                    : 0
-                }
-                placeholder="Enter amount to pay"
-              />
-            </div>
-          )} */}
-          </div>
-          <Button
-            size='large'
-            className='text-primary'
-            type='text'
-            onClick={() => navigate('/checkout')}
-          >
-            Return to checkout
-          </Button>
+          </Elements>{' '}
         </div>
         <div className='basis-2/5'>
-          <PaymentCard
-            buttonLabel='Place order'
-            onClick={handlePlaceOrder}
-            order={PaymentData.orderDetail as Order}
-          >
-            {/* <OrderList cartItems={orderData?.Products || []} /> */}
-          </PaymentCard>
+          {order && (
+            <PaymentCard
+              buttonLabel='Place order'
+              onClick={handlePlaceOrder}
+              order={order.orderDetail}
+            >
+              <OrderList cartItems={order.orderDetail.orderItems || []} />
+            </PaymentCard>
+          )}
         </div>
       </div>
 

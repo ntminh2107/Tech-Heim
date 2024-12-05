@@ -3,7 +3,7 @@ import { cn } from '../../../../utils/utils'
 
 type Props = {
   name: string
-  color: string
+  color?: string
   quantity: number
   price: number
   salePrice?: number

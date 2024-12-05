@@ -13,29 +13,15 @@ const OrderList = ({ cartItems }: Props) => {
       {cartItems.map((item) => {
         return (
           <OrderCard
-            color={item.color}
+            color={item.color || ''}
             name={item.name}
-            price={item.price}
+            price={item.price * item.quantity}
             quantity={item.quantity}
             key={item.id}
             image={item.image}
-            salePrice={item?.salePrice}
           />
         )
       })}
-      <div className='flex gap-1 pt-6'>
-        <Input
-          className='basis-2/3 border-gray-B4B4B4'
-          size='large'
-          placeholder='discount code'
-        />
-        <Button
-          className='basis-1/3 text-primary border-primary border-2'
-          size='large'
-        >
-          Apply
-        </Button>
-      </div>
     </div>
   )
 }

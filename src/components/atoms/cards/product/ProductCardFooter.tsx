@@ -6,18 +6,20 @@ import {
 
 type Props = {
   price: number
-  salePrice?: number
+  percent?: number
   rating: number
   onClick?: () => void
 }
 
-const ProductCardFooter = ({ price, rating, salePrice, onClick }: Props) => {
-  const renderPrice = salePrice ? (
+const ProductCardFooter = ({ price, rating, percent, onClick }: Props) => {
+  const renderPrice = percent ? (
     <div className='flex-1'>
       <p className='text-gray-717171 line-through text-xs'>
         ${formatNumber(price)}
       </p>
-      <p className='text-sm'>${formatNumber(salePrice)}</p>
+      <p className='text-sm'>
+        ${formatNumber((price * (100 - percent)) / 100)}
+      </p>
     </div>
   ) : (
     <div className='flex-1'>

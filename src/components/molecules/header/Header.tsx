@@ -25,9 +25,15 @@ import {
   getUserDetailThunk
 } from '../../../redux/slice/authSlice'
 import MenuSlider from '../../atoms/MenuSlider'
-import { getListMethodShipThunk } from '../../../redux/slice/orderSlice'
+import {
+  getAllOrderThunk,
+  getListMethodShipThunk,
+  getOrderDetailThunk
+} from '../../../redux/slice/orderSlice'
+import { useParams } from 'react-router-dom'
 
 const Header = () => {
+  const { orderID } = useParams<{ orderID: string }>()
   const dispatch = useDispatch<AppDispatch>()
   const token = localStorage.getItem('token')
   const [isOpen, setIsOpen] = useState(false)
@@ -46,6 +52,10 @@ const Header = () => {
     dispatch(getListMethodShipThunk())
     if (token) {
       dispatch(getUserDetailThunk())
+      dispatch(getAllOrderThunk())
+      if (orderID) {
+        dispatch(getOrderDetailThunk(orderID))
+      }
     }
   }, [dispatch])
 

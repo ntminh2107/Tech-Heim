@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Button, Divider } from 'antd'
 
 import { cn } from '../../../utils/utils'
@@ -55,9 +55,6 @@ const PaymentCard = ({
           <span>${formatNumber(grandTotal)}</span>
         </h6>
       </div>
-      <Button size='large' type='primary' onClick={onClick}>
-        {buttonLabel}
-      </Button>
     </div>
   )
 }

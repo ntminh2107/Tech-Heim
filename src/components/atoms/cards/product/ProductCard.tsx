@@ -65,7 +65,7 @@ const ProductCard = ({ id, image, name, price, rating }: Props) => {
           <div className='static h-[30px] content-end'>
             <ProductCardFooter
               price={price.price}
-              salePrice={salePrice}
+              percent={price.percent}
               rating={rating}
               onClick={handleAddToCart}
             />

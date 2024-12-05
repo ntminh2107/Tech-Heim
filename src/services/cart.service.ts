@@ -43,7 +43,7 @@ export const deleteCartItemAPI = (cartItemID: number) => {
 export const deleteCartAPI = () => {
   const token = localStorage.getItem('token')
   return axiosClient
-    .delete('/api/cart/delete/all', {
+    .delete('/api/cart/delete', {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {

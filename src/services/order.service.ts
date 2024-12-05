@@ -23,7 +23,7 @@ export const addOrderAPI = ({
 export const getDetailOrderAPI = (orderID: string) => {
   const token = localStorage.getItem('token')
   return axiosClient
-    .get(`/api/order/${orderID}`, {
+    .get(`/api/order/detail/${orderID}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
@@ -35,15 +35,13 @@ export const getDetailOrderAPI = (orderID: string) => {
 
 export const addtransactionAPI = ({
   orderID,
-  type,
-  deposit
+  stripePaymentIntentID
 }: {
   orderID: string
-  type: string
-  deposit: number
+  stripePaymentIntentID: string
 }) => {
   const token = localStorage.getItem('token')
-  const body = { orderID, type, deposit }
+  const body = { orderID, stripePaymentIntentID }
   return axiosClient
     .post('/api/order/transaction/add', body, {
       headers: { Authorization: `Bearer ${token}` }
@@ -58,6 +56,19 @@ export const addtransactionAPI = ({
 export const getListMethodAPI = () => {
   return axiosClient
     .get('api/order/ship')
+    .then((res) => {
+      const { data, status } = res
+      return { data, status }
+    })
+    .catch((err) => err)
+}
+
+export const getAllOrderAPI = () => {
+  const token = localStorage.getItem('token')
+  return axiosClient
+    .get('api/order/all', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
     .then((res) => {
       const { data, status } = res
       return { data, status }

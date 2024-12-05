@@ -18,6 +18,14 @@ export type Order = {
   transaction?: Transaction
   createdAt: Date
   updatedAt: Date
+  stripeID?: string
+  stripeClientSecret?: string
+}
+
+export type OrderWithIDStripe = {
+  orderDetail: Order
+  stripeID?: string
+  stripeClientSecret?: string
 }
 
 export type ShipMethod = {
@@ -31,9 +39,10 @@ export type Transaction = {
   id: string
   orderID: string
   userID: string
-  type: string
-  deposit: number
-  status: string
+  stripePaymentIntentID: string
+  stripeStatus: string
+  amount: number
+  currency: string
+  receiptURL: string
   createdAt: Date
-  updatedAt: Date
 }

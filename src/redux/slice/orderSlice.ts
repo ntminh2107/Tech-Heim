@@ -2,19 +2,26 @@ import { PayloadAction } from '@reduxjs/toolkit'
 import {
   addOrderAPI,
   addtransactionAPI,
+  getAllOrderAPI,
   getDetailOrderAPI,
   getListMethodAPI
 } from '../../services/order.service'
-import { Order, ShipMethod, Transaction } from '../../types/Order'
+import {
+  Order,
+  OrderWithIDStripe,
+  ShipMethod,
+  Transaction
+} from '../../types/Order'
 
 import { createAppSlice } from '../appSlice'
 
 interface OrderState {
   loading: boolean
-  order: Order | null
+  order: OrderWithIDStripe | null
   transaction: Transaction | null
   shipCost: ShipMethod | null
   shipCostList: ShipMethod[]
+  orderList: Order[]
 }
 
 const initialState: OrderState = {
@@ -22,7 +29,8 @@ const initialState: OrderState = {
   order: null,
   transaction: null,
   shipCost: null,
-  shipCostList: []
+  shipCostList: [],
+  orderList: []
 }
 
 export const orderSlice = createAppSlice({
@@ -105,14 +113,12 @@ export const orderSlice = createAppSlice({
     addTransactionThunk: create.asyncThunk(
       async ({
         orderID,
-        type,
-        deposit
+        stripePaymentIntentID
       }: {
         orderID: string
-        type: string
-        deposit: number
+        stripePaymentIntentID: string
       }) => {
-        const res = await addtransactionAPI({ orderID, type, deposit })
+        const res = await addtransactionAPI({ orderID, stripePaymentIntentID })
         return res
       },
       {
@@ -161,6 +167,29 @@ export const orderSlice = createAppSlice({
           loading: false
         }
       }
+    }),
+    getAllOrderThunk: create.asyncThunk(getAllOrderAPI, {
+      pending: (state) => {
+        return {
+          ...state,
+          loading: true
+        }
+      },
+      fulfilled: (state, action) => {
+        const { data, status } = action.payload
+        return {
+          ...state,
+          status: status,
+          orderList: data,
+          loading: false
+        }
+      },
+      rejected: (state) => {
+        return {
+          ...state,
+          loading: false
+        }
+      }
     })
   })
 })
@@ -170,7 +199,8 @@ export const {
   getOrderDetailThunk,
   addTransactionThunk,
   chooseShipCostAction,
-  getListMethodShipThunk
+  getListMethodShipThunk,
+  getAllOrderThunk
 } = orderSlice.actions
 
 export default orderSlice.reducer
