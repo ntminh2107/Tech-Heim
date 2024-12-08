@@ -48,10 +48,11 @@ const Header = () => {
     dispatch(getListVideoBlogsThunk())
     dispatch(getSaleProductListThunk())
     dispatch(getCategoriesListThunk())
-    dispatch(getAddressListThunk())
     dispatch(getListMethodShipThunk())
     if (token) {
       dispatch(getUserDetailThunk())
+      dispatch(getAddressListThunk())
+
       dispatch(getAllOrderThunk())
       if (orderID) {
         dispatch(getOrderDetailThunk(orderID))

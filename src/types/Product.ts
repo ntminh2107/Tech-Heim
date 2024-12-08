@@ -42,3 +42,15 @@ export type ImagePreview = {
 export type Colors = {
   color: string
 }
+
+export type Meta = {
+  page: number
+  page_limit: number
+  total: number
+  total_pages: number
+}
+
+export type ProductList = {
+  meta: Meta
+  data: Product[]
+}

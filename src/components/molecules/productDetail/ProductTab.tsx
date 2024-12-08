@@ -1,22 +1,33 @@
-import { useSelector } from 'react-redux'
-import { RootState } from '../../../redux/store'
+import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, RootState } from '../../../redux/store'
 import { Tabs } from 'antd'
 import TabPane from 'antd/es/tabs/TabPane'
 import { ProductDescription } from '.'
 import ProductSimilarCarousel from './ProductSimilarCarousel'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ListComment from '../comment/ListComment'
 import CommentInputCard from '../../atoms/cards/comment/CommentInputCard'
+import { getCommentListThunk } from '../../../redux/slice/productSlice'
+import { useParams } from 'react-router-dom'
 
 const ProductTab = () => {
   const [activeKey, setActiveKey] = useState('technical-details')
-  const { product } = useSelector((state: RootState) => state.product)
+  const { id } = useParams<{ id?: string }>() ?? {}
+
+  const dispatch = useDispatch<AppDispatch>()
+  const { product, commentList } = useSelector(
+    (state: RootState) => state.product
+  )
 
   const handleChange = (key: string) => {
     setActiveKey(key)
     const element = document.getElementById(key)
     element?.scrollIntoView({ behavior: 'smooth' })
   }
+
+  useEffect(() => {
+    if (id) dispatch(getCommentListThunk(Number(id)))
+  }, [commentList])
 
   return (
     <div>
@@ -35,10 +46,10 @@ const ProductTab = () => {
         <div className='font-medium text-xl'>Comments</div>
         <div className='flex lg:flex-row flex-col gap-6'>
           <div className='lg:basis-1/4'>
-            <CommentInputCard />
+            <CommentInputCard productID={Number(id)} />
           </div>
           <div className='lg:basis-3/4'>
-            <ListComment comments={product?.comments} />
+            <ListComment comments={commentList} />
           </div>
         </div>
       </div>

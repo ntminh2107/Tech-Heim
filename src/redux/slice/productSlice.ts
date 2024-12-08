@@ -1,7 +1,9 @@
 import {
+  addCommentProductAPI,
   getBestSellerProductsAPI,
   getBrandListAPI,
   getCategoriesListAPI,
+  getCommentAPI,
   getNewProductsAPI,
   getProductByCatAPI,
   getProductDetailAPI,
@@ -9,20 +11,29 @@ import {
   getSearchProductsAPI,
   getSpecFilterAPI
 } from '../../services/product.service'
-import { Brand, Category, Product, SpecFilter } from '../../types/Product'
+import { Comments } from '../../types/Comment'
+import {
+  Brand,
+  Category,
+  Product,
+  ProductList,
+  SpecFilter
+} from '../../types/Product'
 import { createAppSlice } from '../appSlice'
 
 interface ProductState {
   loading: boolean
   listBrand: Brand[]
   listProducts: Product[]
-  listNewProducts: Product[]
-  listBestSellerProducts: Product[]
+  listNewProducts: ProductList
+  listBestSellerProducts: ProductList
   listSearchProducts: Product[]
   listSaleProducts: Product[]
   listCategory: Category[]
   product: Product | null
   specFilter: SpecFilter[]
+  comment: Comments | null
+  commentList: Comments[]
 }
 
 const initialState: ProductState = {
@@ -31,11 +42,13 @@ const initialState: ProductState = {
   listProducts: [],
   product: null,
   specFilter: [],
-  listNewProducts: [],
+  listNewProducts: null,
   listSearchProducts: [],
-  listBestSellerProducts: [],
+  listBestSellerProducts: null,
   listSaleProducts: [],
-  listCategory: []
+  listCategory: [],
+  comment: null,
+  commentList: []
 }
 
 export const listProductslice = createAppSlice({
@@ -273,7 +286,73 @@ export const listProductslice = createAppSlice({
           loading: false
         }
       }
-    })
+    }),
+    addCommentProductThunk: create.asyncThunk(
+      async ({
+        productID,
+        content,
+        rating
+      }: {
+        productID: number
+        content: string
+        rating: number
+      }) => {
+        const res = await addCommentProductAPI({ productID, content, rating })
+        return res
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true
+          }
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload
+          return {
+            ...state,
+            loading: false,
+            comment: data,
+            status: status
+          }
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false
+          }
+        }
+      }
+    ),
+    getCommentListThunk: create.asyncThunk(
+      async (productID: number) => {
+        const res = await getCommentAPI(productID)
+        return res
+      },
+      {
+        pending: (state) => {
+          return {
+            ...state,
+            loading: true
+          }
+        },
+        fulfilled: (state, action) => {
+          const { data, status } = action.payload
+          return {
+            ...state,
+            loading: false,
+            commentList: data,
+            status: status
+          }
+        },
+        rejected: (state) => {
+          return {
+            ...state,
+            loading: false
+          }
+        }
+      }
+    )
   })
 })
 
@@ -286,7 +365,9 @@ export const {
   getBestSellerProductListThunk,
   getSearchedProductListThunk,
   getBrandListThunk,
-  getCategoriesListThunk
+  getCategoriesListThunk,
+  addCommentProductThunk,
+  getCommentListThunk
 } = listProductslice.actions
 
 export default listProductslice.reducer

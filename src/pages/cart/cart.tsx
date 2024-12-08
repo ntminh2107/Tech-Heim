@@ -55,7 +55,7 @@ const Cart = () => {
           Customers who viewed items in your browsing history also viewed
         </h5>
         <ListProductFromLanding
-          productList={listNewProducts}
+          productList={listNewProducts.data}
           className='grid-cols-2 lg:grid-cols-4'
         />
       </div>

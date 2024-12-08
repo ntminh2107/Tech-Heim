@@ -49,7 +49,7 @@ export const getProductDetailAPI = (productID: number) => {
 
 export const getNewProductsAPI = () => {
   return axiosClient
-    .get(`/api/product?limit=10`)
+    .get(`/api/product?page=1&pageSize=10`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -59,7 +59,7 @@ export const getNewProductsAPI = () => {
 
 export const getBestSellerProductsAPI = () => {
   return axiosClient
-    .get(`/api/product?limit=10`)
+    .get(`/api/product?page=1&pageSize=10`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -149,6 +149,38 @@ export const addProductAPI = ({
   }
   return axiosClient
     .post('/api/product/add', body)
+    .then((res) => {
+      const { data, status } = res
+      return { data, status }
+    })
+    .catch((err) => err)
+}
+
+export const addCommentProductAPI = ({
+  productID,
+  content,
+  rating
+}: {
+  productID: number
+  content: string
+  rating: number
+}) => {
+  const token = localStorage.getItem('token')
+  const body = { content, rating, productID }
+  return axiosClient
+    .post(`/api/product/comment/add`, body, {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+    .then((res) => {
+      const { data, status } = res
+      return { data, status }
+    })
+    .catch((err) => err)
+}
+
+export const getCommentAPI = (productID: number) => {
+  return axiosClient
+    .get(`/api/product/comment/list/${productID}`)
     .then((res) => {
       const { data, status } = res
       return { data, status }

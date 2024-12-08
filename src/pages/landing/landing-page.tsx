@@ -35,14 +35,14 @@ const LandingPage = () => {
       <ProductSale />
       <HomeSection sectionName='New Products' viewAllButton>
         <ListProductFromLanding
-          productList={listNewProducts}
+          productList={listNewProducts?.data}
           className='grid-cols-2 lg:grid-cols-4'
         />
       </HomeSection>
       <SecondBanner />
       <HomeSection sectionName='Best Sellers' viewAllButton>
         <ListProductFromLanding
-          productList={listBestSellerProducts}
+          productList={listBestSellerProducts?.data}
           className='grid-cols-2 lg:grid-cols-4'
         />
       </HomeSection>
