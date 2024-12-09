@@ -49,7 +49,7 @@ export const getProductDetailAPI = (productID: number) => {
 
 export const getNewProductsAPI = () => {
   return axiosClient
-    .get(`/api/product?page=1&pageSize=10`)
+    .get(`/api/product?page=1&pageSize=10&sortOrder=asc&search=`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -59,7 +59,7 @@ export const getNewProductsAPI = () => {
 
 export const getBestSellerProductsAPI = () => {
   return axiosClient
-    .get(`/api/product?page=1&pageSize=10`)
+    .get(`/api/product?page=1&pageSize=10&sortOrder=asc&search=`)
     .then((res) => {
       const { data, status } = res
       return { data, status }
