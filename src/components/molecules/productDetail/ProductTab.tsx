@@ -14,7 +14,6 @@ const ProductTab = () => {
   const [activeKey, setActiveKey] = useState('technical-details')
   const { id } = useParams<{ id?: string }>() ?? {}
 
-  const dispatch = useDispatch<AppDispatch>()
   const { product, commentList } = useSelector(
     (state: RootState) => state.product
   )
@@ -24,10 +23,6 @@ const ProductTab = () => {
     const element = document.getElementById(key)
     element?.scrollIntoView({ behavior: 'smooth' })
   }
-
-  useEffect(() => {
-    if (id) dispatch(getCommentListThunk(Number(id)))
-  }, [commentList])
 
   return (
     <div>

@@ -22,45 +22,6 @@ const stripePromise = loadStripe(
   'pk_test_51QOsXXKg88uI13X4K67Vh216k6UpMSI47nT3eWJF4pyM73bYwzWBHHmMj6GGy8DaCOPqfckPkzjgyAqvJDh69dR1005KaCCZTe'
 )
 
-// const PaymentData = {
-//   orderDetail: {
-//     id: '5d4d591f-509a-4330-8706-fb4a6845cd7c',
-//     userID: '467678d7-1b86-45ee-ac21-353eb8315b2a',
-//     address: {
-//       id: 5,
-//       fullname: 'minh e',
-//       phoneNumber: '0339633289',
-//       district: '123',
-//       address: 'dsd',
-//       city: 'dasd',
-//       country: 'Việt Nam'
-//     },
-//     shipMethod: {
-//       id: 1,
-//       method: 'Free Shipping',
-//       detail: '7-30 business days',
-//       price: 0
-//     },
-//     status: 'pending',
-//     orderItems: [
-//       {
-//         id: 10,
-//         name: 'Dell XPS 13',
-//         image:
-//           'https://product.hstatic.net/1000331874/product/dell_xps_13_dc9a366cc90c495b9a3da844f2a08cb9.jpg',
-//         quantity: 1,
-//         price: 1399
-//       }
-//     ],
-//     total: 1399,
-//     createdAt: '2024-11-28T14:28:19.782Z',
-//     updatedAt: '2024-11-28T14:28:19.782Z'
-//   },
-//   stripeID: 'pi_3QQ4YNKg88uI13X40xyvHiFP',
-//   stripeClientSecret:
-//     'pi_3QQ4YNKg88uI13X40xyvHiFP_secret_keLzMxDy3yN2ZBOk5r2MlqvV8'
-// }
-
 const Payments = () => {
   const { orderID } = useParams<{ orderID: string }>()
   console.log('orderID:', orderID)
@@ -127,7 +88,7 @@ const Payments = () => {
 
   useEffect(() => {
     if (orderID) dispatch(getOrderDetailThunk(orderID))
-  }, [])
+  }, [orderID, dispatch])
 
   return (
     <>

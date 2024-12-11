@@ -34,17 +34,21 @@ const LandingPage = () => {
       <CategoryHomeList />
       <ProductSale />
       <HomeSection sectionName='New Products' viewAllButton>
-        <ListProductFromLanding
-          productList={listNewProducts.data}
-          className='grid-cols-2 lg:grid-cols-4'
-        />
+        {listNewProducts && (
+          <ListProductFromLanding
+            productList={listNewProducts.data}
+            className='grid-cols-2 lg:grid-cols-4'
+          />
+        )}
       </HomeSection>
       <SecondBanner />
       <HomeSection sectionName='Best Sellers' viewAllButton>
-        <ListProductFromLanding
-          productList={listBestSellerProducts.data}
-          className='grid-cols-2 lg:grid-cols-4'
-        />
+        {listBestSellerProducts && (
+          <ListProductFromLanding
+            productList={listBestSellerProducts.data}
+            className='grid-cols-2 lg:grid-cols-4'
+          />
+        )}
       </HomeSection>
       <HomeSection sectionName='Top Brands' viewAllButton={false}>
         <BrandCarousel brand={listBrand} />

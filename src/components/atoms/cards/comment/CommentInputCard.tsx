@@ -39,7 +39,6 @@ const CommentInputCard: React.FC<CommentInputProps> = ({ productID }) => {
           rating: commentData.rating
         })
       )
-      dispatch(getCommentListThunk(productID))
       message.success('Comment submitted successfully!')
       setRating(0) // Reset rating
     } catch (error) {

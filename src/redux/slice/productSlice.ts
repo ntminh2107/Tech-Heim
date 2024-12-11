@@ -288,16 +288,22 @@ export const listProductslice = createAppSlice({
       }
     }),
     addCommentProductThunk: create.asyncThunk(
-      async ({
-        productID,
-        content,
-        rating
-      }: {
-        productID: number
-        content: string
-        rating: number
-      }) => {
+      async (
+        {
+          productID,
+          content,
+          rating
+        }: {
+          productID: number
+          content: string
+          rating: number
+        },
+        { dispatch }
+      ) => {
         const res = await addCommentProductAPI({ productID, content, rating })
+        if (res.status === 201) {
+          dispatch(getCommentListThunk(productID))
+        }
         return res
       },
       {

@@ -32,46 +32,46 @@ const ProductCard = ({ id, image, name, price, rating }: Props) => {
     }
   }
 
+  const isDiscount: boolean = (price.percent as number) > 0
+
   const salePrice: number =
     (price.price * (100 - (price.percent as number))) / 100
 
   return (
     <div
       className='relative rounded-md bg-white  sm:w-full
-     md:w-full lg:w-full xl:w-72 h-auto flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4 '
+     md:w-full lg:w-full xl:w-72 h-auto flex flex-col gap-3 shadow-md group hover:shadow-lg cursor-pointer p-4'
     >
-      <>
-        {price.percent && (
-          <p className='absolute top-2 left-0 py-1 px-[6px] text-secondary-400 bg-secondary-100 rounded-tr-xl rounded-br-xl group-hover:hidden'>
-            {price.percent}%
-          </p>
-        )}
+      {(price.percent || isDiscount) && (
+        <p className='absolute top-2 left-0 py-1 px-[6px] text-secondary-400 bg-secondary-100 rounded-tr-xl rounded-br-xl group-hover:hidden'>
+          {price.percent}%
+        </p>
+      )}
 
-        <div
-          className='flex justify-center items-center w-full h-40 md:h-32 lg:h-48'
-          onClick={handleClick}
-        >
-          <img
-            src={image}
-            alt={name}
-            className='object-contain w-full h-full p-2'
+      <div
+        className='flex justify-center items-center w-full h-40 md:h-32 lg:h-48'
+        onClick={handleClick}
+      >
+        <img
+          src={image}
+          alt={name}
+          className='object-contain w-full h-full p-2'
+        />
+      </div>
+      <div className='gradient-black mx-2'></div>
+      <div className='flex-1 flex flex-col justify-between pb-2 px-2'>
+        <div className='pb-2 group-hover:text-primary text-sm sm:text-base lg:text-lg max-h-fit truncate '>
+          {name}
+        </div>
+        <div className='static h-[30px] content-end'>
+          <ProductCardFooter
+            price={price.price}
+            percent={price.percent}
+            rating={rating}
+            onClick={handleAddToCart}
           />
         </div>
-        <div className='gradient-black mx-2'></div>
-        <div className='flex-1 flex flex-col justify-between pb-2 px-2'>
-          <div className='pb-2 group-hover:text-primary text-sm sm:text-base lg:text-lg max-h-fit truncate '>
-            {name}
-          </div>
-          <div className='static h-[30px] content-end'>
-            <ProductCardFooter
-              price={price.price}
-              percent={price.percent}
-              rating={rating}
-              onClick={handleAddToCart}
-            />
-          </div>
-        </div>
-      </>
+      </div>
     </div>
   )
 }

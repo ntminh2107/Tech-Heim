@@ -3,31 +3,32 @@ import PayCard from '../../components/atoms/cards/productdetails/PayCard'
 import ProductInfoCard from '../../components/atoms/cards/productdetails/ProductInfoCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../../redux/store'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import ProductTab from '../../components/molecules/productDetail/ProductTab'
 import ImagePreview from '../../components/atoms/image/ImagePreview'
-import ProductSimilarCarousel from '../../components/molecules/productDetail/ProductSimilarCarousel'
 import VideoBlogCarousel from '../../components/molecules/blog/VideoBlogCarousel'
 import { getProductDetailThunk } from '../../redux/slice/productSlice'
 
-const product = () => {
-  const { id } = useParams<{ id?: string }>() ?? {}
+const Product = () => {
+  const { id } = useParams()
+  const idProduct = Number(id)
   const dispatch = useDispatch<AppDispatch>()
 
-  useEffect(() => {
-    if (id) {
-      dispatch(getProductDetailThunk(Number(id)))
-      window.scrollTo(0, 0)
-    }
-  }, [dispatch, id])
+  // Track if the effect has been triggered once
+  const [hasDispatched, setHasDispatched] = useState(false)
 
-  const { product, loading } = useSelector((state: RootState) => state.product)
+  const { product } = useSelector((state: RootState) => state.product)
   const { listvideoBlogsPost } = useSelector((state: RootState) => state.blog)
 
-  console.log(product?.imagePreview)
+  useEffect(() => {
+    if (id && !hasDispatched) {
+      // Ensure that dispatch only runs once for the given id
+      dispatch(getProductDetailThunk(idProduct))
+      setHasDispatched(true) // Set to true to prevent repeated dispatches for the same id
+      window.scrollTo(0, 0)
+    }
+  }, [])
 
-  if (loading) {
-  }
   return (
     <div className='flex flex-col gap-8 mb-14'>
       <div className='flex xl:flex-row flex-col gap-8 mb-8'>
@@ -53,4 +54,5 @@ const product = () => {
     </div>
   )
 }
-export default product
+
+export default Product
