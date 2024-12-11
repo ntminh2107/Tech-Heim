@@ -13,6 +13,8 @@ type Props = {
   depositAmount?: number
   shippingCost?: number
   shipCost?: number
+  selectedAddress: number | null
+  selectedMethod: number | null
   cartItems?: CartItem[]
 }
 
@@ -23,6 +25,8 @@ const PaymentCartCard = ({
   className,
   setGrandTotal,
   cartItems,
+  selectedAddress,
+  selectedMethod,
   shipCost,
   depositAmount = 0
 }: Props) => {
@@ -69,7 +73,12 @@ const PaymentCartCard = ({
         </h6>
       </div>
 
-      <Button size='large' type='primary' onClick={onClick}>
+      <Button
+        size='large'
+        type='primary'
+        onClick={onClick}
+        disabled={selectedMethod === null || selectedAddress === null}
+      >
         {buttonLabel}
       </Button>
     </div>

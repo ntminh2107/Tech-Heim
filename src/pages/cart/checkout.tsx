@@ -152,7 +152,12 @@ const Checkout = () => {
                     <Button
                       type='text'
                       className='p-0'
-                      onClick={() => handleDeleteSelectedAddress(address.id)}
+                      onClick={() => {
+                        handleDeleteSelectedAddress(address.id)
+                        if (selectedAddress === address.id) {
+                          setSelectedAddress(null)
+                        }
+                      }}
                     >
                       <img
                         src='/assets/icons/essential/trash_icon.svg'
@@ -212,6 +217,8 @@ const Checkout = () => {
           <PaymentCartCard
             buttonLabel='Continue to pay'
             cartItems={cartItems}
+            selectedAddress={selectedAddress}
+            selectedMethod={selectedMethod}
             shipCost={selectedPrice as number}
             onClick={() =>
               handleAddOrder(
