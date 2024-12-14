@@ -31,7 +31,7 @@ const Product = () => {
 
   return (
     <div className='flex flex-col gap-8 mb-14'>
-      <div className='flex xl:flex-row flex-col gap-8 mb-8'>
+      <div className='flex xl:flex-row flex-col gap-8 mb-8 justify-around'>
         <div className='flex lg:flex-row flex-col gap-6'>
           <div className='xl:basis-3/5 lg:basis-1/2'>
             <ImagePreview imageUrl={product?.imagePreview as string[]} />

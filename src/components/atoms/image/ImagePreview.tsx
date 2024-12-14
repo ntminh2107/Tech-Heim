@@ -41,7 +41,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({ imageUrl }) => {
             <img
               key={index}
               src={imageUrl[index]}
-              className='w-full h-full cursor-pointer object-contain'
+              className='w-full h-full cursor-pointer object-contain bg-white'
               onClick={() => handleChangeImg(index)}
               alt={`Thumbnail ${index + 1}`}
             />
