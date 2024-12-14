@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { PriceTag, Product } from '../../../types/Product'
 import { cn } from '../../../utils/utils'
 import ProductCard from '../../atoms/cards/product/ProductCard'
-import { Pagination } from 'antd'
+import { Pagination, Input } from 'antd'
 
 type Props = {
   productList: Product[]
@@ -12,12 +12,23 @@ type Props = {
 const ListProduct = ({ productList, className }: Props) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [isTransitioning, setIsTransitioning] = useState(false)
-
   const [productPerPage] = useState(9)
+  const [searchQuery, setSearchQuery] = useState('')
 
+  // Filter products based on search query
+  const filteredProducts = productList.filter(
+    (product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (product.category &&
+        product.category.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      (product.brand &&
+        product.brand.toLowerCase().includes(searchQuery.toLowerCase()))
+  )
+
+  // Calculate pagination based on filtered products
   const indexOfLastProduct = currentPage * productPerPage
   const indexOfFirstProduct = indexOfLastProduct - productPerPage
-  const currentProducts = productList.slice(
+  const currentProducts = filteredProducts.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   )
@@ -30,8 +41,23 @@ const ListProduct = ({ productList, className }: Props) => {
     }, 300)
   }
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value)
+    setCurrentPage(1) // Reset to first page when search query changes
+  }
+
   return (
     <div>
+      {/* Search input */}
+      <div className='mb-4'>
+        <Input
+          placeholder='Search for products...'
+          value={searchQuery}
+          onChange={handleSearchChange}
+          className='w-full'
+        />
+      </div>
+
       <div
         className={cn(
           `grid gap-6 transition-opacity duration-300 ${
@@ -59,7 +85,7 @@ const ListProduct = ({ productList, className }: Props) => {
         <Pagination
           current={currentPage}
           pageSize={productPerPage}
-          total={productList.length}
+          total={filteredProducts.length}
           onChange={onPageChange}
           className='items-center'
         />

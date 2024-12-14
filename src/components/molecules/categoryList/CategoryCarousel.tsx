@@ -23,7 +23,7 @@ const CategoryCarousel = () => {
               key={item.id}
               onClick={() => handleRedirect(item.categoryName)}
               name={item.categoryName}
-              img={`/assets/icons/device/${item.categoryName}.svg`}
+              img={item.image}
               className='my-3'
             />
           )

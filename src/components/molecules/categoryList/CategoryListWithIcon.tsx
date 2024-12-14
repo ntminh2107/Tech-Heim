@@ -28,11 +28,7 @@ const CategoryListWithIcon = () => {
             )}
             key={item.id}
           >
-            <img
-              src={`/assets/icons/device/${item.categoryName}.svg`}
-              alt=''
-              className='h-12 w-12'
-            />
+            <img src={item.image} alt='' className='h-12 w-12' />
             <p className='px-2 pb-2'>{item.categoryName}</p>
           </div>
         )
