@@ -92,91 +92,99 @@ const Payments = () => {
 
   return (
     <>
-      <div className='max-w-lg mx-auto mb-12'>
-        <Step
-          current={2}
-          iconCart={<img src='/assets/icons/shopping/cart_finish_icon.svg' />}
-          iconCheckout={
-            <img src='/assets/icons/shopping/checkout_finish_icon.svg' />
-          }
-          iconPayment={
-            <img src='/assets/icons/shopping/payment_active_icon.svg' />
-          }
-        />
-      </div>
-      <div className='flex flex-col lg:flex-row px-6 lg:px-20 gap-6 mb-14'>
-        <div className='basis-3/5'>
-          <Elements stripe={stripePromise}>
-            <div className='flex w-full h-full'>
+      {order && (
+        <>
+          <div className='max-w-lg mx-auto mb-12'>
+            <Step
+              current={2}
+              iconCart={
+                <img src='/assets/icons/shopping/cart_finish_icon.svg' />
+              }
+              iconCheckout={
+                <img src='/assets/icons/shopping/checkout_finish_icon.svg' />
+              }
+              iconPayment={
+                <img src='/assets/icons/shopping/payment_active_icon.svg' />
+              }
+            />
+          </div>
+          <div className='flex flex-col lg:flex-row px-6 lg:px-20 gap-6 mb-14'>
+            <div className='basis-3/5'>
+              <Elements stripe={stripePromise}>
+                <div className='flex w-full h-full'>
+                  {order?.orderDetail && (
+                    <PaymentForm
+                      stripeClientSecret={order.stripeClientSecret as string}
+                      orderTotal={order?.orderDetail.total}
+                      orderDetail={order?.orderDetail}
+                      onSuccess={handlePaymentSuccess}
+                    />
+                  )}
+                </div>
+              </Elements>{' '}
+            </div>
+            <div className='basis-2/5'>
               {order && (
-                <PaymentForm
-                  stripeClientSecret={order.stripeClientSecret as string}
-                  orderTotal={order.orderDetail.total}
-                  orderDetail={order.orderDetail}
-                  onSuccess={handlePaymentSuccess}
-                />
+                <PaymentCard
+                  buttonLabel='Place order'
+                  onClick={handlePlaceOrder}
+                  order={order.orderDetail}
+                >
+                  <OrderList cartItems={order.orderDetail.orderItems || []} />
+                </PaymentCard>
               )}
             </div>
-          </Elements>{' '}
-        </div>
-        <div className='basis-2/5'>
-          {order && (
-            <PaymentCard
-              buttonLabel='Place order'
-              onClick={handlePlaceOrder}
-              order={order.orderDetail}
-            >
-              <OrderList cartItems={order.orderDetail.orderItems || []} />
-            </PaymentCard>
-          )}
-        </div>
-      </div>
+          </div>
 
-      {/* {addNewCardModal && (
+          {/* {addNewCardModal && (
         <AddNewCardModal
           isOpen={addNewCardModal}
           setIsOpen={handleOpenAddModal}
         />
       )} */}
-      {successModal && (
-        <SuccessModal
-          title='Successful Payment'
-          isOpen={successModal}
-          setIsOpen={handleOpenSuccessModal}
-        >
-          <div className='flex flex-col gap-4'>
-            <p className='text-base text-gray-717171 flex justify-between'>
-              <span>Payment type</span>
-              <span>
-                {selectedPayment === 'CreditCard' ? 'Credit Card' : 'PayPal'}
-              </span>
-            </p>
-            <p className='text-base text-gray-717171 flex justify-between'>
-              <span>Phone number</span>
-              <span>{currentUser?.phoneNumber}</span>
-            </p>
-            <p className='text-base text-gray-717171 flex justify-between'>
-              <span>Email</span>
-              <span>{currentUser?.email}</span>
-            </p>
-            <p className='text-base text-gray-717171 flex justify-between'>
-              <span>Transaction id</span>
-              <span>{generateTransactionID()}</span>
-            </p>
-            <p className='text-base font-semibold text-gray-717171 flex justify-between'>
-              <span>Amount Paid</span>
-              <span>${formatNumber(grandTotal)}</span>
-            </p>
-            <Button
-              onClick={() => navigate('/redirect-to-homepage')}
-              className='w-1/2 self-end'
-              type='primary'
-              size='large'
+          {successModal && (
+            <SuccessModal
+              title='Successful Payment'
+              isOpen={successModal}
+              setIsOpen={handleOpenSuccessModal}
             >
-              Order Status
-            </Button>
-          </div>
-        </SuccessModal>
+              <div className='flex flex-col gap-4'>
+                <p className='text-base text-gray-717171 flex justify-between'>
+                  <span>Payment type</span>
+                  <span>
+                    {selectedPayment === 'CreditCard'
+                      ? 'Credit Card'
+                      : 'PayPal'}
+                  </span>
+                </p>
+                <p className='text-base text-gray-717171 flex justify-between'>
+                  <span>Phone number</span>
+                  <span>{currentUser?.phoneNumber}</span>
+                </p>
+                <p className='text-base text-gray-717171 flex justify-between'>
+                  <span>Email</span>
+                  <span>{currentUser?.email}</span>
+                </p>
+                <p className='text-base text-gray-717171 flex justify-between'>
+                  <span>Transaction id</span>
+                  <span>{generateTransactionID()}</span>
+                </p>
+                <p className='text-base font-semibold text-gray-717171 flex justify-between'>
+                  <span>Amount Paid</span>
+                  <span>${formatNumber(grandTotal)}</span>
+                </p>
+                <Button
+                  onClick={() => navigate('/redirect-to-homepage')}
+                  className='w-1/2 self-end'
+                  type='primary'
+                  size='large'
+                >
+                  Order Status
+                </Button>
+              </div>
+            </SuccessModal>
+          )}
+        </>
       )}
     </>
   )

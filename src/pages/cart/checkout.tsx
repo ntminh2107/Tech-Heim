@@ -127,47 +127,49 @@ const Checkout = () => {
           <div className=' flex flex-col border gap-8 border-gray-CBCBCB rounded-lg py-6 px-8'>
             <h5 className='text-xl mb-2 font-semibold'>Address</h5>
 
-            <Radio.Group
-              className='w-full'
-              onChange={(e) => {
-                const selectedAddressId = e.target.value
-                const selectedAddress = addressList.find(
-                  (address) => address.id === selectedAddressId
-                )
-                if (selectedAddress) handleAddressChange(selectedAddress.id)
-              }}
-              value={selectedAddress}
-            >
-              <Space direction='vertical' className='w-full'>
-                {addressList.map((address) => (
-                  <div className='w-full flex justify-center'>
-                    <Radio value={address.id} className='w-full'>
-                      <div className='w-full'>
-                        <div className='text-md mb-2 font-semibold'>
-                          {address.fullname || 'no name'}
+            {addressList && (
+              <Radio.Group
+                className='w-full'
+                onChange={(e) => {
+                  const selectedAddressId = e.target.value
+                  const selectedAddress = addressList.find(
+                    (address) => address.id === selectedAddressId
+                  )
+                  if (selectedAddress) handleAddressChange(selectedAddress.id)
+                }}
+                value={selectedAddress}
+              >
+                <Space direction='vertical' className='w-full'>
+                  {addressList.map((address) => (
+                    <div className='w-full flex justify-center'>
+                      <Radio value={address.id} className='w-full'>
+                        <div className='w-full'>
+                          <div className='text-md mb-2 font-semibold'>
+                            {address.fullname || 'no name'}
+                          </div>
+                          <div className='text-md mb-2'>{`${address.address}, ${address.city}, ${address.country}`}</div>
                         </div>
-                        <div className='text-md mb-2'>{`${address.address}, ${address.city}, ${address.country}`}</div>
-                      </div>
-                    </Radio>
-                    <Button
-                      type='text'
-                      className='p-0'
-                      onClick={() => {
-                        handleDeleteSelectedAddress(address.id)
-                        if (selectedAddress === address.id) {
-                          setSelectedAddress(null)
-                        }
-                      }}
-                    >
-                      <img
-                        src='/assets/icons/essential/trash_icon.svg'
-                        alt=''
-                      />
-                    </Button>
-                  </div>
-                ))}
-              </Space>
-            </Radio.Group>
+                      </Radio>
+                      <Button
+                        type='text'
+                        className='p-0'
+                        onClick={() => {
+                          handleDeleteSelectedAddress(address.id)
+                          if (selectedAddress === address.id) {
+                            setSelectedAddress(null)
+                          }
+                        }}
+                      >
+                        <img
+                          src='/assets/icons/essential/trash_icon.svg'
+                          alt=''
+                        />
+                      </Button>
+                    </div>
+                  ))}
+                </Space>
+              </Radio.Group>
+            )}
 
             <InputFormField
               label='Ship to'
@@ -213,23 +215,25 @@ const Checkout = () => {
             </Radio.Group>
           </div>
         </div>
-        <div className='basis-2/5'>
-          <PaymentCartCard
-            buttonLabel='Continue to pay'
-            cartItems={cartItems}
-            selectedAddress={selectedAddress}
-            selectedMethod={selectedMethod}
-            shipCost={selectedPrice as number}
-            onClick={() =>
-              handleAddOrder(
-                selectedAddress as number,
-                selectedMethod as number
-              )
-            }
-          >
-            <OrderList cartItems={cartItems || []} />
-          </PaymentCartCard>
-        </div>
+        {cart && (
+          <div className='basis-2/5'>
+            <PaymentCartCard
+              buttonLabel='Continue to pay'
+              cartItems={cartItems}
+              selectedAddress={selectedAddress}
+              selectedMethod={selectedMethod}
+              shipCost={selectedPrice as number}
+              onClick={() =>
+                handleAddOrder(
+                  selectedAddress as number,
+                  selectedMethod as number
+                )
+              }
+            >
+              <OrderList cartItems={cartItems || []} />
+            </PaymentCartCard>
+          </div>
+        )}
       </div>
 
       {addressModal && (

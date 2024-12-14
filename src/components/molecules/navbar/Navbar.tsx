@@ -9,23 +9,24 @@ const Navbar = () => {
   return (
     <div className='hidden md:flex items-center justify-between my-6 py-2 gap-12 font-inter'>
       {navBarItems.map((item) => {
-        return item.key === 'products' ? (
-          <ProductNavbarDropdown key='products' />
-        ) : (
-          <div key={item.key}>
-            <Link
-              to={item.link}
-              className={
-                (cn('p-2'),
-                location.pathname === item.link ? 'text-primary' : '')
-              }
-            >
-              <p>{item.label}</p>
-            </Link>
-            {location.pathname === item.link && (
-              <div className='gradient w-full' />
-            )}
-          </div>
+        return (
+          <>
+            {' '}
+            <div key={item.key}>
+              <Link
+                to={item.link}
+                className={
+                  (cn('p-2'),
+                  location.pathname === item.link ? 'text-primary' : '')
+                }
+              >
+                <p>{item.label}</p>
+              </Link>
+              {location.pathname === item.link && (
+                <div className='gradient w-full' />
+              )}
+            </div>
+          </>
         )
       })}
     </div>

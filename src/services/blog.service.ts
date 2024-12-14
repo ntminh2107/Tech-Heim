@@ -2,7 +2,7 @@ import axiosClient from './api.service'
 
 export const getListBlogAPI = () => {
   return axiosClient
-    .get('/api/blog')
+    .get('/api/blog/list')
     .then((res) => {
       const { data, status } = res
       return { data, status }
@@ -12,7 +12,7 @@ export const getListBlogAPI = () => {
 
 export const getListNewBlogsAPI = () => {
   return axiosClient
-    .get('/api/blog?limit=4')
+    .get('/api/blog/list?limit=4')
     .then((res) => {
       const { data, status } = res
       return { data, status }

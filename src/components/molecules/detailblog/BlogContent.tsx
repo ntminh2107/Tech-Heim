@@ -7,7 +7,7 @@ type Props = {
 const BlogContent = ({ detailBlogPost }: Props) => {
   return (
     <div>
-      <div className='border-b-2 border-b-gray-717171 pb-4'>
+      <div className='border-b-2 pb-4'>
         <div className='mt-4' key={detailBlogPost?.id}>
           <h5 className='font-medium text-xl'>{detailBlogPost?.title}</h5>
           <div className='mt-4 text-xs text-[#717171]'>

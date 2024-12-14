@@ -111,13 +111,17 @@ const BlogCard = ({
 
               <p
                 className={cn(
-                  'font-normal mb-3 max-h-12 line-clamp-2',
+                  '!font-normal mb-3 max-h-12 line-clamp-2 ',
                   mode === 'vertical'
                     ? 'black text-base'
                     : 'text-gray-717171 text-sm'
                 )}
               >
-                {content}
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: content
+                  }}
+                />
               </p>
 
               <div className='flex justify-between'>
