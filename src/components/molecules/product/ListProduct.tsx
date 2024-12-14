@@ -49,12 +49,12 @@ const ListProduct = ({ productList, className }: Props) => {
   return (
     <div>
       {/* Search input */}
-      <div className='mb-4'>
+      <div className='mb-4 mr-[125px]'>
         <Input
           placeholder='Search for products...'
           value={searchQuery}
           onChange={handleSearchChange}
-          className='w-full'
+          className='w-full '
         />
       </div>
 
