@@ -1,7 +1,4 @@
-import Markdown from 'react-markdown'
-import remarkBreaks from 'remark-breaks'
 import { Blog } from '../../../types/Blog'
-import ListComment from '../comment/ListComment'
 import dayjs from 'dayjs'
 type Props = {
   detailBlogPost: Blog | null
@@ -25,16 +22,12 @@ const BlogContent = ({ detailBlogPost }: Props) => {
           />
         </div>
 
-        <Markdown
-          remarkPlugins={[remarkBreaks]}
+        <div
           className='prose font-light text-xl mt-4'
-        >
-          {detailBlogPost?.content}
-        </Markdown>
-      </div>
-      <div className='mt-4 flex flex-col'>
-        <div className='font-medium text-xl'>Comment</div>
-        <ListComment comments={detailBlogPost?.comment} />
+          dangerouslySetInnerHTML={{
+            __html: detailBlogPost?.content as string
+          }}
+        />
       </div>
     </div>
   )
